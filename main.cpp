@@ -59,7 +59,8 @@ int main()
             return 1;
         }
 
-        uintptr_t m_SignatureAddress = Memory::FindSignature(reinterpret_cast<uintptr_t>(m_SchemaSystemBytes), m_SchemaModule[1], "48 89 05 ? ? ? ? 4C 8D 45 D0");
+        // Xref: CSchemaSystem::`vftable'
+        uintptr_t m_SignatureAddress = Memory::FindSignature(reinterpret_cast<uintptr_t>(m_SchemaSystemBytes), m_SchemaModule[1], "48 89 05 ? ? ? ? 4C 8D 45 E0 ");
         if (!m_SignatureAddress)
         {
             PRINT_ERROR("[ - ] Signature scan failed, outdated signature?\n");

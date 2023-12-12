@@ -59,7 +59,7 @@ namespace SDK
 		void* m_This;
 		char m_Name[0x100];
 
-		S2_PAD(0x454);
+		S2_PAD(0x484);
 
 		uint32_t m_ClassItterSize;
 

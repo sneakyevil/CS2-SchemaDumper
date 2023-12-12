@@ -25,6 +25,18 @@ namespace InfoForResourceTypeCVDataResource
 {
 }
 
+namespace InfoForResourceTypeIPulseGraphDef
+{
+}
+
+namespace InfoForResourceTypeCTypeScriptResource
+{
+}
+
+namespace InfoForResourceTypeCJavaScriptResource
+{
+}
+
 namespace InfoForResourceTypeIParticleSystemDefinition
 {
 }
@@ -129,15 +141,11 @@ namespace InfoForResourceTypeCDotaItemDefinitionResource
 {
 }
 
-namespace InfoForResourceTypeCPanoramaScript
-{
-}
-
-namespace InfoForResourceTypeCPanoramaTypeScript
-{
-}
-
 namespace InfoForResourceTypeCDOTAPatchNotesList
+{
+}
+
+namespace InfoForResourceTypeCDOTANovelsList
 {
 }
 
@@ -166,6 +174,14 @@ namespace InfoForResourceTypeCCSGOEconItem
 }
 
 namespace InfoForResourceTypeCResponseRulesList
+{
+}
+
+namespace InfoForResourceTypeCNmSkeleton
+{
+}
+
+namespace InfoForResourceTypeCNmClip
 {
 }
 
@@ -215,9 +231,12 @@ namespace CFuseProgram
 
 namespace CFuseSymbolTable
 {
-	constexpr uint32_t m_constants = 0x8;
-	constexpr uint32_t m_variables = 0x28;
-	constexpr uint32_t m_functions = 0x48;
+	constexpr uint32_t m_constants = 0x0;
+	constexpr uint32_t m_variables = 0x18;
+	constexpr uint32_t m_functions = 0x30;
+	constexpr uint32_t m_constantMap = 0x48;
+	constexpr uint32_t m_variableMap = 0x68;
+	constexpr uint32_t m_functionMap = 0x88;
 }
 
 namespace AABB_t

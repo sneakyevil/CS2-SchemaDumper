@@ -46,6 +46,8 @@ namespace EventClientProcessInput_t
 {
 	constexpr uint32_t m_LoopState = 0x0;
 	constexpr uint32_t m_flRealTime = 0x28;
+	constexpr uint32_t m_flTickInterval = 0x2C;
+	constexpr uint32_t m_flTickStartTime = 0x30;
 }
 
 namespace EventClientProcessGameInput_t
@@ -207,10 +209,6 @@ namespace EventAppShutdown_t
 	constexpr uint32_t m_nDummy0 = 0x0;
 }
 
-namespace IHandleEntity
-{
-}
-
 namespace CNetworkVarChainer
 {
 	constexpr uint32_t m_PathIndex = 0x20;
@@ -226,14 +224,13 @@ namespace EntOutput_t
 
 namespace EntComponentInfo_t
 {
-	constexpr uint32_t m_id = 0x0;
-	constexpr uint32_t m_pName = 0x10;
-	constexpr uint32_t m_pCPPClassname = 0x18;
-	constexpr uint32_t m_pNetworkDataReferencedDescription = 0x20;
-	constexpr uint32_t m_pNetworkDataReferencedPtrPropDescription = 0x28;
-	constexpr uint32_t m_nRuntimeIndex = 0x30;
-	constexpr uint32_t m_nFlags = 0x34;
-	constexpr uint32_t m_pBaseClassComponentHelper = 0x70;
+	constexpr uint32_t m_pName = 0x0;
+	constexpr uint32_t m_pCPPClassname = 0x8;
+	constexpr uint32_t m_pNetworkDataReferencedDescription = 0x10;
+	constexpr uint32_t m_pNetworkDataReferencedPtrPropDescription = 0x18;
+	constexpr uint32_t m_nRuntimeIndex = 0x20;
+	constexpr uint32_t m_nFlags = 0x24;
+	constexpr uint32_t m_pBaseClassComponentHelper = 0x60;
 }
 
 namespace CEntityComponent

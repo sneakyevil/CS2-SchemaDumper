@@ -11,16 +11,16 @@ namespace EntityIOConnectionData_t
 
 namespace EntityKeyValueData_t
 {
-	constexpr uint32_t m_keyValuesData = 0x0;
-	constexpr uint32_t m_connections = 0x18;
+	constexpr uint32_t m_connections = 0x8;
+	constexpr uint32_t m_keyValuesData = 0x20;
 }
 
 namespace PermEntityLumpData_t
 {
-	constexpr uint32_t m_name = 0x0;
-	constexpr uint32_t m_hammerUniqueId = 0x8;
-	constexpr uint32_t m_childLumps = 0x10;
-	constexpr uint32_t m_entityKeyValues = 0x28;
+	constexpr uint32_t m_name = 0x8;
+	constexpr uint32_t m_hammerUniqueId = 0x10;
+	constexpr uint32_t m_childLumps = 0x18;
+	constexpr uint32_t m_entityKeyValues = 0x30;
 }
 
 namespace SceneObject_t
@@ -33,13 +33,12 @@ namespace SceneObject_t
 	constexpr uint32_t m_skin = 0x50;
 	constexpr uint32_t m_nObjectTypeFlags = 0x58;
 	constexpr uint32_t m_vLightingOrigin = 0x5C;
-	constexpr uint32_t m_nLightGroup = 0x68;
-	constexpr uint32_t m_nOverlayRenderOrder = 0x6C;
-	constexpr uint32_t m_nLODOverride = 0x6E;
-	constexpr uint32_t m_nCubeMapPrecomputedHandshake = 0x70;
-	constexpr uint32_t m_nLightProbeVolumePrecomputedHandshake = 0x74;
-	constexpr uint32_t m_renderableModel = 0x80;
-	constexpr uint32_t m_renderable = 0x88;
+	constexpr uint32_t m_nOverlayRenderOrder = 0x68;
+	constexpr uint32_t m_nLODOverride = 0x6A;
+	constexpr uint32_t m_nCubeMapPrecomputedHandshake = 0x6C;
+	constexpr uint32_t m_nLightProbeVolumePrecomputedHandshake = 0x70;
+	constexpr uint32_t m_renderableModel = 0x78;
+	constexpr uint32_t m_renderable = 0x80;
 }
 
 namespace BaseSceneObjectOverride_t
@@ -99,14 +98,18 @@ namespace AggregateMeshInfo_t
 	constexpr uint32_t m_nVisClusterMemberCount = 0x4;
 	constexpr uint32_t m_bHasTransform = 0x5;
 	constexpr uint32_t m_nDrawCallIndex = 0x6;
-	constexpr uint32_t m_vTintColor = 0x8;
-	constexpr uint32_t m_nLODGroupMask = 0xC;
+	constexpr uint32_t m_nLODSetupIndex = 0x8;
+	constexpr uint32_t m_nLODGroupMask = 0xA;
+	constexpr uint32_t m_vTintColor = 0xB;
 	constexpr uint32_t m_objectFlags = 0x10;
-	constexpr uint32_t m_vLODOrigin = 0x14;
-	constexpr uint32_t m_fLODStartDrawDistance = 0x20;
-	constexpr uint32_t m_fLODEndDrawDistance = 0x24;
-	constexpr uint32_t m_fMaxObjectScale = 0x28;
-	constexpr uint32_t m_nLightProbeVolumePrecomputedHandshake = 0x2C;
+	constexpr uint32_t m_nLightProbeVolumePrecomputedHandshake = 0x14;
+}
+
+namespace AggregateLODSetup_t
+{
+	constexpr uint32_t m_vLODOrigin = 0x0;
+	constexpr uint32_t m_fMaxObjectScale = 0xC;
+	constexpr uint32_t m_fSwitchDistances = 0x10;
 }
 
 namespace AggregateSceneObject_t
@@ -115,9 +118,29 @@ namespace AggregateSceneObject_t
 	constexpr uint32_t m_anyFlags = 0x4;
 	constexpr uint32_t m_nLayer = 0x8;
 	constexpr uint32_t m_aggregateMeshes = 0x10;
-	constexpr uint32_t m_visClusterMembership = 0x28;
-	constexpr uint32_t m_fragmentTransforms = 0x40;
-	constexpr uint32_t m_renderableModel = 0x58;
+	constexpr uint32_t m_lodSetups = 0x28;
+	constexpr uint32_t m_visClusterMembership = 0x40;
+	constexpr uint32_t m_fragmentTransforms = 0x58;
+	constexpr uint32_t m_renderableModel = 0x70;
+}
+
+namespace ClutterTile_t
+{
+	constexpr uint32_t m_nFirstInstance = 0x0;
+	constexpr uint32_t m_nLastInstance = 0x4;
+	constexpr uint32_t m_BoundsWs = 0x8;
+}
+
+namespace ClutterSceneObject_t
+{
+	constexpr uint32_t m_Bounds = 0x0;
+	constexpr uint32_t m_flags = 0x18;
+	constexpr uint32_t m_nLayer = 0x1C;
+	constexpr uint32_t m_instancePositions = 0x20;
+	constexpr uint32_t m_instanceScales = 0x50;
+	constexpr uint32_t m_instanceTintSrgb = 0x68;
+	constexpr uint32_t m_tiles = 0x80;
+	constexpr uint32_t m_renderableModel = 0x98;
 }
 
 namespace WorldNode_t
@@ -126,14 +149,15 @@ namespace WorldNode_t
 	constexpr uint32_t m_infoOverlays = 0x18;
 	constexpr uint32_t m_visClusterMembership = 0x30;
 	constexpr uint32_t m_aggregateSceneObjects = 0x48;
-	constexpr uint32_t m_extraVertexStreamOverrides = 0x60;
-	constexpr uint32_t m_materialOverrides = 0x78;
-	constexpr uint32_t m_extraVertexStreams = 0x90;
-	constexpr uint32_t m_layerNames = 0xA8;
-	constexpr uint32_t m_sceneObjectLayerIndices = 0xC0;
-	constexpr uint32_t m_overlayLayerIndices = 0xD8;
-	constexpr uint32_t m_grassFileName = 0xF0;
-	constexpr uint32_t m_nodeLightingInfo = 0xF8;
+	constexpr uint32_t m_clutterSceneObjects = 0x60;
+	constexpr uint32_t m_extraVertexStreamOverrides = 0x78;
+	constexpr uint32_t m_materialOverrides = 0x90;
+	constexpr uint32_t m_extraVertexStreams = 0xA8;
+	constexpr uint32_t m_layerNames = 0xC0;
+	constexpr uint32_t m_sceneObjectLayerIndices = 0xD8;
+	constexpr uint32_t m_overlayLayerIndices = 0xF0;
+	constexpr uint32_t m_grassFileName = 0x108;
+	constexpr uint32_t m_nodeLightingInfo = 0x110;
 }
 
 namespace WorldBuilderParams_t
@@ -192,6 +216,10 @@ namespace VMapResourceData_t
 }
 
 namespace InfoForResourceTypeVMapResourceData_t
+{
+}
+
+namespace CEntityComponent
 {
 }
 

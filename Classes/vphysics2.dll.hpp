@@ -99,10 +99,9 @@ namespace PhysFeModelDesc_t
 	constexpr uint32_t m_nSimdQuadCount2 = 0x4E;
 	constexpr uint32_t m_nQuadCount1 = 0x50;
 	constexpr uint32_t m_nQuadCount2 = 0x52;
-	constexpr uint32_t m_nCollisionSphereInclusiveCount = 0x54;
-	constexpr uint32_t m_nTreeDepth = 0x56;
-	constexpr uint32_t m_nNodeBaseJiggleboneDependsCount = 0x58;
-	constexpr uint32_t m_nRopeCount = 0x5A;
+	constexpr uint32_t m_nTreeDepth = 0x54;
+	constexpr uint32_t m_nNodeBaseJiggleboneDependsCount = 0x56;
+	constexpr uint32_t m_nRopeCount = 0x58;
 	constexpr uint32_t m_Ropes = 0x60;
 	constexpr uint32_t m_NodeBases = 0x78;
 	constexpr uint32_t m_SimdNodeBases = 0x90;
@@ -118,71 +117,70 @@ namespace PhysFeModelDesc_t
 	constexpr uint32_t m_CtrlOffsets = 0x180;
 	constexpr uint32_t m_CtrlOsOffsets = 0x198;
 	constexpr uint32_t m_FollowNodes = 0x1B0;
-	constexpr uint32_t m_CollisionSpheres = 0x1C8;
-	constexpr uint32_t m_CollisionPlanes = 0x1E0;
-	constexpr uint32_t m_NodeIntegrator = 0x1F8;
-	constexpr uint32_t m_SpringIntegrator = 0x210;
-	constexpr uint32_t m_SimdSpringIntegrator = 0x228;
-	constexpr uint32_t m_WorldCollisionParams = 0x240;
-	constexpr uint32_t m_LegacyStretchForce = 0x258;
-	constexpr uint32_t m_NodeCollisionRadii = 0x270;
-	constexpr uint32_t m_DynNodeFriction = 0x288;
-	constexpr uint32_t m_LocalRotation = 0x2A0;
-	constexpr uint32_t m_LocalForce = 0x2B8;
-	constexpr uint32_t m_TaperedCapsuleStretches = 0x2D0;
-	constexpr uint32_t m_TaperedCapsuleRigids = 0x2E8;
-	constexpr uint32_t m_SphereRigids = 0x300;
-	constexpr uint32_t m_WorldCollisionNodes = 0x318;
-	constexpr uint32_t m_TreeParents = 0x330;
-	constexpr uint32_t m_TreeCollisionMasks = 0x348;
-	constexpr uint32_t m_TreeChildren = 0x360;
-	constexpr uint32_t m_FreeNodes = 0x378;
-	constexpr uint32_t m_FitMatrices = 0x390;
-	constexpr uint32_t m_FitWeights = 0x3A8;
-	constexpr uint32_t m_ReverseOffsets = 0x3C0;
-	constexpr uint32_t m_AnimStrayRadii = 0x3D8;
-	constexpr uint32_t m_SimdAnimStrayRadii = 0x3F0;
-	constexpr uint32_t m_KelagerBends = 0x408;
-	constexpr uint32_t m_CtrlSoftOffsets = 0x420;
-	constexpr uint32_t m_JiggleBones = 0x438;
-	constexpr uint32_t m_SourceElems = 0x450;
-	constexpr uint32_t m_GoalDampedSpringIntegrators = 0x468;
-	constexpr uint32_t m_Tris = 0x480;
-	constexpr uint32_t m_nTriCount1 = 0x498;
-	constexpr uint32_t m_nTriCount2 = 0x49A;
-	constexpr uint32_t m_nReservedUint8 = 0x49C;
-	constexpr uint32_t m_nExtraPressureIterations = 0x49D;
-	constexpr uint32_t m_nExtraGoalIterations = 0x49E;
-	constexpr uint32_t m_nExtraIterations = 0x49F;
-	constexpr uint32_t m_BoxRigids = 0x4A0;
-	constexpr uint32_t m_DynNodeVertexSet = 0x4B8;
-	constexpr uint32_t m_VertexSetNames = 0x4D0;
-	constexpr uint32_t m_RigidColliderPriorities = 0x4E8;
-	constexpr uint32_t m_MorphLayers = 0x500;
-	constexpr uint32_t m_MorphSetData = 0x518;
-	constexpr uint32_t m_VertexMaps = 0x530;
-	constexpr uint32_t m_VertexMapValues = 0x548;
-	constexpr uint32_t m_Effects = 0x560;
-	constexpr uint32_t m_LockToParent = 0x578;
-	constexpr uint32_t m_LockToGoal = 0x590;
-	constexpr uint32_t m_DynNodeWindBases = 0x5A8;
-	constexpr uint32_t m_flInternalPressure = 0x5C0;
-	constexpr uint32_t m_flDefaultTimeDilation = 0x5C4;
-	constexpr uint32_t m_flWindage = 0x5C8;
-	constexpr uint32_t m_flWindDrag = 0x5CC;
-	constexpr uint32_t m_flDefaultSurfaceStretch = 0x5D0;
-	constexpr uint32_t m_flDefaultThreadStretch = 0x5D4;
-	constexpr uint32_t m_flDefaultGravityScale = 0x5D8;
-	constexpr uint32_t m_flDefaultVelAirDrag = 0x5DC;
-	constexpr uint32_t m_flDefaultExpAirDrag = 0x5E0;
-	constexpr uint32_t m_flDefaultVelQuadAirDrag = 0x5E4;
-	constexpr uint32_t m_flDefaultExpQuadAirDrag = 0x5E8;
-	constexpr uint32_t m_flRodVelocitySmoothRate = 0x5EC;
-	constexpr uint32_t m_flQuadVelocitySmoothRate = 0x5F0;
-	constexpr uint32_t m_flAddWorldCollisionRadius = 0x5F4;
-	constexpr uint32_t m_flDefaultVolumetricSolveAmount = 0x5F8;
-	constexpr uint32_t m_nRodVelocitySmoothIterations = 0x5FC;
-	constexpr uint32_t m_nQuadVelocitySmoothIterations = 0x5FE;
+	constexpr uint32_t m_CollisionPlanes = 0x1C8;
+	constexpr uint32_t m_NodeIntegrator = 0x1E0;
+	constexpr uint32_t m_SpringIntegrator = 0x1F8;
+	constexpr uint32_t m_SimdSpringIntegrator = 0x210;
+	constexpr uint32_t m_WorldCollisionParams = 0x228;
+	constexpr uint32_t m_LegacyStretchForce = 0x240;
+	constexpr uint32_t m_NodeCollisionRadii = 0x258;
+	constexpr uint32_t m_DynNodeFriction = 0x270;
+	constexpr uint32_t m_LocalRotation = 0x288;
+	constexpr uint32_t m_LocalForce = 0x2A0;
+	constexpr uint32_t m_TaperedCapsuleStretches = 0x2B8;
+	constexpr uint32_t m_TaperedCapsuleRigids = 0x2D0;
+	constexpr uint32_t m_SphereRigids = 0x2E8;
+	constexpr uint32_t m_WorldCollisionNodes = 0x300;
+	constexpr uint32_t m_TreeParents = 0x318;
+	constexpr uint32_t m_TreeCollisionMasks = 0x330;
+	constexpr uint32_t m_TreeChildren = 0x348;
+	constexpr uint32_t m_FreeNodes = 0x360;
+	constexpr uint32_t m_FitMatrices = 0x378;
+	constexpr uint32_t m_FitWeights = 0x390;
+	constexpr uint32_t m_ReverseOffsets = 0x3A8;
+	constexpr uint32_t m_AnimStrayRadii = 0x3C0;
+	constexpr uint32_t m_SimdAnimStrayRadii = 0x3D8;
+	constexpr uint32_t m_KelagerBends = 0x3F0;
+	constexpr uint32_t m_CtrlSoftOffsets = 0x408;
+	constexpr uint32_t m_JiggleBones = 0x420;
+	constexpr uint32_t m_SourceElems = 0x438;
+	constexpr uint32_t m_GoalDampedSpringIntegrators = 0x450;
+	constexpr uint32_t m_Tris = 0x468;
+	constexpr uint32_t m_nTriCount1 = 0x480;
+	constexpr uint32_t m_nTriCount2 = 0x482;
+	constexpr uint32_t m_nReservedUint8 = 0x484;
+	constexpr uint32_t m_nExtraPressureIterations = 0x485;
+	constexpr uint32_t m_nExtraGoalIterations = 0x486;
+	constexpr uint32_t m_nExtraIterations = 0x487;
+	constexpr uint32_t m_BoxRigids = 0x488;
+	constexpr uint32_t m_DynNodeVertexSet = 0x4A0;
+	constexpr uint32_t m_VertexSetNames = 0x4B8;
+	constexpr uint32_t m_RigidColliderPriorities = 0x4D0;
+	constexpr uint32_t m_MorphLayers = 0x4E8;
+	constexpr uint32_t m_MorphSetData = 0x500;
+	constexpr uint32_t m_VertexMaps = 0x518;
+	constexpr uint32_t m_VertexMapValues = 0x530;
+	constexpr uint32_t m_Effects = 0x548;
+	constexpr uint32_t m_LockToParent = 0x560;
+	constexpr uint32_t m_LockToGoal = 0x578;
+	constexpr uint32_t m_DynNodeWindBases = 0x590;
+	constexpr uint32_t m_flInternalPressure = 0x5A8;
+	constexpr uint32_t m_flDefaultTimeDilation = 0x5AC;
+	constexpr uint32_t m_flWindage = 0x5B0;
+	constexpr uint32_t m_flWindDrag = 0x5B4;
+	constexpr uint32_t m_flDefaultSurfaceStretch = 0x5B8;
+	constexpr uint32_t m_flDefaultThreadStretch = 0x5BC;
+	constexpr uint32_t m_flDefaultGravityScale = 0x5C0;
+	constexpr uint32_t m_flDefaultVelAirDrag = 0x5C4;
+	constexpr uint32_t m_flDefaultExpAirDrag = 0x5C8;
+	constexpr uint32_t m_flDefaultVelQuadAirDrag = 0x5CC;
+	constexpr uint32_t m_flDefaultExpQuadAirDrag = 0x5D0;
+	constexpr uint32_t m_flRodVelocitySmoothRate = 0x5D4;
+	constexpr uint32_t m_flQuadVelocitySmoothRate = 0x5D8;
+	constexpr uint32_t m_flAddWorldCollisionRadius = 0x5DC;
+	constexpr uint32_t m_flDefaultVolumetricSolveAmount = 0x5E0;
+	constexpr uint32_t m_nRodVelocitySmoothIterations = 0x5E4;
+	constexpr uint32_t m_nQuadVelocitySmoothIterations = 0x5E6;
 }
 
 namespace FourVectors2D
@@ -422,22 +420,12 @@ namespace FeFollowNode_t
 	constexpr uint32_t flWeight = 0x4;
 }
 
-namespace FeCollisionSphere_t
-{
-	constexpr uint32_t nCtrlParent = 0x0;
-	constexpr uint32_t nChildNode = 0x2;
-	constexpr uint32_t m_flRFactor = 0x4;
-	constexpr uint32_t m_vOrigin = 0x8;
-	constexpr uint32_t flStickiness = 0x14;
-}
-
 namespace FeCollisionPlane_t
 {
 	constexpr uint32_t nCtrlParent = 0x0;
 	constexpr uint32_t nChildNode = 0x2;
 	constexpr uint32_t m_Plane = 0x4;
-	constexpr uint32_t flStickiness = 0x14;
-	constexpr uint32_t flStrength = 0x18;
+	constexpr uint32_t flStrength = 0x14;
 }
 
 namespace FeWorldCollisionParams_t
@@ -456,21 +444,19 @@ namespace FeTreeChildren_t
 namespace FeTaperedCapsuleRigid_t
 {
 	constexpr uint32_t vSphere = 0x0;
-	constexpr uint32_t flStickiness = 0x20;
-	constexpr uint32_t nNode = 0x24;
-	constexpr uint32_t nCollisionMask = 0x26;
-	constexpr uint32_t nVertexMapIndex = 0x28;
-	constexpr uint32_t nFlags = 0x2A;
+	constexpr uint32_t nNode = 0x20;
+	constexpr uint32_t nCollisionMask = 0x22;
+	constexpr uint32_t nVertexMapIndex = 0x24;
+	constexpr uint32_t nFlags = 0x26;
 }
 
 namespace FeSphereRigid_t
 {
 	constexpr uint32_t vSphere = 0x0;
-	constexpr uint32_t flStickiness = 0x10;
-	constexpr uint32_t nNode = 0x14;
-	constexpr uint32_t nCollisionMask = 0x16;
-	constexpr uint32_t nVertexMapIndex = 0x18;
-	constexpr uint32_t nFlags = 0x1A;
+	constexpr uint32_t nNode = 0x10;
+	constexpr uint32_t nCollisionMask = 0x12;
+	constexpr uint32_t nVertexMapIndex = 0x14;
+	constexpr uint32_t nFlags = 0x16;
 }
 
 namespace FeTaperedCapsuleStretch_t
@@ -479,7 +465,6 @@ namespace FeTaperedCapsuleStretch_t
 	constexpr uint32_t nCollisionMask = 0x4;
 	constexpr uint32_t nDummy = 0x6;
 	constexpr uint32_t flRadius = 0x8;
-	constexpr uint32_t flStickiness = 0x10;
 }
 
 namespace FeBoxRigid_t
@@ -488,10 +473,8 @@ namespace FeBoxRigid_t
 	constexpr uint32_t nNode = 0x20;
 	constexpr uint32_t nCollisionMask = 0x22;
 	constexpr uint32_t vSize = 0x24;
-	constexpr uint32_t flStickiness = 0x30;
-	constexpr uint32_t nVertexMapIndex = 0x34;
-	constexpr uint32_t nFlags = 0x36;
-	constexpr uint32_t flReserved = 0x38;
+	constexpr uint32_t nVertexMapIndex = 0x30;
+	constexpr uint32_t nFlags = 0x32;
 }
 
 namespace CovMatrix3
@@ -538,8 +521,7 @@ namespace FeRigidColliderIndices_t
 	constexpr uint32_t m_nTaperedCapsuleRigidIndex = 0x0;
 	constexpr uint32_t m_nSphereRigidIndex = 0x2;
 	constexpr uint32_t m_nBoxRigidIndex = 0x4;
-	constexpr uint32_t m_nCollisionSphereIndex = 0x6;
-	constexpr uint32_t m_nCollisionPlaneIndex = 0xA;
+	constexpr uint32_t m_nCollisionPlaneIndex = 0x6;
 }
 
 namespace FeBuildTaperedCapsuleRigid_t
@@ -656,6 +638,11 @@ namespace RnPlane_t
 	constexpr uint32_t m_flOffset = 0xC;
 }
 
+namespace RnVertex_t
+{
+	constexpr uint32_t m_nEdge = 0x0;
+}
+
 namespace RnHalfEdge_t
 {
 	constexpr uint32_t m_nNext = 0x0;
@@ -684,11 +671,12 @@ namespace RnHull_t
 	constexpr uint32_t m_MassProperties = 0x34;
 	constexpr uint32_t m_flVolume = 0x64;
 	constexpr uint32_t m_Vertices = 0x68;
-	constexpr uint32_t m_Edges = 0x80;
-	constexpr uint32_t m_Faces = 0x98;
-	constexpr uint32_t m_Planes = 0xB0;
-	constexpr uint32_t m_nFlags = 0xC8;
-	constexpr uint32_t m_pRegionSVM = 0xD0;
+	constexpr uint32_t m_VertexPositions = 0x80;
+	constexpr uint32_t m_Edges = 0x98;
+	constexpr uint32_t m_Faces = 0xB0;
+	constexpr uint32_t m_FacePlanes = 0xC8;
+	constexpr uint32_t m_nFlags = 0xE0;
+	constexpr uint32_t m_pRegionSVM = 0xE8;
 }
 
 namespace RnTriangle_t
@@ -719,6 +707,8 @@ namespace RnMesh_t
 	constexpr uint32_t m_Wings = 0x60;
 	constexpr uint32_t m_Materials = 0x78;
 	constexpr uint32_t m_vOrthographicAreas = 0x90;
+	constexpr uint32_t m_nFlags = 0x9C;
+	constexpr uint32_t m_nDebugFlags = 0xA0;
 }
 
 namespace RnShapeDesc_t
@@ -788,6 +778,45 @@ namespace CastSphereSATParams_t
 	constexpr uint32_t m_pHull = 0x28;
 }
 
+namespace RnBodyDesc_t
+{
+	constexpr uint32_t m_sDebugName = 0x0;
+	constexpr uint32_t m_vPosition = 0x8;
+	constexpr uint32_t m_qOrientation = 0x14;
+	constexpr uint32_t m_vLinearVelocity = 0x24;
+	constexpr uint32_t m_vAngularVelocity = 0x30;
+	constexpr uint32_t m_vLocalMassCenter = 0x3C;
+	constexpr uint32_t m_LocalInertiaInv = 0x48;
+	constexpr uint32_t m_flMassInv = 0x6C;
+	constexpr uint32_t m_flGameMass = 0x70;
+	constexpr uint32_t m_flInertiaScaleInv = 0x74;
+	constexpr uint32_t m_flLinearDamping = 0x78;
+	constexpr uint32_t m_flAngularDamping = 0x7C;
+	constexpr uint32_t m_flLinearDrag = 0x80;
+	constexpr uint32_t m_flAngularDrag = 0x84;
+	constexpr uint32_t m_flLinearBuoyancyDrag = 0x88;
+	constexpr uint32_t m_flAngularBuoyancyDrag = 0x8C;
+	constexpr uint32_t m_vLastAwakeForceAccum = 0x90;
+	constexpr uint32_t m_vLastAwakeTorqueAccum = 0x9C;
+	constexpr uint32_t m_flBuoyancyFactor = 0xA8;
+	constexpr uint32_t m_flGravityScale = 0xAC;
+	constexpr uint32_t m_flTimeScale = 0xB0;
+	constexpr uint32_t m_nBodyType = 0xB4;
+	constexpr uint32_t m_nGameIndex = 0xB8;
+	constexpr uint32_t m_nGameFlags = 0xBC;
+	constexpr uint32_t m_nMinVelocityIterations = 0xC0;
+	constexpr uint32_t m_nMinPositionIterations = 0xC1;
+	constexpr uint32_t m_nMassPriority = 0xC2;
+	constexpr uint32_t m_bEnabled = 0xC3;
+	constexpr uint32_t m_bSleeping = 0xC4;
+	constexpr uint32_t m_bIsContinuousEnabled = 0xC5;
+	constexpr uint32_t m_bDragEnabled = 0xC6;
+	constexpr uint32_t m_bBuoyancyDragEnabled = 0xC7;
+	constexpr uint32_t m_bGravityDisabled = 0xC8;
+	constexpr uint32_t m_bSpeculativeEnabled = 0xC9;
+	constexpr uint32_t m_bHasShadowController = 0xCA;
+}
+
 namespace VertexPositionNormal_t
 {
 	constexpr uint32_t m_vPosition = 0x0;
@@ -797,5 +826,10 @@ namespace VertexPositionNormal_t
 namespace VertexPositionColor_t
 {
 	constexpr uint32_t m_vPosition = 0x0;
+}
+
+namespace vphysics_save_cphysicsbody_t
+{
+	constexpr uint32_t m_nOldPointer = 0xD0;
 }
 

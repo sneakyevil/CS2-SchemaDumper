@@ -17,6 +17,15 @@ namespace CSosGroupActionTimeLimitSchema
 	constexpr uint32_t m_flMaxDuration = 0x18;
 }
 
+namespace CSosGroupActionSetSoundeventParameterSchema
+{
+	constexpr uint32_t m_nMaxCount = 0x18;
+	constexpr uint32_t m_flMinValue = 0x1C;
+	constexpr uint32_t m_flMaxValue = 0x20;
+	constexpr uint32_t m_opvarName = 0x28;
+	constexpr uint32_t m_nSortType = 0x30;
+}
+
 namespace CSosGroupBranchPattern
 {
 	constexpr uint32_t m_bMatchEventName = 0x8;
