@@ -1,3 +1,8 @@
+namespace CScriptComponent
+{
+	constexpr uint32_t m_scriptClassName = 0x30;
+}
+
 namespace EntityIOConnectionData_t
 {
 	constexpr uint32_t m_outputName = 0x0;
@@ -243,10 +248,6 @@ namespace CEntityInstance
 	constexpr uint32_t m_iszPrivateVScripts = 0x8;
 	constexpr uint32_t m_pEntity = 0x10;
 	constexpr uint32_t m_CScriptComponent = 0x28;
-}
-
-namespace CScriptComponent
-{
-	constexpr uint32_t m_scriptClassName = 0x30;
+	constexpr uint32_t m_bVisibleinPVS = 0x30;
 }
 

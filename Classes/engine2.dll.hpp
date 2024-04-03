@@ -6,6 +6,31 @@ namespace EngineLoopState_t
 	constexpr uint32_t m_nRenderHeight = 0x24;
 }
 
+namespace EntComponentInfo_t
+{
+	constexpr uint32_t m_pName = 0x0;
+	constexpr uint32_t m_pCPPClassname = 0x8;
+	constexpr uint32_t m_pNetworkDataReferencedDescription = 0x10;
+	constexpr uint32_t m_pNetworkDataReferencedPtrPropDescription = 0x18;
+	constexpr uint32_t m_nRuntimeIndex = 0x20;
+	constexpr uint32_t m_nFlags = 0x24;
+	constexpr uint32_t m_pBaseClassComponentHelper = 0x60;
+}
+
+namespace CVariantDefaultAllocator
+{
+}
+
+namespace CScriptComponent
+{
+	constexpr uint32_t m_scriptClassName = 0x30;
+}
+
+namespace ChangeAccessorFieldPathIndex_t
+{
+	constexpr uint32_t m_Value = 0x0;
+}
+
 namespace EventModInitialized_t
 {
 }
@@ -95,6 +120,7 @@ namespace EventClientFrameSimulate_t
 	constexpr uint32_t m_LoopState = 0x0;
 	constexpr uint32_t m_flRealTime = 0x28;
 	constexpr uint32_t m_flFrameTime = 0x2C;
+	constexpr uint32_t m_flWhenScheduleSendTickPacket = 0x30;
 }
 
 namespace EventSimpleLoopFrameUpdate_t
@@ -141,12 +167,6 @@ namespace EventClientAdvanceTick_t
 
 namespace EventClientPostAdvanceTick_t
 {
-}
-
-namespace EventClientSendInput_t
-{
-	constexpr uint32_t m_bFinalClientCommandTick = 0x0;
-	constexpr uint32_t m_nAdditionalClientCommandsToCreate = 0x4;
 }
 
 namespace EventClientPredictionPostNetupdate_t
@@ -214,30 +234,7 @@ namespace CNetworkVarChainer
 	constexpr uint32_t m_PathIndex = 0x20;
 }
 
-namespace CVariantDefaultAllocator
-{
-}
-
 namespace EntOutput_t
-{
-}
-
-namespace EntComponentInfo_t
-{
-	constexpr uint32_t m_pName = 0x0;
-	constexpr uint32_t m_pCPPClassname = 0x8;
-	constexpr uint32_t m_pNetworkDataReferencedDescription = 0x10;
-	constexpr uint32_t m_pNetworkDataReferencedPtrPropDescription = 0x18;
-	constexpr uint32_t m_nRuntimeIndex = 0x20;
-	constexpr uint32_t m_nFlags = 0x24;
-	constexpr uint32_t m_pBaseClassComponentHelper = 0x60;
-}
-
-namespace CEntityComponent
-{
-}
-
-namespace EntInput_t
 {
 }
 
@@ -247,6 +244,14 @@ namespace CEntityComponentHelper
 	constexpr uint32_t m_pInfo = 0x10;
 	constexpr uint32_t m_nPriority = 0x18;
 	constexpr uint32_t m_pNext = 0x20;
+}
+
+namespace CEntityComponent
+{
+}
+
+namespace EntInput_t
+{
 }
 
 namespace CEntityIdentity
@@ -273,15 +278,11 @@ namespace CEntityInstance
 	constexpr uint32_t m_iszPrivateVScripts = 0x8;
 	constexpr uint32_t m_pEntity = 0x10;
 	constexpr uint32_t m_CScriptComponent = 0x28;
+	constexpr uint32_t m_bVisibleinPVS = 0x30;
 }
 
 namespace CEntityIOOutput
 {
 	constexpr uint32_t m_Value = 0x18;
-}
-
-namespace CScriptComponent
-{
-	constexpr uint32_t m_scriptClassName = 0x30;
 }
 

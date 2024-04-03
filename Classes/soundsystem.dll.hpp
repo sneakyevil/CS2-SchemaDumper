@@ -17,6 +17,12 @@ namespace CSosGroupActionTimeLimitSchema
 	constexpr uint32_t m_flMaxDuration = 0x18;
 }
 
+namespace CSosGroupActionTimeBlockLimitSchema
+{
+	constexpr uint32_t m_nMaxCount = 0x18;
+	constexpr uint32_t m_flMaxDuration = 0x1C;
+}
+
 namespace CSosGroupActionSetSoundeventParameterSchema
 {
 	constexpr uint32_t m_nMaxCount = 0x18;
@@ -24,6 +30,17 @@ namespace CSosGroupActionSetSoundeventParameterSchema
 	constexpr uint32_t m_flMaxValue = 0x20;
 	constexpr uint32_t m_opvarName = 0x28;
 	constexpr uint32_t m_nSortType = 0x30;
+}
+
+namespace CSosGroupActionSoundeventClusterSchema
+{
+	constexpr uint32_t m_nMinNearby = 0x18;
+	constexpr uint32_t m_flClusterEpsilon = 0x1C;
+	constexpr uint32_t m_shouldPlayOpvar = 0x20;
+	constexpr uint32_t m_shouldPlayClusterChild = 0x28;
+	constexpr uint32_t m_clusterSizeOpvar = 0x30;
+	constexpr uint32_t m_groupBoundingBoxMinsOpvar = 0x38;
+	constexpr uint32_t m_groupBoundingBoxMaxsOpvar = 0x40;
 }
 
 namespace CSosGroupBranchPattern
@@ -97,6 +114,80 @@ namespace CDspPresetModifierList
 namespace CDSPPresetMixgroupModifierTable
 {
 	constexpr uint32_t m_table = 0x0;
+}
+
+namespace CVoiceContainerBase
+{
+	constexpr uint32_t m_curves = 0x20;
+}
+
+namespace CVoiceContainerDefault
+{
+}
+
+namespace CVoiceContainerWavFileReader
+{
+	constexpr uint32_t m_wavFilePath = 0x60;
+}
+
+namespace CVoiceContainerTestConstant
+{
+	constexpr uint32_t m_flTestConstantParam = 0x68;
+}
+
+namespace CVoiceContainerTestNestedDynamic
+{
+	constexpr uint32_t m_SoundToPlay = 0x60;
+	constexpr uint32_t m_flTestConstantParam = 0x68;
+}
+
+namespace CVoiceContainerDecayingSineWave
+{
+	constexpr uint32_t m_flFrequency = 0x60;
+	constexpr uint32_t m_flDecayTime = 0x64;
+}
+
+namespace CVoiceContainerAmpedDecayingSineWave
+{
+	constexpr uint32_t m_flGainAmount = 0x68;
+}
+
+namespace CVoiceContainerRealtimeFMSineWave
+{
+	constexpr uint32_t m_flCarrierFrequency = 0x60;
+	constexpr uint32_t m_flModulatorFrequency = 0x64;
+	constexpr uint32_t m_flModulatorAmount = 0x68;
+}
+
+namespace CVoiceContainerBlend
+{
+	constexpr uint32_t m_hSoundOne = 0x60;
+	constexpr uint32_t m_hSoundTwo = 0x68;
+	constexpr uint32_t m_flBlendAmount = 0x70;
+}
+
+namespace CVoiceContainerEngineSound
+{
+	constexpr uint32_t m_SoundToPlay = 0x60;
+	constexpr uint32_t m_flTestConstantParam = 0x68;
+	constexpr uint32_t m_flTestSoundEventBoundParam = 0x6C;
+	constexpr uint32_t m_flEngineRPM = 0x70;
+}
+
+namespace CVoiceContainerEnvelopeAnalyzer
+{
+	constexpr uint32_t m_envBuffer = 0x68;
+}
+
+namespace CVoiceContainerRandomSampler
+{
+	constexpr uint32_t m_flLoudAmplitude = 0x60;
+	constexpr uint32_t m_flLoudAmplitudeJitter = 0x64;
+	constexpr uint32_t m_flSoftAmplitude = 0x68;
+	constexpr uint32_t m_flSoftAmplitudeJitter = 0x6C;
+	constexpr uint32_t m_flLoudTimeJitter = 0x70;
+	constexpr uint32_t m_flSoftTimeJitter = 0x74;
+	constexpr uint32_t m_grainResources = 0x78;
 }
 
 namespace VMixFilterDesc_t

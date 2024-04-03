@@ -1,3 +1,25 @@
+namespace HSequence
+{
+	constexpr uint32_t m_Value = 0x0;
+}
+
+namespace AnimParamID
+{
+	constexpr uint32_t m_id = 0x0;
+}
+
+namespace CAnimInputDamping
+{
+	constexpr uint32_t m_speedFunction = 0x8;
+	constexpr uint32_t m_fSpeedScale = 0xC;
+}
+
+namespace CAnimParamHandle
+{
+	constexpr uint32_t m_type = 0x0;
+	constexpr uint32_t m_index = 0x1;
+}
+
 namespace MoodAnimation_t
 {
 	constexpr uint32_t m_sName = 0x0;
@@ -18,6 +40,11 @@ namespace MoodAnimationLayer_t
 	constexpr uint32_t m_flEndOffset = 0x4C;
 	constexpr uint32_t m_flFadeIn = 0x54;
 	constexpr uint32_t m_flFadeOut = 0x58;
+}
+
+namespace CRangeFloat
+{
+	constexpr uint32_t m_pValue = 0x0;
 }
 
 namespace CMoodVData
@@ -327,6 +354,8 @@ namespace CSeqMultiFetch
 	constexpr uint32_t m_poseKeyArray1 = 0x48;
 	constexpr uint32_t m_nLocalCyclePoseParameter = 0x60;
 	constexpr uint32_t m_bCalculatePoseParameters = 0x64;
+	constexpr uint32_t m_bFixedBlendWeight = 0x65;
+	constexpr uint32_t m_flFixedBlendWeightVals = 0x68;
 }
 
 namespace CSeqSeqDescFlag
@@ -355,14 +384,21 @@ namespace CSeqS1SeqDesc
 	constexpr uint32_t m_sName = 0x0;
 	constexpr uint32_t m_flags = 0x10;
 	constexpr uint32_t m_fetch = 0x20;
-	constexpr uint32_t m_nLocalWeightlist = 0x88;
-	constexpr uint32_t m_autoLayerArray = 0x90;
-	constexpr uint32_t m_IKLockArray = 0xA8;
-	constexpr uint32_t m_transition = 0xC0;
-	constexpr uint32_t m_SequenceKeys = 0xC8;
-	constexpr uint32_t m_LegacyKeyValueText = 0xD8;
-	constexpr uint32_t m_activityArray = 0xE8;
-	constexpr uint32_t m_footMotion = 0x100;
+	constexpr uint32_t m_nLocalWeightlist = 0x90;
+	constexpr uint32_t m_autoLayerArray = 0x98;
+	constexpr uint32_t m_IKLockArray = 0xB0;
+	constexpr uint32_t m_transition = 0xC8;
+	constexpr uint32_t m_SequenceKeys = 0xD0;
+	constexpr uint32_t m_LegacyKeyValueText = 0xE0;
+	constexpr uint32_t m_activityArray = 0xF0;
+	constexpr uint32_t m_footMotion = 0x108;
+}
+
+namespace CFootMotion
+{
+	constexpr uint32_t m_strides = 0x0;
+	constexpr uint32_t m_name = 0x18;
+	constexpr uint32_t m_bAdditive = 0x20;
 }
 
 namespace CSeqSynthAnimDesc
@@ -464,11 +500,6 @@ namespace CCompressorGroup
 	constexpr uint32_t m_vector4DCompressor = 0x188;
 }
 
-namespace HSequence
-{
-	constexpr uint32_t m_Value = 0x0;
-}
-
 namespace CAnimEnum
 {
 	constexpr uint32_t m_value = 0x0;
@@ -485,11 +516,6 @@ namespace AnimNodeOutputID
 }
 
 namespace AnimStateID
-{
-	constexpr uint32_t m_id = 0x0;
-}
-
-namespace AnimParamID
 {
 	constexpr uint32_t m_id = 0x0;
 }
@@ -525,6 +551,26 @@ namespace VPhysics2ShapeDef_t
 	constexpr uint32_t m_hulls = 0x30;
 	constexpr uint32_t m_meshes = 0x48;
 	constexpr uint32_t m_CollisionAttributeIndices = 0x60;
+}
+
+namespace RnSphereDesc_t
+{
+	constexpr uint32_t m_Sphere = 0x10;
+}
+
+namespace RnCapsuleDesc_t
+{
+	constexpr uint32_t m_Capsule = 0x10;
+}
+
+namespace RnHullDesc_t
+{
+	constexpr uint32_t m_Hull = 0x10;
+}
+
+namespace RnMeshDesc_t
+{
+	constexpr uint32_t m_Mesh = 0x10;
 }
 
 namespace VPhysXBodyPart_t
@@ -655,6 +701,24 @@ namespace PhysSoftbodyDesc_t
 	constexpr uint32_t m_ParticleBoneName = 0x78;
 }
 
+namespace RnSoftbodyParticle_t
+{
+	constexpr uint32_t m_flMassInv = 0x0;
+}
+
+namespace RnSoftbodySpring_t
+{
+	constexpr uint32_t m_nParticle = 0x0;
+	constexpr uint32_t m_flLength = 0x4;
+}
+
+namespace RnSoftbodyCapsule_t
+{
+	constexpr uint32_t m_vCenter = 0x0;
+	constexpr uint32_t m_flRadius = 0x18;
+	constexpr uint32_t m_nParticle = 0x1C;
+}
+
 namespace VPhysXAggregateData_t
 {
 	constexpr uint32_t m_nFlags = 0x0;
@@ -673,6 +737,110 @@ namespace VPhysXAggregateData_t
 	constexpr uint32_t m_collisionAttributes = 0x100;
 	constexpr uint32_t m_debugPartNames = 0x118;
 	constexpr uint32_t m_embeddedKeyvalues = 0x130;
+}
+
+namespace PhysFeModelDesc_t
+{
+	constexpr uint32_t m_CtrlHash = 0x0;
+	constexpr uint32_t m_CtrlName = 0x18;
+	constexpr uint32_t m_nStaticNodeFlags = 0x30;
+	constexpr uint32_t m_nDynamicNodeFlags = 0x34;
+	constexpr uint32_t m_flLocalForce = 0x38;
+	constexpr uint32_t m_flLocalRotation = 0x3C;
+	constexpr uint32_t m_nNodeCount = 0x40;
+	constexpr uint32_t m_nStaticNodes = 0x42;
+	constexpr uint32_t m_nRotLockStaticNodes = 0x44;
+	constexpr uint32_t m_nFirstPositionDrivenNode = 0x46;
+	constexpr uint32_t m_nSimdTriCount1 = 0x48;
+	constexpr uint32_t m_nSimdTriCount2 = 0x4A;
+	constexpr uint32_t m_nSimdQuadCount1 = 0x4C;
+	constexpr uint32_t m_nSimdQuadCount2 = 0x4E;
+	constexpr uint32_t m_nQuadCount1 = 0x50;
+	constexpr uint32_t m_nQuadCount2 = 0x52;
+	constexpr uint32_t m_nTreeDepth = 0x54;
+	constexpr uint32_t m_nNodeBaseJiggleboneDependsCount = 0x56;
+	constexpr uint32_t m_nRopeCount = 0x58;
+	constexpr uint32_t m_Ropes = 0x60;
+	constexpr uint32_t m_NodeBases = 0x78;
+	constexpr uint32_t m_SimdNodeBases = 0x90;
+	constexpr uint32_t m_Quads = 0xA8;
+	constexpr uint32_t m_SimdQuads = 0xC0;
+	constexpr uint32_t m_SimdTris = 0xD8;
+	constexpr uint32_t m_SimdRods = 0xF0;
+	constexpr uint32_t m_SimdRodsAnim = 0x108;
+	constexpr uint32_t m_InitPose = 0x120;
+	constexpr uint32_t m_Rods = 0x138;
+	constexpr uint32_t m_Twists = 0x150;
+	constexpr uint32_t m_AxialEdges = 0x168;
+	constexpr uint32_t m_NodeInvMasses = 0x180;
+	constexpr uint32_t m_CtrlOffsets = 0x198;
+	constexpr uint32_t m_CtrlOsOffsets = 0x1B0;
+	constexpr uint32_t m_FollowNodes = 0x1C8;
+	constexpr uint32_t m_CollisionPlanes = 0x1E0;
+	constexpr uint32_t m_NodeIntegrator = 0x1F8;
+	constexpr uint32_t m_SpringIntegrator = 0x210;
+	constexpr uint32_t m_SimdSpringIntegrator = 0x228;
+	constexpr uint32_t m_WorldCollisionParams = 0x240;
+	constexpr uint32_t m_LegacyStretchForce = 0x258;
+	constexpr uint32_t m_NodeCollisionRadii = 0x270;
+	constexpr uint32_t m_DynNodeFriction = 0x288;
+	constexpr uint32_t m_LocalRotation = 0x2A0;
+	constexpr uint32_t m_LocalForce = 0x2B8;
+	constexpr uint32_t m_TaperedCapsuleStretches = 0x2D0;
+	constexpr uint32_t m_TaperedCapsuleRigids = 0x2E8;
+	constexpr uint32_t m_SphereRigids = 0x300;
+	constexpr uint32_t m_WorldCollisionNodes = 0x318;
+	constexpr uint32_t m_TreeParents = 0x330;
+	constexpr uint32_t m_TreeCollisionMasks = 0x348;
+	constexpr uint32_t m_TreeChildren = 0x360;
+	constexpr uint32_t m_FreeNodes = 0x378;
+	constexpr uint32_t m_FitMatrices = 0x390;
+	constexpr uint32_t m_FitWeights = 0x3A8;
+	constexpr uint32_t m_ReverseOffsets = 0x3C0;
+	constexpr uint32_t m_AnimStrayRadii = 0x3D8;
+	constexpr uint32_t m_SimdAnimStrayRadii = 0x3F0;
+	constexpr uint32_t m_KelagerBends = 0x408;
+	constexpr uint32_t m_CtrlSoftOffsets = 0x420;
+	constexpr uint32_t m_JiggleBones = 0x438;
+	constexpr uint32_t m_SourceElems = 0x450;
+	constexpr uint32_t m_GoalDampedSpringIntegrators = 0x468;
+	constexpr uint32_t m_Tris = 0x480;
+	constexpr uint32_t m_nTriCount1 = 0x498;
+	constexpr uint32_t m_nTriCount2 = 0x49A;
+	constexpr uint32_t m_nReservedUint8 = 0x49C;
+	constexpr uint32_t m_nExtraPressureIterations = 0x49D;
+	constexpr uint32_t m_nExtraGoalIterations = 0x49E;
+	constexpr uint32_t m_nExtraIterations = 0x49F;
+	constexpr uint32_t m_BoxRigids = 0x4A0;
+	constexpr uint32_t m_DynNodeVertexSet = 0x4B8;
+	constexpr uint32_t m_VertexSetNames = 0x4D0;
+	constexpr uint32_t m_RigidColliderPriorities = 0x4E8;
+	constexpr uint32_t m_MorphLayers = 0x500;
+	constexpr uint32_t m_MorphSetData = 0x518;
+	constexpr uint32_t m_VertexMaps = 0x530;
+	constexpr uint32_t m_VertexMapValues = 0x548;
+	constexpr uint32_t m_Effects = 0x560;
+	constexpr uint32_t m_LockToParent = 0x578;
+	constexpr uint32_t m_LockToGoal = 0x590;
+	constexpr uint32_t m_SkelParents = 0x5A8;
+	constexpr uint32_t m_DynNodeWindBases = 0x5C0;
+	constexpr uint32_t m_flInternalPressure = 0x5D8;
+	constexpr uint32_t m_flDefaultTimeDilation = 0x5DC;
+	constexpr uint32_t m_flWindage = 0x5E0;
+	constexpr uint32_t m_flWindDrag = 0x5E4;
+	constexpr uint32_t m_flDefaultSurfaceStretch = 0x5E8;
+	constexpr uint32_t m_flDefaultThreadStretch = 0x5EC;
+	constexpr uint32_t m_flDefaultGravityScale = 0x5F0;
+	constexpr uint32_t m_flDefaultVelAirDrag = 0x5F4;
+	constexpr uint32_t m_flDefaultExpAirDrag = 0x5F8;
+	constexpr uint32_t m_flDefaultVelQuadAirDrag = 0x5FC;
+	constexpr uint32_t m_flDefaultExpQuadAirDrag = 0x600;
+	constexpr uint32_t m_flRodVelocitySmoothRate = 0x604;
+	constexpr uint32_t m_flQuadVelocitySmoothRate = 0x608;
+	constexpr uint32_t m_flAddWorldCollisionRadius = 0x60C;
+	constexpr uint32_t m_flDefaultVolumetricSolveAmount = 0x610;
+	constexpr uint32_t m_nRodVelocitySmoothIterations = 0x614;
+	constexpr uint32_t m_nQuadVelocitySmoothIterations = 0x616;
 }
 
 namespace CPhysSurfacePropertiesPhysics
@@ -815,6 +983,13 @@ namespace PermModelData_t
 	constexpr uint32_t m_AnimatedMaterialAttributes = 0x2B0;
 }
 
+namespace CModelConfigList
+{
+	constexpr uint32_t m_bHideMaterialGroupInTools = 0x0;
+	constexpr uint32_t m_bHideRenderColorInTools = 0x1;
+	constexpr uint32_t m_Configs = 0x8;
+}
+
 namespace AttachmentHandle_t
 {
 	constexpr uint32_t m_Value = 0x0;
@@ -898,13 +1073,6 @@ namespace CModelConfig
 	constexpr uint32_t m_ConfigName = 0x0;
 	constexpr uint32_t m_Elements = 0x8;
 	constexpr uint32_t m_bTopLevel = 0x20;
-}
-
-namespace CModelConfigList
-{
-	constexpr uint32_t m_bHideMaterialGroupInTools = 0x0;
-	constexpr uint32_t m_bHideRenderColorInTools = 0x1;
-	constexpr uint32_t m_Configs = 0x8;
 }
 
 namespace CRenderBufferBinding
@@ -1016,11 +1184,51 @@ namespace CHitBoxSetList
 	constexpr uint32_t m_HitBoxSets = 0x0;
 }
 
+namespace DynamicMeshDeformParams_t
+{
+	constexpr uint32_t m_flTensionCompressScale = 0x0;
+	constexpr uint32_t m_flTensionStretchScale = 0x4;
+	constexpr uint32_t m_bRecomputeSmoothNormalsAfterAnimation = 0x8;
+	constexpr uint32_t m_bComputeDynamicMeshTensionAfterAnimation = 0x9;
+}
+
+namespace RenderHairStrandInfo_t
+{
+	constexpr uint32_t m_nGuideIdx = 0x0;
+	constexpr uint32_t m_nBaseTriIdx = 0xC;
+	constexpr uint32_t m_vGuideBarycentric = 0x10;
+	constexpr uint32_t m_vBaseBarycentric = 0x18;
+	constexpr uint32_t m_vRootOffset_flLengthScale = 0x20;
+	constexpr uint32_t m_nPackedBaseMeshUv = 0x28;
+	constexpr uint32_t m_nPad = 0x2C;
+}
+
+namespace CRenderGroom
+{
+	constexpr uint32_t m_nSegmentsPerHairStrand = 0x0;
+	constexpr uint32_t m_nGuideHairCount = 0x4;
+	constexpr uint32_t m_nHairCount = 0x8;
+	constexpr uint32_t m_nGroomGroupID = 0xC;
+	constexpr uint32_t m_nAttachBoneIdx = 0x10;
+	constexpr uint32_t m_hairInfoBufferData = 0x18;
+	constexpr uint32_t m_hairs = 0x30;
+}
+
 namespace CRenderMesh
 {
 	constexpr uint32_t m_sceneObjects = 0x10;
 	constexpr uint32_t m_constraints = 0xA0;
 	constexpr uint32_t m_skeleton = 0xB8;
+	constexpr uint32_t m_meshDeformParams = 0x1E0;
+	constexpr uint32_t m_pGroomData = 0x1F0;
+}
+
+namespace CBaseConstraint
+{
+	constexpr uint32_t m_name = 0x28;
+	constexpr uint32_t m_vUpVector = 0x30;
+	constexpr uint32_t m_slaves = 0x40;
+	constexpr uint32_t m_targets = 0x58;
 }
 
 namespace CConstraintTarget
@@ -1044,14 +1252,6 @@ namespace CConstraintSlave
 
 namespace CBoneConstraintBase
 {
-}
-
-namespace CBaseConstraint
-{
-	constexpr uint32_t m_name = 0x28;
-	constexpr uint32_t m_vUpVector = 0x30;
-	constexpr uint32_t m_slaves = 0x40;
-	constexpr uint32_t m_targets = 0x58;
 }
 
 namespace CPointConstraint
@@ -1265,60 +1465,227 @@ namespace CFootStride
 	constexpr uint32_t m_trajectories = 0x40;
 }
 
-namespace CFootMotion
+namespace SkeletonAnimCapture_t
 {
-	constexpr uint32_t m_strides = 0x0;
-	constexpr uint32_t m_name = 0x18;
-	constexpr uint32_t m_bAdditive = 0x20;
+	constexpr uint32_t m_nEntIndex = 0x0;
+	constexpr uint32_t m_nEntParent = 0x4;
+	constexpr uint32_t m_ImportedCollision = 0x8;
+	constexpr uint32_t m_ModelName = 0x20;
+	constexpr uint32_t m_CaptureName = 0x28;
+	constexpr uint32_t m_ModelBindPose = 0x30;
+	constexpr uint32_t m_FeModelInitPose = 0x48;
+	constexpr uint32_t m_nFlexControllers = 0x60;
+	constexpr uint32_t m_bPredicted = 0x64;
+	constexpr uint32_t m_Frames = 0xA8;
 }
 
-namespace CFingerSource
+namespace SkeletonAnimCapture_t::Bone_t
 {
-	constexpr uint32_t m_nFingerIndex = 0x0;
-	constexpr uint32_t m_flFingerWeight = 0x4;
+	constexpr uint32_t m_Name = 0x0;
+	constexpr uint32_t m_BindPose = 0x10;
+	constexpr uint32_t m_nParent = 0x30;
 }
 
-namespace CFingerBone
+namespace SkeletonAnimCapture_t::Frame_t
 {
-	constexpr uint32_t m_boneName = 0x0;
-	constexpr uint32_t m_hingeAxis = 0x8;
-	constexpr uint32_t m_vCapsulePos1 = 0x14;
-	constexpr uint32_t m_vCapsulePos2 = 0x20;
-	constexpr uint32_t m_flMinAngle = 0x2C;
-	constexpr uint32_t m_flMaxAngle = 0x30;
-	constexpr uint32_t m_flRadius = 0x34;
+	constexpr uint32_t m_flTime = 0x0;
+	constexpr uint32_t m_Stamp = 0x4;
+	constexpr uint32_t m_Transform = 0x20;
+	constexpr uint32_t m_bTeleport = 0x40;
+	constexpr uint32_t m_CompositeBones = 0x48;
+	constexpr uint32_t m_SimStateBones = 0x60;
+	constexpr uint32_t m_FeModelAnims = 0x78;
+	constexpr uint32_t m_FeModelPos = 0x90;
+	constexpr uint32_t m_FlexControllerWeights = 0xA8;
 }
 
-namespace CFingerChain
+namespace SkeletonAnimCapture_t::FrameStamp_t
 {
-	constexpr uint32_t m_targets = 0x0;
-	constexpr uint32_t m_bones = 0x18;
-	constexpr uint32_t m_name = 0x30;
-	constexpr uint32_t m_tipParentBoneName = 0x38;
-	constexpr uint32_t m_vTipOffset = 0x40;
-	constexpr uint32_t m_metacarpalBoneName = 0x50;
-	constexpr uint32_t m_vSplayHingeAxis = 0x58;
-	constexpr uint32_t m_flSplayMinAngle = 0x64;
-	constexpr uint32_t m_flSplayMaxAngle = 0x68;
-	constexpr uint32_t m_flFingerScaleRatio = 0x6C;
+	constexpr uint32_t m_flTime = 0x0;
+	constexpr uint32_t m_flEntitySimTime = 0x4;
+	constexpr uint32_t m_bTeleportTick = 0x8;
+	constexpr uint32_t m_bPredicted = 0x9;
+	constexpr uint32_t m_flCurTime = 0xC;
+	constexpr uint32_t m_flRealTime = 0x10;
+	constexpr uint32_t m_nFrameCount = 0x14;
+	constexpr uint32_t m_nTickCount = 0x18;
 }
 
-namespace CWristBone
+namespace SkeletonAnimCapture_t::Camera_t
 {
-	constexpr uint32_t m_name = 0x0;
-	constexpr uint32_t m_vForwardLS = 0x8;
-	constexpr uint32_t m_vUpLS = 0x14;
-	constexpr uint32_t m_vOffset = 0x20;
+	constexpr uint32_t m_tmCamera = 0x0;
+	constexpr uint32_t m_flTime = 0x20;
 }
 
-namespace CVrSkeletalInputSettings
+namespace SkeletonDemoDb_t
 {
-	constexpr uint32_t m_wristBones = 0x0;
-	constexpr uint32_t m_fingers = 0x18;
-	constexpr uint32_t m_name = 0x30;
-	constexpr uint32_t m_outerKnuckle1 = 0x38;
-	constexpr uint32_t m_outerKnuckle2 = 0x40;
-	constexpr uint32_t m_eHand = 0x48;
+	constexpr uint32_t m_AnimCaptures = 0x0;
+	constexpr uint32_t m_CameraTrack = 0x18;
+	constexpr uint32_t m_flRecordingTime = 0x30;
+}
+
+namespace CNmBoneMask
+{
+	constexpr uint32_t m_ID = 0x0;
+	constexpr uint32_t m_weightInfo = 0x8;
+	constexpr uint32_t m_weights = 0x18;
+}
+
+namespace CNmClip
+{
+	constexpr uint32_t m_skeleton = 0x0;
+	constexpr uint32_t m_nNumFrames = 0x8;
+	constexpr uint32_t m_flDuration = 0xC;
+	constexpr uint32_t m_compressedPoseData = 0x10;
+	constexpr uint32_t m_trackCompressionSettings = 0x28;
+	constexpr uint32_t m_compressedPoseOffsets = 0x40;
+	constexpr uint32_t m_syncTrack = 0xA0;
+	constexpr uint32_t m_rootMotion = 0x150;
+	constexpr uint32_t m_bIsAdditive = 0x1A0;
+}
+
+namespace NmCompressionSettings_t
+{
+	constexpr uint32_t m_translationRangeX = 0x0;
+	constexpr uint32_t m_translationRangeY = 0x8;
+	constexpr uint32_t m_translationRangeZ = 0x10;
+	constexpr uint32_t m_scaleRange = 0x18;
+	constexpr uint32_t m_constantRotation = 0x20;
+	constexpr uint32_t m_bIsRotationStatic = 0x30;
+	constexpr uint32_t m_bIsTranslationStatic = 0x31;
+	constexpr uint32_t m_bIsScaleStatic = 0x32;
+}
+
+namespace CNmSyncTrack
+{
+	constexpr uint32_t m_syncEvents = 0x0;
+	constexpr uint32_t m_nStartEventOffset = 0xA8;
+}
+
+namespace CNmRootMotionData
+{
+	constexpr uint32_t m_transforms = 0x0;
+	constexpr uint32_t m_nNumFrames = 0x18;
+	constexpr uint32_t m_flAverageLinearVelocity = 0x1C;
+	constexpr uint32_t m_flAverageAngularVelocityRadians = 0x20;
+	constexpr uint32_t m_totalDelta = 0x30;
+}
+
+namespace NmCompressionSettings_t::QuantizationRange_t
+{
+	constexpr uint32_t m_flRangeStart = 0x0;
+	constexpr uint32_t m_flRangeLength = 0x4;
+}
+
+namespace CNmEvent
+{
+	constexpr uint32_t m_flStartTime = 0x8;
+	constexpr uint32_t m_flDuration = 0xC;
+}
+
+namespace CNmSkeleton
+{
+	constexpr uint32_t m_ID = 0x0;
+	constexpr uint32_t m_boneIDs = 0x8;
+	constexpr uint32_t m_parentIndices = 0x18;
+	constexpr uint32_t m_parentSpaceReferencePose = 0x30;
+	constexpr uint32_t m_modelSpaceReferencePose = 0x48;
+	constexpr uint32_t m_numBonesToSampleAtLowLOD = 0x60;
+	constexpr uint32_t m_boneMasks = 0x68;
+}
+
+namespace NmSyncTrackTime_t
+{
+	constexpr uint32_t m_nEventIdx = 0x0;
+	constexpr uint32_t m_percentageThrough = 0x4;
+}
+
+namespace NmPercent_t
+{
+	constexpr uint32_t m_flValue = 0x0;
+}
+
+namespace NmSyncTrackTimeRange_t
+{
+	constexpr uint32_t m_startTime = 0x0;
+	constexpr uint32_t m_endTime = 0x8;
+}
+
+namespace CNmSyncTrack::Event_t
+{
+	constexpr uint32_t m_ID = 0x0;
+	constexpr uint32_t m_startTime = 0x8;
+	constexpr uint32_t m_duration = 0xC;
+}
+
+namespace CNmSyncTrack::EventMarker_t
+{
+	constexpr uint32_t m_startTime = 0x0;
+	constexpr uint32_t m_ID = 0x8;
+}
+
+namespace CNmLegacyEvent
+{
+}
+
+namespace CNmFootEvent
+{
+	constexpr uint32_t m_phase = 0x10;
+}
+
+namespace CNmIDEvent
+{
+	constexpr uint32_t m_ID = 0x10;
+}
+
+namespace CNmTransitionEvent
+{
+	constexpr uint32_t m_rule = 0x10;
+	constexpr uint32_t m_ID = 0x18;
+}
+
+namespace CNmFrameSnapEvent
+{
+	constexpr uint32_t m_frameSnapMode = 0x10;
+}
+
+namespace CNmGraphDataSet
+{
+	constexpr uint32_t m_variationID = 0x0;
+	constexpr uint32_t m_skeleton = 0x8;
+	constexpr uint32_t m_resources = 0x10;
+}
+
+namespace CNmGraph
+{
+	constexpr uint32_t m_persistentNodeIndices = 0x0;
+	constexpr uint32_t m_instanceNodeStartOffsets = 0x18;
+	constexpr uint32_t m_instanceRequiredMemory = 0x30;
+	constexpr uint32_t m_instanceRequiredAlignment = 0x34;
+	constexpr uint32_t m_rootNodeIdx = 0x38;
+	constexpr uint32_t m_controlParameterIDs = 0x40;
+	constexpr uint32_t m_virtualParameterIDs = 0x58;
+	constexpr uint32_t m_virtualParameterNodeIndices = 0x70;
+	constexpr uint32_t m_childGraphSlots = 0x88;
+	constexpr uint32_t m_externalGraphSlots = 0xA0;
+}
+
+namespace CNmGraph::ChildGraphSlot_t
+{
+	constexpr uint32_t m_nNodeIdx = 0x0;
+	constexpr uint32_t m_dataSlotIdx = 0x2;
+}
+
+namespace CNmGraph::ExternalGraphSlot_t
+{
+	constexpr uint32_t m_nNodeIdx = 0x0;
+	constexpr uint32_t m_slotID = 0x8;
+}
+
+namespace CNmGraphVariation
+{
+	constexpr uint32_t m_graph = 0x0;
+	constexpr uint32_t m_dataSet = 0x8;
 }
 
 namespace BoneDemoCaptureSettings_t
@@ -1380,16 +1747,18 @@ namespace CAnimGraphModelBinding
 	constexpr uint32_t m_pSharedData = 0x10;
 }
 
-namespace CAnimInputDamping
+namespace CAnimUpdateSharedData
 {
-	constexpr uint32_t m_speedFunction = 0x8;
-	constexpr uint32_t m_fSpeedScale = 0xC;
-}
-
-namespace CAnimParamHandle
-{
-	constexpr uint32_t m_type = 0x0;
-	constexpr uint32_t m_index = 0x1;
+	constexpr uint32_t m_nodes = 0x10;
+	constexpr uint32_t m_nodeIndexMap = 0x28;
+	constexpr uint32_t m_components = 0x48;
+	constexpr uint32_t m_pParamListUpdater = 0x60;
+	constexpr uint32_t m_pTagManagerUpdater = 0x68;
+	constexpr uint32_t m_scriptManager = 0x70;
+	constexpr uint32_t m_settings = 0x78;
+	constexpr uint32_t m_pStaticPoseCache = 0xA8;
+	constexpr uint32_t m_pSkeleton = 0xB0;
+	constexpr uint32_t m_rootNodePath = 0xB8;
 }
 
 namespace CAnimParamHandleMap
@@ -1407,18 +1776,54 @@ namespace CAnimParameterManagerUpdater
 	constexpr uint32_t m_autoResetMap = 0xA0;
 }
 
-namespace CAnimUpdateSharedData
+namespace CAnimParameterBase
 {
-	constexpr uint32_t m_nodes = 0x10;
-	constexpr uint32_t m_nodeIndexMap = 0x28;
-	constexpr uint32_t m_components = 0x48;
-	constexpr uint32_t m_pParamListUpdater = 0x60;
-	constexpr uint32_t m_pTagManagerUpdater = 0x68;
-	constexpr uint32_t m_scriptManager = 0x70;
-	constexpr uint32_t m_settings = 0x78;
-	constexpr uint32_t m_pStaticPoseCache = 0xA8;
-	constexpr uint32_t m_pSkeleton = 0xB0;
-	constexpr uint32_t m_rootNodePath = 0xB8;
+	constexpr uint32_t m_name = 0x18;
+	constexpr uint32_t m_group = 0x20;
+	constexpr uint32_t m_id = 0x28;
+	constexpr uint32_t m_componentName = 0x40;
+	constexpr uint32_t m_bNetworkingRequested = 0x60;
+	constexpr uint32_t m_bIsReferenced = 0x61;
+}
+
+namespace CAnimUpdateNodeBase
+{
+	constexpr uint32_t m_nodePath = 0x18;
+	constexpr uint32_t m_networkMode = 0x48;
+	constexpr uint32_t m_name = 0x50;
+}
+
+namespace CAnimNodePath
+{
+	constexpr uint32_t m_path = 0x0;
+	constexpr uint32_t m_nCount = 0x2C;
+}
+
+namespace CAnimComponentUpdater
+{
+	constexpr uint32_t m_name = 0x18;
+	constexpr uint32_t m_id = 0x20;
+	constexpr uint32_t m_networkMode = 0x24;
+	constexpr uint32_t m_bStartEnabled = 0x28;
+}
+
+namespace CAnimTagManagerUpdater
+{
+	constexpr uint32_t m_tags = 0x18;
+}
+
+namespace CAnimScriptManager
+{
+	constexpr uint32_t m_scriptInfo = 0x10;
+}
+
+namespace CAnimGraphSettingsManager
+{
+	constexpr uint32_t m_settingsGroups = 0x18;
+}
+
+namespace CStaticPoseCacheBuilder
+{
 }
 
 namespace CBlendCurve
@@ -1451,11 +1856,6 @@ namespace CAnimGraphSettingsGroup
 {
 }
 
-namespace CAnimGraphSettingsManager
-{
-	constexpr uint32_t m_settingsGroups = 0x18;
-}
-
 namespace CCachedPose
 {
 	constexpr uint32_t m_transforms = 0x8;
@@ -1469,10 +1869,6 @@ namespace CStaticPoseCache
 	constexpr uint32_t m_poses = 0x10;
 	constexpr uint32_t m_nBoneCount = 0x28;
 	constexpr uint32_t m_nMorphCount = 0x2C;
-}
-
-namespace CStaticPoseCacheBuilder
-{
 }
 
 namespace CAnimActionUpdater
@@ -1509,23 +1905,18 @@ namespace CAnimTagBase
 	constexpr uint32_t m_name = 0x18;
 	constexpr uint32_t m_group = 0x20;
 	constexpr uint32_t m_tagID = 0x28;
-	constexpr uint32_t m_bIsReferenced = 0x2C;
-}
-
-namespace CAnimTagManagerUpdater
-{
-	constexpr uint32_t m_tags = 0x18;
+	constexpr uint32_t m_bIsReferenced = 0x40;
 }
 
 namespace CAudioAnimTag
 {
-	constexpr uint32_t m_clipName = 0x38;
-	constexpr uint32_t m_attachmentName = 0x40;
-	constexpr uint32_t m_flVolume = 0x48;
-	constexpr uint32_t m_bStopWhenTagEnds = 0x4C;
-	constexpr uint32_t m_bStopWhenGraphEnds = 0x4D;
-	constexpr uint32_t m_bPlayOnServer = 0x4E;
-	constexpr uint32_t m_bPlayOnClient = 0x4F;
+	constexpr uint32_t m_clipName = 0x50;
+	constexpr uint32_t m_attachmentName = 0x58;
+	constexpr uint32_t m_flVolume = 0x60;
+	constexpr uint32_t m_bStopWhenTagEnds = 0x64;
+	constexpr uint32_t m_bStopWhenGraphEnds = 0x65;
+	constexpr uint32_t m_bPlayOnServer = 0x66;
+	constexpr uint32_t m_bPlayOnClient = 0x67;
 }
 
 namespace CBodyGroupSetting
@@ -1536,66 +1927,66 @@ namespace CBodyGroupSetting
 
 namespace CBodyGroupAnimTag
 {
-	constexpr uint32_t m_nPriority = 0x38;
-	constexpr uint32_t m_bodyGroupSettings = 0x40;
+	constexpr uint32_t m_nPriority = 0x50;
+	constexpr uint32_t m_bodyGroupSettings = 0x58;
 }
 
 namespace CClothSettingsAnimTag
 {
-	constexpr uint32_t m_flStiffness = 0x38;
-	constexpr uint32_t m_flEaseIn = 0x3C;
-	constexpr uint32_t m_flEaseOut = 0x40;
-	constexpr uint32_t m_nVertexSet = 0x48;
+	constexpr uint32_t m_flStiffness = 0x50;
+	constexpr uint32_t m_flEaseIn = 0x54;
+	constexpr uint32_t m_flEaseOut = 0x58;
+	constexpr uint32_t m_nVertexSet = 0x60;
 }
 
 namespace CFootFallAnimTag
 {
-	constexpr uint32_t m_foot = 0x38;
+	constexpr uint32_t m_foot = 0x50;
 }
 
 namespace CFootstepLandedAnimTag
 {
-	constexpr uint32_t m_FootstepType = 0x38;
-	constexpr uint32_t m_OverrideSoundName = 0x40;
-	constexpr uint32_t m_DebugAnimSourceString = 0x48;
-	constexpr uint32_t m_BoneName = 0x50;
+	constexpr uint32_t m_FootstepType = 0x50;
+	constexpr uint32_t m_OverrideSoundName = 0x58;
+	constexpr uint32_t m_DebugAnimSourceString = 0x60;
+	constexpr uint32_t m_BoneName = 0x68;
 }
 
 namespace CMaterialAttributeAnimTag
 {
-	constexpr uint32_t m_AttributeName = 0x38;
-	constexpr uint32_t m_AttributeType = 0x40;
-	constexpr uint32_t m_flValue = 0x44;
-	constexpr uint32_t m_Color = 0x48;
+	constexpr uint32_t m_AttributeName = 0x50;
+	constexpr uint32_t m_AttributeType = 0x58;
+	constexpr uint32_t m_flValue = 0x5C;
+	constexpr uint32_t m_Color = 0x60;
 }
 
 namespace CParticleAnimTag
 {
-	constexpr uint32_t m_hParticleSystem = 0x38;
-	constexpr uint32_t m_particleSystemName = 0x40;
-	constexpr uint32_t m_configName = 0x48;
-	constexpr uint32_t m_bDetachFromOwner = 0x50;
-	constexpr uint32_t m_bStopWhenTagEnds = 0x51;
-	constexpr uint32_t m_bTagEndStopIsInstant = 0x52;
-	constexpr uint32_t m_attachmentName = 0x58;
-	constexpr uint32_t m_attachmentType = 0x60;
-	constexpr uint32_t m_attachmentCP1Name = 0x68;
-	constexpr uint32_t m_attachmentCP1Type = 0x70;
+	constexpr uint32_t m_hParticleSystem = 0x50;
+	constexpr uint32_t m_particleSystemName = 0x58;
+	constexpr uint32_t m_configName = 0x60;
+	constexpr uint32_t m_bDetachFromOwner = 0x68;
+	constexpr uint32_t m_bStopWhenTagEnds = 0x69;
+	constexpr uint32_t m_bTagEndStopIsInstant = 0x6A;
+	constexpr uint32_t m_attachmentName = 0x70;
+	constexpr uint32_t m_attachmentType = 0x78;
+	constexpr uint32_t m_attachmentCP1Name = 0x80;
+	constexpr uint32_t m_attachmentCP1Type = 0x88;
 }
 
 namespace CRagdollAnimTag
 {
-	constexpr uint32_t m_nPoseControl = 0x38;
-	constexpr uint32_t m_flFrequency = 0x3C;
-	constexpr uint32_t m_flDampingRatio = 0x40;
-	constexpr uint32_t m_flDecayDuration = 0x44;
-	constexpr uint32_t m_flDecayBias = 0x48;
-	constexpr uint32_t m_bDestroy = 0x4C;
+	constexpr uint32_t m_nPoseControl = 0x50;
+	constexpr uint32_t m_flFrequency = 0x54;
+	constexpr uint32_t m_flDampingRatio = 0x58;
+	constexpr uint32_t m_flDecayDuration = 0x5C;
+	constexpr uint32_t m_flDecayBias = 0x60;
+	constexpr uint32_t m_bDestroy = 0x64;
 }
 
 namespace CSequenceFinishedAnimTag
 {
-	constexpr uint32_t m_sequenceName = 0x38;
+	constexpr uint32_t m_sequenceName = 0x50;
 }
 
 namespace CStringAnimTag
@@ -1604,14 +1995,6 @@ namespace CStringAnimTag
 
 namespace CTaskStatusAnimTag
 {
-}
-
-namespace CAnimComponentUpdater
-{
-	constexpr uint32_t m_name = 0x18;
-	constexpr uint32_t m_id = 0x20;
-	constexpr uint32_t m_networkMode = 0x24;
-	constexpr uint32_t m_bStartEnabled = 0x28;
 }
 
 namespace CAnimScriptComponentUpdater
@@ -1658,23 +2041,23 @@ namespace CLookComponentUpdater
 	constexpr uint32_t m_bNetworkLookTarget = 0x42;
 }
 
-namespace CMovementMode
-{
-	constexpr uint32_t m_name = 0x0;
-	constexpr uint32_t m_flSpeed = 0x8;
-}
-
 namespace CMovementComponentUpdater
 {
-	constexpr uint32_t m_movementModes = 0x30;
-	constexpr uint32_t m_motors = 0x48;
-	constexpr uint32_t m_facingDamping = 0x60;
-	constexpr uint32_t m_eDefaultFacingMode = 0x70;
-	constexpr uint32_t m_nDefaultMotorIndex = 0x7C;
-	constexpr uint32_t m_bMoveVarsDisabled = 0x80;
-	constexpr uint32_t m_bNetworkPath = 0x81;
-	constexpr uint32_t m_bNetworkFacing = 0x82;
-	constexpr uint32_t m_paramHandles = 0x83;
+	constexpr uint32_t m_motors = 0x30;
+	constexpr uint32_t m_facingDamping = 0x48;
+	constexpr uint32_t m_eDefaultFacingMode = 0x58;
+	constexpr uint32_t m_nDefaultMotorIndex = 0x64;
+	constexpr uint32_t m_flDefaultRunSpeed = 0x68;
+	constexpr uint32_t m_bMoveVarsDisabled = 0x6C;
+	constexpr uint32_t m_bNetworkPath = 0x6D;
+	constexpr uint32_t m_bNetworkFacing = 0x6E;
+	constexpr uint32_t m_paramHandles = 0x6F;
+}
+
+namespace CAnimMotorUpdaterBase
+{
+	constexpr uint32_t m_name = 0x10;
+	constexpr uint32_t m_bDefault = 0x18;
 }
 
 namespace WeightList
@@ -1692,6 +2075,7 @@ namespace CRagdollComponentUpdater
 	constexpr uint32_t m_flSpringFrequencyMin = 0x90;
 	constexpr uint32_t m_flSpringFrequencyMax = 0x94;
 	constexpr uint32_t m_flMaxStretch = 0x98;
+	constexpr uint32_t m_bSolidCollisionAtZeroWeight = 0x9C;
 }
 
 namespace CSlopeComponentUpdater
@@ -1705,22 +2089,16 @@ namespace CSlopeComponentUpdater
 	constexpr uint32_t m_hSlopeNormal_WorldSpace = 0x42;
 }
 
-namespace CVRInputComponentUpdater
-{
-	constexpr uint32_t m_FingerCurl_Thumb = 0x34;
-	constexpr uint32_t m_FingerCurl_Index = 0x36;
-	constexpr uint32_t m_FingerCurl_Middle = 0x38;
-	constexpr uint32_t m_FingerCurl_Ring = 0x3A;
-	constexpr uint32_t m_FingerCurl_Pinky = 0x3C;
-	constexpr uint32_t m_FingerSplay_Thumb_Index = 0x3E;
-	constexpr uint32_t m_FingerSplay_Index_Middle = 0x40;
-	constexpr uint32_t m_FingerSplay_Middle_Ring = 0x42;
-	constexpr uint32_t m_FingerSplay_Ring_Pinky = 0x44;
-}
-
 namespace CStateMachineComponentUpdater
 {
 	constexpr uint32_t m_stateMachine = 0x30;
+}
+
+namespace CAnimStateMachineUpdater
+{
+	constexpr uint32_t m_states = 0x8;
+	constexpr uint32_t m_transitions = 0x20;
+	constexpr uint32_t m_startStateIndex = 0x50;
 }
 
 namespace CMotionDataSet
@@ -1736,6 +2114,33 @@ namespace CMotionGraphGroup
 	constexpr uint32_t m_motionGraphConfigs = 0xD0;
 	constexpr uint32_t m_sampleToConfig = 0xE8;
 	constexpr uint32_t m_hIsActiveScript = 0x100;
+}
+
+namespace CMotionSearchDB
+{
+	constexpr uint32_t m_rootNode = 0x0;
+	constexpr uint32_t m_residualQuantizer = 0x80;
+	constexpr uint32_t m_codeIndices = 0xA0;
+}
+
+namespace CMotionGraph
+{
+	constexpr uint32_t m_paramSpans = 0x10;
+	constexpr uint32_t m_tags = 0x28;
+	constexpr uint32_t m_pRootNode = 0x40;
+	constexpr uint32_t m_nParameterCount = 0x48;
+	constexpr uint32_t m_nConfigStartIndex = 0x4C;
+	constexpr uint32_t m_nConfigCount = 0x50;
+	constexpr uint32_t m_bLoop = 0x54;
+}
+
+namespace CMotionGraphConfig
+{
+	constexpr uint32_t m_paramValues = 0x0;
+	constexpr uint32_t m_flDuration = 0x10;
+	constexpr uint32_t m_nMotionIndex = 0x14;
+	constexpr uint32_t m_nSampleStart = 0x18;
+	constexpr uint32_t m_nSampleCount = 0x1C;
 }
 
 namespace SampleCode
@@ -1770,32 +2175,21 @@ namespace CMotionSearchNode
 	constexpr uint32_t m_selectableSamples = 0x68;
 }
 
-namespace CMotionSearchDB
+namespace TagSpan_t
 {
-	constexpr uint32_t m_rootNode = 0x0;
-	constexpr uint32_t m_residualQuantizer = 0x80;
-	constexpr uint32_t m_codeIndices = 0xA0;
-}
-
-namespace CMotionGraph
-{
-	constexpr uint32_t m_paramSpans = 0x10;
-	constexpr uint32_t m_tags = 0x28;
-	constexpr uint32_t m_pRootNode = 0x40;
-	constexpr uint32_t m_nParameterCount = 0x48;
-	constexpr uint32_t m_nConfigStartIndex = 0x4C;
-	constexpr uint32_t m_nConfigCount = 0x50;
-	constexpr uint32_t m_bLoop = 0x54;
-}
-
-namespace CEditableMotionGraph
-{
+	constexpr uint32_t m_tagIndex = 0x0;
+	constexpr uint32_t m_startCycle = 0x4;
+	constexpr uint32_t m_endCycle = 0x8;
 }
 
 namespace CMotionNode
 {
 	constexpr uint32_t m_name = 0x18;
 	constexpr uint32_t m_id = 0x20;
+}
+
+namespace CEditableMotionGraph
+{
 }
 
 namespace CMotionNodeSequence
@@ -1905,12 +2299,6 @@ namespace CTimeRemainingMetricEvaluator
 	constexpr uint32_t m_flMinTimeRemaining = 0x5C;
 }
 
-namespace CAnimMotorUpdaterBase
-{
-	constexpr uint32_t m_name = 0x10;
-	constexpr uint32_t m_bDefault = 0x18;
-}
-
 namespace CPathAnimMotorUpdaterBase
 {
 	constexpr uint32_t m_bLockToPath = 0x20;
@@ -1953,6 +2341,12 @@ namespace AimMatrixOpFixedSettings_t
 	constexpr uint32_t m_bTargetIsPosition = 0xC8;
 }
 
+namespace CPoseHandle
+{
+	constexpr uint32_t m_nIndex = 0x0;
+	constexpr uint32_t m_eType = 0x2;
+}
+
 namespace FollowAttachmentSettings_t
 {
 	constexpr uint32_t m_attachment = 0x0;
@@ -1981,6 +2375,21 @@ namespace FootLockPoseOpFixedSettings
 	constexpr uint32_t m_bEnableStretching = 0x50;
 	constexpr uint32_t m_flMaxStretchAmount = 0x54;
 	constexpr uint32_t m_flStretchExtensionScale = 0x58;
+}
+
+namespace FootFixedData_t
+{
+	constexpr uint32_t m_vToeOffset = 0x0;
+	constexpr uint32_t m_vHeelOffset = 0x10;
+	constexpr uint32_t m_nTargetBoneIndex = 0x20;
+	constexpr uint32_t m_nAnkleBoneIndex = 0x24;
+	constexpr uint32_t m_nIKAnchorBoneIndex = 0x28;
+	constexpr uint32_t m_ikChainIndex = 0x2C;
+	constexpr uint32_t m_flMaxIKLength = 0x30;
+	constexpr uint32_t m_nFootIndex = 0x34;
+	constexpr uint32_t m_nTagIndex = 0x38;
+	constexpr uint32_t m_flMaxRotationLeft = 0x3C;
+	constexpr uint32_t m_flMaxRotationRight = 0x40;
 }
 
 namespace FootPinningPoseOpFixedData_t
@@ -2052,55 +2461,6 @@ namespace LookAtOpFixedSettings_t
 	constexpr uint32_t m_bUseHysteresis = 0xBB;
 }
 
-namespace FingerSource_t
-{
-	constexpr uint32_t m_nFingerIndex = 0x0;
-	constexpr uint32_t m_flFingerWeight = 0x4;
-}
-
-namespace FingerBone_t
-{
-	constexpr uint32_t m_boneIndex = 0x0;
-	constexpr uint32_t m_hingeAxis = 0x4;
-	constexpr uint32_t m_vCapsulePos1 = 0x10;
-	constexpr uint32_t m_vCapsulePos2 = 0x1C;
-	constexpr uint32_t m_flMinAngle = 0x28;
-	constexpr uint32_t m_flMaxAngle = 0x2C;
-	constexpr uint32_t m_flRadius = 0x30;
-}
-
-namespace FingerChain_t
-{
-	constexpr uint32_t m_targets = 0x0;
-	constexpr uint32_t m_bones = 0x18;
-	constexpr uint32_t m_vTipOffset = 0x30;
-	constexpr uint32_t m_vSplayHingeAxis = 0x3C;
-	constexpr uint32_t m_tipParentBoneIndex = 0x48;
-	constexpr uint32_t m_metacarpalBoneIndex = 0x4C;
-	constexpr uint32_t m_flSplayMinAngle = 0x50;
-	constexpr uint32_t m_flSplayMaxAngle = 0x54;
-	constexpr uint32_t m_flFingerScaleRatio = 0x58;
-}
-
-namespace WristBone_t
-{
-	constexpr uint32_t m_xOffsetTransformMS = 0x0;
-	constexpr uint32_t m_boneIndex = 0x20;
-}
-
-namespace SkeletalInputOpFixedSettings_t
-{
-	constexpr uint32_t m_wristBones = 0x0;
-	constexpr uint32_t m_fingers = 0x18;
-	constexpr uint32_t m_outerKnuckle1 = 0x30;
-	constexpr uint32_t m_outerKnuckle2 = 0x34;
-	constexpr uint32_t m_eHand = 0x38;
-	constexpr uint32_t m_eMotionRange = 0x3C;
-	constexpr uint32_t m_eTransformSource = 0x40;
-	constexpr uint32_t m_bEnableIK = 0x44;
-	constexpr uint32_t m_bEnableCollision = 0x45;
-}
-
 namespace ChainToSolveData_t
 {
 	constexpr uint32_t m_nChainIndex = 0x0;
@@ -2111,73 +2471,731 @@ namespace ChainToSolveData_t
 	constexpr uint32_t m_vDebugOffset = 0x40;
 }
 
+namespace IKSolverSettings_t
+{
+	constexpr uint32_t m_SolverType = 0x0;
+	constexpr uint32_t m_nNumIterations = 0x4;
+}
+
+namespace IKTargetSettings_t
+{
+	constexpr uint32_t m_TargetSource = 0x0;
+	constexpr uint32_t m_Bone = 0x8;
+	constexpr uint32_t m_AnimgraphParameterNamePosition = 0x18;
+	constexpr uint32_t m_AnimgraphParameterNameOrientation = 0x1C;
+	constexpr uint32_t m_TargetCoordSystem = 0x20;
+}
+
 namespace SolveIKChainPoseOpFixedSettings_t
 {
 	constexpr uint32_t m_ChainsToSolveData = 0x0;
 	constexpr uint32_t m_bMatchTargetOrientation = 0x18;
 }
 
-namespace CAnimParameterBase
-{
-	constexpr uint32_t m_name = 0x18;
-	constexpr uint32_t m_group = 0x20;
-	constexpr uint32_t m_id = 0x28;
-	constexpr uint32_t m_componentName = 0x40;
-	constexpr uint32_t m_bNetworkingRequested = 0x4C;
-	constexpr uint32_t m_bIsReferenced = 0x4D;
-}
-
 namespace CConcreteAnimParameter
 {
-	constexpr uint32_t m_previewButton = 0x50;
-	constexpr uint32_t m_eNetworkSetting = 0x54;
-	constexpr uint32_t m_bUseMostRecentValue = 0x58;
-	constexpr uint32_t m_bAutoReset = 0x59;
-	constexpr uint32_t m_bGameWritable = 0x5A;
-	constexpr uint32_t m_bGraphWritable = 0x5B;
+	constexpr uint32_t m_previewButton = 0x68;
+	constexpr uint32_t m_eNetworkSetting = 0x6C;
+	constexpr uint32_t m_bUseMostRecentValue = 0x70;
+	constexpr uint32_t m_bAutoReset = 0x71;
+	constexpr uint32_t m_bGameWritable = 0x72;
+	constexpr uint32_t m_bGraphWritable = 0x73;
 }
 
 namespace CVirtualAnimParameter
 {
-	constexpr uint32_t m_expressionString = 0x50;
-	constexpr uint32_t m_eParamType = 0x58;
+	constexpr uint32_t m_expressionString = 0x68;
+	constexpr uint32_t m_eParamType = 0x70;
 }
 
 namespace CBoolAnimParameter
 {
-	constexpr uint32_t m_bDefaultValue = 0x60;
+	constexpr uint32_t m_bDefaultValue = 0x78;
 }
 
 namespace CEnumAnimParameter
 {
-	constexpr uint32_t m_defaultValue = 0x68;
-	constexpr uint32_t m_enumOptions = 0x70;
+	constexpr uint32_t m_defaultValue = 0x80;
+	constexpr uint32_t m_enumOptions = 0x88;
 }
 
 namespace CIntAnimParameter
 {
-	constexpr uint32_t m_defaultValue = 0x60;
-	constexpr uint32_t m_minValue = 0x64;
-	constexpr uint32_t m_maxValue = 0x68;
+	constexpr uint32_t m_defaultValue = 0x78;
+	constexpr uint32_t m_minValue = 0x7C;
+	constexpr uint32_t m_maxValue = 0x80;
 }
 
 namespace CFloatAnimParameter
 {
-	constexpr uint32_t m_fDefaultValue = 0x60;
-	constexpr uint32_t m_fMinValue = 0x64;
-	constexpr uint32_t m_fMaxValue = 0x68;
-	constexpr uint32_t m_bInterpolate = 0x6C;
+	constexpr uint32_t m_fDefaultValue = 0x78;
+	constexpr uint32_t m_fMinValue = 0x7C;
+	constexpr uint32_t m_fMaxValue = 0x80;
+	constexpr uint32_t m_bInterpolate = 0x84;
 }
 
 namespace CVectorAnimParameter
 {
-	constexpr uint32_t m_defaultValue = 0x60;
-	constexpr uint32_t m_bInterpolate = 0x6C;
+	constexpr uint32_t m_defaultValue = 0x78;
+	constexpr uint32_t m_bInterpolate = 0x84;
 }
 
 namespace CQuaternionAnimParameter
 {
-	constexpr uint32_t m_defaultValue = 0x60;
-	constexpr uint32_t m_bInterpolate = 0x70;
+	constexpr uint32_t m_defaultValue = 0x80;
+	constexpr uint32_t m_bInterpolate = 0x90;
+}
+
+namespace CSymbolAnimParameter
+{
+	constexpr uint32_t m_defaultValue = 0x78;
+}
+
+namespace ScriptInfo_t
+{
+	constexpr uint32_t m_code = 0x0;
+	constexpr uint32_t m_paramsModified = 0x8;
+	constexpr uint32_t m_proxyReadParams = 0x20;
+	constexpr uint32_t m_proxyWriteParams = 0x38;
+	constexpr uint32_t m_eScriptType = 0x50;
+}
+
+namespace CStateActionUpdater
+{
+	constexpr uint32_t m_pAction = 0x0;
+	constexpr uint32_t m_eBehavior = 0x8;
+}
+
+namespace CTransitionUpdateData
+{
+	constexpr uint32_t m_srcStateIndex = 0x0;
+	constexpr uint32_t m_destStateIndex = 0x1;
+	constexpr uint32_t m_bDisabled = 0x0;
+}
+
+namespace CStateUpdateData
+{
+	constexpr uint32_t m_name = 0x0;
+	constexpr uint32_t m_hScript = 0x8;
+	constexpr uint32_t m_transitionIndices = 0x10;
+	constexpr uint32_t m_actions = 0x28;
+	constexpr uint32_t m_stateID = 0x40;
+	constexpr uint32_t m_bIsStartState = 0x0;
+	constexpr uint32_t m_bIsEndState = 0x0;
+	constexpr uint32_t m_bIsPassthrough = 0x0;
+}
+
+namespace CAnimUpdateNodeRef
+{
+	constexpr uint32_t m_nodeIndex = 0x8;
+}
+
+namespace CBinaryUpdateNode
+{
+	constexpr uint32_t m_pChild1 = 0x58;
+	constexpr uint32_t m_pChild2 = 0x68;
+	constexpr uint32_t m_timingBehavior = 0x78;
+	constexpr uint32_t m_flTimingBlend = 0x7C;
+	constexpr uint32_t m_bResetChild1 = 0x80;
+	constexpr uint32_t m_bResetChild2 = 0x81;
+}
+
+namespace CBlendUpdateNode
+{
+	constexpr uint32_t m_children = 0x60;
+	constexpr uint32_t m_sortedOrder = 0x78;
+	constexpr uint32_t m_targetValues = 0x90;
+	constexpr uint32_t m_blendValueSource = 0xAC;
+	constexpr uint32_t m_paramIndex = 0xB0;
+	constexpr uint32_t m_damping = 0xB8;
+	constexpr uint32_t m_blendKeyType = 0xC8;
+	constexpr uint32_t m_bLockBlendOnReset = 0xCC;
+	constexpr uint32_t m_bSyncCycles = 0xCD;
+	constexpr uint32_t m_bLoop = 0xCE;
+	constexpr uint32_t m_bLockWhenWaning = 0xCF;
+}
+
+namespace BlendItem_t
+{
+	constexpr uint32_t m_tags = 0x0;
+	constexpr uint32_t m_pChild = 0x18;
+	constexpr uint32_t m_hSequence = 0x28;
+	constexpr uint32_t m_vPos = 0x2C;
+	constexpr uint32_t m_flDuration = 0x34;
+	constexpr uint32_t m_bUseCustomDuration = 0x38;
+}
+
+namespace CBlend2DUpdateNode
+{
+	constexpr uint32_t m_items = 0x60;
+	constexpr uint32_t m_tags = 0x78;
+	constexpr uint32_t m_paramSpans = 0x90;
+	constexpr uint32_t m_nodeItemIndices = 0xA8;
+	constexpr uint32_t m_damping = 0xC0;
+	constexpr uint32_t m_blendSourceX = 0xD0;
+	constexpr uint32_t m_paramX = 0xD4;
+	constexpr uint32_t m_blendSourceY = 0xD8;
+	constexpr uint32_t m_paramY = 0xDC;
+	constexpr uint32_t m_eBlendMode = 0xE0;
+	constexpr uint32_t m_playbackSpeed = 0xE4;
+	constexpr uint32_t m_bLoop = 0xE8;
+	constexpr uint32_t m_bLockBlendOnReset = 0xE9;
+	constexpr uint32_t m_bLockWhenWaning = 0xEA;
+	constexpr uint32_t m_bAnimEventsAndTagsOnMostWeightedOnly = 0xEB;
+}
+
+namespace CBoneMaskUpdateNode
+{
+	constexpr uint32_t m_nWeightListIndex = 0x8C;
+	constexpr uint32_t m_flRootMotionBlend = 0x90;
+	constexpr uint32_t m_blendSpace = 0x94;
+	constexpr uint32_t m_footMotionTiming = 0x98;
+	constexpr uint32_t m_bUseBlendScale = 0x9C;
+	constexpr uint32_t m_blendValueSource = 0xA0;
+	constexpr uint32_t m_hBlendParameter = 0xA4;
+}
+
+namespace CChoiceUpdateNode
+{
+	constexpr uint32_t m_children = 0x58;
+	constexpr uint32_t m_weights = 0x70;
+	constexpr uint32_t m_blendTimes = 0x88;
+	constexpr uint32_t m_choiceMethod = 0xA0;
+	constexpr uint32_t m_choiceChangeMethod = 0xA4;
+	constexpr uint32_t m_blendMethod = 0xA8;
+	constexpr uint32_t m_blendTime = 0xAC;
+	constexpr uint32_t m_bCrossFade = 0xB0;
+	constexpr uint32_t m_bResetChosen = 0xB1;
+	constexpr uint32_t m_bDontResetSameSelection = 0xB2;
+}
+
+namespace CDirectPlaybackTagData
+{
+	constexpr uint32_t m_sequenceName = 0x0;
+	constexpr uint32_t m_tags = 0x8;
+}
+
+namespace TraceSettings_t
+{
+	constexpr uint32_t m_flTraceHeight = 0x0;
+	constexpr uint32_t m_flTraceRadius = 0x4;
+}
+
+namespace FootFixedSettings
+{
+	constexpr uint32_t m_traceSettings = 0x0;
+	constexpr uint32_t m_vFootBaseBindPosePositionMS = 0x10;
+	constexpr uint32_t m_flFootBaseLength = 0x20;
+	constexpr uint32_t m_flMaxRotationLeft = 0x24;
+	constexpr uint32_t m_flMaxRotationRight = 0x28;
+	constexpr uint32_t m_footstepLandedTagIndex = 0x2C;
+	constexpr uint32_t m_bEnableTracing = 0x30;
+	constexpr uint32_t m_flTraceAngleBlend = 0x34;
+	constexpr uint32_t m_nDisableTagIndex = 0x38;
+	constexpr uint32_t m_nFootIndex = 0x3C;
+}
+
+namespace FootStepTrigger
+{
+	constexpr uint32_t m_tags = 0x0;
+	constexpr uint32_t m_nFootIndex = 0x18;
+	constexpr uint32_t m_triggerPhase = 0x1C;
+}
+
+namespace CLeafUpdateNode
+{
+}
+
+namespace CLeanMatrixUpdateNode
+{
+	constexpr uint32_t m_frameCorners = 0x5C;
+	constexpr uint32_t m_poses = 0x80;
+	constexpr uint32_t m_damping = 0xA8;
+	constexpr uint32_t m_blendSource = 0xB8;
+	constexpr uint32_t m_paramIndex = 0xBC;
+	constexpr uint32_t m_verticalAxis = 0xC0;
+	constexpr uint32_t m_horizontalAxis = 0xCC;
+	constexpr uint32_t m_hSequence = 0xD8;
+	constexpr uint32_t m_flMaxValue = 0xDC;
+	constexpr uint32_t m_nSequenceMaxFrame = 0xE0;
+}
+
+namespace CMotionGraphUpdateNode
+{
+	constexpr uint32_t m_pMotionGraph = 0x58;
+}
+
+namespace CMotionMatchingUpdateNode
+{
+	constexpr uint32_t m_dataSet = 0x58;
+	constexpr uint32_t m_metrics = 0x78;
+	constexpr uint32_t m_weights = 0x90;
+	constexpr uint32_t m_bSearchEveryTick = 0xE0;
+	constexpr uint32_t m_flSearchInterval = 0xE4;
+	constexpr uint32_t m_bSearchWhenClipEnds = 0xE8;
+	constexpr uint32_t m_bSearchWhenGoalChanges = 0xE9;
+	constexpr uint32_t m_blendCurve = 0xEC;
+	constexpr uint32_t m_flSampleRate = 0xF4;
+	constexpr uint32_t m_flBlendTime = 0xF8;
+	constexpr uint32_t m_bLockClipWhenWaning = 0xFC;
+	constexpr uint32_t m_flSelectionThreshold = 0x100;
+	constexpr uint32_t m_flReselectionTimeWindow = 0x104;
+	constexpr uint32_t m_bEnableRotationCorrection = 0x108;
+	constexpr uint32_t m_bGoalAssist = 0x109;
+	constexpr uint32_t m_flGoalAssistDistance = 0x10C;
+	constexpr uint32_t m_flGoalAssistTolerance = 0x110;
+	constexpr uint32_t m_distanceScale_Damping = 0x118;
+	constexpr uint32_t m_flDistanceScale_OuterRadius = 0x128;
+	constexpr uint32_t m_flDistanceScale_InnerRadius = 0x12C;
+	constexpr uint32_t m_flDistanceScale_MaxScale = 0x130;
+	constexpr uint32_t m_flDistanceScale_MinScale = 0x134;
+	constexpr uint32_t m_bEnableDistanceScaling = 0x138;
+}
+
+namespace CSelectorUpdateNode
+{
+	constexpr uint32_t m_children = 0x58;
+	constexpr uint32_t m_tags = 0x70;
+	constexpr uint32_t m_blendCurve = 0x8C;
+	constexpr uint32_t m_flBlendTime = 0x94;
+	constexpr uint32_t m_hParameter = 0x9C;
+	constexpr uint32_t m_eTagBehavior = 0xA0;
+	constexpr uint32_t m_bResetOnChange = 0xA4;
+	constexpr uint32_t m_bSyncCyclesOnChange = 0xA5;
+}
+
+namespace CSequenceUpdateNode
+{
+	constexpr uint32_t m_paramSpans = 0x60;
+	constexpr uint32_t m_tags = 0x78;
+	constexpr uint32_t m_hSequence = 0x94;
+	constexpr uint32_t m_playbackSpeed = 0x98;
+	constexpr uint32_t m_duration = 0x9C;
+	constexpr uint32_t m_bLoop = 0xA0;
+}
+
+namespace CSingleFrameUpdateNode
+{
+	constexpr uint32_t m_actions = 0x58;
+	constexpr uint32_t m_hPoseCacheHandle = 0x70;
+	constexpr uint32_t m_hSequence = 0x74;
+	constexpr uint32_t m_flCycle = 0x78;
+}
+
+namespace CSolveIKTargetHandle_t
+{
+	constexpr uint32_t m_positionHandle = 0x0;
+	constexpr uint32_t m_orientationHandle = 0x2;
+}
+
+namespace StanceInfo_t
+{
+	constexpr uint32_t m_vPosition = 0x0;
+	constexpr uint32_t m_flDirection = 0xC;
+}
+
+namespace CStateNodeTransitionData
+{
+	constexpr uint32_t m_curve = 0x0;
+	constexpr uint32_t m_blendDuration = 0x8;
+	constexpr uint32_t m_resetCycleValue = 0x10;
+	constexpr uint32_t m_bReset = 0x0;
+	constexpr uint32_t m_resetCycleOption = 0x0;
+}
+
+namespace CStateNodeStateData
+{
+	constexpr uint32_t m_pChild = 0x0;
+	constexpr uint32_t m_bExclusiveRootMotion = 0x0;
+}
+
+namespace CStateMachineUpdateNode
+{
+	constexpr uint32_t m_stateMachine = 0x68;
+	constexpr uint32_t m_stateData = 0xC0;
+	constexpr uint32_t m_transitionData = 0xD8;
+	constexpr uint32_t m_bBlockWaningTags = 0xF4;
+	constexpr uint32_t m_bLockStateWhenWaning = 0xF5;
+}
+
+namespace CSubtractUpdateNode
+{
+	constexpr uint32_t m_footMotionTiming = 0x8C;
+	constexpr uint32_t m_bApplyToFootMotion = 0x90;
+	constexpr uint32_t m_bApplyChannelsSeparately = 0x91;
+	constexpr uint32_t m_bUseModelSpace = 0x92;
+}
+
+namespace TwoBoneIKSettings_t
+{
+	constexpr uint32_t m_endEffectorType = 0x0;
+	constexpr uint32_t m_endEffectorAttachment = 0x10;
+	constexpr uint32_t m_targetType = 0x90;
+	constexpr uint32_t m_targetAttachment = 0xA0;
+	constexpr uint32_t m_targetBoneIndex = 0x120;
+	constexpr uint32_t m_hPositionParam = 0x124;
+	constexpr uint32_t m_hRotationParam = 0x126;
+	constexpr uint32_t m_bAlwaysUseFallbackHinge = 0x128;
+	constexpr uint32_t m_vLsFallbackHingeAxis = 0x130;
+	constexpr uint32_t m_nFixedBoneIndex = 0x140;
+	constexpr uint32_t m_nMiddleBoneIndex = 0x144;
+	constexpr uint32_t m_nEndBoneIndex = 0x148;
+	constexpr uint32_t m_bMatchTargetOrientation = 0x14C;
+	constexpr uint32_t m_bConstrainTwist = 0x14D;
+	constexpr uint32_t m_flMaxTwist = 0x150;
+}
+
+namespace CUnaryUpdateNode
+{
+	constexpr uint32_t m_pChildNode = 0x58;
+}
+
+namespace CWayPointHelperUpdateNode
+{
+	constexpr uint32_t m_flStartCycle = 0x6C;
+	constexpr uint32_t m_flEndCycle = 0x70;
+	constexpr uint32_t m_bOnlyGoals = 0x74;
+	constexpr uint32_t m_bPreventOvershoot = 0x75;
+	constexpr uint32_t m_bPreventUndershoot = 0x76;
+}
+
+namespace CZeroPoseUpdateNode
+{
+}
+
+namespace ConfigIndex
+{
+	constexpr uint32_t m_nGroup = 0x0;
+	constexpr uint32_t m_nConfig = 0x2;
+}
+
+namespace MotionIndex
+{
+	constexpr uint32_t m_nGroup = 0x0;
+	constexpr uint32_t m_nMotion = 0x2;
+}
+
+namespace CAnimationGraphVisualizerPrimitiveBase
+{
+	constexpr uint32_t m_Type = 0x8;
+	constexpr uint32_t m_OwningAnimNodePaths = 0xC;
+	constexpr uint32_t m_nOwningAnimNodePathCount = 0x38;
+}
+
+namespace CAnimationGraphVisualizerText
+{
+	constexpr uint32_t m_vWsPosition = 0x40;
+	constexpr uint32_t m_Color = 0x50;
+	constexpr uint32_t m_Text = 0x58;
+}
+
+namespace CAnimationGraphVisualizerSphere
+{
+	constexpr uint32_t m_vWsPosition = 0x40;
+	constexpr uint32_t m_flRadius = 0x50;
+	constexpr uint32_t m_Color = 0x54;
+}
+
+namespace CAnimationGraphVisualizerLine
+{
+	constexpr uint32_t m_vWsPositionStart = 0x40;
+	constexpr uint32_t m_vWsPositionEnd = 0x50;
+	constexpr uint32_t m_Color = 0x60;
+}
+
+namespace CAnimationGraphVisualizerPie
+{
+	constexpr uint32_t m_vWsCenter = 0x40;
+	constexpr uint32_t m_vWsStart = 0x50;
+	constexpr uint32_t m_vWsEnd = 0x60;
+	constexpr uint32_t m_Color = 0x70;
+}
+
+namespace CAnimationGraphVisualizerAxis
+{
+	constexpr uint32_t m_xWsTransform = 0x40;
+	constexpr uint32_t m_flAxisSize = 0x60;
+}
+
+namespace IKBoneNameAndIndex_t
+{
+	constexpr uint32_t m_Name = 0x0;
+}
+
+namespace CAnimGraphNetworkSettings
+{
+	constexpr uint32_t m_bNetworkingEnabled = 0x20;
+}
+
+namespace CActionComponentUpdater
+{
+	constexpr uint32_t m_actions = 0x30;
+}
+
+namespace CAddUpdateNode
+{
+	constexpr uint32_t m_footMotionTiming = 0x8C;
+	constexpr uint32_t m_bApplyToFootMotion = 0x90;
+	constexpr uint32_t m_bApplyChannelsSeparately = 0x91;
+	constexpr uint32_t m_bUseModelSpace = 0x92;
+}
+
+namespace CAimMatrixUpdateNode
+{
+	constexpr uint32_t m_opFixedSettings = 0x70;
+	constexpr uint32_t m_target = 0x148;
+	constexpr uint32_t m_paramIndex = 0x14C;
+	constexpr uint32_t m_hSequence = 0x150;
+	constexpr uint32_t m_bResetChild = 0x154;
+	constexpr uint32_t m_bLockWhenWaning = 0x155;
+}
+
+namespace CBindPoseUpdateNode
+{
+}
+
+namespace CChoreoUpdateNode
+{
+}
+
+namespace CCycleControlUpdateNode
+{
+	constexpr uint32_t m_valueSource = 0x68;
+	constexpr uint32_t m_paramIndex = 0x6C;
+}
+
+namespace CCycleControlClipUpdateNode
+{
+	constexpr uint32_t m_tags = 0x60;
+	constexpr uint32_t m_hSequence = 0x7C;
+	constexpr uint32_t m_duration = 0x80;
+	constexpr uint32_t m_valueSource = 0x84;
+	constexpr uint32_t m_paramIndex = 0x88;
+}
+
+namespace CDirectionalBlendUpdateNode
+{
+	constexpr uint32_t m_hSequences = 0x5C;
+	constexpr uint32_t m_damping = 0x80;
+	constexpr uint32_t m_blendValueSource = 0x90;
+	constexpr uint32_t m_paramIndex = 0x94;
+	constexpr uint32_t m_playbackSpeed = 0x98;
+	constexpr uint32_t m_duration = 0x9C;
+	constexpr uint32_t m_bLoop = 0xA0;
+	constexpr uint32_t m_bLockBlendOnReset = 0xA1;
+}
+
+namespace CDirectPlaybackUpdateNode
+{
+	constexpr uint32_t m_bFinishEarly = 0x6C;
+	constexpr uint32_t m_bResetOnFinish = 0x6D;
+	constexpr uint32_t m_allTags = 0x70;
+}
+
+namespace CFollowPathUpdateNode
+{
+	constexpr uint32_t m_flBlendOutTime = 0x6C;
+	constexpr uint32_t m_bBlockNonPathMovement = 0x70;
+	constexpr uint32_t m_bStopFeetAtGoal = 0x71;
+	constexpr uint32_t m_bScaleSpeed = 0x72;
+	constexpr uint32_t m_flScale = 0x74;
+	constexpr uint32_t m_flMinAngle = 0x78;
+	constexpr uint32_t m_flMaxAngle = 0x7C;
+	constexpr uint32_t m_flSpeedScaleBlending = 0x80;
+	constexpr uint32_t m_turnDamping = 0x88;
+	constexpr uint32_t m_facingTarget = 0x98;
+	constexpr uint32_t m_hParam = 0x9C;
+	constexpr uint32_t m_flTurnToFaceOffset = 0xA0;
+	constexpr uint32_t m_bTurnToFace = 0xA4;
+}
+
+namespace CFollowAttachmentUpdateNode
+{
+	constexpr uint32_t m_opFixedData = 0x70;
+}
+
+namespace CFootAdjustmentUpdateNode
+{
+	constexpr uint32_t m_clips = 0x70;
+	constexpr uint32_t m_hBasePoseCacheHandle = 0x88;
+	constexpr uint32_t m_facingTarget = 0x8C;
+	constexpr uint32_t m_flTurnTimeMin = 0x90;
+	constexpr uint32_t m_flTurnTimeMax = 0x94;
+	constexpr uint32_t m_flStepHeightMax = 0x98;
+	constexpr uint32_t m_flStepHeightMaxAngle = 0x9C;
+	constexpr uint32_t m_bResetChild = 0xA0;
+	constexpr uint32_t m_bAnimationDriven = 0xA1;
+}
+
+namespace CFootLockUpdateNode
+{
+	constexpr uint32_t m_opFixedSettings = 0x68;
+	constexpr uint32_t m_footSettings = 0xD0;
+	constexpr uint32_t m_hipShiftDamping = 0xE8;
+	constexpr uint32_t m_rootHeightDamping = 0xF8;
+	constexpr uint32_t m_flStrideCurveScale = 0x108;
+	constexpr uint32_t m_flStrideCurveLimitScale = 0x10C;
+	constexpr uint32_t m_flStepHeightIncreaseScale = 0x110;
+	constexpr uint32_t m_flStepHeightDecreaseScale = 0x114;
+	constexpr uint32_t m_flHipShiftScale = 0x118;
+	constexpr uint32_t m_flBlendTime = 0x11C;
+	constexpr uint32_t m_flMaxRootHeightOffset = 0x120;
+	constexpr uint32_t m_flMinRootHeightOffset = 0x124;
+	constexpr uint32_t m_flTiltPlanePitchSpringStrength = 0x128;
+	constexpr uint32_t m_flTiltPlaneRollSpringStrength = 0x12C;
+	constexpr uint32_t m_bApplyFootRotationLimits = 0x130;
+	constexpr uint32_t m_bApplyHipShift = 0x131;
+	constexpr uint32_t m_bModulateStepHeight = 0x132;
+	constexpr uint32_t m_bResetChild = 0x133;
+	constexpr uint32_t m_bEnableVerticalCurvedPaths = 0x134;
+	constexpr uint32_t m_bEnableRootHeightDamping = 0x135;
+}
+
+namespace CFootPinningUpdateNode
+{
+	constexpr uint32_t m_poseOpFixedData = 0x70;
+	constexpr uint32_t m_eTimingSource = 0xA0;
+	constexpr uint32_t m_params = 0xA8;
+	constexpr uint32_t m_bResetChild = 0xC0;
+}
+
+namespace CFootStepTriggerUpdateNode
+{
+	constexpr uint32_t m_triggers = 0x68;
+	constexpr uint32_t m_flTolerance = 0x84;
+}
+
+namespace CHitReactUpdateNode
+{
+	constexpr uint32_t m_opFixedSettings = 0x68;
+	constexpr uint32_t m_triggerParam = 0xB4;
+	constexpr uint32_t m_hitBoneParam = 0xB6;
+	constexpr uint32_t m_hitOffsetParam = 0xB8;
+	constexpr uint32_t m_hitDirectionParam = 0xBA;
+	constexpr uint32_t m_hitStrengthParam = 0xBC;
+	constexpr uint32_t m_flMinDelayBetweenHits = 0xC0;
+	constexpr uint32_t m_bResetChild = 0xC4;
+}
+
+namespace CInputStreamUpdateNode
+{
+}
+
+namespace CJiggleBoneUpdateNode
+{
+	constexpr uint32_t m_opFixedData = 0x68;
+}
+
+namespace CJumpHelperUpdateNode
+{
+	constexpr uint32_t m_hTargetParam = 0xA8;
+	constexpr uint32_t m_flOriginalJumpMovement = 0xAC;
+	constexpr uint32_t m_flOriginalJumpDuration = 0xB8;
+	constexpr uint32_t m_flJumpStartCycle = 0xBC;
+	constexpr uint32_t m_flJumpEndCycle = 0xC0;
+	constexpr uint32_t m_eCorrectionMethod = 0xC4;
+	constexpr uint32_t m_bTranslationAxis = 0xC8;
+	constexpr uint32_t m_bScaleSpeed = 0xCB;
+}
+
+namespace CLookAtUpdateNode
+{
+	constexpr uint32_t m_opFixedSettings = 0x70;
+	constexpr uint32_t m_target = 0x138;
+	constexpr uint32_t m_paramIndex = 0x13C;
+	constexpr uint32_t m_weightParamIndex = 0x13E;
+	constexpr uint32_t m_bResetChild = 0x140;
+	constexpr uint32_t m_bLockWhenWaning = 0x141;
+}
+
+namespace CMoverUpdateNode
+{
+	constexpr uint32_t m_damping = 0x70;
+	constexpr uint32_t m_facingTarget = 0x80;
+	constexpr uint32_t m_hMoveVecParam = 0x84;
+	constexpr uint32_t m_hMoveHeadingParam = 0x86;
+	constexpr uint32_t m_hTurnToFaceParam = 0x88;
+	constexpr uint32_t m_flTurnToFaceOffset = 0x8C;
+	constexpr uint32_t m_flTurnToFaceLimit = 0x90;
+	constexpr uint32_t m_bAdditive = 0x94;
+	constexpr uint32_t m_bApplyMovement = 0x95;
+	constexpr uint32_t m_bOrientMovement = 0x96;
+	constexpr uint32_t m_bApplyRotation = 0x97;
+	constexpr uint32_t m_bLimitOnly = 0x98;
+}
+
+namespace CPathHelperUpdateNode
+{
+	constexpr uint32_t m_flStoppingRadius = 0x68;
+	constexpr uint32_t m_flStoppingSpeedScale = 0x6C;
+}
+
+namespace CRagdollUpdateNode
+{
+	constexpr uint32_t m_nWeightListIndex = 0x68;
+	constexpr uint32_t m_poseControlMethod = 0x6C;
+}
+
+namespace CRootUpdateNode
+{
+}
+
+namespace CSetFacingUpdateNode
+{
+	constexpr uint32_t m_facingMode = 0x68;
+	constexpr uint32_t m_bResetChild = 0x6C;
+}
+
+namespace CSlowDownOnSlopesUpdateNode
+{
+	constexpr uint32_t m_flSlowDownStrength = 0x68;
+}
+
+namespace CSolveIKChainUpdateNode
+{
+	constexpr uint32_t m_targetHandles = 0x68;
+	constexpr uint32_t m_opFixedData = 0x80;
+}
+
+namespace CSpeedScaleUpdateNode
+{
+	constexpr uint32_t m_paramIndex = 0x68;
+}
+
+namespace CStanceOverrideUpdateNode
+{
+	constexpr uint32_t m_footStanceInfo = 0x68;
+	constexpr uint32_t m_pStanceSourceNode = 0x80;
+	constexpr uint32_t m_hParameter = 0x90;
+	constexpr uint32_t m_eMode = 0x94;
+}
+
+namespace CStanceScaleUpdateNode
+{
+	constexpr uint32_t m_hParam = 0x68;
+}
+
+namespace CStopAtGoalUpdateNode
+{
+	constexpr uint32_t m_flOuterRadius = 0x6C;
+	constexpr uint32_t m_flInnerRadius = 0x70;
+	constexpr uint32_t m_flMaxScale = 0x74;
+	constexpr uint32_t m_flMinScale = 0x78;
+	constexpr uint32_t m_damping = 0x80;
+}
+
+namespace CTurnHelperUpdateNode
+{
+	constexpr uint32_t m_facingTarget = 0x6C;
+	constexpr uint32_t m_turnStartTimeOffset = 0x70;
+	constexpr uint32_t m_turnDuration = 0x74;
+	constexpr uint32_t m_bMatchChildDuration = 0x78;
+	constexpr uint32_t m_manualTurnOffset = 0x7C;
+	constexpr uint32_t m_bUseManualTurnOffset = 0x80;
+}
+
+namespace CTwoBoneIKUpdateNode
+{
+	constexpr uint32_t m_opFixedData = 0x70;
 }
 

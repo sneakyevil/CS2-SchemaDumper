@@ -12,75 +12,70 @@ namespace SDK
 	class CSchemaField
 	{
 	public:
-		const char* m_Name;
-		void* m_Type;
-		uint32_t m_Offset;
-		uint32_t m_MetadataSize;
-		void* m_Metadata;
+		const char* m_szName;
+		void* m_pType;
+		uint32_t m_nOffset;
+		uint32_t m_nMetadataSize;
+		void* m_nMetadata;
 	};
 
 	class CSchemaClass
 	{
 	public:
-		void* m_This;
-		const char* m_Name;
-		const char* m_ModuleName;
-		uint32_t m_Size;
-		uint16_t m_Alignment;
+		void* vfptr;
+		const char* m_szName;
+		const char* m_szModuleName;
+		uint32_t m_nSize;
+		uint16_t m_nNumFields;
 
 		S2_PAD(0x2);
 
-		uint16_t m_StaticSize;
-		uint16_t m_MetadataSize;
+		uint16_t m_nStaticSize;
+		uint16_t m_nMetadataSize;
 
 		S2_PAD(0x4);
 
-		CSchemaField* m_Fields;
-
-		__forceinline CSchemaField* GetFieldByIndex(int m_Index) { return &m_Fields[m_Index]; }
+		CSchemaField* m_pFields;
 	};
 
-	class CSchemaClassItter
+	class CSchemaDeclaredClass
 	{
 	public:
-		CSchemaClassItter* m_Next;
-		S2_PAD(0x18);
-
-		__forceinline uintptr_t GetClassOffsetByIndex(uintptr_t m_Index)
-		{
-			return (sizeof(CSchemaClassItter) + m_Index * 0x18);
-		}
+		void* vfptr;
+		const char* m_szName;
+		const char* m_szModuleName;
+		const char* m_szUnknownStr;
+		CSchemaClass* m_Class;
 	};
 
-	// Source2 Classes
+	class CSchemaDeclaredClassEntry
+	{
+	public:
+		uint64_t m_nHash[2];
+		CSchemaDeclaredClass* m_pDeclaredClass;
+	};
+
 	class CSchemaSystemTypeScope
 	{
 	public:
-		void* m_This;
-		char m_Name[0x100];
+		void* vfptr;
+		char m_szName[256];
 
-		S2_PAD(0x484);
+		S2_PAD(0x3C8);
 
-		uint32_t m_ClassItterSize;
+		CSchemaDeclaredClassEntry* m_pDeclaredClasses;
 
-		S2_PAD(0x28);
+		S2_PAD(0xE);
 
-		CSchemaClassItter* m_ClassItter;
+		uint16_t m_nNumDeclaredClasses;
 	};
 
 	class CSchemaSystem
 	{
 	public:
-		void* m_This;
+		S2_PAD(0x190);
 
-		S2_PAD(0x188);
-
-		uint64_t m_ScopeSize;
-		CSchemaSystemTypeScope** m_ScopeArray;
-
-		__forceinline CSchemaSystemTypeScope* GetScopeByIndex(uint64_t m_Index)
-		{
-			return m_ScopeArray[m_Index];
-		}
+		uint64_t m_nScopeSize;
+		CSchemaSystemTypeScope** m_pScopeArray;
 	};
 }

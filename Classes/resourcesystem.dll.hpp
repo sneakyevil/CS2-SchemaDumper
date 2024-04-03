@@ -89,7 +89,7 @@ namespace InfoForResourceTypeCVSoundStackScriptList
 {
 }
 
-namespace InfoForResourceTypeVSound_t
+namespace InfoForResourceTypeCVoiceContainerBase
 {
 }
 
@@ -165,6 +165,10 @@ namespace InfoForResourceTypeCCompositeMaterialKit
 {
 }
 
+namespace InfoForResourceTypeCGcExportableExternalData
+{
+}
+
 namespace InfoForResourceTypeCSmartProp
 {
 }
@@ -182,6 +186,14 @@ namespace InfoForResourceTypeCNmSkeleton
 }
 
 namespace InfoForResourceTypeCNmClip
+{
+}
+
+namespace InfoForResourceTypeCNmGraph
+{
+}
+
+namespace InfoForResourceTypeCNmGraphDataSet
 {
 }
 

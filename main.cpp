@@ -18,75 +18,75 @@
 
 int main()
 {
-    HWND m_GameWindow = FindWindowA(0, "Counter-Strike 2");
-    if (!m_GameWindow)
+    HWND _GameWindow = FindWindowA(0, "Counter-Strike 2");
+    if (!_GameWindow)
     {
         PRINT_ERROR("[ ! ] Couldn't find 'Counter-Strike 2' window\n");
         return 1;
     }
 
-    DWORD m_GameProcessID = 0x0;
-    GetWindowThreadProcessId(m_GameWindow, &m_GameProcessID);
-    if (!m_GameProcessID)
+    DWORD _GameProcessID = 0x0;
+    GetWindowThreadProcessId(_GameWindow, &_GameProcessID);
+    if (!_GameProcessID)
     {
         PRINT_ERROR("[ ! ] Couldn't get process id from 'Counter-Strike 2' window\n");
         return 1;
     }
 
-    ProcessMemory m_ProcessMem(OpenProcess(PROCESS_ALL_ACCESS, 0, m_GameProcessID));
-    if (!m_ProcessMem.m_Handle)
+    ProcessMemory _ProcessMem(OpenProcess(PROCESS_ALL_ACCESS, 0, _GameProcessID));
+    if (!_ProcessMem.m_Handle)
     {
         PRINT_ERROR("[ ! ] Couldn't OpenProcess to targeted process id\n");
         return 1;
     }
 
-    uintptr_t m_SchemaModule[2] = { 0, 0 };
-    if (!m_ProcessMem.GetModuleInfo("schemasystem.dll", &m_SchemaModule[0], &m_SchemaModule[1]))
+    uintptr_t _SchemaModule[2] = { 0, 0 };
+    if (!_ProcessMem.GetModuleInfo("schemasystem.dll", &_SchemaModule[0], &_SchemaModule[1]))
     {
         PRINT_ERROR("[ ! ] Couldn't get module information for 'schemasystem.dll'\n");
         return 1;
     }
 
-    uintptr_t m_SchemaSystemInterface = 0;
+    uintptr_t _SchemaSystemInterface = 0;
     printf("[ ~ ] Searching for SchemaSystem Interface...\n");
 
     // Signature scan for interface ptr...
     {
-        uint8_t* m_SchemaSystemBytes = new uint8_t[m_SchemaModule[1]];
-        if (!m_ProcessMem.Read(m_SchemaModule[0], m_SchemaSystemBytes, m_SchemaModule[1]))
+        uint8_t* _SchemaSystemBytes = new uint8_t[_SchemaModule[1]];
+        if (!_ProcessMem.Read(_SchemaModule[0], _SchemaSystemBytes, _SchemaModule[1]))
         {
             PRINT_ERROR("[ - ] Failed to read memory...\n");
             return 1;
         }
 
         // Xref: CSchemaSystem::`vftable'
-        uintptr_t m_SignatureAddress = Memory::FindSignature(reinterpret_cast<uintptr_t>(m_SchemaSystemBytes), m_SchemaModule[1], "48 89 05 ? ? ? ? 4C 8D 45 E0 ");
-        if (!m_SignatureAddress)
+        uintptr_t _SignatureAddress = Memory::FindSignature(reinterpret_cast<uintptr_t>(_SchemaSystemBytes), _SchemaModule[1], "48 89 05 ? ? ? ? 4C 8D 45 E0 ");
+        if (!_SignatureAddress)
         {
             PRINT_ERROR("[ - ] Signature scan failed, outdated signature?\n");
             return 1;
         }
 
-        m_SchemaSystemInterface = m_SchemaModule[0] + ((m_SignatureAddress + static_cast<uintptr_t>(*reinterpret_cast<int*>(m_SignatureAddress + 0x3)) + 0x7) - reinterpret_cast<uintptr_t>(m_SchemaSystemBytes));
-        delete[] m_SchemaSystemBytes;
+        _SchemaSystemInterface = _SchemaModule[0] + ((_SignatureAddress + static_cast<uintptr_t>(*reinterpret_cast<int*>(_SignatureAddress + 0x3)) + 0x7) - reinterpret_cast<uintptr_t>(_SchemaSystemBytes));
+        delete[] _SchemaSystemBytes;
     }
 
-    SDK::CSchemaSystem m_SchemaSystem = { 0 };
-    if (!m_ProcessMem.Read(m_SchemaSystemInterface, &m_SchemaSystem))
+    SDK::CSchemaSystem _SchemaSystem = { 0 };
+    if (!_ProcessMem.Read(_SchemaSystemInterface, &_SchemaSystem))
     {
         PRINT_ERROR("[ - ] Failed to read SchemaSystem Interface...\n");
         return 1;
     }
 
-    uintptr_t m_SchemaSystemScopeArrayPtr = 0;
-    if (!m_ProcessMem.Read(m_SchemaSystemInterface + (offsetof(SDK::CSchemaSystem, m_ScopeArray)), &m_SchemaSystemScopeArrayPtr))
+    uintptr_t _SchemaSystemScopeArrayPtr = 0;
+    if (!_ProcessMem.Read(_SchemaSystemInterface + (offsetof(SDK::CSchemaSystem, m_pScopeArray)), &_SchemaSystemScopeArrayPtr))
     {
         PRINT_ERROR("[ - ] Failed to read SchemaSystem::ScopeArrayPtr...\n");
         return 1;
     }
 
-    void** m_ScopeArray = new void*[m_SchemaSystem.m_ScopeSize];
-    if (!m_ProcessMem.Read(m_SchemaSystemScopeArrayPtr, m_ScopeArray, (m_SchemaSystem.m_ScopeSize * sizeof(void*))))
+    void** _ScopeArray = new void*[_SchemaSystem.m_nScopeSize];
+    if (!_ProcessMem.Read(_SchemaSystemScopeArrayPtr, _ScopeArray, (_SchemaSystem.m_nScopeSize * sizeof(void*))))
     {
         PRINT_ERROR("[ - ] Failed to read SchemaSystem::ScopeArray...\n");
         return 1;
@@ -95,96 +95,96 @@ int main()
     printf("[ ~ ] Dumping starting...\n");
     CreateDirectoryA(DUMP_FOLDER_NAME, 0);
 
-    for (uint64_t i = 0; m_SchemaSystem.m_ScopeSize > i; ++i)
+    for (uint64_t s = 0; _SchemaSystem.m_nScopeSize > s; ++s)
     {
-        SDK::CSchemaSystemTypeScope m_SchemaScope = { 0 };
-        if (!m_ProcessMem.Read(m_ScopeArray[i], &m_SchemaScope))
+        SDK::CSchemaSystemTypeScope _SchemaScope = { 0 };
+        if (!_ProcessMem.Read(_ScopeArray[s], &_SchemaScope)) {
             continue;
+        }
 
-        uintptr_t m_ClassItterPtr = reinterpret_cast<uintptr_t>(m_SchemaScope.m_ClassItter);
-        SDK::CSchemaClassItter m_ClassItter = { 0 };
-        if (!m_ClassItterPtr || !m_ProcessMem.Read(m_ClassItterPtr, &m_ClassItter))
+        printf("[ ~ ] Dumping Schema: %s:\n", _SchemaScope.m_szName);
+
+        char _DumpFileName[MAX_PATH] = { 0 };
+        sprintf_s(_DumpFileName, sizeof(_DumpFileName), DUMP_FOLDER_NAME"\\%s.hpp", _SchemaScope.m_szName);
+
+        FILE* _File = fopen(_DumpFileName, "w");
+        if (!_File) {
             continue;
+        }
 
-        printf("[ ~ ] Dumping Schema: %s:\n", m_SchemaScope.m_Name);
-
-        char m_DumpFileName[MAX_PATH] = { 0 };
-        sprintf_s(m_DumpFileName, sizeof(m_DumpFileName), DUMP_FOLDER_NAME"\\%s.hpp", m_SchemaScope.m_Name);
-
-        FILE* m_File = fopen(m_DumpFileName, "w");
-        if (!m_File)
+        SDK::CSchemaDeclaredClassEntry* _DeclaredClassEntries = new SDK::CSchemaDeclaredClassEntry[_SchemaScope.m_nNumDeclaredClasses + 1];
+        if (!_ProcessMem.Read(_SchemaScope.m_pDeclaredClasses, _DeclaredClassEntries, (_SchemaScope.m_nNumDeclaredClasses + 1) * sizeof(SDK::CSchemaDeclaredClassEntry))) {
             continue;
+        }
 
-        char m_FileLine[1024] = { 0 };
-
-        while (1)
+        for (uint16_t c = 0; _SchemaScope.m_nNumDeclaredClasses >= c; ++c)
         {
-           
-            for (uint32_t c = 0; m_SchemaScope.m_ClassItterSize > c; ++c)
+            SDK::CSchemaDeclaredClass _DeclaredClass;
+            if (!_ProcessMem.Read(_DeclaredClassEntries[c].m_pDeclaredClass, &_DeclaredClass)) {
+                continue;
+            }
+
+            SDK::CSchemaClass _Class = { 0 };
+            if (!_ProcessMem.Read(_DeclaredClass.m_Class, &_Class)) {
+                continue;
+            }
+
+            char _ClassName[128] = { 0 };
+            if (!_ProcessMem.Read((void*)(_Class.m_szName), _ClassName, sizeof(_ClassName))) {
+                continue;
+            }
+
+            printf("\n[ ~ ] Dumping Class: %s:\n", _ClassName);
+            fprintf(_File, "namespace %s\n{\n", _ClassName);
+
+            uintptr_t _ClassFieldsPtr = reinterpret_cast<uintptr_t>(_Class.m_pFields);
+            if (_ClassFieldsPtr)
             {
-                uintptr_t m_SchemaClassPtr = (m_ClassItterPtr + m_ClassItter.GetClassOffsetByIndex(c));
-                if (!m_ProcessMem.Read(m_SchemaClassPtr, &m_SchemaClassPtr) || !m_SchemaClassPtr)
-                    continue;
-
-                SDK::CSchemaClass m_SchemaClass = { 0 };
-                if (!m_ProcessMem.Read(m_SchemaClassPtr, &m_SchemaClass))
-                    continue;
-
-                char m_SchemaClassName[128] = { 0 };
-                if (!m_ProcessMem.Read((void*)(m_SchemaClass.m_Name), m_SchemaClassName, sizeof(m_SchemaClassName)))
-                    continue;
-
-                printf("\n[ ~ ] Dumping Class: %s:\n", m_SchemaClassName);
-                fwrite(m_FileLine, sizeof(char), sprintf_s(m_FileLine, sizeof(m_FileLine), "namespace %s\n{\n", m_SchemaClassName), m_File);
-
-                uintptr_t m_SchemaClassFieldsPtr = reinterpret_cast<uintptr_t>(m_SchemaClass.m_Fields);
-                if (m_SchemaClassFieldsPtr)
+                for (uint16_t f = 0; _Class.m_nNumFields > f; ++f)
                 {
-                    for (uint16_t f = 0; m_SchemaClass.m_Alignment > f; ++f)
+                    SDK::CSchemaField _Field = { 0 };
+                    if (!_ProcessMem.Read(_ClassFieldsPtr + sizeof(SDK::CSchemaField) * f, &_Field)) {
+                        continue;
+                    }
+
+                    if (!_Field.m_pType) {
+                        continue;
+                    }
+
+                    char _FieldName[128] = { 0 };
+                    if (!_ProcessMem.Read((void*)(_Field.m_szName), _FieldName, sizeof(_FieldName))) {
+                        continue;
+                    }
+
+                    size_t _FieldNameSize = strlen(_FieldName);
+                    bool _IsNameValid = (_FieldNameSize > 0);
                     {
-                        SDK::CSchemaField m_SchemaField = { 0 };
-                        if (!m_ProcessMem.Read(m_SchemaClassFieldsPtr + sizeof(SDK::CSchemaField) * f, &m_SchemaField))
-                            continue;
-
-                        if (!m_SchemaField.m_Type)
-                            continue;
-
-                        char m_SchemaFieldName[128] = { 0 };
-                        if (!m_ProcessMem.Read((void*)(m_SchemaField.m_Name), m_SchemaFieldName, sizeof(m_SchemaFieldName)))
-                            continue;
-
-                        size_t m_SchemaFieldNameSize = strlen(m_SchemaFieldName);
-                        bool m_IsNameValid = (m_SchemaFieldNameSize > 0);
-                        for (size_t n = 0; m_SchemaFieldNameSize > n; ++n)
+                        for (size_t n = 0; _FieldNameSize > n; ++n)
                         {
-                            if (!isascii(m_SchemaFieldName[n]))
+                            if (!isascii(_FieldName[n]))
                             {
-                                m_IsNameValid = false;
+                                _IsNameValid = false;
                                 break;
                             }
                         }
-
-                        if (!m_IsNameValid)
-                            continue;
-
-                        printf("[ + ] %s->%s:: 0x%X\n", m_SchemaClassName, m_SchemaFieldName, m_SchemaField.m_Offset);
-                        fwrite(m_FileLine, sizeof(char), sprintf_s(m_FileLine, sizeof(m_FileLine), "\tconstexpr uint32_t %s = 0x%X;\n", m_SchemaFieldName, m_SchemaField.m_Offset), m_File);
                     }
-                }
+                    if (!_IsNameValid) {
+                        continue;
+                    }
 
-                fwrite(m_FileLine, sizeof(char), sprintf_s(m_FileLine, sizeof(m_FileLine), "}\n\n"), m_File);
+                    printf("[ + ] %s->%s:: 0x%X\n", _ClassName, _FieldName, _Field.m_nOffset);
+                    fprintf(_File, "\tconstexpr uint32_t %s = 0x%X;\n", _FieldName, _Field.m_nOffset);
+                }
             }
 
-            m_ClassItterPtr = reinterpret_cast<uintptr_t>(m_ClassItter.m_Next);
-            if (m_ClassItterPtr || !m_ProcessMem.Read(m_ClassItterPtr, &m_ClassItter))
-                break;
+            fprintf(_File, "}\n\n");
         }
 
         printf("\n");
-        fclose(m_File);
+        fclose(_File);
     }
 
-    delete[] m_ScopeArray;
+    delete[] _ScopeArray;
 
     return 0;
 }
