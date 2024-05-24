@@ -115,6 +115,10 @@ namespace EventClientPostOutput_t
 	constexpr uint32_t m_bRenderOnly = 0x38;
 }
 
+namespace EventClientAdvanceNonRenderedFrame_t
+{
+}
+
 namespace EventClientFrameSimulate_t
 {
 	constexpr uint32_t m_LoopState = 0x0;
@@ -166,10 +170,6 @@ namespace EventClientAdvanceTick_t
 }
 
 namespace EventClientPostAdvanceTick_t
-{
-}
-
-namespace EventClientPredictionPostNetupdate_t
 {
 }
 

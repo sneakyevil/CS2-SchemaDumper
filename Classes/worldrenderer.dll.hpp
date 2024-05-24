@@ -23,9 +23,8 @@ namespace EntityKeyValueData_t
 namespace PermEntityLumpData_t
 {
 	constexpr uint32_t m_name = 0x8;
-	constexpr uint32_t m_hammerUniqueId = 0x10;
-	constexpr uint32_t m_childLumps = 0x18;
-	constexpr uint32_t m_entityKeyValues = 0x30;
+	constexpr uint32_t m_childLumps = 0x10;
+	constexpr uint32_t m_entityKeyValues = 0x28;
 }
 
 namespace SceneObject_t
@@ -86,6 +85,10 @@ namespace BakedLightingInfo_t
 	constexpr uint32_t m_nLightmapGameVersionNumber = 0x4;
 	constexpr uint32_t m_vLightmapUvScale = 0x8;
 	constexpr uint32_t m_bHasLightmaps = 0x10;
+	constexpr uint32_t m_bBakedShadowsGamma20 = 0x11;
+	constexpr uint32_t m_bCompressionEnabled = 0x12;
+	constexpr uint32_t m_nChartPackIterations = 0x13;
+	constexpr uint32_t m_nVradQuality = 0x14;
 	constexpr uint32_t m_lightMaps = 0x18;
 }
 
@@ -169,9 +172,9 @@ namespace WorldBuilderParams_t
 {
 	constexpr uint32_t m_flMinDrawVolumeSize = 0x0;
 	constexpr uint32_t m_bBuildBakedLighting = 0x4;
-	constexpr uint32_t m_vLightmapUvScale = 0x8;
-	constexpr uint32_t m_nCompileTimestamp = 0x10;
-	constexpr uint32_t m_nCompileFingerprint = 0x18;
+	constexpr uint32_t m_bakedLightingInfo = 0x8;
+	constexpr uint32_t m_nCompileTimestamp = 0x38;
+	constexpr uint32_t m_nCompileFingerprint = 0x40;
 }
 
 namespace NodeData_t
@@ -188,9 +191,9 @@ namespace NodeData_t
 namespace World_t
 {
 	constexpr uint32_t m_builderParams = 0x0;
-	constexpr uint32_t m_worldNodes = 0x20;
-	constexpr uint32_t m_worldLightingInfo = 0x38;
-	constexpr uint32_t m_entityLumps = 0x68;
+	constexpr uint32_t m_worldNodes = 0x48;
+	constexpr uint32_t m_worldLightingInfo = 0x60;
+	constexpr uint32_t m_entityLumps = 0x90;
 }
 
 namespace VoxelVisBlockOffset_t

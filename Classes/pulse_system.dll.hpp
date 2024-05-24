@@ -15,6 +15,18 @@ namespace FakeEntity_tAPI
 {
 }
 
+namespace FakeEntityDerivedA_tAPI
+{
+}
+
+namespace FakeEntityDerivedB_tAPI
+{
+}
+
+namespace CPulseTestGapTypeQueryRegistration
+{
+}
+
 namespace CPulseExecCursor
 {
 }
@@ -52,7 +64,8 @@ namespace PGDInstruction_t
 	constexpr uint32_t m_nDestInstruction = 0x18;
 	constexpr uint32_t m_nCallInfoIndex = 0x1C;
 	constexpr uint32_t m_nConstIdx = 0x20;
-	constexpr uint32_t m_DomainValue = 0x28;
+	constexpr uint32_t m_nDomainValueIdx = 0x22;
+	constexpr uint32_t m_nBlackboardReferenceIdx = 0x24;
 }
 
 namespace PulseDocNodeID_t
@@ -67,12 +80,29 @@ namespace CPulse_Variable
 	constexpr uint32_t m_Type = 0x10;
 	constexpr uint32_t m_DefaultValue = 0x20;
 	constexpr uint32_t m_bIsPublic = 0x32;
+	constexpr uint32_t m_bIsObservable = 0x33;
+	constexpr uint32_t m_nEditorNodeID = 0x34;
 }
 
 namespace CPulse_Constant
 {
 	constexpr uint32_t m_Type = 0x0;
 	constexpr uint32_t m_Value = 0x10;
+}
+
+namespace CPulse_DomainValue
+{
+	constexpr uint32_t m_nType = 0x0;
+	constexpr uint32_t m_Value = 0x8;
+	constexpr uint32_t m_ExpectedRuntimeType = 0x10;
+}
+
+namespace CPulse_BlackboardReference
+{
+	constexpr uint32_t m_hBlackboardResource = 0x0;
+	constexpr uint32_t m_BlackboardResource = 0xE0;
+	constexpr uint32_t m_nNodeID = 0xE8;
+	constexpr uint32_t m_NodeName = 0xF0;
 }
 
 namespace CPulse_PublicOutput
@@ -129,14 +159,18 @@ namespace CPulseGraphDef
 {
 	constexpr uint32_t m_DomainIdentifier = 0x8;
 	constexpr uint32_t m_ParentMapName = 0x10;
-	constexpr uint32_t m_Chunks = 0x18;
-	constexpr uint32_t m_Cells = 0x30;
-	constexpr uint32_t m_Vars = 0x48;
-	constexpr uint32_t m_PublicOutputs = 0x60;
-	constexpr uint32_t m_InvokeBindings = 0x78;
-	constexpr uint32_t m_CallInfos = 0x90;
-	constexpr uint32_t m_Constants = 0xA8;
-	constexpr uint32_t m_OutputConnections = 0xC0;
+	constexpr uint32_t m_ParentXmlName = 0x18;
+	constexpr uint32_t m_vecGameBlackboards = 0x20;
+	constexpr uint32_t m_Chunks = 0x38;
+	constexpr uint32_t m_Cells = 0x50;
+	constexpr uint32_t m_Vars = 0x68;
+	constexpr uint32_t m_PublicOutputs = 0x80;
+	constexpr uint32_t m_InvokeBindings = 0x98;
+	constexpr uint32_t m_CallInfos = 0xB0;
+	constexpr uint32_t m_Constants = 0xC8;
+	constexpr uint32_t m_DomainValues = 0xE0;
+	constexpr uint32_t m_BlackboardReferences = 0xF8;
+	constexpr uint32_t m_OutputConnections = 0x110;
 }
 
 namespace CPulseCell_Base
@@ -146,6 +180,49 @@ namespace CPulseCell_Base
 
 namespace CBasePulseGraphInstance
 {
+}
+
+namespace PulseGraphExecutionHistoryEntry_t
+{
+	constexpr uint32_t nCursorID = 0x0;
+	constexpr uint32_t nEditorID = 0x4;
+	constexpr uint32_t flExecTime = 0x8;
+	constexpr uint32_t unFlags = 0xC;
+	constexpr uint32_t tagName = 0x10;
+}
+
+namespace PulseCursorID_t
+{
+	constexpr uint32_t m_Value = 0x0;
+}
+
+namespace PulseGraphExecutionHistoryNodeDesc_t
+{
+	constexpr uint32_t strCellDesc = 0x0;
+	constexpr uint32_t strBindingName = 0x10;
+}
+
+namespace PulseGraphExecutionHistoryCursorDesc_t
+{
+	constexpr uint32_t vecAncestorCursorIDs = 0x0;
+	constexpr uint32_t nSpawnNodeID = 0x18;
+	constexpr uint32_t nRetiredAtNodeID = 0x1C;
+	constexpr uint32_t flLastReferenced = 0x20;
+	constexpr uint32_t nLastValidEntryIdx = 0x24;
+}
+
+namespace CPulseGraphExecutionHistory
+{
+	constexpr uint32_t m_nInstanceID = 0x0;
+	constexpr uint32_t m_strFileName = 0x8;
+	constexpr uint32_t m_vecHistory = 0x10;
+	constexpr uint32_t m_mapCellDesc = 0x28;
+	constexpr uint32_t m_mapCursorDesc = 0x50;
+}
+
+namespace PulseGraphInstanceID_t
+{
+	constexpr uint32_t m_Value = 0x0;
 }
 
 namespace CPulseMathlib
@@ -181,22 +258,22 @@ namespace PulseRuntimeConstantIndex_t
 	constexpr uint32_t m_Value = 0x0;
 }
 
+namespace PulseRuntimeDomainValueIndex_t
+{
+	constexpr uint32_t m_Value = 0x0;
+}
+
+namespace PulseRuntimeBlackboardReferenceIndex_t
+{
+	constexpr uint32_t m_Value = 0x0;
+}
+
 namespace PulseRuntimeInvokeIndex_t
 {
 	constexpr uint32_t m_Value = 0x0;
 }
 
 namespace PulseRuntimeEntrypointIndex_t
-{
-	constexpr uint32_t m_Value = 0x0;
-}
-
-namespace PulseGraphInstanceID_t
-{
-	constexpr uint32_t m_Value = 0x0;
-}
-
-namespace PulseCursorID_t
 {
 	constexpr uint32_t m_Value = 0x0;
 }
@@ -211,13 +288,37 @@ namespace CPulse_OutflowConnection
 	constexpr uint32_t m_SourceOutflowName = 0x0;
 	constexpr uint32_t m_nDestChunk = 0x8;
 	constexpr uint32_t m_nInstruction = 0xC;
+	constexpr uint32_t m_OutflowRegisterMap = 0x10;
 }
 
 namespace CPulse_ResumePoint
 {
 }
 
+namespace SignatureOutflow_Continue
+{
+}
+
+namespace SignatureOutflow_Resume
+{
+}
+
+namespace PulseNodeDynamicOutflows_t
+{
+	constexpr uint32_t m_Outflows = 0x0;
+}
+
+namespace PulseNodeDynamicOutflows_t::DynamicOutflow_t
+{
+	constexpr uint32_t m_OutflowID = 0x0;
+	constexpr uint32_t m_Connection = 0x8;
+}
+
 namespace CPulseCell_BaseFlow
+{
+}
+
+namespace CPulseCell_BaseRequirement
 {
 }
 
@@ -261,8 +362,29 @@ namespace CPulseCell_Inflow_EntOutputHandler
 	constexpr uint32_t m_ExpectedParamType = 0x88;
 }
 
+namespace CPulseCell_Inflow_ObservableVariableListener
+{
+	constexpr uint32_t m_BlackboardReference = 0x70;
+}
+
 namespace CPulseCell_BaseYieldingInflow
 {
+}
+
+namespace CPulseCell_BaseLerp
+{
+	constexpr uint32_t m_WakeResume = 0x48;
+}
+
+namespace CPulseCell_BaseLerp::CursorState_t
+{
+	constexpr uint32_t m_StartTime = 0x0;
+	constexpr uint32_t m_EndTime = 0x4;
+}
+
+namespace GameTime_t
+{
+	constexpr uint32_t m_Value = 0x0;
 }
 
 namespace CPulseCell_BaseValue
@@ -287,13 +409,13 @@ namespace CPulseCell_Inflow_Wait
 namespace CPulseCell_Outflow_StringSwitch
 {
 	constexpr uint32_t m_DefaultCaseOutflow = 0x48;
-	constexpr uint32_t m_CaseOutflows = 0x58;
+	constexpr uint32_t m_CaseOutflows = 0x78;
 }
 
 namespace CPulseCell_Outflow_IntSwitch
 {
 	constexpr uint32_t m_DefaultCaseOutflow = 0x48;
-	constexpr uint32_t m_CaseOutflows = 0x58;
+	constexpr uint32_t m_CaseOutflows = 0x78;
 }
 
 namespace CPulseCell_Outflow_CycleOrdered
@@ -325,13 +447,13 @@ namespace CPulseCell_Outflow_CycleShuffled::InstanceState_t
 namespace CPulseCell_Outflow_TestRandomYesNo
 {
 	constexpr uint32_t m_Yes = 0x48;
-	constexpr uint32_t m_No = 0x58;
+	constexpr uint32_t m_No = 0x78;
 }
 
 namespace CPulseCell_Outflow_TestExplicitYesNo
 {
 	constexpr uint32_t m_Yes = 0x48;
-	constexpr uint32_t m_No = 0x58;
+	constexpr uint32_t m_No = 0x78;
 }
 
 namespace CPulseCell_Value_TestValue50
@@ -349,9 +471,28 @@ namespace CPulseCell_Step_DebugLog
 namespace CPulseCell_Step_CallExternalMethod
 {
 	constexpr uint32_t m_MethodName = 0x48;
-	constexpr uint32_t m_ExpectedArgs = 0x50;
+	constexpr uint32_t m_GameBlackboard = 0x50;
+	constexpr uint32_t m_ExpectedArgs = 0x58;
 	constexpr uint32_t m_nAsyncCallMode = 0x68;
 	constexpr uint32_t m_OnFinished = 0x70;
+}
+
+namespace CPulseCell_FireCursors
+{
+	constexpr uint32_t m_Outflows = 0x48;
+	constexpr uint32_t m_bWaitForChildOutflows = 0x60;
+	constexpr uint32_t m_OnFinished = 0x68;
+	constexpr uint32_t m_OnCanceled = 0x98;
+}
+
+namespace CPulseCell_LimitCount
+{
+	constexpr uint32_t m_nLimitCount = 0x48;
+}
+
+namespace CPulseCell_LimitCount::InstanceState_t
+{
+	constexpr uint32_t m_nCurrentCount = 0x0;
 }
 
 namespace CPulseCell_Timeline
@@ -359,7 +500,7 @@ namespace CPulseCell_Timeline
 	constexpr uint32_t m_TimelineEvents = 0x48;
 	constexpr uint32_t m_bWaitForChildOutflows = 0x60;
 	constexpr uint32_t m_OnFinished = 0x68;
-	constexpr uint32_t m_OnCanceled = 0x78;
+	constexpr uint32_t m_OnCanceled = 0x98;
 }
 
 namespace CPulseCell_Timeline::TimelineEvent_t
@@ -370,30 +511,14 @@ namespace CPulseCell_Timeline::TimelineEvent_t
 	constexpr uint32_t m_EventOutflow = 0x8;
 }
 
-namespace PulseTestEHandle_t
-{
-	constexpr uint32_t m_Value = 0x0;
-}
-
-namespace FakeEntity_t
-{
-	constexpr uint32_t m_nHandle = 0x0;
-	constexpr uint32_t m_Name = 0x8;
-	constexpr uint32_t m_Class = 0x10;
-	constexpr uint32_t m_bDestroyed = 0x18;
-	constexpr uint32_t m_pAssociatedGraphInstance = 0x20;
-	constexpr uint32_t m_bFuncWasCalled = 0x28;
-	constexpr uint32_t m_fValue = 0x2C;
-}
-
 namespace CPulseGraphInstance_TestDomain
 {
-	constexpr uint32_t m_bIsRunningUnitTests = 0xD8;
-	constexpr uint32_t m_bExplicitTimeStepping = 0xD9;
-	constexpr uint32_t m_bExpectingToDestroyWithYieldedCursors = 0xDA;
-	constexpr uint32_t m_nNextValidateIndex = 0xDC;
-	constexpr uint32_t m_Tracepoints = 0xE0;
-	constexpr uint32_t m_bTestYesOrNoPath = 0xF8;
+	constexpr uint32_t m_bIsRunningUnitTests = 0xF8;
+	constexpr uint32_t m_bExplicitTimeStepping = 0xF9;
+	constexpr uint32_t m_bExpectingToDestroyWithYieldedCursors = 0xFA;
+	constexpr uint32_t m_nNextValidateIndex = 0xFC;
+	constexpr uint32_t m_Tracepoints = 0x100;
+	constexpr uint32_t m_bTestYesOrNoPath = 0x118;
 }
 
 namespace CPulseCell_Step_TestDomainTracepoint
@@ -424,8 +549,8 @@ namespace CPulseCell_Val_TestDomainFindEntityByName
 namespace CPulseCell_TestWaitWithCursorState
 {
 	constexpr uint32_t m_WakeResume = 0x48;
-	constexpr uint32_t m_WakeCancel = 0x58;
-	constexpr uint32_t m_WakeFail = 0x68;
+	constexpr uint32_t m_WakeCancel = 0x78;
+	constexpr uint32_t m_WakeFail = 0xA8;
 }
 
 namespace CPulseCell_TestWaitWithCursorState::CursorState_t
@@ -436,13 +561,13 @@ namespace CPulseCell_TestWaitWithCursorState::CursorState_t
 
 namespace CTestDomainDerived_Cursor
 {
-	constexpr uint32_t m_nCursorValueA = 0x168;
-	constexpr uint32_t m_nCursorValueB = 0x16C;
+	constexpr uint32_t m_nCursorValueA = 0xA0;
+	constexpr uint32_t m_nCursorValueB = 0xA4;
 }
 
 namespace CPulseGraphInstance_TestDomain_Derived
 {
-	constexpr uint32_t m_nInstanceValueX = 0x100;
+	constexpr uint32_t m_nInstanceValueX = 0x120;
 }
 
 namespace CPulseTestFuncs_DerivedDomain
@@ -461,12 +586,32 @@ namespace CPulseCell_Test_MultiInflow_NoDefault
 {
 }
 
+namespace CPulseCell_Test_MultiOutflow_WithParams
+{
+	constexpr uint32_t m_Out1 = 0x48;
+	constexpr uint32_t m_Out2 = 0x78;
+}
+
+namespace CPulseCell_Test_MultiOutflow_WithParams_Yielding
+{
+	constexpr uint32_t m_Out1 = 0x48;
+	constexpr uint32_t m_AsyncChild1 = 0x78;
+	constexpr uint32_t m_AsyncChild2 = 0xA8;
+	constexpr uint32_t m_YieldResume1 = 0xD8;
+	constexpr uint32_t m_YieldResume2 = 0x108;
+}
+
+namespace CPulseCell_Test_MultiOutflow_WithParams_Yielding::CursorState_t
+{
+	constexpr uint32_t nTestStep = 0x0;
+}
+
 namespace CPulseTurtleGraphicsCursor
 {
-	constexpr uint32_t m_Color = 0x168;
-	constexpr uint32_t m_vPos = 0x16C;
-	constexpr uint32_t m_flHeadingDeg = 0x174;
-	constexpr uint32_t m_bPenUp = 0x178;
+	constexpr uint32_t m_Color = 0xA0;
+	constexpr uint32_t m_vPos = 0xA4;
+	constexpr uint32_t m_flHeadingDeg = 0xAC;
+	constexpr uint32_t m_bPenUp = 0xB0;
 }
 
 namespace CPulseGraphInstance_TurtleGraphics
@@ -481,12 +626,12 @@ namespace CPulseCell_WaitForCursorsWithTagBase
 
 namespace CPulseCell_WaitForCursorsWithTag
 {
-	constexpr uint32_t m_bTagSelfWhenComplete = 0x60;
-	constexpr uint32_t m_nDesiredKillPriority = 0x64;
+	constexpr uint32_t m_bTagSelfWhenComplete = 0x80;
+	constexpr uint32_t m_nDesiredKillPriority = 0x84;
 }
 
 namespace CPulseCell_CursorQueue
 {
-	constexpr uint32_t m_nCursorsAllowedToRunParallel = 0x60;
+	constexpr uint32_t m_nCursorsAllowedToRunParallel = 0x80;
 }
 

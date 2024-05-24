@@ -61,7 +61,7 @@ namespace SDK
 		void* vfptr;
 		char m_szName[256];
 
-		S2_PAD(0x3C8);
+		S2_PAD(0x338);
 
 		CSchemaDeclaredClassEntry* m_pDeclaredClasses;
 
@@ -73,7 +73,7 @@ namespace SDK
 	class CSchemaSystem
 	{
 	public:
-		S2_PAD(0x190);
+		S2_PAD(0x188);
 
 		uint64_t m_nScopeSize;
 		CSchemaSystemTypeScope** m_pScopeArray;

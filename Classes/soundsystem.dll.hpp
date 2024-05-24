@@ -43,12 +43,33 @@ namespace CSosGroupActionSoundeventClusterSchema
 	constexpr uint32_t m_groupBoundingBoxMaxsOpvar = 0x40;
 }
 
+namespace CSosGroupActionSoundeventPrioritySchema
+{
+	constexpr uint32_t m_priorityValue = 0x18;
+	constexpr uint32_t m_priorityVolumeScalar = 0x20;
+	constexpr uint32_t m_priorityContributeButDontRead = 0x28;
+	constexpr uint32_t m_bPriorityReadButDontContribute = 0x30;
+}
+
+namespace CSosGroupActionMemberCountEnvelopeSchema
+{
+	constexpr uint32_t m_nBaseCount = 0x18;
+	constexpr uint32_t m_nTargetCount = 0x1C;
+	constexpr uint32_t m_flBaseValue = 0x20;
+	constexpr uint32_t m_flTargetValue = 0x24;
+	constexpr uint32_t m_flAttack = 0x28;
+	constexpr uint32_t m_flDecay = 0x2C;
+	constexpr uint32_t m_resultVarName = 0x30;
+	constexpr uint32_t m_bSaveToGroup = 0x38;
+}
+
 namespace CSosGroupBranchPattern
 {
 	constexpr uint32_t m_bMatchEventName = 0x8;
 	constexpr uint32_t m_bMatchEventSubString = 0x9;
 	constexpr uint32_t m_bMatchEntIndex = 0xA;
 	constexpr uint32_t m_bMatchOpvar = 0xB;
+	constexpr uint32_t m_bMatchString = 0xC;
 }
 
 namespace CSosGroupMatchPattern
@@ -57,6 +78,7 @@ namespace CSosGroupMatchPattern
 	constexpr uint32_t m_matchSoundEventSubString = 0x18;
 	constexpr uint32_t m_flEntIndex = 0x20;
 	constexpr uint32_t m_flOpvar = 0x24;
+	constexpr uint32_t m_opvarString = 0x28;
 }
 
 namespace CSosSoundEventGroupSchema
@@ -67,8 +89,9 @@ namespace CSosSoundEventGroupSchema
 	constexpr uint32_t m_nBlockMaxCount = 0x10;
 	constexpr uint32_t m_bInvertMatch = 0x14;
 	constexpr uint32_t m_matchPattern = 0x18;
-	constexpr uint32_t m_branchPattern = 0x40;
-	constexpr uint32_t m_vActions = 0xB0;
+	constexpr uint32_t m_branchPattern = 0x48;
+	constexpr uint32_t m_flLifeSpanTime = 0x58;
+	constexpr uint32_t m_vActions = 0xC0;
 }
 
 namespace CSosSoundEventGroupListSchema
@@ -116,78 +139,161 @@ namespace CDSPPresetMixgroupModifierTable
 	constexpr uint32_t m_table = 0x0;
 }
 
+namespace CVoiceContainerAnalysisBase
+{
+	constexpr uint32_t m_bRegenerateCurveOnCompile = 0x8;
+	constexpr uint32_t m_curve = 0x10;
+}
+
 namespace CVoiceContainerBase
 {
-	constexpr uint32_t m_curves = 0x20;
+	constexpr uint32_t m_vSound = 0x20;
+	constexpr uint32_t m_bHideAnalyzers = 0xD0;
+	constexpr uint32_t m_analysisContainers = 0xD8;
+}
+
+namespace CVSound
+{
+	constexpr uint32_t m_nRate = 0x0;
+	constexpr uint32_t m_nFormat = 0x4;
+	constexpr uint32_t m_nChannels = 0x8;
+	constexpr uint32_t m_nLoopStart = 0xC;
+	constexpr uint32_t m_nSampleCount = 0x10;
+	constexpr uint32_t m_flDuration = 0x14;
+	constexpr uint32_t m_Sentences = 0x18;
+	constexpr uint32_t m_nStreamingSize = 0x30;
+	constexpr uint32_t m_nSeekTable = 0x38;
+	constexpr uint32_t m_nLoopEnd = 0x50;
+	constexpr uint32_t m_encodedHeader = 0x58;
 }
 
 namespace CVoiceContainerDefault
 {
-}
-
-namespace CVoiceContainerWavFileReader
-{
-	constexpr uint32_t m_wavFilePath = 0x60;
-}
-
-namespace CVoiceContainerTestConstant
-{
-	constexpr uint32_t m_flTestConstantParam = 0x68;
-}
-
-namespace CVoiceContainerTestNestedDynamic
-{
-	constexpr uint32_t m_SoundToPlay = 0x60;
-	constexpr uint32_t m_flTestConstantParam = 0x68;
+	constexpr uint32_t m_vsndReference = 0xF0;
 }
 
 namespace CVoiceContainerDecayingSineWave
 {
-	constexpr uint32_t m_flFrequency = 0x60;
-	constexpr uint32_t m_flDecayTime = 0x64;
+	constexpr uint32_t m_flFrequency = 0xF0;
+	constexpr uint32_t m_flDecayTime = 0xF4;
 }
 
 namespace CVoiceContainerAmpedDecayingSineWave
 {
-	constexpr uint32_t m_flGainAmount = 0x68;
+	constexpr uint32_t m_flGainAmount = 0xF8;
 }
 
 namespace CVoiceContainerRealtimeFMSineWave
 {
-	constexpr uint32_t m_flCarrierFrequency = 0x60;
-	constexpr uint32_t m_flModulatorFrequency = 0x64;
-	constexpr uint32_t m_flModulatorAmount = 0x68;
+	constexpr uint32_t m_flCarrierFrequency = 0xF0;
+	constexpr uint32_t m_flModulatorFrequency = 0xF4;
+	constexpr uint32_t m_flModulatorAmount = 0xF8;
 }
 
-namespace CVoiceContainerBlend
+namespace CVoiceContainerNull
 {
-	constexpr uint32_t m_hSoundOne = 0x60;
-	constexpr uint32_t m_hSoundTwo = 0x68;
-	constexpr uint32_t m_flBlendAmount = 0x70;
 }
 
-namespace CVoiceContainerEngineSound
+namespace CAudioEmphasisSample
 {
-	constexpr uint32_t m_SoundToPlay = 0x60;
-	constexpr uint32_t m_flTestConstantParam = 0x68;
-	constexpr uint32_t m_flTestSoundEventBoundParam = 0x6C;
-	constexpr uint32_t m_flEngineRPM = 0x70;
+	constexpr uint32_t m_flTime = 0x0;
+	constexpr uint32_t m_flValue = 0x4;
+}
+
+namespace CAudioPhonemeTag
+{
+	constexpr uint32_t m_flStartTime = 0x0;
+	constexpr uint32_t m_flEndTime = 0x4;
+	constexpr uint32_t m_nPhonemeCode = 0x8;
+}
+
+namespace CAudioMorphData
+{
+	constexpr uint32_t m_times = 0x0;
+	constexpr uint32_t m_nameHashCodes = 0x18;
+	constexpr uint32_t m_nameStrings = 0x30;
+	constexpr uint32_t m_samples = 0x48;
+	constexpr uint32_t m_flEaseIn = 0x60;
+	constexpr uint32_t m_flEaseOut = 0x64;
+}
+
+namespace CAudioSentence
+{
+	constexpr uint32_t m_bShouldVoiceDuck = 0x0;
+	constexpr uint32_t m_RunTimePhonemes = 0x8;
+	constexpr uint32_t m_EmphasisSamples = 0x20;
+	constexpr uint32_t m_morphData = 0x38;
+}
+
+namespace CSoundInfoHeader
+{
 }
 
 namespace CVoiceContainerEnvelopeAnalyzer
 {
-	constexpr uint32_t m_envBuffer = 0x68;
+	constexpr uint32_t m_mode = 0x50;
+	constexpr uint32_t m_nSamples = 0x54;
+	constexpr uint32_t m_flThreshold = 0x58;
+}
+
+namespace CVoiceContainerSelector
+{
+	constexpr uint32_t m_mode = 0xF0;
+	constexpr uint32_t m_bRetrigger = 0xF4;
+	constexpr uint32_t m_soundsToPlay = 0xF8;
+}
+
+namespace CVoiceContainerBlender
+{
+	constexpr uint32_t m_firstSound = 0xF0;
+	constexpr uint32_t m_secondSound = 0xF8;
+	constexpr uint32_t m_flBlendFactor = 0x100;
 }
 
 namespace CVoiceContainerRandomSampler
 {
-	constexpr uint32_t m_flLoudAmplitude = 0x60;
-	constexpr uint32_t m_flLoudAmplitudeJitter = 0x64;
-	constexpr uint32_t m_flSoftAmplitude = 0x68;
-	constexpr uint32_t m_flSoftAmplitudeJitter = 0x6C;
-	constexpr uint32_t m_flLoudTimeJitter = 0x70;
-	constexpr uint32_t m_flSoftTimeJitter = 0x74;
-	constexpr uint32_t m_grainResources = 0x78;
+	constexpr uint32_t m_flAmplitude = 0xF0;
+	constexpr uint32_t m_flAmplitudeJitter = 0xF4;
+	constexpr uint32_t m_flTimeJitter = 0xF8;
+	constexpr uint32_t m_flMaxLength = 0xFC;
+	constexpr uint32_t m_nNumDelayVariations = 0x100;
+	constexpr uint32_t m_grainResources = 0x108;
+}
+
+namespace CVoiceContainerStaticAdditiveSynth
+{
+	constexpr uint32_t m_tones = 0xF0;
+}
+
+namespace CVoiceContainerStaticAdditiveSynth::CTone
+{
+	constexpr uint32_t m_harmonics = 0x0;
+	constexpr uint32_t m_curve = 0x18;
+	constexpr uint32_t m_bSyncInstances = 0x58;
+}
+
+namespace CVoiceContainerStaticAdditiveSynth::CGainScalePerInstance
+{
+	constexpr uint32_t m_flMinVolume = 0x0;
+	constexpr uint32_t m_nInstancesAtMinVolume = 0x4;
+	constexpr uint32_t m_flMaxVolume = 0x8;
+	constexpr uint32_t m_nInstancesAtMaxVolume = 0xC;
+}
+
+namespace CVoiceContainerStaticAdditiveSynth::CHarmonic
+{
+	constexpr uint32_t m_nWaveform = 0x0;
+	constexpr uint32_t m_nFundamental = 0x1;
+	constexpr uint32_t m_nOctave = 0x4;
+	constexpr uint32_t m_flCents = 0x8;
+	constexpr uint32_t m_flPhase = 0xC;
+	constexpr uint32_t m_curve = 0x10;
+	constexpr uint32_t m_volumeScaling = 0x50;
+}
+
+namespace CVoiceContainerSwitch
+{
+	constexpr uint32_t m_soundsToPlay = 0xF0;
 }
 
 namespace VMixFilterDesc_t

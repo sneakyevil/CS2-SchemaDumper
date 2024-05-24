@@ -7,79 +7,81 @@ namespace CBaseEntity
 {
 	constexpr uint32_t m_CBodyComponent = 0x38;
 	constexpr uint32_t m_NetworkTransmitComponent = 0x40;
-	constexpr uint32_t m_aThinkFunctions = 0x230;
-	constexpr uint32_t m_iCurrentThinkContext = 0x248;
-	constexpr uint32_t m_nLastThinkTick = 0x24C;
-	constexpr uint32_t m_nDisableContextThinkStartTick = 0x250;
-	constexpr uint32_t m_isSteadyState = 0x260;
-	constexpr uint32_t m_lastNetworkChange = 0x268;
-	constexpr uint32_t m_ResponseContexts = 0x278;
-	constexpr uint32_t m_iszResponseContext = 0x290;
-	constexpr uint32_t m_iHealth = 0x2B8;
-	constexpr uint32_t m_iMaxHealth = 0x2BC;
-	constexpr uint32_t m_lifeState = 0x2C0;
-	constexpr uint32_t m_flDamageAccumulator = 0x2C4;
-	constexpr uint32_t m_bTakesDamage = 0x2C8;
-	constexpr uint32_t m_nTakeDamageFlags = 0x2CC;
-	constexpr uint32_t m_bIsPlatform = 0x2D0;
-	constexpr uint32_t m_MoveCollide = 0x2D2;
-	constexpr uint32_t m_MoveType = 0x2D3;
-	constexpr uint32_t m_nActualMoveType = 0x2D4;
-	constexpr uint32_t m_nWaterTouch = 0x2D5;
-	constexpr uint32_t m_nSlimeTouch = 0x2D6;
-	constexpr uint32_t m_bRestoreInHierarchy = 0x2D7;
-	constexpr uint32_t m_target = 0x2D8;
-	constexpr uint32_t m_hDamageFilter = 0x2E0;
-	constexpr uint32_t m_iszDamageFilterName = 0x2E8;
-	constexpr uint32_t m_flMoveDoneTime = 0x2F0;
-	constexpr uint32_t m_nSubclassID = 0x2F4;
-	constexpr uint32_t m_flAnimTime = 0x300;
-	constexpr uint32_t m_flSimulationTime = 0x304;
-	constexpr uint32_t m_flCreateTime = 0x308;
-	constexpr uint32_t m_bClientSideRagdoll = 0x30C;
-	constexpr uint32_t m_ubInterpolationFrame = 0x30D;
-	constexpr uint32_t m_vPrevVPhysicsUpdatePos = 0x310;
-	constexpr uint32_t m_iTeamNum = 0x31C;
-	constexpr uint32_t m_iGlobalname = 0x320;
-	constexpr uint32_t m_iSentToClients = 0x328;
-	constexpr uint32_t m_flSpeed = 0x32C;
-	constexpr uint32_t m_sUniqueHammerID = 0x330;
-	constexpr uint32_t m_spawnflags = 0x338;
-	constexpr uint32_t m_nNextThinkTick = 0x33C;
-	constexpr uint32_t m_nSimulationTick = 0x340;
-	constexpr uint32_t m_OnKilled = 0x348;
-	constexpr uint32_t m_fFlags = 0x370;
-	constexpr uint32_t m_vecAbsVelocity = 0x374;
-	constexpr uint32_t m_vecVelocity = 0x380;
-	constexpr uint32_t m_vecBaseVelocity = 0x3B0;
-	constexpr uint32_t m_nPushEnumCount = 0x3BC;
-	constexpr uint32_t m_pCollision = 0x3C0;
-	constexpr uint32_t m_hEffectEntity = 0x3C8;
-	constexpr uint32_t m_hOwnerEntity = 0x3CC;
-	constexpr uint32_t m_fEffects = 0x3D0;
-	constexpr uint32_t m_hGroundEntity = 0x3D4;
-	constexpr uint32_t m_flFriction = 0x3D8;
-	constexpr uint32_t m_flElasticity = 0x3DC;
-	constexpr uint32_t m_flGravityScale = 0x3E0;
-	constexpr uint32_t m_flTimeScale = 0x3E4;
-	constexpr uint32_t m_flWaterLevel = 0x3E8;
-	constexpr uint32_t m_bAnimatedEveryTick = 0x3EC;
-	constexpr uint32_t m_bDisableLowViolence = 0x3ED;
-	constexpr uint32_t m_nWaterType = 0x3EE;
-	constexpr uint32_t m_iEFlags = 0x3F0;
-	constexpr uint32_t m_OnUser1 = 0x3F8;
-	constexpr uint32_t m_OnUser2 = 0x420;
-	constexpr uint32_t m_OnUser3 = 0x448;
-	constexpr uint32_t m_OnUser4 = 0x470;
-	constexpr uint32_t m_iInitialTeamNum = 0x498;
-	constexpr uint32_t m_flNavIgnoreUntilTime = 0x49C;
-	constexpr uint32_t m_vecAngVelocity = 0x4A0;
-	constexpr uint32_t m_bNetworkQuantizeOriginAndAngles = 0x4AC;
-	constexpr uint32_t m_bLagCompensate = 0x4AD;
-	constexpr uint32_t m_flOverriddenFriction = 0x4B0;
-	constexpr uint32_t m_pBlocker = 0x4B4;
-	constexpr uint32_t m_flLocalTime = 0x4B8;
-	constexpr uint32_t m_flVPhysicsUpdateLocalTime = 0x4BC;
+	constexpr uint32_t m_aThinkFunctions = 0x220;
+	constexpr uint32_t m_iCurrentThinkContext = 0x238;
+	constexpr uint32_t m_nLastThinkTick = 0x23C;
+	constexpr uint32_t m_bDisabledContextThinks = 0x240;
+	constexpr uint32_t m_isSteadyState = 0x250;
+	constexpr uint32_t m_lastNetworkChange = 0x258;
+	constexpr uint32_t m_ResponseContexts = 0x268;
+	constexpr uint32_t m_iszResponseContext = 0x280;
+	constexpr uint32_t m_iHealth = 0x2A8;
+	constexpr uint32_t m_iMaxHealth = 0x2AC;
+	constexpr uint32_t m_lifeState = 0x2B0;
+	constexpr uint32_t m_flDamageAccumulator = 0x2B4;
+	constexpr uint32_t m_bTakesDamage = 0x2B8;
+	constexpr uint32_t m_nTakeDamageFlags = 0x2C0;
+	constexpr uint32_t m_bIsPlatform = 0x2C8;
+	constexpr uint32_t m_MoveCollide = 0x2CA;
+	constexpr uint32_t m_MoveType = 0x2CB;
+	constexpr uint32_t m_nActualMoveType = 0x2CC;
+	constexpr uint32_t m_nWaterTouch = 0x2CD;
+	constexpr uint32_t m_nSlimeTouch = 0x2CE;
+	constexpr uint32_t m_bRestoreInHierarchy = 0x2CF;
+	constexpr uint32_t m_target = 0x2D0;
+	constexpr uint32_t m_hDamageFilter = 0x2D8;
+	constexpr uint32_t m_iszDamageFilterName = 0x2E0;
+	constexpr uint32_t m_flMoveDoneTime = 0x2E8;
+	constexpr uint32_t m_nSubclassID = 0x2EC;
+	constexpr uint32_t m_flAnimTime = 0x2F8;
+	constexpr uint32_t m_flSimulationTime = 0x2FC;
+	constexpr uint32_t m_flCreateTime = 0x300;
+	constexpr uint32_t m_bClientSideRagdoll = 0x304;
+	constexpr uint32_t m_ubInterpolationFrame = 0x305;
+	constexpr uint32_t m_vPrevVPhysicsUpdatePos = 0x308;
+	constexpr uint32_t m_iTeamNum = 0x314;
+	constexpr uint32_t m_iGlobalname = 0x318;
+	constexpr uint32_t m_iSentToClients = 0x320;
+	constexpr uint32_t m_flSpeed = 0x324;
+	constexpr uint32_t m_sUniqueHammerID = 0x328;
+	constexpr uint32_t m_spawnflags = 0x330;
+	constexpr uint32_t m_nNextThinkTick = 0x334;
+	constexpr uint32_t m_nSimulationTick = 0x338;
+	constexpr uint32_t m_OnKilled = 0x340;
+	constexpr uint32_t m_fFlags = 0x368;
+	constexpr uint32_t m_vecAbsVelocity = 0x36C;
+	constexpr uint32_t m_vecVelocity = 0x378;
+	constexpr uint32_t m_vecBaseVelocity = 0x3A8;
+	constexpr uint32_t m_nPushEnumCount = 0x3B4;
+	constexpr uint32_t m_pCollision = 0x3B8;
+	constexpr uint32_t m_hEffectEntity = 0x3C0;
+	constexpr uint32_t m_hOwnerEntity = 0x3C4;
+	constexpr uint32_t m_fEffects = 0x3C8;
+	constexpr uint32_t m_hGroundEntity = 0x3CC;
+	constexpr uint32_t m_nGroundBodyIndex = 0x3D0;
+	constexpr uint32_t m_flFriction = 0x3D4;
+	constexpr uint32_t m_flElasticity = 0x3D8;
+	constexpr uint32_t m_flGravityScale = 0x3DC;
+	constexpr uint32_t m_flTimeScale = 0x3E0;
+	constexpr uint32_t m_flWaterLevel = 0x3E4;
+	constexpr uint32_t m_bAnimatedEveryTick = 0x3E8;
+	constexpr uint32_t m_bDisableLowViolence = 0x3E9;
+	constexpr uint32_t m_nWaterType = 0x3EA;
+	constexpr uint32_t m_iEFlags = 0x3EC;
+	constexpr uint32_t m_OnUser1 = 0x3F0;
+	constexpr uint32_t m_OnUser2 = 0x418;
+	constexpr uint32_t m_OnUser3 = 0x440;
+	constexpr uint32_t m_OnUser4 = 0x468;
+	constexpr uint32_t m_iInitialTeamNum = 0x490;
+	constexpr uint32_t m_flNavIgnoreUntilTime = 0x494;
+	constexpr uint32_t m_vecAngVelocity = 0x498;
+	constexpr uint32_t m_bNetworkQuantizeOriginAndAngles = 0x4A4;
+	constexpr uint32_t m_bLagCompensate = 0x4A5;
+	constexpr uint32_t m_flOverriddenFriction = 0x4A8;
+	constexpr uint32_t m_pBlocker = 0x4AC;
+	constexpr uint32_t m_flLocalTime = 0x4B0;
+	constexpr uint32_t m_flVPhysicsUpdateLocalTime = 0x4B4;
+	constexpr uint32_t m_nBloodType = 0x4B8;
 }
 
 namespace ParticleIndex_t
@@ -105,16 +107,16 @@ namespace CRangeInt
 	constexpr uint32_t m_pValue = 0x0;
 }
 
-namespace Extent
-{
-	constexpr uint32_t lo = 0x0;
-	constexpr uint32_t hi = 0xC;
-}
-
 namespace NavGravity_t
 {
 	constexpr uint32_t m_vGravity = 0x0;
 	constexpr uint32_t m_bDefault = 0xC;
+}
+
+namespace Extent
+{
+	constexpr uint32_t lo = 0x0;
+	constexpr uint32_t hi = 0xC;
 }
 
 namespace CNavVolume
@@ -195,17 +197,17 @@ namespace CGameSceneNode
 	constexpr uint32_t m_pParent = 0x38;
 	constexpr uint32_t m_pChild = 0x40;
 	constexpr uint32_t m_pNextSibling = 0x48;
-	constexpr uint32_t m_hParent = 0x70;
-	constexpr uint32_t m_vecOrigin = 0x80;
-	constexpr uint32_t m_angRotation = 0xB8;
-	constexpr uint32_t m_flScale = 0xC4;
-	constexpr uint32_t m_vecAbsOrigin = 0xC8;
-	constexpr uint32_t m_angAbsRotation = 0xD4;
-	constexpr uint32_t m_flAbsScale = 0xE0;
-	constexpr uint32_t m_nParentAttachmentOrBone = 0xE4;
-	constexpr uint32_t m_bDebugAbsOriginChanges = 0xE6;
-	constexpr uint32_t m_bDormant = 0xE7;
-	constexpr uint32_t m_bForceParentToBeNetworked = 0xE8;
+	constexpr uint32_t m_hParent = 0x78;
+	constexpr uint32_t m_vecOrigin = 0x88;
+	constexpr uint32_t m_angRotation = 0xC0;
+	constexpr uint32_t m_flScale = 0xCC;
+	constexpr uint32_t m_vecAbsOrigin = 0xD0;
+	constexpr uint32_t m_angAbsRotation = 0xDC;
+	constexpr uint32_t m_flAbsScale = 0xE8;
+	constexpr uint32_t m_nParentAttachmentOrBone = 0xEC;
+	constexpr uint32_t m_bDebugAbsOriginChanges = 0xEE;
+	constexpr uint32_t m_bDormant = 0xEF;
+	constexpr uint32_t m_bForceParentToBeNetworked = 0xF0;
 	constexpr uint32_t m_bDirtyHierarchy = 0x0;
 	constexpr uint32_t m_bDirtyBoneMergeInfo = 0x0;
 	constexpr uint32_t m_bNetworkedPositionChanged = 0x0;
@@ -215,13 +217,14 @@ namespace CGameSceneNode
 	constexpr uint32_t m_bBoneMergeFlex = 0x0;
 	constexpr uint32_t m_nLatchAbsOrigin = 0x0;
 	constexpr uint32_t m_bDirtyBoneMergeBoneToRoot = 0x0;
-	constexpr uint32_t m_nHierarchicalDepth = 0xEB;
-	constexpr uint32_t m_nHierarchyType = 0xEC;
-	constexpr uint32_t m_nDoNotSetAnimTimeInInvalidatePhysicsCount = 0xED;
-	constexpr uint32_t m_name = 0xF0;
-	constexpr uint32_t m_hierarchyAttachName = 0x130;
-	constexpr uint32_t m_flZOffset = 0x134;
-	constexpr uint32_t m_vRenderOrigin = 0x138;
+	constexpr uint32_t m_nHierarchicalDepth = 0xF3;
+	constexpr uint32_t m_nHierarchyType = 0xF4;
+	constexpr uint32_t m_nDoNotSetAnimTimeInInvalidatePhysicsCount = 0xF5;
+	constexpr uint32_t m_name = 0xF8;
+	constexpr uint32_t m_hierarchyAttachName = 0x138;
+	constexpr uint32_t m_flZOffset = 0x13C;
+	constexpr uint32_t m_flClientLocalScale = 0x140;
+	constexpr uint32_t m_vRenderOrigin = 0x144;
 }
 
 namespace CBodyComponent
@@ -233,25 +236,23 @@ namespace CBodyComponent
 namespace CBodyComponentPoint
 {
 	constexpr uint32_t m_sceneNode = 0x50;
-	constexpr uint32_t __m_pChainEntity = 0x1A0;
 }
 
 namespace CSkeletonInstance
 {
-	constexpr uint32_t m_modelState = 0x160;
-	constexpr uint32_t m_bIsAnimationEnabled = 0x370;
-	constexpr uint32_t m_bUseParentRenderBounds = 0x371;
-	constexpr uint32_t m_bDisableSolidCollisionsForHierarchy = 0x372;
+	constexpr uint32_t m_modelState = 0x170;
+	constexpr uint32_t m_bIsAnimationEnabled = 0x3A0;
+	constexpr uint32_t m_bUseParentRenderBounds = 0x3A1;
+	constexpr uint32_t m_bDisableSolidCollisionsForHierarchy = 0x3A2;
 	constexpr uint32_t m_bDirtyMotionType = 0x0;
 	constexpr uint32_t m_bIsGeneratingLatchedParentSpaceState = 0x0;
-	constexpr uint32_t m_materialGroup = 0x374;
-	constexpr uint32_t m_nHitboxSet = 0x378;
+	constexpr uint32_t m_materialGroup = 0x3A4;
+	constexpr uint32_t m_nHitboxSet = 0x3A8;
 }
 
 namespace CBodyComponentSkeletonInstance
 {
 	constexpr uint32_t m_skeletonInstance = 0x50;
-	constexpr uint32_t __m_pChainEntity = 0x430;
 }
 
 namespace CHitboxComponent
@@ -259,80 +260,75 @@ namespace CHitboxComponent
 	constexpr uint32_t m_bvDisabledHitGroups = 0x24;
 }
 
-namespace GameTime_t
-{
-	constexpr uint32_t m_Value = 0x0;
-}
-
 namespace CLightComponent
 {
-	constexpr uint32_t __m_pChainEntity = 0x48;
-	constexpr uint32_t m_Color = 0x85;
-	constexpr uint32_t m_SecondaryColor = 0x89;
-	constexpr uint32_t m_flBrightness = 0x90;
-	constexpr uint32_t m_flBrightnessScale = 0x94;
-	constexpr uint32_t m_flBrightnessMult = 0x98;
-	constexpr uint32_t m_flRange = 0x9C;
-	constexpr uint32_t m_flFalloff = 0xA0;
-	constexpr uint32_t m_flAttenuation0 = 0xA4;
-	constexpr uint32_t m_flAttenuation1 = 0xA8;
-	constexpr uint32_t m_flAttenuation2 = 0xAC;
-	constexpr uint32_t m_flTheta = 0xB0;
-	constexpr uint32_t m_flPhi = 0xB4;
-	constexpr uint32_t m_hLightCookie = 0xB8;
-	constexpr uint32_t m_nCascades = 0xC0;
-	constexpr uint32_t m_nCastShadows = 0xC4;
-	constexpr uint32_t m_nShadowWidth = 0xC8;
-	constexpr uint32_t m_nShadowHeight = 0xCC;
-	constexpr uint32_t m_bRenderDiffuse = 0xD0;
-	constexpr uint32_t m_nRenderSpecular = 0xD4;
-	constexpr uint32_t m_bRenderTransmissive = 0xD8;
-	constexpr uint32_t m_flOrthoLightWidth = 0xDC;
-	constexpr uint32_t m_flOrthoLightHeight = 0xE0;
-	constexpr uint32_t m_nStyle = 0xE4;
-	constexpr uint32_t m_Pattern = 0xE8;
-	constexpr uint32_t m_nCascadeRenderStaticObjects = 0xF0;
-	constexpr uint32_t m_flShadowCascadeCrossFade = 0xF4;
-	constexpr uint32_t m_flShadowCascadeDistanceFade = 0xF8;
-	constexpr uint32_t m_flShadowCascadeDistance0 = 0xFC;
-	constexpr uint32_t m_flShadowCascadeDistance1 = 0x100;
-	constexpr uint32_t m_flShadowCascadeDistance2 = 0x104;
-	constexpr uint32_t m_flShadowCascadeDistance3 = 0x108;
-	constexpr uint32_t m_nShadowCascadeResolution0 = 0x10C;
-	constexpr uint32_t m_nShadowCascadeResolution1 = 0x110;
-	constexpr uint32_t m_nShadowCascadeResolution2 = 0x114;
-	constexpr uint32_t m_nShadowCascadeResolution3 = 0x118;
-	constexpr uint32_t m_bUsesBakedShadowing = 0x11C;
-	constexpr uint32_t m_nShadowPriority = 0x120;
-	constexpr uint32_t m_nBakedShadowIndex = 0x124;
-	constexpr uint32_t m_bRenderToCubemaps = 0x128;
-	constexpr uint32_t m_nDirectLight = 0x12C;
-	constexpr uint32_t m_nIndirectLight = 0x130;
-	constexpr uint32_t m_flFadeMinDist = 0x134;
-	constexpr uint32_t m_flFadeMaxDist = 0x138;
-	constexpr uint32_t m_flShadowFadeMinDist = 0x13C;
-	constexpr uint32_t m_flShadowFadeMaxDist = 0x140;
-	constexpr uint32_t m_bEnabled = 0x144;
-	constexpr uint32_t m_bFlicker = 0x145;
-	constexpr uint32_t m_bPrecomputedFieldsValid = 0x146;
-	constexpr uint32_t m_vPrecomputedBoundsMins = 0x148;
-	constexpr uint32_t m_vPrecomputedBoundsMaxs = 0x154;
-	constexpr uint32_t m_vPrecomputedOBBOrigin = 0x160;
-	constexpr uint32_t m_vPrecomputedOBBAngles = 0x16C;
-	constexpr uint32_t m_vPrecomputedOBBExtent = 0x178;
-	constexpr uint32_t m_flPrecomputedMaxRange = 0x184;
-	constexpr uint32_t m_nFogLightingMode = 0x188;
-	constexpr uint32_t m_flFogContributionStength = 0x18C;
-	constexpr uint32_t m_flNearClipPlane = 0x190;
-	constexpr uint32_t m_SkyColor = 0x194;
-	constexpr uint32_t m_flSkyIntensity = 0x198;
-	constexpr uint32_t m_SkyAmbientBounce = 0x19C;
-	constexpr uint32_t m_bUseSecondaryColor = 0x1A0;
-	constexpr uint32_t m_bMixedShadows = 0x1A1;
-	constexpr uint32_t m_flLightStyleStartTime = 0x1A4;
-	constexpr uint32_t m_flCapsuleLength = 0x1A8;
-	constexpr uint32_t m_flMinRoughness = 0x1AC;
-	constexpr uint32_t m_bPvsModifyEntity = 0x1C0;
+	constexpr uint32_t __m_pChainEntity = 0x38;
+	constexpr uint32_t m_Color = 0x75;
+	constexpr uint32_t m_SecondaryColor = 0x79;
+	constexpr uint32_t m_flBrightness = 0x80;
+	constexpr uint32_t m_flBrightnessScale = 0x84;
+	constexpr uint32_t m_flBrightnessMult = 0x88;
+	constexpr uint32_t m_flRange = 0x8C;
+	constexpr uint32_t m_flFalloff = 0x90;
+	constexpr uint32_t m_flAttenuation0 = 0x94;
+	constexpr uint32_t m_flAttenuation1 = 0x98;
+	constexpr uint32_t m_flAttenuation2 = 0x9C;
+	constexpr uint32_t m_flTheta = 0xA0;
+	constexpr uint32_t m_flPhi = 0xA4;
+	constexpr uint32_t m_hLightCookie = 0xA8;
+	constexpr uint32_t m_nCascades = 0xB0;
+	constexpr uint32_t m_nCastShadows = 0xB4;
+	constexpr uint32_t m_nShadowWidth = 0xB8;
+	constexpr uint32_t m_nShadowHeight = 0xBC;
+	constexpr uint32_t m_bRenderDiffuse = 0xC0;
+	constexpr uint32_t m_nRenderSpecular = 0xC4;
+	constexpr uint32_t m_bRenderTransmissive = 0xC8;
+	constexpr uint32_t m_flOrthoLightWidth = 0xCC;
+	constexpr uint32_t m_flOrthoLightHeight = 0xD0;
+	constexpr uint32_t m_nStyle = 0xD4;
+	constexpr uint32_t m_Pattern = 0xD8;
+	constexpr uint32_t m_nCascadeRenderStaticObjects = 0xE0;
+	constexpr uint32_t m_flShadowCascadeCrossFade = 0xE4;
+	constexpr uint32_t m_flShadowCascadeDistanceFade = 0xE8;
+	constexpr uint32_t m_flShadowCascadeDistance0 = 0xEC;
+	constexpr uint32_t m_flShadowCascadeDistance1 = 0xF0;
+	constexpr uint32_t m_flShadowCascadeDistance2 = 0xF4;
+	constexpr uint32_t m_flShadowCascadeDistance3 = 0xF8;
+	constexpr uint32_t m_nShadowCascadeResolution0 = 0xFC;
+	constexpr uint32_t m_nShadowCascadeResolution1 = 0x100;
+	constexpr uint32_t m_nShadowCascadeResolution2 = 0x104;
+	constexpr uint32_t m_nShadowCascadeResolution3 = 0x108;
+	constexpr uint32_t m_bUsesBakedShadowing = 0x10C;
+	constexpr uint32_t m_nShadowPriority = 0x110;
+	constexpr uint32_t m_nBakedShadowIndex = 0x114;
+	constexpr uint32_t m_bRenderToCubemaps = 0x118;
+	constexpr uint32_t m_nDirectLight = 0x11C;
+	constexpr uint32_t m_nIndirectLight = 0x120;
+	constexpr uint32_t m_flFadeMinDist = 0x124;
+	constexpr uint32_t m_flFadeMaxDist = 0x128;
+	constexpr uint32_t m_flShadowFadeMinDist = 0x12C;
+	constexpr uint32_t m_flShadowFadeMaxDist = 0x130;
+	constexpr uint32_t m_bEnabled = 0x134;
+	constexpr uint32_t m_bFlicker = 0x135;
+	constexpr uint32_t m_bPrecomputedFieldsValid = 0x136;
+	constexpr uint32_t m_vPrecomputedBoundsMins = 0x138;
+	constexpr uint32_t m_vPrecomputedBoundsMaxs = 0x144;
+	constexpr uint32_t m_vPrecomputedOBBOrigin = 0x150;
+	constexpr uint32_t m_vPrecomputedOBBAngles = 0x15C;
+	constexpr uint32_t m_vPrecomputedOBBExtent = 0x168;
+	constexpr uint32_t m_flPrecomputedMaxRange = 0x174;
+	constexpr uint32_t m_nFogLightingMode = 0x178;
+	constexpr uint32_t m_flFogContributionStength = 0x17C;
+	constexpr uint32_t m_flNearClipPlane = 0x180;
+	constexpr uint32_t m_SkyColor = 0x184;
+	constexpr uint32_t m_flSkyIntensity = 0x188;
+	constexpr uint32_t m_SkyAmbientBounce = 0x18C;
+	constexpr uint32_t m_bUseSecondaryColor = 0x190;
+	constexpr uint32_t m_bMixedShadows = 0x191;
+	constexpr uint32_t m_flLightStyleStartTime = 0x194;
+	constexpr uint32_t m_flCapsuleLength = 0x198;
+	constexpr uint32_t m_flMinRoughness = 0x19C;
+	constexpr uint32_t m_bPvsModifyEntity = 0x1B0;
 }
 
 namespace CNetworkTransmitComponent
@@ -361,9 +357,87 @@ namespace CAnimEventQueueListener
 {
 }
 
+namespace PointCameraSettings_t
+{
+	constexpr uint32_t m_flNearBlurryDistance = 0x0;
+	constexpr uint32_t m_flNearCrispDistance = 0x4;
+	constexpr uint32_t m_flFarCrispDistance = 0x8;
+	constexpr uint32_t m_flFarBlurryDistance = 0xC;
+}
+
+namespace CPulseCell_LerpCameraSettings
+{
+	constexpr uint32_t m_flSeconds = 0x78;
+	constexpr uint32_t m_Start = 0x7C;
+	constexpr uint32_t m_End = 0x8C;
+}
+
+namespace CPulseCell_LerpCameraSettings::CursorState_t
+{
+	constexpr uint32_t m_hCamera = 0x8;
+	constexpr uint32_t m_OverlaidStart = 0xC;
+	constexpr uint32_t m_OverlaidEnd = 0x1C;
+}
+
+namespace CPointCamera
+{
+	constexpr uint32_t m_FOV = 0x4C0;
+	constexpr uint32_t m_Resolution = 0x4C4;
+	constexpr uint32_t m_bFogEnable = 0x4C8;
+	constexpr uint32_t m_FogColor = 0x4C9;
+	constexpr uint32_t m_flFogStart = 0x4D0;
+	constexpr uint32_t m_flFogEnd = 0x4D4;
+	constexpr uint32_t m_flFogMaxDensity = 0x4D8;
+	constexpr uint32_t m_bActive = 0x4DC;
+	constexpr uint32_t m_bUseScreenAspectRatio = 0x4DD;
+	constexpr uint32_t m_flAspectRatio = 0x4E0;
+	constexpr uint32_t m_bNoSky = 0x4E4;
+	constexpr uint32_t m_fBrightness = 0x4E8;
+	constexpr uint32_t m_flZFar = 0x4EC;
+	constexpr uint32_t m_flZNear = 0x4F0;
+	constexpr uint32_t m_bCanHLTVUse = 0x4F4;
+	constexpr uint32_t m_bDofEnabled = 0x4F5;
+	constexpr uint32_t m_flDofNearBlurry = 0x4F8;
+	constexpr uint32_t m_flDofNearCrisp = 0x4FC;
+	constexpr uint32_t m_flDofFarCrisp = 0x500;
+	constexpr uint32_t m_flDofFarBlurry = 0x504;
+	constexpr uint32_t m_flDofTiltToGround = 0x508;
+	constexpr uint32_t m_TargetFOV = 0x50C;
+	constexpr uint32_t m_DegreesPerSecond = 0x510;
+	constexpr uint32_t m_bIsOn = 0x514;
+	constexpr uint32_t m_pNext = 0x518;
+}
+
+namespace CPointTemplateAPI
+{
+}
+
+namespace CPropDataComponent
+{
+	constexpr uint32_t m_flDmgModBullet = 0x10;
+	constexpr uint32_t m_flDmgModClub = 0x14;
+	constexpr uint32_t m_flDmgModExplosive = 0x18;
+	constexpr uint32_t m_flDmgModFire = 0x1C;
+	constexpr uint32_t m_iszPhysicsDamageTableName = 0x20;
+	constexpr uint32_t m_iszBasePropData = 0x28;
+	constexpr uint32_t m_nInteractions = 0x30;
+	constexpr uint32_t m_bSpawnMotionDisabled = 0x34;
+	constexpr uint32_t m_nDisableTakePhysicsDamageSpawnFlag = 0x38;
+	constexpr uint32_t m_nMotionDisabledSpawnFlag = 0x3C;
+}
+
 namespace CBuoyancyHelper
 {
 	constexpr uint32_t m_flFluidDensity = 0x18;
+}
+
+namespace SoundeventPathCornerPairNetworked_t
+{
+	constexpr uint32_t vP1 = 0x0;
+	constexpr uint32_t vP2 = 0xC;
+	constexpr uint32_t flPathLengthSqr = 0x18;
+	constexpr uint32_t flP1Pct = 0x1C;
+	constexpr uint32_t flP2Pct = 0x20;
 }
 
 namespace CSkillInt
@@ -374,7 +448,8 @@ namespace CSkillInt
 namespace CSkillDamage
 {
 	constexpr uint32_t m_flDamage = 0x0;
-	constexpr uint32_t m_flPhysicsForceDamage = 0x10;
+	constexpr uint32_t m_flNPCDamageScalarVsNPC = 0x10;
+	constexpr uint32_t m_flPhysicsForceDamage = 0x14;
 }
 
 namespace CRemapFloat
@@ -386,6 +461,50 @@ namespace CScriptUniformRandomStream
 {
 	constexpr uint32_t m_hScriptScope = 0x8;
 	constexpr uint32_t m_nInitialSeed = 0x9C;
+}
+
+namespace IGapHost_GameEntity
+{
+}
+
+namespace CPulseCell_Step_EntFire
+{
+	constexpr uint32_t m_Input = 0x48;
+}
+
+namespace CPulseCell_PlaySequence
+{
+	constexpr uint32_t m_SequenceName = 0x48;
+	constexpr uint32_t m_PulseAnimEvents = 0x50;
+	constexpr uint32_t m_OnFinished = 0x68;
+	constexpr uint32_t m_OnCanceled = 0x98;
+}
+
+namespace CPulseCell_PlaySequence::CursorState_t
+{
+	constexpr uint32_t m_hTarget = 0x0;
+}
+
+namespace CBaseAnimGraph
+{
+	constexpr uint32_t m_bInitiallyPopulateInterpHistory = 0x788;
+	constexpr uint32_t m_pChoreoServices = 0x790;
+	constexpr uint32_t m_bAnimGraphUpdateEnabled = 0x798;
+	constexpr uint32_t m_flMaxSlopeDistance = 0x79C;
+	constexpr uint32_t m_vLastSlopeCheckPos = 0x7A0;
+	constexpr uint32_t m_bAnimationUpdateScheduled = 0x7AC;
+	constexpr uint32_t m_vecForce = 0x7B0;
+	constexpr uint32_t m_nForceBone = 0x7BC;
+	constexpr uint32_t m_pRagdollPose = 0x7D0;
+	constexpr uint32_t m_bRagdollClientSide = 0x7D8;
+}
+
+namespace CPulseAnimFuncs
+{
+}
+
+namespace CSharedGapTypeQueryRegistration
+{
 }
 
 namespace CBasePlayerControllerAPI
@@ -419,10 +538,6 @@ namespace CommandToolCommand_t
 	constexpr uint32_t m_Commands = 0x30;
 	constexpr uint32_t m_SetDebugBits = 0x38;
 	constexpr uint32_t m_ClearDebugBits = 0x40;
-}
-
-namespace CDynamicPropAPI
-{
 }
 
 namespace CPlayerPawnComponent
@@ -506,22 +621,22 @@ namespace CTonemapController2
 
 namespace CPostProcessingVolume
 {
-	constexpr uint32_t m_hPostSettings = 0x8C8;
-	constexpr uint32_t m_flFadeDuration = 0x8D0;
-	constexpr uint32_t m_flMinLogExposure = 0x8D4;
-	constexpr uint32_t m_flMaxLogExposure = 0x8D8;
-	constexpr uint32_t m_flMinExposure = 0x8DC;
-	constexpr uint32_t m_flMaxExposure = 0x8E0;
-	constexpr uint32_t m_flExposureCompensation = 0x8E4;
-	constexpr uint32_t m_flExposureFadeSpeedUp = 0x8E8;
-	constexpr uint32_t m_flExposureFadeSpeedDown = 0x8EC;
-	constexpr uint32_t m_flTonemapEVSmoothingRange = 0x8F0;
-	constexpr uint32_t m_bMaster = 0x8F4;
-	constexpr uint32_t m_bExposureControl = 0x8F5;
-	constexpr uint32_t m_flRate = 0x8F8;
-	constexpr uint32_t m_flTonemapPercentTarget = 0x8FC;
-	constexpr uint32_t m_flTonemapPercentBrightPixels = 0x900;
-	constexpr uint32_t m_flTonemapMinAvgLum = 0x904;
+	constexpr uint32_t m_hPostSettings = 0x8F0;
+	constexpr uint32_t m_flFadeDuration = 0x8F8;
+	constexpr uint32_t m_flMinLogExposure = 0x8FC;
+	constexpr uint32_t m_flMaxLogExposure = 0x900;
+	constexpr uint32_t m_flMinExposure = 0x904;
+	constexpr uint32_t m_flMaxExposure = 0x908;
+	constexpr uint32_t m_flExposureCompensation = 0x90C;
+	constexpr uint32_t m_flExposureFadeSpeedUp = 0x910;
+	constexpr uint32_t m_flExposureFadeSpeedDown = 0x914;
+	constexpr uint32_t m_flTonemapEVSmoothingRange = 0x918;
+	constexpr uint32_t m_bMaster = 0x91C;
+	constexpr uint32_t m_bExposureControl = 0x91D;
+	constexpr uint32_t m_flRate = 0x920;
+	constexpr uint32_t m_flTonemapPercentTarget = 0x924;
+	constexpr uint32_t m_flTonemapPercentBrightPixels = 0x928;
+	constexpr uint32_t m_flTonemapMinAvgLum = 0x92C;
 }
 
 namespace CEnvSoundscapeTriggerable
@@ -649,22 +764,22 @@ namespace CBaseAnimGraphController
 	constexpr uint32_t m_animGraphNetworkedVars = 0x18;
 	constexpr uint32_t m_bSequenceFinished = 0x220;
 	constexpr uint32_t m_flSoundSyncTime = 0x224;
-	constexpr uint32_t m_hSequence = 0x228;
-	constexpr uint32_t m_flSeqStartTime = 0x22C;
-	constexpr uint32_t m_flSeqFixedCycle = 0x230;
-	constexpr uint32_t m_nAnimLoopMode = 0x234;
-	constexpr uint32_t m_flPlaybackRate = 0x238;
-	constexpr uint32_t m_nNotifyState = 0x244;
-	constexpr uint32_t m_bNetworkedAnimationInputsChanged = 0x246;
-	constexpr uint32_t m_bNetworkedSequenceChanged = 0x247;
-	constexpr uint32_t m_bLastUpdateSkipped = 0x248;
-	constexpr uint32_t m_flPrevAnimUpdateTime = 0x24C;
+	constexpr uint32_t m_nActiveIKChainMask = 0x228;
+	constexpr uint32_t m_hSequence = 0x22C;
+	constexpr uint32_t m_flSeqStartTime = 0x230;
+	constexpr uint32_t m_flSeqFixedCycle = 0x234;
+	constexpr uint32_t m_nAnimLoopMode = 0x238;
+	constexpr uint32_t m_flPlaybackRate = 0x23C;
+	constexpr uint32_t m_nNotifyState = 0x248;
+	constexpr uint32_t m_bNetworkedAnimationInputsChanged = 0x24A;
+	constexpr uint32_t m_bNetworkedSequenceChanged = 0x24B;
+	constexpr uint32_t m_bLastUpdateSkipped = 0x24C;
+	constexpr uint32_t m_flPrevAnimUpdateTime = 0x250;
 }
 
 namespace CBodyComponentBaseAnimGraph
 {
 	constexpr uint32_t m_animationController = 0x460;
-	constexpr uint32_t __m_pChainEntity = 0x950;
 }
 
 namespace EntityRenderAttribute_t
@@ -717,7 +832,6 @@ namespace ActiveModelConfig_t
 
 namespace CBodyComponentBaseModelEntity
 {
-	constexpr uint32_t __m_pChainEntity = 0x460;
 }
 
 namespace CNetworkOriginCellCoordQuantizedVector
@@ -804,10 +918,10 @@ namespace CModelState
 	constexpr uint32_t m_hModel = 0xA0;
 	constexpr uint32_t m_ModelName = 0xA8;
 	constexpr uint32_t m_bClientClothCreationSuppressed = 0xE8;
-	constexpr uint32_t m_MeshGroupMask = 0x180;
-	constexpr uint32_t m_nIdealMotionType = 0x202;
-	constexpr uint32_t m_nForceLOD = 0x203;
-	constexpr uint32_t m_nClothUpdateFlags = 0x204;
+	constexpr uint32_t m_MeshGroupMask = 0x198;
+	constexpr uint32_t m_nIdealMotionType = 0x21A;
+	constexpr uint32_t m_nForceLOD = 0x21B;
+	constexpr uint32_t m_nClothUpdateFlags = 0x21C;
 }
 
 namespace IntervalTimer
@@ -887,8 +1001,8 @@ namespace ResponseParams
 
 namespace CResponseCriteriaSet
 {
-	constexpr uint32_t m_nNumPrefixedContexts = 0x28;
-	constexpr uint32_t m_bOverrideOnAppend = 0x2C;
+	constexpr uint32_t m_nNumPrefixedContexts = 0x20;
+	constexpr uint32_t m_bOverrideOnAppend = 0x24;
 }
 
 namespace CRR_Response
@@ -901,6 +1015,7 @@ namespace CRR_Response
 	constexpr uint32_t m_szSpeakerContext = 0x170;
 	constexpr uint32_t m_szWorldContext = 0x178;
 	constexpr uint32_t m_Followup = 0x180;
+	constexpr uint32_t m_recipientFilter = 0x1B2;
 	constexpr uint32_t m_pchCriteriaNames = 0x1B8;
 	constexpr uint32_t m_pchCriteriaValues = 0x1D0;
 }
@@ -920,8 +1035,9 @@ namespace CAI_Expresser
 	constexpr uint32_t m_flLastTimeAcceptedSpeak = 0x48;
 	constexpr uint32_t m_bAllowSpeakingInterrupts = 0x4C;
 	constexpr uint32_t m_bConsiderSceneInvolvementAsSpeech = 0x4D;
+	constexpr uint32_t m_bSceneEntityDisabled = 0x4E;
 	constexpr uint32_t m_nLastSpokenPriority = 0x50;
-	constexpr uint32_t m_pOuter = 0x58;
+	constexpr uint32_t m_pOuter = 0x70;
 }
 
 namespace CBaseFlex
@@ -943,20 +1059,20 @@ namespace CResponseQueue
 namespace CResponseQueue::CDeferredResponse
 {
 	constexpr uint32_t m_contexts = 0x8;
-	constexpr uint32_t m_fDispatchTime = 0x38;
-	constexpr uint32_t m_hIssuer = 0x3C;
-	constexpr uint32_t m_response = 0x48;
-	constexpr uint32_t m_bResponseValid = 0x230;
+	constexpr uint32_t m_fDispatchTime = 0x30;
+	constexpr uint32_t m_hIssuer = 0x34;
+	constexpr uint32_t m_response = 0x40;
+	constexpr uint32_t m_bResponseValid = 0x228;
 }
 
 namespace CAI_ExpresserWithFollowup
 {
-	constexpr uint32_t m_pPostponedFollowup = 0x60;
+	constexpr uint32_t m_pPostponedFollowup = 0x78;
 }
 
 namespace CMultiplayer_Expresser
 {
-	constexpr uint32_t m_bAllowMultipleScenes = 0x70;
+	constexpr uint32_t m_bAllowMultipleScenes = 0x88;
 }
 
 namespace CBaseEntityAPI
@@ -1045,20 +1161,6 @@ namespace CGameChoreoServices
 	constexpr uint32_t m_flTimeStartedState = 0x18;
 }
 
-namespace CBaseAnimGraph
-{
-	constexpr uint32_t m_bInitiallyPopulateInterpHistory = 0x788;
-	constexpr uint32_t m_pChoreoServices = 0x790;
-	constexpr uint32_t m_bAnimGraphUpdateEnabled = 0x798;
-	constexpr uint32_t m_flMaxSlopeDistance = 0x79C;
-	constexpr uint32_t m_vLastSlopeCheckPos = 0x7A0;
-	constexpr uint32_t m_bAnimationUpdateScheduled = 0x7AC;
-	constexpr uint32_t m_vecForce = 0x7B0;
-	constexpr uint32_t m_nForceBone = 0x7BC;
-	constexpr uint32_t m_pRagdollPose = 0x7D0;
-	constexpr uint32_t m_bClientRagdoll = 0x7D8;
-}
-
 namespace CScriptedSequence
 {
 	constexpr uint32_t m_iszEntry = 0x4C0;
@@ -1070,47 +1172,57 @@ namespace CScriptedSequence
 	constexpr uint32_t m_iszEntity = 0x4F0;
 	constexpr uint32_t m_iszSyncGroup = 0x4F8;
 	constexpr uint32_t m_nMoveTo = 0x500;
-	constexpr uint32_t m_bIsPlayingPreIdle = 0x504;
-	constexpr uint32_t m_bIsPlayingEntry = 0x505;
-	constexpr uint32_t m_bIsPlayingAction = 0x506;
-	constexpr uint32_t m_bIsPlayingPostIdle = 0x507;
-	constexpr uint32_t m_bLoopPreIdleSequence = 0x508;
-	constexpr uint32_t m_bLoopActionSequence = 0x509;
-	constexpr uint32_t m_bLoopPostIdleSequence = 0x50A;
-	constexpr uint32_t m_bSynchPostIdles = 0x50B;
-	constexpr uint32_t m_bIgnoreLookAt = 0x50C;
-	constexpr uint32_t m_bIgnoreGravity = 0x50D;
-	constexpr uint32_t m_bDisableNPCCollisions = 0x50E;
-	constexpr uint32_t m_bKeepAnimgraphLockedPost = 0x50F;
-	constexpr uint32_t m_bDontAddModifiers = 0x510;
-	constexpr uint32_t m_flRadius = 0x514;
-	constexpr uint32_t m_flRepeat = 0x518;
-	constexpr uint32_t m_flPlayAnimFadeInTime = 0x51C;
-	constexpr uint32_t m_flMoveInterpTime = 0x520;
-	constexpr uint32_t m_flAngRate = 0x524;
-	constexpr uint32_t m_nNotReadySequenceCount = 0x528;
-	constexpr uint32_t m_startTime = 0x52C;
-	constexpr uint32_t m_bWaitForBeginSequence = 0x530;
-	constexpr uint32_t m_saved_effects = 0x534;
-	constexpr uint32_t m_savedFlags = 0x538;
-	constexpr uint32_t m_savedCollisionGroup = 0x53C;
-	constexpr uint32_t m_interruptable = 0x540;
-	constexpr uint32_t m_sequenceStarted = 0x541;
-	constexpr uint32_t m_bPositionRelativeToOtherEntity = 0x542;
-	constexpr uint32_t m_hTargetEnt = 0x544;
-	constexpr uint32_t m_hNextCine = 0x548;
-	constexpr uint32_t m_bThinking = 0x54C;
-	constexpr uint32_t m_bInitiatedSelfDelete = 0x54D;
-	constexpr uint32_t m_bIsTeleportingDueToMoveTo = 0x54E;
-	constexpr uint32_t m_bAllowCustomInterruptConditions = 0x54F;
-	constexpr uint32_t m_hLastFoundEntity = 0x550;
-	constexpr uint32_t m_hForcedTarget = 0x554;
-	constexpr uint32_t m_bDontCancelOtherSequences = 0x558;
-	constexpr uint32_t m_bForceSynch = 0x559;
-	constexpr uint32_t m_bPreventUpdateYawOnFinish = 0x55A;
-	constexpr uint32_t m_bEnsureOnNavmeshOnFinish = 0x55B;
-	constexpr uint32_t m_onDeathBehavior = 0x55C;
-	constexpr uint32_t m_ConflictResponse = 0x560;
+	constexpr uint32_t m_nMoveToGait = 0x504;
+	constexpr uint32_t m_bIsPlayingPreIdle = 0x505;
+	constexpr uint32_t m_bIsPlayingEntry = 0x506;
+	constexpr uint32_t m_bIsPlayingAction = 0x507;
+	constexpr uint32_t m_bIsPlayingPostIdle = 0x508;
+	constexpr uint32_t m_bDontRotateOther = 0x509;
+	constexpr uint32_t m_bIsRepeatable = 0x50A;
+	constexpr uint32_t m_bShouldLeaveCorpse = 0x50B;
+	constexpr uint32_t m_bStartOnSpawn = 0x50C;
+	constexpr uint32_t m_bDisallowInterrupts = 0x50D;
+	constexpr uint32_t m_bCanOverrideNPCState = 0x50E;
+	constexpr uint32_t m_bDontTeleportAtEnd = 0x50F;
+	constexpr uint32_t m_bHighPriority = 0x510;
+	constexpr uint32_t m_bHideDebugComplaints = 0x511;
+	constexpr uint32_t m_bContinueOnDeath = 0x512;
+	constexpr uint32_t m_bLoopPreIdleSequence = 0x513;
+	constexpr uint32_t m_bLoopActionSequence = 0x514;
+	constexpr uint32_t m_bLoopPostIdleSequence = 0x515;
+	constexpr uint32_t m_bSynchPostIdles = 0x516;
+	constexpr uint32_t m_bIgnoreLookAt = 0x517;
+	constexpr uint32_t m_bIgnoreGravity = 0x518;
+	constexpr uint32_t m_bDisableNPCCollisions = 0x519;
+	constexpr uint32_t m_bKeepAnimgraphLockedPost = 0x51A;
+	constexpr uint32_t m_bDontAddModifiers = 0x51B;
+	constexpr uint32_t m_flRadius = 0x51C;
+	constexpr uint32_t m_flRepeat = 0x520;
+	constexpr uint32_t m_flPlayAnimFadeInTime = 0x524;
+	constexpr uint32_t m_flMoveInterpTime = 0x528;
+	constexpr uint32_t m_flAngRate = 0x52C;
+	constexpr uint32_t m_nNotReadySequenceCount = 0x530;
+	constexpr uint32_t m_startTime = 0x534;
+	constexpr uint32_t m_bWaitForBeginSequence = 0x538;
+	constexpr uint32_t m_saved_effects = 0x53C;
+	constexpr uint32_t m_savedFlags = 0x540;
+	constexpr uint32_t m_savedCollisionGroup = 0x544;
+	constexpr uint32_t m_bInterruptable = 0x548;
+	constexpr uint32_t m_sequenceStarted = 0x549;
+	constexpr uint32_t m_bPositionRelativeToOtherEntity = 0x54A;
+	constexpr uint32_t m_hTargetEnt = 0x54C;
+	constexpr uint32_t m_hNextCine = 0x550;
+	constexpr uint32_t m_bThinking = 0x554;
+	constexpr uint32_t m_bInitiatedSelfDelete = 0x555;
+	constexpr uint32_t m_bIsTeleportingDueToMoveTo = 0x556;
+	constexpr uint32_t m_bAllowCustomInterruptConditions = 0x557;
+	constexpr uint32_t m_hForcedTarget = 0x558;
+	constexpr uint32_t m_bDontCancelOtherSequences = 0x55C;
+	constexpr uint32_t m_bForceSynch = 0x55D;
+	constexpr uint32_t m_bPreventUpdateYawOnFinish = 0x55E;
+	constexpr uint32_t m_bEnsureOnNavmeshOnFinish = 0x55F;
+	constexpr uint32_t m_onDeathBehavior = 0x560;
+	constexpr uint32_t m_ConflictResponse = 0x564;
 	constexpr uint32_t m_OnBeginSequence = 0x568;
 	constexpr uint32_t m_OnActionStartOrLoop = 0x590;
 	constexpr uint32_t m_OnEndSequence = 0x5B8;
@@ -1195,6 +1307,7 @@ namespace CPulseServerCursor
 namespace CPulseGraphComponentBase
 {
 	constexpr uint32_t m_hOwner = 0x8;
+	constexpr uint32_t m_bActivated = 0xC;
 	constexpr uint32_t m_sNameFixupStaticPrefix = 0x10;
 	constexpr uint32_t m_sNameFixupParent = 0x18;
 	constexpr uint32_t m_sNameFixupLocal = 0x20;
@@ -1202,14 +1315,14 @@ namespace CPulseGraphComponentBase
 
 namespace CPulseGraphInstance_ServerEntity
 {
-	constexpr uint32_t m_pComponent = 0xD8;
-}
-
-namespace CPulseGraphInstance_ServerPointEntity
-{
+	constexpr uint32_t m_pComponent = 0x100;
 }
 
 namespace CPulseGraphComponentPointServer
+{
+}
+
+namespace IPulseComponentEntity
 {
 }
 
@@ -1229,14 +1342,18 @@ namespace CPulseCell_Step_FollowEntity
 	constexpr uint32_t m_ParamBoneOrAttachNameChild = 0x50;
 }
 
-namespace CPulseCell_Step_EntFire
+namespace CPulseCell_Outflow_ListenForEntityOutput
 {
-	constexpr uint32_t m_Input = 0x48;
+	constexpr uint32_t m_OnFired = 0x48;
+	constexpr uint32_t m_OnCanceled = 0x78;
+	constexpr uint32_t m_strEntityOutput = 0xA8;
+	constexpr uint32_t m_strEntityOutputParam = 0xB0;
+	constexpr uint32_t m_bListenUntilCanceled = 0xB8;
 }
 
-namespace CPulseCell_Inflow_GameEvent
+namespace CPulseCell_Outflow_ListenForEntityOutput::CursorState_t
 {
-	constexpr uint32_t m_EventName = 0x70;
+	constexpr uint32_t m_entity = 0x0;
 }
 
 namespace CPulseServerFuncs
@@ -1255,23 +1372,24 @@ namespace CPulseServerFuncs_Sounds
 namespace CPulseCell_Outflow_PlaySceneBase
 {
 	constexpr uint32_t m_OnFinished = 0x48;
-	constexpr uint32_t m_OnCanceled = 0x58;
-	constexpr uint32_t m_Triggers = 0x68;
+	constexpr uint32_t m_OnCanceled = 0x78;
+	constexpr uint32_t m_Triggers = 0xA8;
 }
 
 namespace CPulseCell_Outflow_PlaySceneBase::CursorState_t
 {
 	constexpr uint32_t m_sceneInstance = 0x0;
+	constexpr uint32_t m_mainActor = 0x4;
 }
 
 namespace CPulseCell_Outflow_PlayVCD
 {
-	constexpr uint32_t m_vcdFilename = 0x80;
+	constexpr uint32_t m_vcdFilename = 0xC0;
 }
 
 namespace CPulseCell_Outflow_PlaySequence
 {
-	constexpr uint32_t m_ParamSequenceName = 0x80;
+	constexpr uint32_t m_ParamSequenceName = 0xC0;
 }
 
 namespace PulseScriptedSequenceData_t
@@ -1292,13 +1410,21 @@ namespace CPulseCell_Outflow_ScriptedSequence
 	constexpr uint32_t m_scriptedSequenceDataMain = 0x48;
 	constexpr uint32_t m_vecAdditionalActors = 0x78;
 	constexpr uint32_t m_OnFinished = 0x90;
-	constexpr uint32_t m_OnCanceled = 0xA0;
-	constexpr uint32_t m_Triggers = 0xB0;
+	constexpr uint32_t m_OnCanceled = 0xC0;
+	constexpr uint32_t m_Triggers = 0xF0;
 }
 
 namespace CPulseCell_Outflow_ScriptedSequence::CursorState_t
 {
 	constexpr uint32_t m_scriptedSequence = 0x0;
+}
+
+namespace CPulseGraphInstance_GameBlackboard
+{
+}
+
+namespace CPulseGraphComponentGameBlackboard
+{
 }
 
 namespace CTouchExpansionComponent
@@ -1392,8 +1518,9 @@ namespace CBasePlayerController
 	constexpr uint32_t m_nInButtonsWhichAreToggles = 0x4C8;
 	constexpr uint32_t m_nTickBase = 0x4D0;
 	constexpr uint32_t m_hPawn = 0x500;
-	constexpr uint32_t m_nSplitScreenSlot = 0x504;
-	constexpr uint32_t m_hSplitOwner = 0x508;
+	constexpr uint32_t m_bKnownTeamMismatch = 0x504;
+	constexpr uint32_t m_nSplitScreenSlot = 0x508;
+	constexpr uint32_t m_hSplitOwner = 0x50C;
 	constexpr uint32_t m_hSplitScreenPlayers = 0x510;
 	constexpr uint32_t m_bIsHLTV = 0x528;
 	constexpr uint32_t m_iConnected = 0x52C;
@@ -1518,6 +1645,22 @@ namespace CFishPool
 	constexpr uint32_t m_visTimer = 0x500;
 }
 
+namespace CMoverPathNode
+{
+	constexpr uint32_t m_vInTangentLocal = 0x4C0;
+	constexpr uint32_t m_vOutTangentLocal = 0x4CC;
+	constexpr uint32_t m_szParentPathUniqueID = 0x4D8;
+	constexpr uint32_t m_OnPassThrough = 0x4E0;
+	constexpr uint32_t m_hMover = 0x508;
+}
+
+namespace CPathMover
+{
+	constexpr uint32_t m_vecPathNodes = 0x4C0;
+	constexpr uint32_t m_flPathLength = 0x4D8;
+	constexpr uint32_t m_bClosedLoop = 0x4DC;
+}
+
 namespace CInfoData
 {
 }
@@ -1622,13 +1765,19 @@ namespace sky3dparams_t
 	constexpr uint32_t m_nWorldGroupID = 0x88;
 }
 
+namespace AISound_t
+{
+	constexpr uint32_t nType = 0x0;
+	constexpr uint32_t nFlags = 0x2;
+}
+
 namespace CSound
 {
 	constexpr uint32_t m_hOwner = 0x0;
 	constexpr uint32_t m_hTarget = 0x4;
 	constexpr uint32_t m_iVolume = 0x8;
 	constexpr uint32_t m_flOcclusionScale = 0xC;
-	constexpr uint32_t m_iType = 0x10;
+	constexpr uint32_t m_Sound = 0x10;
 	constexpr uint32_t m_iNextAudible = 0x14;
 	constexpr uint32_t m_flExpireTime = 0x18;
 	constexpr uint32_t m_iNext = 0x1C;
@@ -1670,15 +1819,16 @@ namespace lerpdata_t
 
 namespace CNavLinkAnimgraphVar
 {
-	constexpr uint32_t m_strAnimgraphVar = 0x0;
+	constexpr uint32_t m_sAnimGraphNavlinkType = 0x0;
 	constexpr uint32_t m_unAlignmentDegrees = 0x8;
 }
 
 namespace CNavLinkMovementVData
 {
-	constexpr uint32_t m_bIsInterpolated = 0x0;
-	constexpr uint32_t m_unRecommendedDistance = 0x4;
-	constexpr uint32_t m_vecAnimgraphVars = 0x8;
+	constexpr uint32_t m_sToolsOnlyOwnerModelName = 0x0;
+	constexpr uint32_t m_bIsInterpolated = 0xE0;
+	constexpr uint32_t m_unRecommendedDistance = 0xE4;
+	constexpr uint32_t m_vecAnimgraphVars = 0xE8;
 }
 
 namespace CNavVolumeMarkupVolume
@@ -1841,9 +1991,9 @@ namespace CShatterGlassShard
 
 namespace CShatterGlassShardPhysics
 {
-	constexpr uint32_t m_bDebris = 0xBD0;
-	constexpr uint32_t m_hParentShard = 0xBD4;
-	constexpr uint32_t m_ShardDesc = 0xBD8;
+	constexpr uint32_t m_bDebris = 0xBE8;
+	constexpr uint32_t m_hParentShard = 0xBEC;
+	constexpr uint32_t m_ShardDesc = 0xBF0;
 }
 
 namespace CFuncShatterglass
@@ -1888,8 +2038,12 @@ namespace CGameRulesProxy
 
 namespace CGameRules
 {
-	constexpr uint32_t m_szQuestName = 0x8;
-	constexpr uint32_t m_nQuestPhase = 0x88;
+	constexpr uint32_t __m_pChainEntity = 0x8;
+	constexpr uint32_t m_szQuestName = 0x30;
+	constexpr uint32_t m_nQuestPhase = 0xB0;
+	constexpr uint32_t m_nTotalPausedTicks = 0xB4;
+	constexpr uint32_t m_nPauseStartTick = 0xB8;
+	constexpr uint32_t m_bGamePaused = 0xBC;
 }
 
 namespace CGlowProperty
@@ -1999,6 +2153,11 @@ namespace CSceneEventInfo
 	constexpr uint32_t m_bStarted = 0x4D;
 }
 
+namespace SceneEventId_t
+{
+	constexpr uint32_t m_Value = 0x0;
+}
+
 namespace AmmoIndex_t
 {
 	constexpr uint32_t m_Value = 0x0;
@@ -2012,6 +2171,7 @@ namespace RagdollCreationParams_t
 {
 	constexpr uint32_t m_vForce = 0x0;
 	constexpr uint32_t m_nForceBone = 0xC;
+	constexpr uint32_t m_bForceCurrentWorldTransform = 0x10;
 }
 
 namespace hudtextparms_t
@@ -2063,7 +2223,7 @@ namespace CRandStopwatch
 
 namespace CSingleplayRules
 {
-	constexpr uint32_t m_bSinglePlayerGameEnding = 0x90;
+	constexpr uint32_t m_bSinglePlayerGameEnding = 0xC0;
 }
 
 namespace CSoundOpvarSetPointBase
@@ -2167,30 +2327,34 @@ namespace CTakeDamageInfo
 	constexpr uint32_t m_hAttacker = 0x3C;
 	constexpr uint32_t m_hAbility = 0x40;
 	constexpr uint32_t m_flDamage = 0x44;
-	constexpr uint32_t m_bitsDamageType = 0x48;
-	constexpr uint32_t m_iDamageCustom = 0x4C;
-	constexpr uint32_t m_iAmmoType = 0x50;
+	constexpr uint32_t m_flTotalledDamage = 0x48;
+	constexpr uint32_t m_bitsDamageType = 0x4C;
+	constexpr uint32_t m_iDamageCustom = 0x50;
+	constexpr uint32_t m_iAmmoType = 0x54;
 	constexpr uint32_t m_flOriginalDamage = 0x60;
 	constexpr uint32_t m_bShouldBleed = 0x64;
 	constexpr uint32_t m_bShouldSpark = 0x65;
 	constexpr uint32_t m_nDamageFlags = 0x70;
-	constexpr uint32_t m_nNumObjectsPenetrated = 0x74;
-	constexpr uint32_t m_hScriptInstance = 0x78;
-	constexpr uint32_t m_bInTakeDamageFlow = 0x94;
+	constexpr uint32_t m_nNumObjectsPenetrated = 0x78;
+	constexpr uint32_t m_hScriptInstance = 0x80;
+	constexpr uint32_t m_bInTakeDamageFlow = 0x9C;
 }
 
 namespace CTakeDamageResult
 {
-	constexpr uint32_t m_nHealthLost = 0x0;
-	constexpr uint32_t m_nDamageTaken = 0x4;
+	constexpr uint32_t m_pOriginatingInfo = 0x0;
+	constexpr uint32_t m_nHealthLost = 0x8;
+	constexpr uint32_t m_nDamageTaken = 0xC;
+	constexpr uint32_t m_nTotalledHealthLost = 0x10;
+	constexpr uint32_t m_nTotalledDamageTaken = 0x14;
 }
 
 namespace SummaryTakeDamageInfo_t
 {
 	constexpr uint32_t nSummarisedCount = 0x0;
 	constexpr uint32_t info = 0x8;
-	constexpr uint32_t result = 0xA0;
-	constexpr uint32_t hTarget = 0xA8;
+	constexpr uint32_t result = 0xB0;
+	constexpr uint32_t hTarget = 0xC8;
 }
 
 namespace CTakeDamageSummaryScopeGuard
@@ -2283,236 +2447,197 @@ namespace SpawnPoint
 	constexpr uint32_t m_nType = 0x4C8;
 }
 
-namespace SpawnPointCoopEnemy
-{
-	constexpr uint32_t m_szWeaponsToGive = 0x4D0;
-	constexpr uint32_t m_szPlayerModelToUse = 0x4D8;
-	constexpr uint32_t m_nArmorToSpawnWith = 0x4E0;
-	constexpr uint32_t m_nDefaultBehavior = 0x4E4;
-	constexpr uint32_t m_nBotDifficulty = 0x4E8;
-	constexpr uint32_t m_bIsAgressive = 0x4EC;
-	constexpr uint32_t m_bStartAsleep = 0x4ED;
-	constexpr uint32_t m_flHideRadius = 0x4F0;
-	constexpr uint32_t m_szBehaviorTreeFile = 0x500;
-}
-
 namespace CCSGameRules
 {
-	constexpr uint32_t __m_pChainEntity = 0x98;
-	constexpr uint32_t m_coopMissionManager = 0xC0;
-	constexpr uint32_t m_bFreezePeriod = 0xC4;
-	constexpr uint32_t m_bWarmupPeriod = 0xC5;
-	constexpr uint32_t m_fWarmupPeriodEnd = 0xC8;
-	constexpr uint32_t m_fWarmupPeriodStart = 0xCC;
-	constexpr uint32_t m_nTotalPausedTicks = 0xD0;
-	constexpr uint32_t m_nPauseStartTick = 0xD4;
-	constexpr uint32_t m_bServerPaused = 0xD8;
-	constexpr uint32_t m_bGamePaused = 0xD9;
-	constexpr uint32_t m_bTerroristTimeOutActive = 0xDA;
-	constexpr uint32_t m_bCTTimeOutActive = 0xDB;
-	constexpr uint32_t m_flTerroristTimeOutRemaining = 0xDC;
-	constexpr uint32_t m_flCTTimeOutRemaining = 0xE0;
-	constexpr uint32_t m_nTerroristTimeOuts = 0xE4;
-	constexpr uint32_t m_nCTTimeOuts = 0xE8;
-	constexpr uint32_t m_bTechnicalTimeOut = 0xEC;
-	constexpr uint32_t m_bMatchWaitingForResume = 0xED;
-	constexpr uint32_t m_iRoundTime = 0xF0;
-	constexpr uint32_t m_fMatchStartTime = 0xF4;
-	constexpr uint32_t m_fRoundStartTime = 0xF8;
-	constexpr uint32_t m_flRestartRoundTime = 0xFC;
-	constexpr uint32_t m_bGameRestart = 0x100;
-	constexpr uint32_t m_flGameStartTime = 0x104;
-	constexpr uint32_t m_timeUntilNextPhaseStarts = 0x108;
-	constexpr uint32_t m_gamePhase = 0x10C;
-	constexpr uint32_t m_totalRoundsPlayed = 0x110;
-	constexpr uint32_t m_nRoundsPlayedThisPhase = 0x114;
-	constexpr uint32_t m_nOvertimePlaying = 0x118;
-	constexpr uint32_t m_iHostagesRemaining = 0x11C;
-	constexpr uint32_t m_bAnyHostageReached = 0x120;
-	constexpr uint32_t m_bMapHasBombTarget = 0x121;
-	constexpr uint32_t m_bMapHasRescueZone = 0x122;
-	constexpr uint32_t m_bMapHasBuyZone = 0x123;
-	constexpr uint32_t m_bIsQueuedMatchmaking = 0x124;
-	constexpr uint32_t m_nQueuedMatchmakingMode = 0x128;
-	constexpr uint32_t m_bIsValveDS = 0x12C;
-	constexpr uint32_t m_bLogoMap = 0x12D;
-	constexpr uint32_t m_bPlayAllStepSoundsOnServer = 0x12E;
-	constexpr uint32_t m_iSpectatorSlotCount = 0x130;
-	constexpr uint32_t m_MatchDevice = 0x134;
-	constexpr uint32_t m_bHasMatchStarted = 0x138;
-	constexpr uint32_t m_nNextMapInMapgroup = 0x13C;
-	constexpr uint32_t m_szTournamentEventName = 0x140;
-	constexpr uint32_t m_szTournamentEventStage = 0x340;
-	constexpr uint32_t m_szMatchStatTxt = 0x540;
-	constexpr uint32_t m_szTournamentPredictionsTxt = 0x740;
-	constexpr uint32_t m_nTournamentPredictionsPct = 0x940;
-	constexpr uint32_t m_flCMMItemDropRevealStartTime = 0x944;
-	constexpr uint32_t m_flCMMItemDropRevealEndTime = 0x948;
-	constexpr uint32_t m_bIsDroppingItems = 0x94C;
-	constexpr uint32_t m_bIsQuestEligible = 0x94D;
-	constexpr uint32_t m_bIsHltvActive = 0x94E;
-	constexpr uint32_t m_nGuardianModeWaveNumber = 0x950;
-	constexpr uint32_t m_nGuardianModeSpecialKillsRemaining = 0x954;
-	constexpr uint32_t m_nGuardianModeSpecialWeaponNeeded = 0x958;
-	constexpr uint32_t m_nGuardianGrenadesToGiveBots = 0x95C;
-	constexpr uint32_t m_nNumHeaviesToSpawn = 0x960;
-	constexpr uint32_t m_numGlobalGiftsGiven = 0x964;
-	constexpr uint32_t m_numGlobalGifters = 0x968;
-	constexpr uint32_t m_numGlobalGiftsPeriodSeconds = 0x96C;
-	constexpr uint32_t m_arrFeaturedGiftersAccounts = 0x970;
-	constexpr uint32_t m_arrFeaturedGiftersGifts = 0x980;
-	constexpr uint32_t m_arrProhibitedItemIndices = 0x990;
-	constexpr uint32_t m_arrTournamentActiveCasterAccounts = 0xA58;
-	constexpr uint32_t m_numBestOfMaps = 0xA68;
-	constexpr uint32_t m_nHalloweenMaskListSeed = 0xA6C;
-	constexpr uint32_t m_bBombDropped = 0xA70;
-	constexpr uint32_t m_bBombPlanted = 0xA71;
-	constexpr uint32_t m_iRoundWinStatus = 0xA74;
-	constexpr uint32_t m_eRoundWinReason = 0xA78;
-	constexpr uint32_t m_bTCantBuy = 0xA7C;
-	constexpr uint32_t m_bCTCantBuy = 0xA7D;
-	constexpr uint32_t m_flGuardianBuyUntilTime = 0xA80;
-	constexpr uint32_t m_iMatchStats_RoundResults = 0xA84;
-	constexpr uint32_t m_iMatchStats_PlayersAlive_CT = 0xAFC;
-	constexpr uint32_t m_iMatchStats_PlayersAlive_T = 0xB74;
-	constexpr uint32_t m_TeamRespawnWaveTimes = 0xBEC;
-	constexpr uint32_t m_flNextRespawnWave = 0xC6C;
-	constexpr uint32_t m_nServerQuestID = 0xCEC;
-	constexpr uint32_t m_vMinimapMins = 0xCF0;
-	constexpr uint32_t m_vMinimapMaxs = 0xCFC;
-	constexpr uint32_t m_MinimapVerticalSectionHeights = 0xD08;
-	constexpr uint32_t m_bDontIncrementCoopWave = 0xD28;
-	constexpr uint32_t m_bSpawnedTerrorHuntHeavy = 0xD29;
-	constexpr uint32_t m_nEndMatchMapGroupVoteTypes = 0xD2C;
-	constexpr uint32_t m_nEndMatchMapGroupVoteOptions = 0xD54;
-	constexpr uint32_t m_nEndMatchMapVoteWinner = 0xD7C;
-	constexpr uint32_t m_iNumConsecutiveCTLoses = 0xD80;
-	constexpr uint32_t m_iNumConsecutiveTerroristLoses = 0xD84;
-	constexpr uint32_t m_bHasHostageBeenTouched = 0xDA0;
-	constexpr uint32_t m_flIntermissionStartTime = 0xDA4;
-	constexpr uint32_t m_flIntermissionEndTime = 0xDA8;
-	constexpr uint32_t m_bLevelInitialized = 0xDAC;
-	constexpr uint32_t m_iTotalRoundsPlayed = 0xDB0;
-	constexpr uint32_t m_iUnBalancedRounds = 0xDB4;
-	constexpr uint32_t m_endMatchOnRoundReset = 0xDB8;
-	constexpr uint32_t m_endMatchOnThink = 0xDB9;
-	constexpr uint32_t m_iFreezeTime = 0xDBC;
-	constexpr uint32_t m_iNumTerrorist = 0xDC0;
-	constexpr uint32_t m_iNumCT = 0xDC4;
-	constexpr uint32_t m_iNumSpawnableTerrorist = 0xDC8;
-	constexpr uint32_t m_iNumSpawnableCT = 0xDCC;
-	constexpr uint32_t m_arrSelectedHostageSpawnIndices = 0xDD0;
-	constexpr uint32_t m_nSpawnPointsRandomSeed = 0xDE8;
-	constexpr uint32_t m_bFirstConnected = 0xDEC;
-	constexpr uint32_t m_bCompleteReset = 0xDED;
-	constexpr uint32_t m_bPickNewTeamsOnReset = 0xDEE;
-	constexpr uint32_t m_bScrambleTeamsOnRestart = 0xDEF;
-	constexpr uint32_t m_bSwapTeamsOnRestart = 0xDF0;
-	constexpr uint32_t m_nEndMatchTiedVotes = 0xDF8;
-	constexpr uint32_t m_bNeedToAskPlayersForContinueVote = 0xE14;
-	constexpr uint32_t m_numQueuedMatchmakingAccounts = 0xE18;
-	constexpr uint32_t m_pQueuedMatchmakingReservationString = 0xE20;
-	constexpr uint32_t m_numTotalTournamentDrops = 0xE28;
-	constexpr uint32_t m_numSpectatorsCountMax = 0xE2C;
-	constexpr uint32_t m_numSpectatorsCountMaxTV = 0xE30;
-	constexpr uint32_t m_numSpectatorsCountMaxLnk = 0xE34;
-	constexpr uint32_t m_bForceTeamChangeSilent = 0xE40;
-	constexpr uint32_t m_bLoadingRoundBackupData = 0xE41;
-	constexpr uint32_t m_nMatchInfoShowType = 0xE78;
-	constexpr uint32_t m_flMatchInfoDecidedTime = 0xE7C;
-	constexpr uint32_t m_flCoopRespawnAndHealTime = 0xE98;
-	constexpr uint32_t m_coopBonusCoinsFound = 0xE9C;
-	constexpr uint32_t m_coopBonusPistolsOnly = 0xEA0;
-	constexpr uint32_t m_coopPlayersInDeploymentZone = 0xEA1;
-	constexpr uint32_t m_coopMissionDeadPlayerRespawnEnabled = 0xEA2;
-	constexpr uint32_t mTeamDMLastWinningTeamNumber = 0xEA4;
-	constexpr uint32_t mTeamDMLastThinkTime = 0xEA8;
-	constexpr uint32_t m_flTeamDMLastAnnouncementTime = 0xEAC;
-	constexpr uint32_t m_iAccountTerrorist = 0xEB0;
-	constexpr uint32_t m_iAccountCT = 0xEB4;
-	constexpr uint32_t m_iSpawnPointCount_Terrorist = 0xEB8;
-	constexpr uint32_t m_iSpawnPointCount_CT = 0xEBC;
-	constexpr uint32_t m_iMaxNumTerrorists = 0xEC0;
-	constexpr uint32_t m_iMaxNumCTs = 0xEC4;
-	constexpr uint32_t m_iLoserBonus = 0xEC8;
-	constexpr uint32_t m_iLoserBonusMostRecentTeam = 0xECC;
-	constexpr uint32_t m_tmNextPeriodicThink = 0xED0;
-	constexpr uint32_t m_bVoiceWonMatchBragFired = 0xED4;
-	constexpr uint32_t m_fWarmupNextChatNoticeTime = 0xED8;
-	constexpr uint32_t m_iHostagesRescued = 0xEE0;
-	constexpr uint32_t m_iHostagesTouched = 0xEE4;
-	constexpr uint32_t m_flNextHostageAnnouncement = 0xEE8;
-	constexpr uint32_t m_bNoTerroristsKilled = 0xEEC;
-	constexpr uint32_t m_bNoCTsKilled = 0xEED;
-	constexpr uint32_t m_bNoEnemiesKilled = 0xEEE;
-	constexpr uint32_t m_bCanDonateWeapons = 0xEEF;
-	constexpr uint32_t m_firstKillTime = 0xEF4;
-	constexpr uint32_t m_firstBloodTime = 0xEFC;
-	constexpr uint32_t m_hostageWasInjured = 0xF18;
-	constexpr uint32_t m_hostageWasKilled = 0xF19;
-	constexpr uint32_t m_bVoteCalled = 0xF28;
-	constexpr uint32_t m_bServerVoteOnReset = 0xF29;
-	constexpr uint32_t m_flVoteCheckThrottle = 0xF2C;
-	constexpr uint32_t m_bBuyTimeEnded = 0xF30;
-	constexpr uint32_t m_nLastFreezeEndBeep = 0xF34;
-	constexpr uint32_t m_bTargetBombed = 0xF38;
-	constexpr uint32_t m_bBombDefused = 0xF39;
-	constexpr uint32_t m_bMapHasBombZone = 0xF3A;
-	constexpr uint32_t m_vecMainCTSpawnPos = 0xF58;
-	constexpr uint32_t m_CTSpawnPointsMasterList = 0xF68;
-	constexpr uint32_t m_TerroristSpawnPointsMasterList = 0xF80;
-	constexpr uint32_t m_bRespawningAllRespawnablePlayers = 0xF98;
-	constexpr uint32_t m_iNextCTSpawnPoint = 0xF9C;
-	constexpr uint32_t m_flCTSpawnPointUsedTime = 0xFA0;
-	constexpr uint32_t m_iNextTerroristSpawnPoint = 0xFA4;
-	constexpr uint32_t m_flTerroristSpawnPointUsedTime = 0xFA8;
-	constexpr uint32_t m_CTSpawnPoints = 0xFB0;
-	constexpr uint32_t m_TerroristSpawnPoints = 0xFC8;
-	constexpr uint32_t m_bIsUnreservedGameServer = 0xFE0;
-	constexpr uint32_t m_fAutobalanceDisplayTime = 0xFE4;
-	constexpr uint32_t m_bAllowWeaponSwitch = 0x1250;
-	constexpr uint32_t m_bRoundTimeWarningTriggered = 0x1251;
-	constexpr uint32_t m_phaseChangeAnnouncementTime = 0x1254;
-	constexpr uint32_t m_fNextUpdateTeamClanNamesTime = 0x1258;
-	constexpr uint32_t m_flLastThinkTime = 0x125C;
-	constexpr uint32_t m_fAccumulatedRoundOffDamage = 0x1260;
-	constexpr uint32_t m_nShorthandedBonusLastEvalRound = 0x1264;
-	constexpr uint32_t m_nMatchAbortedEarlyReason = 0x14E0;
-	constexpr uint32_t m_bHasTriggeredRoundStartMusic = 0x14E4;
-	constexpr uint32_t m_bHasTriggeredCoopSpawnReset = 0x14E5;
-	constexpr uint32_t m_bSwitchingTeamsAtRoundReset = 0x14E6;
-	constexpr uint32_t m_pGameModeRules = 0x1500;
-	constexpr uint32_t m_BtGlobalBlackboard = 0x1508;
-	constexpr uint32_t m_hPlayerResource = 0x1570;
-	constexpr uint32_t m_RetakeRules = 0x1578;
-	constexpr uint32_t m_GuardianBotSkillLevelMax = 0x175C;
-	constexpr uint32_t m_GuardianBotSkillLevelMin = 0x1760;
-	constexpr uint32_t m_arrTeamUniqueKillWeaponsMatch = 0x1768;
-	constexpr uint32_t m_bTeamLastKillUsedUniqueWeaponMatch = 0x17C8;
-	constexpr uint32_t m_nMatchEndCount = 0x17F0;
-	constexpr uint32_t m_nTTeamIntroVariant = 0x17F4;
-	constexpr uint32_t m_nCTTeamIntroVariant = 0x17F8;
-	constexpr uint32_t m_bTeamIntroPeriod = 0x17FC;
-	constexpr uint32_t m_fTeamIntroPeriodEnd = 0x1800;
-	constexpr uint32_t m_bPlayedTeamIntroVO = 0x1804;
-	constexpr uint32_t m_iRoundEndWinnerTeam = 0x1808;
-	constexpr uint32_t m_eRoundEndReason = 0x180C;
-	constexpr uint32_t m_bRoundEndShowTimerDefend = 0x1810;
-	constexpr uint32_t m_iRoundEndTimerTime = 0x1814;
-	constexpr uint32_t m_sRoundEndFunFactToken = 0x1818;
-	constexpr uint32_t m_iRoundEndFunFactPlayerSlot = 0x1820;
-	constexpr uint32_t m_iRoundEndFunFactData1 = 0x1824;
-	constexpr uint32_t m_iRoundEndFunFactData2 = 0x1828;
-	constexpr uint32_t m_iRoundEndFunFactData3 = 0x182C;
-	constexpr uint32_t m_sRoundEndMessage = 0x1830;
-	constexpr uint32_t m_iRoundEndPlayerCount = 0x1838;
-	constexpr uint32_t m_bRoundEndNoMusic = 0x183C;
-	constexpr uint32_t m_iRoundEndLegacy = 0x1840;
-	constexpr uint32_t m_nRoundEndCount = 0x1844;
-	constexpr uint32_t m_iRoundStartRoundNumber = 0x1848;
-	constexpr uint32_t m_nRoundStartCount = 0x184C;
-	constexpr uint32_t m_flLastPerfSampleTime = 0x5858;
-	constexpr uint32_t m_bSkipNextServerPerfSample = 0x5860;
+	constexpr uint32_t m_bFreezePeriod = 0xC8;
+	constexpr uint32_t m_bWarmupPeriod = 0xC9;
+	constexpr uint32_t m_fWarmupPeriodEnd = 0xCC;
+	constexpr uint32_t m_fWarmupPeriodStart = 0xD0;
+	constexpr uint32_t m_bServerPaused = 0xD4;
+	constexpr uint32_t m_bTerroristTimeOutActive = 0xD5;
+	constexpr uint32_t m_bCTTimeOutActive = 0xD6;
+	constexpr uint32_t m_flTerroristTimeOutRemaining = 0xD8;
+	constexpr uint32_t m_flCTTimeOutRemaining = 0xDC;
+	constexpr uint32_t m_nTerroristTimeOuts = 0xE0;
+	constexpr uint32_t m_nCTTimeOuts = 0xE4;
+	constexpr uint32_t m_bTechnicalTimeOut = 0xE8;
+	constexpr uint32_t m_bMatchWaitingForResume = 0xE9;
+	constexpr uint32_t m_iRoundTime = 0xEC;
+	constexpr uint32_t m_fMatchStartTime = 0xF0;
+	constexpr uint32_t m_fRoundStartTime = 0xF4;
+	constexpr uint32_t m_flRestartRoundTime = 0xF8;
+	constexpr uint32_t m_bGameRestart = 0xFC;
+	constexpr uint32_t m_flGameStartTime = 0x100;
+	constexpr uint32_t m_timeUntilNextPhaseStarts = 0x104;
+	constexpr uint32_t m_gamePhase = 0x108;
+	constexpr uint32_t m_totalRoundsPlayed = 0x10C;
+	constexpr uint32_t m_nRoundsPlayedThisPhase = 0x110;
+	constexpr uint32_t m_nOvertimePlaying = 0x114;
+	constexpr uint32_t m_iHostagesRemaining = 0x118;
+	constexpr uint32_t m_bAnyHostageReached = 0x11C;
+	constexpr uint32_t m_bMapHasBombTarget = 0x11D;
+	constexpr uint32_t m_bMapHasRescueZone = 0x11E;
+	constexpr uint32_t m_bMapHasBuyZone = 0x11F;
+	constexpr uint32_t m_bIsQueuedMatchmaking = 0x120;
+	constexpr uint32_t m_nQueuedMatchmakingMode = 0x124;
+	constexpr uint32_t m_bIsValveDS = 0x128;
+	constexpr uint32_t m_bLogoMap = 0x129;
+	constexpr uint32_t m_bPlayAllStepSoundsOnServer = 0x12A;
+	constexpr uint32_t m_iSpectatorSlotCount = 0x12C;
+	constexpr uint32_t m_MatchDevice = 0x130;
+	constexpr uint32_t m_bHasMatchStarted = 0x134;
+	constexpr uint32_t m_nNextMapInMapgroup = 0x138;
+	constexpr uint32_t m_szTournamentEventName = 0x13C;
+	constexpr uint32_t m_szTournamentEventStage = 0x33C;
+	constexpr uint32_t m_szMatchStatTxt = 0x53C;
+	constexpr uint32_t m_szTournamentPredictionsTxt = 0x73C;
+	constexpr uint32_t m_nTournamentPredictionsPct = 0x93C;
+	constexpr uint32_t m_flCMMItemDropRevealStartTime = 0x940;
+	constexpr uint32_t m_flCMMItemDropRevealEndTime = 0x944;
+	constexpr uint32_t m_bIsDroppingItems = 0x948;
+	constexpr uint32_t m_bIsQuestEligible = 0x949;
+	constexpr uint32_t m_bIsHltvActive = 0x94A;
+	constexpr uint32_t m_arrProhibitedItemIndices = 0x94C;
+	constexpr uint32_t m_arrTournamentActiveCasterAccounts = 0xA14;
+	constexpr uint32_t m_numBestOfMaps = 0xA24;
+	constexpr uint32_t m_nHalloweenMaskListSeed = 0xA28;
+	constexpr uint32_t m_bBombDropped = 0xA2C;
+	constexpr uint32_t m_bBombPlanted = 0xA2D;
+	constexpr uint32_t m_iRoundWinStatus = 0xA30;
+	constexpr uint32_t m_eRoundWinReason = 0xA34;
+	constexpr uint32_t m_bTCantBuy = 0xA38;
+	constexpr uint32_t m_bCTCantBuy = 0xA39;
+	constexpr uint32_t m_iMatchStats_RoundResults = 0xA3C;
+	constexpr uint32_t m_iMatchStats_PlayersAlive_CT = 0xAB4;
+	constexpr uint32_t m_iMatchStats_PlayersAlive_T = 0xB2C;
+	constexpr uint32_t m_TeamRespawnWaveTimes = 0xBA4;
+	constexpr uint32_t m_flNextRespawnWave = 0xC24;
+	constexpr uint32_t m_nServerQuestID = 0xCA4;
+	constexpr uint32_t m_vMinimapMins = 0xCA8;
+	constexpr uint32_t m_vMinimapMaxs = 0xCB4;
+	constexpr uint32_t m_MinimapVerticalSectionHeights = 0xCC0;
+	constexpr uint32_t m_bSpawnedTerrorHuntHeavy = 0xCE0;
+	constexpr uint32_t m_nEndMatchMapGroupVoteTypes = 0xCE4;
+	constexpr uint32_t m_nEndMatchMapGroupVoteOptions = 0xD0C;
+	constexpr uint32_t m_nEndMatchMapVoteWinner = 0xD34;
+	constexpr uint32_t m_iNumConsecutiveCTLoses = 0xD38;
+	constexpr uint32_t m_iNumConsecutiveTerroristLoses = 0xD3C;
+	constexpr uint32_t m_bHasHostageBeenTouched = 0xD58;
+	constexpr uint32_t m_flIntermissionStartTime = 0xD5C;
+	constexpr uint32_t m_flIntermissionEndTime = 0xD60;
+	constexpr uint32_t m_bLevelInitialized = 0xD64;
+	constexpr uint32_t m_iTotalRoundsPlayed = 0xD68;
+	constexpr uint32_t m_iUnBalancedRounds = 0xD6C;
+	constexpr uint32_t m_endMatchOnRoundReset = 0xD70;
+	constexpr uint32_t m_endMatchOnThink = 0xD71;
+	constexpr uint32_t m_iFreezeTime = 0xD74;
+	constexpr uint32_t m_iNumTerrorist = 0xD78;
+	constexpr uint32_t m_iNumCT = 0xD7C;
+	constexpr uint32_t m_iNumSpawnableTerrorist = 0xD80;
+	constexpr uint32_t m_iNumSpawnableCT = 0xD84;
+	constexpr uint32_t m_arrSelectedHostageSpawnIndices = 0xD88;
+	constexpr uint32_t m_nSpawnPointsRandomSeed = 0xDA0;
+	constexpr uint32_t m_bFirstConnected = 0xDA4;
+	constexpr uint32_t m_bCompleteReset = 0xDA5;
+	constexpr uint32_t m_bPickNewTeamsOnReset = 0xDA6;
+	constexpr uint32_t m_bScrambleTeamsOnRestart = 0xDA7;
+	constexpr uint32_t m_bSwapTeamsOnRestart = 0xDA8;
+	constexpr uint32_t m_nEndMatchTiedVotes = 0xDB0;
+	constexpr uint32_t m_bNeedToAskPlayersForContinueVote = 0xDCC;
+	constexpr uint32_t m_numQueuedMatchmakingAccounts = 0xDD0;
+	constexpr uint32_t m_fAvgPlayerRank = 0xDD4;
+	constexpr uint32_t m_pQueuedMatchmakingReservationString = 0xDD8;
+	constexpr uint32_t m_numTotalTournamentDrops = 0xDE0;
+	constexpr uint32_t m_numSpectatorsCountMax = 0xDE4;
+	constexpr uint32_t m_numSpectatorsCountMaxTV = 0xDE8;
+	constexpr uint32_t m_numSpectatorsCountMaxLnk = 0xDEC;
+	constexpr uint32_t m_bForceTeamChangeSilent = 0xDF8;
+	constexpr uint32_t m_bLoadingRoundBackupData = 0xDF9;
+	constexpr uint32_t m_nMatchInfoShowType = 0xE30;
+	constexpr uint32_t m_flMatchInfoDecidedTime = 0xE34;
+	constexpr uint32_t mTeamDMLastWinningTeamNumber = 0xE50;
+	constexpr uint32_t mTeamDMLastThinkTime = 0xE54;
+	constexpr uint32_t m_flTeamDMLastAnnouncementTime = 0xE58;
+	constexpr uint32_t m_iAccountTerrorist = 0xE5C;
+	constexpr uint32_t m_iAccountCT = 0xE60;
+	constexpr uint32_t m_iSpawnPointCount_Terrorist = 0xE64;
+	constexpr uint32_t m_iSpawnPointCount_CT = 0xE68;
+	constexpr uint32_t m_iMaxNumTerrorists = 0xE6C;
+	constexpr uint32_t m_iMaxNumCTs = 0xE70;
+	constexpr uint32_t m_iLoserBonusMostRecentTeam = 0xE74;
+	constexpr uint32_t m_tmNextPeriodicThink = 0xE78;
+	constexpr uint32_t m_bVoiceWonMatchBragFired = 0xE7C;
+	constexpr uint32_t m_fWarmupNextChatNoticeTime = 0xE80;
+	constexpr uint32_t m_iHostagesRescued = 0xE88;
+	constexpr uint32_t m_iHostagesTouched = 0xE8C;
+	constexpr uint32_t m_flNextHostageAnnouncement = 0xE90;
+	constexpr uint32_t m_bNoTerroristsKilled = 0xE94;
+	constexpr uint32_t m_bNoCTsKilled = 0xE95;
+	constexpr uint32_t m_bNoEnemiesKilled = 0xE96;
+	constexpr uint32_t m_bCanDonateWeapons = 0xE97;
+	constexpr uint32_t m_firstKillTime = 0xE9C;
+	constexpr uint32_t m_firstBloodTime = 0xEA4;
+	constexpr uint32_t m_hostageWasInjured = 0xEC0;
+	constexpr uint32_t m_hostageWasKilled = 0xEC1;
+	constexpr uint32_t m_bVoteCalled = 0xED0;
+	constexpr uint32_t m_bServerVoteOnReset = 0xED1;
+	constexpr uint32_t m_flVoteCheckThrottle = 0xED4;
+	constexpr uint32_t m_bBuyTimeEnded = 0xED8;
+	constexpr uint32_t m_nLastFreezeEndBeep = 0xEDC;
+	constexpr uint32_t m_bTargetBombed = 0xEE0;
+	constexpr uint32_t m_bBombDefused = 0xEE1;
+	constexpr uint32_t m_bMapHasBombZone = 0xEE2;
+	constexpr uint32_t m_vecMainCTSpawnPos = 0xF00;
+	constexpr uint32_t m_CTSpawnPointsMasterList = 0xF10;
+	constexpr uint32_t m_TerroristSpawnPointsMasterList = 0xF28;
+	constexpr uint32_t m_bRespawningAllRespawnablePlayers = 0xF40;
+	constexpr uint32_t m_iNextCTSpawnPoint = 0xF44;
+	constexpr uint32_t m_flCTSpawnPointUsedTime = 0xF48;
+	constexpr uint32_t m_iNextTerroristSpawnPoint = 0xF4C;
+	constexpr uint32_t m_flTerroristSpawnPointUsedTime = 0xF50;
+	constexpr uint32_t m_CTSpawnPoints = 0xF58;
+	constexpr uint32_t m_TerroristSpawnPoints = 0xF70;
+	constexpr uint32_t m_bIsUnreservedGameServer = 0xF88;
+	constexpr uint32_t m_fAutobalanceDisplayTime = 0xF8C;
+	constexpr uint32_t m_bAllowWeaponSwitch = 0x11F8;
+	constexpr uint32_t m_bRoundTimeWarningTriggered = 0x11F9;
+	constexpr uint32_t m_phaseChangeAnnouncementTime = 0x11FC;
+	constexpr uint32_t m_fNextUpdateTeamClanNamesTime = 0x1200;
+	constexpr uint32_t m_flLastThinkTime = 0x1204;
+	constexpr uint32_t m_fAccumulatedRoundOffDamage = 0x1208;
+	constexpr uint32_t m_nShorthandedBonusLastEvalRound = 0x120C;
+	constexpr uint32_t m_nMatchAbortedEarlyReason = 0x1488;
+	constexpr uint32_t m_bHasTriggeredRoundStartMusic = 0x148C;
+	constexpr uint32_t m_bSwitchingTeamsAtRoundReset = 0x148D;
+	constexpr uint32_t m_pGameModeRules = 0x14A8;
+	constexpr uint32_t m_BtGlobalBlackboard = 0x14B0;
+	constexpr uint32_t m_hPlayerResource = 0x1518;
+	constexpr uint32_t m_RetakeRules = 0x1520;
+	constexpr uint32_t m_arrTeamUniqueKillWeaponsMatch = 0x16B8;
+	constexpr uint32_t m_bTeamLastKillUsedUniqueWeaponMatch = 0x1718;
+	constexpr uint32_t m_nMatchEndCount = 0x1740;
+	constexpr uint32_t m_nTTeamIntroVariant = 0x1744;
+	constexpr uint32_t m_nCTTeamIntroVariant = 0x1748;
+	constexpr uint32_t m_bTeamIntroPeriod = 0x174C;
+	constexpr uint32_t m_fTeamIntroPeriodEnd = 0x1750;
+	constexpr uint32_t m_bPlayedTeamIntroVO = 0x1754;
+	constexpr uint32_t m_iRoundEndWinnerTeam = 0x1758;
+	constexpr uint32_t m_eRoundEndReason = 0x175C;
+	constexpr uint32_t m_bRoundEndShowTimerDefend = 0x1760;
+	constexpr uint32_t m_iRoundEndTimerTime = 0x1764;
+	constexpr uint32_t m_sRoundEndFunFactToken = 0x1768;
+	constexpr uint32_t m_iRoundEndFunFactPlayerSlot = 0x1770;
+	constexpr uint32_t m_iRoundEndFunFactData1 = 0x1774;
+	constexpr uint32_t m_iRoundEndFunFactData2 = 0x1778;
+	constexpr uint32_t m_iRoundEndFunFactData3 = 0x177C;
+	constexpr uint32_t m_sRoundEndMessage = 0x1780;
+	constexpr uint32_t m_iRoundEndPlayerCount = 0x1788;
+	constexpr uint32_t m_bRoundEndNoMusic = 0x178C;
+	constexpr uint32_t m_iRoundEndLegacy = 0x1790;
+	constexpr uint32_t m_nRoundEndCount = 0x1794;
+	constexpr uint32_t m_iRoundStartRoundNumber = 0x1798;
+	constexpr uint32_t m_nRoundStartCount = 0x179C;
+	constexpr uint32_t m_flLastPerfSampleTime = 0x57A8;
 }
 
 namespace CCSGameRulesProxy
@@ -2557,19 +2682,19 @@ namespace CCSGameModeRules_ArmsRace
 
 namespace CCSArmsRaceScript
 {
-	constexpr uint32_t m_pOuter = 0xD8;
+	constexpr uint32_t m_pOuter = 0xF8;
 }
 
 namespace CCSGameModeRules_Deathmatch
 {
 	constexpr uint32_t m_flDMBonusStartTime = 0x38;
 	constexpr uint32_t m_flDMBonusTimeLength = 0x3C;
-	constexpr uint32_t m_nDMBonusWeaponLoadoutSlot = 0x40;
+	constexpr uint32_t m_sDMBonusWeapon = 0x40;
 }
 
 namespace CCSDeathmatchScript
 {
-	constexpr uint32_t m_pOuter = 0xD8;
+	constexpr uint32_t m_pOuter = 0xF8;
 }
 
 namespace CCSDeathmatchScript_ConVars
@@ -2674,61 +2799,167 @@ namespace CCSMinimapBoundary
 {
 }
 
+namespace CCSPointScriptEntity
+{
+}
+
+namespace CCSServerPointScriptEntity
+{
+}
+
+namespace CCSPointScript
+{
+	constexpr uint32_t m_pParent = 0xF8;
+}
+
+namespace CCSPointScriptExtensions_entity
+{
+}
+
+namespace CCSPointScriptExtensions_player
+{
+}
+
+namespace CCSPointScriptExtensions_observer
+{
+}
+
+namespace CCSPointScriptExtensions_player_controller
+{
+}
+
+namespace CCSPointScriptExtensions_weapon_cs_base
+{
+}
+
+namespace CCSPointScriptExtensions_CCSWeaponBaseVData
+{
+}
+
 namespace CCSGOPlayerAnimGraphState
 {
 }
 
 namespace CCSPlayerPawn
 {
-	constexpr uint32_t m_pBulletServices = 0x15A8;
-	constexpr uint32_t m_pHostageServices = 0x15B0;
-	constexpr uint32_t m_pBuyServices = 0x15B8;
-	constexpr uint32_t m_pActionTrackingServices = 0x15C0;
-	constexpr uint32_t m_pRadioServices = 0x15C8;
-	constexpr uint32_t m_pDamageReactServices = 0x15D0;
-	constexpr uint32_t m_nCharacterDefIndex = 0x15D8;
-	constexpr uint32_t m_hPreviousModel = 0x15E0;
-	constexpr uint32_t m_bHasFemaleVoice = 0x15E8;
-	constexpr uint32_t m_strVOPrefix = 0x15F0;
-	constexpr uint32_t m_szLastPlaceName = 0x15F8;
-	constexpr uint32_t m_bInHostageResetZone = 0x16B8;
-	constexpr uint32_t m_bInBuyZone = 0x16B9;
-	constexpr uint32_t m_bWasInBuyZone = 0x16BA;
-	constexpr uint32_t m_bInHostageRescueZone = 0x16BB;
-	constexpr uint32_t m_bInBombZone = 0x16BC;
-	constexpr uint32_t m_bWasInHostageRescueZone = 0x16BD;
-	constexpr uint32_t m_iRetakesOffering = 0x16C0;
-	constexpr uint32_t m_iRetakesOfferingCard = 0x16C4;
-	constexpr uint32_t m_bRetakesHasDefuseKit = 0x16C8;
-	constexpr uint32_t m_bRetakesMVPLastRound = 0x16C9;
-	constexpr uint32_t m_iRetakesMVPBoostItem = 0x16CC;
-	constexpr uint32_t m_RetakesMVPBoostExtraUtility = 0x16D0;
-	constexpr uint32_t m_flHealthShotBoostExpirationTime = 0x16D4;
-	constexpr uint32_t m_flLandseconds = 0x16D8;
-	constexpr uint32_t m_aimPunchAngle = 0x16DC;
-	constexpr uint32_t m_aimPunchAngleVel = 0x16E8;
-	constexpr uint32_t m_aimPunchTickBase = 0x16F4;
-	constexpr uint32_t m_aimPunchTickFraction = 0x16F8;
-	constexpr uint32_t m_aimPunchCache = 0x1700;
-	constexpr uint32_t m_bIsBuyMenuOpen = 0x1718;
-	constexpr uint32_t m_xLastHeadBoneTransform = 0x1D60;
-	constexpr uint32_t m_bLastHeadBoneTransformIsValid = 0x1D80;
-	constexpr uint32_t m_lastLandTime = 0x1D84;
-	constexpr uint32_t m_bOnGroundLastTick = 0x1D88;
-	constexpr uint32_t m_iPlayerLocked = 0x1D8C;
-	constexpr uint32_t m_flTimeOfLastInjury = 0x1D94;
-	constexpr uint32_t m_flNextSprayDecalTime = 0x1D98;
-	constexpr uint32_t m_bNextSprayDecalTimeExpedited = 0x1D9C;
-	constexpr uint32_t m_nRagdollDamageBone = 0x1DA0;
-	constexpr uint32_t m_vRagdollDamageForce = 0x1DA4;
-	constexpr uint32_t m_vRagdollDamagePosition = 0x1DB0;
-	constexpr uint32_t m_szRagdollDamageWeaponName = 0x1DBC;
-	constexpr uint32_t m_bRagdollDamageHeadshot = 0x1DFC;
-	constexpr uint32_t m_vRagdollServerOrigin = 0x1E00;
-	constexpr uint32_t m_EconGloves = 0x1E10;
-	constexpr uint32_t m_nEconGlovesChanged = 0x2088;
-	constexpr uint32_t m_qDeathEyeAngles = 0x208C;
-	constexpr uint32_t m_bSkipOneHeadConstraintUpdate = 0x2098;
+	constexpr uint32_t m_pBulletServices = 0xD20;
+	constexpr uint32_t m_pHostageServices = 0xD28;
+	constexpr uint32_t m_pBuyServices = 0xD30;
+	constexpr uint32_t m_pActionTrackingServices = 0xD38;
+	constexpr uint32_t m_pRadioServices = 0xD40;
+	constexpr uint32_t m_pDamageReactServices = 0xD48;
+	constexpr uint32_t m_nCharacterDefIndex = 0xD50;
+	constexpr uint32_t m_bHasFemaleVoice = 0xD52;
+	constexpr uint32_t m_strVOPrefix = 0xD58;
+	constexpr uint32_t m_szLastPlaceName = 0xD60;
+	constexpr uint32_t m_bInHostageResetZone = 0xE20;
+	constexpr uint32_t m_bInBuyZone = 0xE21;
+	constexpr uint32_t m_TouchingBuyZones = 0xE28;
+	constexpr uint32_t m_bWasInBuyZone = 0xE40;
+	constexpr uint32_t m_bInHostageRescueZone = 0xE41;
+	constexpr uint32_t m_bInBombZone = 0xE42;
+	constexpr uint32_t m_bWasInHostageRescueZone = 0xE43;
+	constexpr uint32_t m_iRetakesOffering = 0xE44;
+	constexpr uint32_t m_iRetakesOfferingCard = 0xE48;
+	constexpr uint32_t m_bRetakesHasDefuseKit = 0xE4C;
+	constexpr uint32_t m_bRetakesMVPLastRound = 0xE4D;
+	constexpr uint32_t m_iRetakesMVPBoostItem = 0xE50;
+	constexpr uint32_t m_RetakesMVPBoostExtraUtility = 0xE54;
+	constexpr uint32_t m_flHealthShotBoostExpirationTime = 0xE58;
+	constexpr uint32_t m_flLandingTimeSeconds = 0xE5C;
+	constexpr uint32_t m_aimPunchAngle = 0xE60;
+	constexpr uint32_t m_aimPunchAngleVel = 0xE6C;
+	constexpr uint32_t m_aimPunchTickBase = 0xE78;
+	constexpr uint32_t m_aimPunchTickFraction = 0xE7C;
+	constexpr uint32_t m_aimPunchCache = 0xE80;
+	constexpr uint32_t m_bIsBuyMenuOpen = 0xE98;
+	constexpr uint32_t m_xLastHeadBoneTransform = 0x14E0;
+	constexpr uint32_t m_bLastHeadBoneTransformIsValid = 0x1500;
+	constexpr uint32_t m_lastLandTime = 0x1504;
+	constexpr uint32_t m_bOnGroundLastTick = 0x1508;
+	constexpr uint32_t m_iPlayerLocked = 0x150C;
+	constexpr uint32_t m_flTimeOfLastInjury = 0x1514;
+	constexpr uint32_t m_flNextSprayDecalTime = 0x1518;
+	constexpr uint32_t m_bNextSprayDecalTimeExpedited = 0x151C;
+	constexpr uint32_t m_nRagdollDamageBone = 0x1520;
+	constexpr uint32_t m_vRagdollDamageForce = 0x1524;
+	constexpr uint32_t m_vRagdollDamagePosition = 0x1530;
+	constexpr uint32_t m_szRagdollDamageWeaponName = 0x153C;
+	constexpr uint32_t m_bRagdollDamageHeadshot = 0x157C;
+	constexpr uint32_t m_vRagdollServerOrigin = 0x1580;
+	constexpr uint32_t m_EconGloves = 0x1590;
+	constexpr uint32_t m_nEconGlovesChanged = 0x1808;
+	constexpr uint32_t m_qDeathEyeAngles = 0x180C;
+	constexpr uint32_t m_bSkipOneHeadConstraintUpdate = 0x1818;
+	constexpr uint32_t m_bLeftHanded = 0x1819;
+	constexpr uint32_t m_fSwitchedHandednessTime = 0x181C;
+	constexpr uint32_t m_flViewmodelOffsetX = 0x1820;
+	constexpr uint32_t m_flViewmodelOffsetY = 0x1824;
+	constexpr uint32_t m_flViewmodelOffsetZ = 0x1828;
+	constexpr uint32_t m_flViewmodelFOV = 0x182C;
+	constexpr uint32_t m_bIsWalking = 0x1830;
+	constexpr uint32_t m_fLastGivenDefuserTime = 0x1834;
+	constexpr uint32_t m_fLastGivenBombTime = 0x1838;
+	constexpr uint32_t m_flDealtDamageToEnemyMostRecentTimestamp = 0x183C;
+	constexpr uint32_t m_iDisplayHistoryBits = 0x1840;
+	constexpr uint32_t m_flLastAttackedTeammate = 0x1844;
+	constexpr uint32_t m_allowAutoFollowTime = 0x1848;
+	constexpr uint32_t m_bResetArmorNextSpawn = 0x184C;
+	constexpr uint32_t m_nLastKillerIndex = 0x1850;
+	constexpr uint32_t m_entitySpottedState = 0x1858;
+	constexpr uint32_t m_nSpotRules = 0x1870;
+	constexpr uint32_t m_bIsScoped = 0x1874;
+	constexpr uint32_t m_bResumeZoom = 0x1875;
+	constexpr uint32_t m_bIsDefusing = 0x1876;
+	constexpr uint32_t m_bIsGrabbingHostage = 0x1877;
+	constexpr uint32_t m_iBlockingUseActionInProgress = 0x1878;
+	constexpr uint32_t m_flEmitSoundTime = 0x187C;
+	constexpr uint32_t m_bInNoDefuseArea = 0x1880;
+	constexpr uint32_t m_iBombSiteIndex = 0x1884;
+	constexpr uint32_t m_nWhichBombZone = 0x1888;
+	constexpr uint32_t m_bInBombZoneTrigger = 0x188C;
+	constexpr uint32_t m_bWasInBombZoneTrigger = 0x188D;
+	constexpr uint32_t m_iShotsFired = 0x1890;
+	constexpr uint32_t m_flFlinchStack = 0x1894;
+	constexpr uint32_t m_flVelocityModifier = 0x1898;
+	constexpr uint32_t m_flHitHeading = 0x189C;
+	constexpr uint32_t m_nHitBodyPart = 0x18A0;
+	constexpr uint32_t m_vecTotalBulletForce = 0x18A4;
+	constexpr uint32_t m_bWaitForNoAttack = 0x18B0;
+	constexpr uint32_t m_ignoreLadderJumpTime = 0x18B4;
+	constexpr uint32_t m_NumEnemiesKilledThisRound = 0x18B8;
+	constexpr uint32_t m_bKilledByHeadshot = 0x18BC;
+	constexpr uint32_t m_LastHitBox = 0x18C0;
+	constexpr uint32_t m_LastHealth = 0x18C4;
+	constexpr uint32_t m_pBot = 0x18C8;
+	constexpr uint32_t m_bBotAllowActive = 0x18D0;
+	constexpr uint32_t m_thirdPersonHeading = 0x18D4;
+	constexpr uint32_t m_flSlopeDropOffset = 0x18E0;
+	constexpr uint32_t m_flSlopeDropHeight = 0x18E4;
+	constexpr uint32_t m_vHeadConstraintOffset = 0x18E8;
+	constexpr uint32_t m_nLastPickupPriority = 0x18F4;
+	constexpr uint32_t m_flLastPickupPriorityTime = 0x18F8;
+	constexpr uint32_t m_ArmorValue = 0x18FC;
+	constexpr uint32_t m_unCurrentEquipmentValue = 0x1900;
+	constexpr uint32_t m_unRoundStartEquipmentValue = 0x1902;
+	constexpr uint32_t m_unFreezetimeEndEquipmentValue = 0x1904;
+	constexpr uint32_t m_iLastWeaponFireUsercmd = 0x1908;
+	constexpr uint32_t m_flLastFriendlyFireDamageReductionRatio = 0x190C;
+	constexpr uint32_t m_bIsSpawning = 0x1910;
+	constexpr uint32_t m_iDeathFlags = 0x1920;
+	constexpr uint32_t m_bHasDeathInfo = 0x1924;
+	constexpr uint32_t m_flDeathInfoTime = 0x1928;
+	constexpr uint32_t m_vecDeathInfoOrigin = 0x192C;
+	constexpr uint32_t m_vecPlayerPatchEconIndices = 0x1938;
+	constexpr uint32_t m_GunGameImmunityColor = 0x194C;
+	constexpr uint32_t m_grenadeParameterStashTime = 0x1950;
+	constexpr uint32_t m_bGrenadeParametersStashed = 0x1954;
+	constexpr uint32_t m_angStashedShootAngles = 0x1958;
+	constexpr uint32_t m_vecStashedGrenadeThrowPosition = 0x1964;
+	constexpr uint32_t m_vecStashedVelocity = 0x1970;
+	constexpr uint32_t m_angShootAngleHistory = 0x197C;
+	constexpr uint32_t m_vecThrowPositionHistory = 0x1994;
+	constexpr uint32_t m_vecVelocityHistory = 0x19AC;
 }
 
 namespace CPlayerPing
@@ -2881,8 +3112,7 @@ namespace CCSPlayer_UseServices
 {
 	constexpr uint32_t m_hLastKnownUseEntity = 0x40;
 	constexpr uint32_t m_flLastUseTimeStamp = 0x44;
-	constexpr uint32_t m_flTimeStartedHoldingUse = 0x48;
-	constexpr uint32_t m_flTimeLastUsedWindow = 0x4C;
+	constexpr uint32_t m_flTimeLastUsedWindow = 0x48;
 }
 
 namespace CBaseViewModel
@@ -2929,8 +3159,9 @@ namespace CCSPlayer_WeaponServices
 	constexpr uint32_t m_bIsPickingUpItemWithUse = 0xC5;
 	constexpr uint32_t m_bPickedUpWeapon = 0xC6;
 	constexpr uint32_t m_bDisableAutoDeploy = 0xC7;
-	constexpr uint32_t m_nOldShootPositionHistoryCount = 0xC8;
-	constexpr uint32_t m_nOldInputHistoryCount = 0x460;
+	constexpr uint32_t m_bIsPickingUpGroundWeapon = 0xC8;
+	constexpr uint32_t m_nOldShootPositionHistoryCount = 0xCC;
+	constexpr uint32_t m_nOldInputHistoryCount = 0x468;
 }
 
 namespace CCSObserver_ObserverServices
@@ -2959,172 +3190,33 @@ namespace CSAdditionalPerRoundStats_t
 	constexpr uint32_t m_killsWhileBlind = 0x4;
 	constexpr uint32_t m_bombCarrierkills = 0x8;
 	constexpr uint32_t m_iBurnDamageInflicted = 0xC;
-	constexpr uint32_t m_iDinks = 0x10;
+	constexpr uint32_t m_iBlastDamageInflicted = 0x10;
+	constexpr uint32_t m_iDinks = 0x14;
 }
 
 namespace CSAdditionalMatchStats_t
 {
-	constexpr uint32_t m_numRoundsSurvived = 0x14;
-	constexpr uint32_t m_maxNumRoundsSurvived = 0x18;
-	constexpr uint32_t m_numRoundsSurvivedTotal = 0x1C;
-	constexpr uint32_t m_iRoundsWonWithoutPurchase = 0x20;
-	constexpr uint32_t m_iRoundsWonWithoutPurchaseTotal = 0x24;
-	constexpr uint32_t m_numFirstKills = 0x28;
-	constexpr uint32_t m_numClutchKills = 0x2C;
-	constexpr uint32_t m_numPistolKills = 0x30;
-	constexpr uint32_t m_numSniperKills = 0x34;
-	constexpr uint32_t m_iNumSuicides = 0x38;
-	constexpr uint32_t m_iNumTeamKills = 0x3C;
-	constexpr uint32_t m_iTeamDamage = 0x40;
+	constexpr uint32_t m_numRoundsSurvived = 0x18;
+	constexpr uint32_t m_maxNumRoundsSurvived = 0x1C;
+	constexpr uint32_t m_numRoundsSurvivedTotal = 0x20;
+	constexpr uint32_t m_iRoundsWonWithoutPurchase = 0x24;
+	constexpr uint32_t m_iRoundsWonWithoutPurchaseTotal = 0x28;
+	constexpr uint32_t m_numFirstKills = 0x2C;
+	constexpr uint32_t m_numClutchKills = 0x30;
+	constexpr uint32_t m_numPistolKills = 0x34;
+	constexpr uint32_t m_numSniperKills = 0x38;
+	constexpr uint32_t m_iNumSuicides = 0x3C;
+	constexpr uint32_t m_iNumTeamKills = 0x40;
+	constexpr uint32_t m_iTeamDamage = 0x44;
 }
 
 namespace CCSPlayerController_ActionTrackingServices
 {
 	constexpr uint32_t m_perRoundStats = 0x40;
-	constexpr uint32_t m_matchStats = 0x90;
-	constexpr uint32_t m_iNumRoundKills = 0x150;
-	constexpr uint32_t m_iNumRoundKillsHeadshots = 0x154;
-	constexpr uint32_t m_unTotalRoundDamageDealt = 0x158;
-}
-
-namespace CCSPlayerPawnBase
-{
-	constexpr uint32_t m_CTouchExpansionComponent = 0xBC0;
-	constexpr uint32_t m_pPingServices = 0xC10;
-	constexpr uint32_t m_pViewModelServices = 0xC18;
-	constexpr uint32_t m_iDisplayHistoryBits = 0xC20;
-	constexpr uint32_t m_flLastAttackedTeammate = 0xC24;
-	constexpr uint32_t m_hOriginalController = 0xC28;
-	constexpr uint32_t m_blindUntilTime = 0xC2C;
-	constexpr uint32_t m_blindStartTime = 0xC30;
-	constexpr uint32_t m_allowAutoFollowTime = 0xC34;
-	constexpr uint32_t m_entitySpottedState = 0xC38;
-	constexpr uint32_t m_nSpotRules = 0xC50;
-	constexpr uint32_t m_iPlayerState = 0xC54;
-	constexpr uint32_t m_chickenIdleSoundTimer = 0xC60;
-	constexpr uint32_t m_chickenJumpSoundTimer = 0xC78;
-	constexpr uint32_t m_vecLastBookmarkedPosition = 0xD30;
-	constexpr uint32_t m_flLastDistanceTraveledNotice = 0xD3C;
-	constexpr uint32_t m_flAccumulatedDistanceTraveled = 0xD40;
-	constexpr uint32_t m_flLastFriendlyFireDamageReductionRatio = 0xD44;
-	constexpr uint32_t m_bRespawning = 0xD48;
-	constexpr uint32_t m_nLastPickupPriority = 0xD4C;
-	constexpr uint32_t m_flLastPickupPriorityTime = 0xD50;
-	constexpr uint32_t m_bIsScoped = 0xD54;
-	constexpr uint32_t m_bIsWalking = 0xD55;
-	constexpr uint32_t m_bResumeZoom = 0xD56;
-	constexpr uint32_t m_bIsDefusing = 0xD57;
-	constexpr uint32_t m_bIsGrabbingHostage = 0xD58;
-	constexpr uint32_t m_iBlockingUseActionInProgress = 0xD5C;
-	constexpr uint32_t m_fImmuneToGunGameDamageTime = 0xD60;
-	constexpr uint32_t m_bGunGameImmunity = 0xD64;
-	constexpr uint32_t m_GunGameImmunityColor = 0xD65;
-	constexpr uint32_t m_fMolotovDamageTime = 0xD6C;
-	constexpr uint32_t m_bHasMovedSinceSpawn = 0xD70;
-	constexpr uint32_t m_bCanMoveDuringFreezePeriod = 0xD71;
-	constexpr uint32_t m_flGuardianTooFarDistFrac = 0xD74;
-	constexpr uint32_t m_flNextGuardianTooFarHurtTime = 0xD78;
-	constexpr uint32_t m_flDetectedByEnemySensorTime = 0xD7C;
-	constexpr uint32_t m_flDealtDamageToEnemyMostRecentTimestamp = 0xD80;
-	constexpr uint32_t m_flLastEquippedHelmetTime = 0xD84;
-	constexpr uint32_t m_flLastEquippedArmorTime = 0xD88;
-	constexpr uint32_t m_nHeavyAssaultSuitCooldownRemaining = 0xD8C;
-	constexpr uint32_t m_bResetArmorNextSpawn = 0xD90;
-	constexpr uint32_t m_flLastBumpMineBumpTime = 0xD94;
-	constexpr uint32_t m_flEmitSoundTime = 0xD98;
-	constexpr uint32_t m_iNumSpawns = 0xD9C;
-	constexpr uint32_t m_iShouldHaveCash = 0xDA0;
-	constexpr uint32_t m_flIdleTimeSinceLastAction = 0xDA8;
-	constexpr uint32_t m_flNameChangeHistory = 0xDAC;
-	constexpr uint32_t m_fLastGivenDefuserTime = 0xDC0;
-	constexpr uint32_t m_fLastGivenBombTime = 0xDC4;
-	constexpr uint32_t m_bHasNightVision = 0xDC8;
-	constexpr uint32_t m_bNightVisionOn = 0xDC9;
-	constexpr uint32_t m_fNextRadarUpdateTime = 0xDCC;
-	constexpr uint32_t m_flLastMoneyUpdateTime = 0xDD0;
-	constexpr uint32_t m_MenuStringBuffer = 0xDD4;
-	constexpr uint32_t m_fIntroCamTime = 0x11D4;
-	constexpr uint32_t m_nMyCollisionGroup = 0x11D8;
-	constexpr uint32_t m_bInNoDefuseArea = 0x11DC;
-	constexpr uint32_t m_bKilledByTaser = 0x11DD;
-	constexpr uint32_t m_iMoveState = 0x11E0;
-	constexpr uint32_t m_grenadeParameterStashTime = 0x11E4;
-	constexpr uint32_t m_bGrenadeParametersStashed = 0x11E8;
-	constexpr uint32_t m_angStashedShootAngles = 0x11EC;
-	constexpr uint32_t m_vecStashedGrenadeThrowPosition = 0x11F8;
-	constexpr uint32_t m_vecStashedVelocity = 0x1204;
-	constexpr uint32_t m_angShootAngleHistory = 0x1210;
-	constexpr uint32_t m_vecThrowPositionHistory = 0x1228;
-	constexpr uint32_t m_vecVelocityHistory = 0x1240;
-	constexpr uint32_t m_bDiedAirborne = 0x1258;
-	constexpr uint32_t m_iBombSiteIndex = 0x125C;
-	constexpr uint32_t m_nWhichBombZone = 0x1260;
-	constexpr uint32_t m_bInBombZoneTrigger = 0x1264;
-	constexpr uint32_t m_bWasInBombZoneTrigger = 0x1265;
-	constexpr uint32_t m_iDirection = 0x1268;
-	constexpr uint32_t m_iShotsFired = 0x126C;
-	constexpr uint32_t m_ArmorValue = 0x1270;
-	constexpr uint32_t m_flFlinchStack = 0x1274;
-	constexpr uint32_t m_flVelocityModifier = 0x1278;
-	constexpr uint32_t m_flHitHeading = 0x127C;
-	constexpr uint32_t m_nHitBodyPart = 0x1280;
-	constexpr uint32_t m_iHostagesKilled = 0x1284;
-	constexpr uint32_t m_vecTotalBulletForce = 0x1288;
-	constexpr uint32_t m_flFlashDuration = 0x1294;
-	constexpr uint32_t m_flFlashMaxAlpha = 0x1298;
-	constexpr uint32_t m_flProgressBarStartTime = 0x129C;
-	constexpr uint32_t m_iProgressBarDuration = 0x12A0;
-	constexpr uint32_t m_bWaitForNoAttack = 0x12A4;
-	constexpr uint32_t m_flLowerBodyYawTarget = 0x12A8;
-	constexpr uint32_t m_bStrafing = 0x12AC;
-	constexpr uint32_t m_lastStandingPos = 0x12B0;
-	constexpr uint32_t m_ignoreLadderJumpTime = 0x12BC;
-	constexpr uint32_t m_ladderSurpressionTimer = 0x12C0;
-	constexpr uint32_t m_lastLadderNormal = 0x12D8;
-	constexpr uint32_t m_lastLadderPos = 0x12E4;
-	constexpr uint32_t m_thirdPersonHeading = 0x12F0;
-	constexpr uint32_t m_flSlopeDropOffset = 0x12FC;
-	constexpr uint32_t m_flSlopeDropHeight = 0x1300;
-	constexpr uint32_t m_vHeadConstraintOffset = 0x1304;
-	constexpr uint32_t m_iLastWeaponFireUsercmd = 0x1318;
-	constexpr uint32_t m_angEyeAngles = 0x131C;
-	constexpr uint32_t m_bVCollisionInitted = 0x1328;
-	constexpr uint32_t m_storedSpawnPosition = 0x132C;
-	constexpr uint32_t m_storedSpawnAngle = 0x1338;
-	constexpr uint32_t m_bIsSpawning = 0x1344;
-	constexpr uint32_t m_bHideTargetID = 0x1345;
-	constexpr uint32_t m_nNumDangerZoneDamageHits = 0x1348;
-	constexpr uint32_t m_bHud_MiniScoreHidden = 0x134C;
-	constexpr uint32_t m_bHud_RadarHidden = 0x134D;
-	constexpr uint32_t m_nLastKillerIndex = 0x1350;
-	constexpr uint32_t m_nLastConcurrentKilled = 0x1354;
-	constexpr uint32_t m_nDeathCamMusic = 0x1358;
-	constexpr uint32_t m_iAddonBits = 0x135C;
-	constexpr uint32_t m_iPrimaryAddon = 0x1360;
-	constexpr uint32_t m_iSecondaryAddon = 0x1364;
-	constexpr uint32_t m_currentDeafnessFilter = 0x1368;
-	constexpr uint32_t m_NumEnemiesKilledThisSpawn = 0x136C;
-	constexpr uint32_t m_NumEnemiesKilledThisRound = 0x1370;
-	constexpr uint32_t m_NumEnemiesAtRoundStart = 0x1374;
-	constexpr uint32_t m_wasNotKilledNaturally = 0x1378;
-	constexpr uint32_t m_vecPlayerPatchEconIndices = 0x137C;
-	constexpr uint32_t m_iDeathFlags = 0x1390;
-	constexpr uint32_t m_hPet = 0x1394;
-	constexpr uint32_t m_unCurrentEquipmentValue = 0x1560;
-	constexpr uint32_t m_unRoundStartEquipmentValue = 0x1562;
-	constexpr uint32_t m_unFreezetimeEndEquipmentValue = 0x1564;
-	constexpr uint32_t m_nSurvivalTeamNumber = 0x1568;
-	constexpr uint32_t m_bHasDeathInfo = 0x156C;
-	constexpr uint32_t m_flDeathInfoTime = 0x1570;
-	constexpr uint32_t m_vecDeathInfoOrigin = 0x1574;
-	constexpr uint32_t m_bKilledByHeadshot = 0x1580;
-	constexpr uint32_t m_LastHitBox = 0x1584;
-	constexpr uint32_t m_LastHealth = 0x1588;
-	constexpr uint32_t m_flLastCollisionCeiling = 0x158C;
-	constexpr uint32_t m_flLastCollisionCeilingChangeTime = 0x1590;
-	constexpr uint32_t m_pBot = 0x1598;
-	constexpr uint32_t m_bBotAllowActive = 0x15A0;
-	constexpr uint32_t m_bCommittingSuicideOnTeamChange = 0x15A1;
+	constexpr uint32_t m_matchStats = 0xB0;
+	constexpr uint32_t m_iNumRoundKills = 0x170;
+	constexpr uint32_t m_iNumRoundKillsHeadshots = 0x174;
+	constexpr uint32_t m_unTotalRoundDamageDealt = 0x178;
 }
 
 namespace CCSPlayerController
@@ -3244,7 +3336,7 @@ namespace CCSPlayerController_DamageServices
 namespace CCSPlayerController_InGameMoneyServices
 {
 	constexpr uint32_t m_bReceivesMoneyNextRound = 0x40;
-	constexpr uint32_t m_iAccountMoneyEarnedForNextRound = 0x44;
+	constexpr uint32_t m_iMoneyEarnedForNextRound = 0x44;
 	constexpr uint32_t m_iAccount = 0x48;
 	constexpr uint32_t m_iStartAccount = 0x4C;
 	constexpr uint32_t m_iTotalCashSpent = 0x50;
@@ -3388,10 +3480,6 @@ namespace CMapVetoPickController
 	constexpr uint32_t m_OnLevelTransition = 0xEC0;
 }
 
-namespace CCSPulseServerFuncs_Globals
-{
-}
-
 namespace CLogicEventListener
 {
 	constexpr uint32_t m_strEventName = 0x4D0;
@@ -3402,7 +3490,8 @@ namespace CLogicEventListener
 
 namespace CChicken_GraphController
 {
-	constexpr uint32_t m_pszActivity = 0x18;
+	constexpr uint32_t m_paramActivity = 0x18;
+	constexpr uint32_t m_paramEndActivityImmediately = 0x38;
 }
 
 namespace CBot
@@ -3499,52 +3588,52 @@ namespace CPointEntity
 
 namespace CEnvCombinedLightProbeVolume
 {
-	constexpr uint32_t m_Color = 0x1518;
-	constexpr uint32_t m_flBrightness = 0x151C;
-	constexpr uint32_t m_hCubemapTexture = 0x1520;
-	constexpr uint32_t m_bCustomCubemapTexture = 0x1528;
-	constexpr uint32_t m_hLightProbeTexture = 0x1530;
-	constexpr uint32_t m_hLightProbeDirectLightIndicesTexture = 0x1538;
-	constexpr uint32_t m_hLightProbeDirectLightScalarsTexture = 0x1540;
-	constexpr uint32_t m_hLightProbeDirectLightShadowsTexture = 0x1548;
-	constexpr uint32_t m_vBoxMins = 0x1550;
-	constexpr uint32_t m_vBoxMaxs = 0x155C;
-	constexpr uint32_t m_bMoveable = 0x1568;
-	constexpr uint32_t m_nHandshake = 0x156C;
-	constexpr uint32_t m_nEnvCubeMapArrayIndex = 0x1570;
-	constexpr uint32_t m_nPriority = 0x1574;
-	constexpr uint32_t m_bStartDisabled = 0x1578;
-	constexpr uint32_t m_flEdgeFadeDist = 0x157C;
-	constexpr uint32_t m_vEdgeFadeDists = 0x1580;
-	constexpr uint32_t m_nLightProbeSizeX = 0x158C;
-	constexpr uint32_t m_nLightProbeSizeY = 0x1590;
-	constexpr uint32_t m_nLightProbeSizeZ = 0x1594;
-	constexpr uint32_t m_nLightProbeAtlasX = 0x1598;
-	constexpr uint32_t m_nLightProbeAtlasY = 0x159C;
-	constexpr uint32_t m_nLightProbeAtlasZ = 0x15A0;
-	constexpr uint32_t m_bEnabled = 0x15B9;
+	constexpr uint32_t m_Entity_Color = 0x1520;
+	constexpr uint32_t m_Entity_flBrightness = 0x1524;
+	constexpr uint32_t m_Entity_hCubemapTexture = 0x1528;
+	constexpr uint32_t m_Entity_bCustomCubemapTexture = 0x1530;
+	constexpr uint32_t m_Entity_hLightProbeTexture = 0x1538;
+	constexpr uint32_t m_Entity_hLightProbeDirectLightIndicesTexture = 0x1540;
+	constexpr uint32_t m_Entity_hLightProbeDirectLightScalarsTexture = 0x1548;
+	constexpr uint32_t m_Entity_hLightProbeDirectLightShadowsTexture = 0x1550;
+	constexpr uint32_t m_Entity_vBoxMins = 0x1558;
+	constexpr uint32_t m_Entity_vBoxMaxs = 0x1564;
+	constexpr uint32_t m_Entity_bMoveable = 0x1570;
+	constexpr uint32_t m_Entity_nHandshake = 0x1574;
+	constexpr uint32_t m_Entity_nEnvCubeMapArrayIndex = 0x1578;
+	constexpr uint32_t m_Entity_nPriority = 0x157C;
+	constexpr uint32_t m_Entity_bStartDisabled = 0x1580;
+	constexpr uint32_t m_Entity_flEdgeFadeDist = 0x1584;
+	constexpr uint32_t m_Entity_vEdgeFadeDists = 0x1588;
+	constexpr uint32_t m_Entity_nLightProbeSizeX = 0x1594;
+	constexpr uint32_t m_Entity_nLightProbeSizeY = 0x1598;
+	constexpr uint32_t m_Entity_nLightProbeSizeZ = 0x159C;
+	constexpr uint32_t m_Entity_nLightProbeAtlasX = 0x15A0;
+	constexpr uint32_t m_Entity_nLightProbeAtlasY = 0x15A4;
+	constexpr uint32_t m_Entity_nLightProbeAtlasZ = 0x15A8;
+	constexpr uint32_t m_Entity_bEnabled = 0x15C1;
 }
 
 namespace CEnvCubemap
 {
-	constexpr uint32_t m_hCubemapTexture = 0x540;
-	constexpr uint32_t m_bCustomCubemapTexture = 0x548;
-	constexpr uint32_t m_flInfluenceRadius = 0x54C;
-	constexpr uint32_t m_vBoxProjectMins = 0x550;
-	constexpr uint32_t m_vBoxProjectMaxs = 0x55C;
-	constexpr uint32_t m_bMoveable = 0x568;
-	constexpr uint32_t m_nHandshake = 0x56C;
-	constexpr uint32_t m_nEnvCubeMapArrayIndex = 0x570;
-	constexpr uint32_t m_nPriority = 0x574;
-	constexpr uint32_t m_flEdgeFadeDist = 0x578;
-	constexpr uint32_t m_vEdgeFadeDists = 0x57C;
-	constexpr uint32_t m_flDiffuseScale = 0x588;
-	constexpr uint32_t m_bStartDisabled = 0x58C;
-	constexpr uint32_t m_bDefaultEnvMap = 0x58D;
-	constexpr uint32_t m_bDefaultSpecEnvMap = 0x58E;
-	constexpr uint32_t m_bIndoorCubeMap = 0x58F;
-	constexpr uint32_t m_bCopyDiffuseFromDefaultCubemap = 0x590;
-	constexpr uint32_t m_bEnabled = 0x5A0;
+	constexpr uint32_t m_Entity_hCubemapTexture = 0x540;
+	constexpr uint32_t m_Entity_bCustomCubemapTexture = 0x548;
+	constexpr uint32_t m_Entity_flInfluenceRadius = 0x54C;
+	constexpr uint32_t m_Entity_vBoxProjectMins = 0x550;
+	constexpr uint32_t m_Entity_vBoxProjectMaxs = 0x55C;
+	constexpr uint32_t m_Entity_bMoveable = 0x568;
+	constexpr uint32_t m_Entity_nHandshake = 0x56C;
+	constexpr uint32_t m_Entity_nEnvCubeMapArrayIndex = 0x570;
+	constexpr uint32_t m_Entity_nPriority = 0x574;
+	constexpr uint32_t m_Entity_flEdgeFadeDist = 0x578;
+	constexpr uint32_t m_Entity_vEdgeFadeDists = 0x57C;
+	constexpr uint32_t m_Entity_flDiffuseScale = 0x588;
+	constexpr uint32_t m_Entity_bStartDisabled = 0x58C;
+	constexpr uint32_t m_Entity_bDefaultEnvMap = 0x58D;
+	constexpr uint32_t m_Entity_bDefaultSpecEnvMap = 0x58E;
+	constexpr uint32_t m_Entity_bIndoorCubeMap = 0x58F;
+	constexpr uint32_t m_Entity_bCopyDiffuseFromDefaultCubemap = 0x590;
+	constexpr uint32_t m_Entity_bEnabled = 0x5A0;
 }
 
 namespace CEnvCubemapBox
@@ -3595,23 +3684,23 @@ namespace CGradientFog
 
 namespace CEnvLightProbeVolume
 {
-	constexpr uint32_t m_hLightProbeTexture = 0x1498;
-	constexpr uint32_t m_hLightProbeDirectLightIndicesTexture = 0x14A0;
-	constexpr uint32_t m_hLightProbeDirectLightScalarsTexture = 0x14A8;
-	constexpr uint32_t m_hLightProbeDirectLightShadowsTexture = 0x14B0;
-	constexpr uint32_t m_vBoxMins = 0x14B8;
-	constexpr uint32_t m_vBoxMaxs = 0x14C4;
-	constexpr uint32_t m_bMoveable = 0x14D0;
-	constexpr uint32_t m_nHandshake = 0x14D4;
-	constexpr uint32_t m_nPriority = 0x14D8;
-	constexpr uint32_t m_bStartDisabled = 0x14DC;
-	constexpr uint32_t m_nLightProbeSizeX = 0x14E0;
-	constexpr uint32_t m_nLightProbeSizeY = 0x14E4;
-	constexpr uint32_t m_nLightProbeSizeZ = 0x14E8;
-	constexpr uint32_t m_nLightProbeAtlasX = 0x14EC;
-	constexpr uint32_t m_nLightProbeAtlasY = 0x14F0;
-	constexpr uint32_t m_nLightProbeAtlasZ = 0x14F4;
-	constexpr uint32_t m_bEnabled = 0x1501;
+	constexpr uint32_t m_Entity_hLightProbeTexture = 0x14A0;
+	constexpr uint32_t m_Entity_hLightProbeDirectLightIndicesTexture = 0x14A8;
+	constexpr uint32_t m_Entity_hLightProbeDirectLightScalarsTexture = 0x14B0;
+	constexpr uint32_t m_Entity_hLightProbeDirectLightShadowsTexture = 0x14B8;
+	constexpr uint32_t m_Entity_vBoxMins = 0x14C0;
+	constexpr uint32_t m_Entity_vBoxMaxs = 0x14CC;
+	constexpr uint32_t m_Entity_bMoveable = 0x14D8;
+	constexpr uint32_t m_Entity_nHandshake = 0x14DC;
+	constexpr uint32_t m_Entity_nPriority = 0x14E0;
+	constexpr uint32_t m_Entity_bStartDisabled = 0x14E4;
+	constexpr uint32_t m_Entity_nLightProbeSizeX = 0x14E8;
+	constexpr uint32_t m_Entity_nLightProbeSizeY = 0x14EC;
+	constexpr uint32_t m_Entity_nLightProbeSizeZ = 0x14F0;
+	constexpr uint32_t m_Entity_nLightProbeAtlasX = 0x14F4;
+	constexpr uint32_t m_Entity_nLightProbeAtlasY = 0x14F8;
+	constexpr uint32_t m_Entity_nLightProbeAtlasZ = 0x14FC;
+	constexpr uint32_t m_Entity_bEnabled = 0x1509;
 }
 
 namespace CPlayerVisibility
@@ -3650,10 +3739,14 @@ namespace CEnvVolumetricFogController
 	constexpr uint32_t m_flDefaultDrawDistance = 0x524;
 	constexpr uint32_t m_bStartDisabled = 0x528;
 	constexpr uint32_t m_bEnableIndirect = 0x529;
-	constexpr uint32_t m_bIsMaster = 0x52A;
+	constexpr uint32_t m_bIndirectUseLPVs = 0x52A;
+	constexpr uint32_t m_bIsMaster = 0x52B;
 	constexpr uint32_t m_hFogIndirectTexture = 0x530;
 	constexpr uint32_t m_nForceRefreshCount = 0x538;
-	constexpr uint32_t m_bFirstTime = 0x53C;
+	constexpr uint32_t m_fNoiseSpeed = 0x53C;
+	constexpr uint32_t m_fNoiseStrength = 0x540;
+	constexpr uint32_t m_vNoiseScale = 0x544;
+	constexpr uint32_t m_bFirstTime = 0x550;
 }
 
 namespace CEnvVolumetricFogVolume
@@ -3665,6 +3758,14 @@ namespace CEnvVolumetricFogVolume
 	constexpr uint32_t m_flStrength = 0x4E0;
 	constexpr uint32_t m_nFalloffShape = 0x4E4;
 	constexpr uint32_t m_flFalloffExponent = 0x4E8;
+	constexpr uint32_t m_flHeightFogDepth = 0x4EC;
+	constexpr uint32_t m_fHeightFogEdgeWidth = 0x4F0;
+	constexpr uint32_t m_fIndirectLightStrength = 0x4F4;
+	constexpr uint32_t m_fSunLightStrength = 0x4F8;
+	constexpr uint32_t m_fNoiseStrength = 0x4FC;
+	constexpr uint32_t m_bOverrideIndirectLightStrength = 0x500;
+	constexpr uint32_t m_bOverrideSunLightStrength = 0x501;
+	constexpr uint32_t m_bOverrideNoiseStrength = 0x502;
 }
 
 namespace CInfoTarget
@@ -3714,35 +3815,6 @@ namespace CMultiLightProxy
 	constexpr uint32_t m_vecLights = 0x4E8;
 }
 
-namespace CPointCamera
-{
-	constexpr uint32_t m_FOV = 0x4C0;
-	constexpr uint32_t m_Resolution = 0x4C4;
-	constexpr uint32_t m_bFogEnable = 0x4C8;
-	constexpr uint32_t m_FogColor = 0x4C9;
-	constexpr uint32_t m_flFogStart = 0x4D0;
-	constexpr uint32_t m_flFogEnd = 0x4D4;
-	constexpr uint32_t m_flFogMaxDensity = 0x4D8;
-	constexpr uint32_t m_bActive = 0x4DC;
-	constexpr uint32_t m_bUseScreenAspectRatio = 0x4DD;
-	constexpr uint32_t m_flAspectRatio = 0x4E0;
-	constexpr uint32_t m_bNoSky = 0x4E4;
-	constexpr uint32_t m_fBrightness = 0x4E8;
-	constexpr uint32_t m_flZFar = 0x4EC;
-	constexpr uint32_t m_flZNear = 0x4F0;
-	constexpr uint32_t m_bCanHLTVUse = 0x4F4;
-	constexpr uint32_t m_bDofEnabled = 0x4F5;
-	constexpr uint32_t m_flDofNearBlurry = 0x4F8;
-	constexpr uint32_t m_flDofNearCrisp = 0x4FC;
-	constexpr uint32_t m_flDofFarCrisp = 0x500;
-	constexpr uint32_t m_flDofFarBlurry = 0x504;
-	constexpr uint32_t m_flDofTiltToGround = 0x508;
-	constexpr uint32_t m_TargetFOV = 0x50C;
-	constexpr uint32_t m_DegreesPerSecond = 0x510;
-	constexpr uint32_t m_bIsOn = 0x514;
-	constexpr uint32_t m_pNext = 0x518;
-}
-
 namespace CPointCameraVFOV
 {
 	constexpr uint32_t m_flVerticalFOV = 0x520;
@@ -3790,33 +3862,93 @@ namespace CSoundAreaEntityOrientedBox
 	constexpr uint32_t m_vMax = 0x4EC;
 }
 
+namespace CSoundStackSave
+{
+	constexpr uint32_t m_iszStackName = 0x4C0;
+}
+
+namespace CSoundEventEntity
+{
+	constexpr uint32_t m_bStartOnSpawn = 0x4C0;
+	constexpr uint32_t m_bToLocalPlayer = 0x4C1;
+	constexpr uint32_t m_bStopOnNew = 0x4C2;
+	constexpr uint32_t m_bSaveRestore = 0x4C3;
+	constexpr uint32_t m_bSavedIsPlaying = 0x4C4;
+	constexpr uint32_t m_flSavedElapsedTime = 0x4C8;
+	constexpr uint32_t m_iszSourceEntityName = 0x4D0;
+	constexpr uint32_t m_iszAttachmentName = 0x4D8;
+	constexpr uint32_t m_onGUIDChanged = 0x4E0;
+	constexpr uint32_t m_onSoundFinished = 0x508;
+	constexpr uint32_t m_iszSoundName = 0x558;
+	constexpr uint32_t m_hSource = 0x568;
+	constexpr uint32_t m_nEntityIndexSelection = 0x56C;
+}
+
+namespace CSoundEventEntityAlias_snd_event_point
+{
+}
+
+namespace CSoundEventAABBEntity
+{
+	constexpr uint32_t m_vMins = 0x570;
+	constexpr uint32_t m_vMaxs = 0x57C;
+}
+
+namespace CSoundEventOBBEntity
+{
+	constexpr uint32_t m_vMins = 0x570;
+	constexpr uint32_t m_vMaxs = 0x57C;
+}
+
+namespace CSoundEventSphereEntity
+{
+	constexpr uint32_t m_flRadius = 0x570;
+}
+
+namespace CSoundEventPathCornerEntity
+{
+	constexpr uint32_t m_iszPathCorner = 0x570;
+	constexpr uint32_t m_iCountMax = 0x578;
+	constexpr uint32_t m_flDistanceMax = 0x57C;
+	constexpr uint32_t m_flDistMaxSqr = 0x580;
+	constexpr uint32_t m_flDotProductMax = 0x584;
+	constexpr uint32_t m_bPlaying = 0x588;
+	constexpr uint32_t m_vecCornerPairsNetworked = 0x5B0;
+}
+
+namespace CSoundEventParameter
+{
+	constexpr uint32_t m_iszParamName = 0x4C8;
+	constexpr uint32_t m_flFloatValue = 0x4D0;
+}
+
 namespace CBasePlayerPawn
 {
-	constexpr uint32_t m_pWeaponServices = 0xA10;
-	constexpr uint32_t m_pItemServices = 0xA18;
-	constexpr uint32_t m_pAutoaimServices = 0xA20;
-	constexpr uint32_t m_pObserverServices = 0xA28;
-	constexpr uint32_t m_pWaterServices = 0xA30;
-	constexpr uint32_t m_pUseServices = 0xA38;
-	constexpr uint32_t m_pFlashlightServices = 0xA40;
-	constexpr uint32_t m_pCameraServices = 0xA48;
-	constexpr uint32_t m_pMovementServices = 0xA50;
-	constexpr uint32_t m_ServerViewAngleChanges = 0xA60;
-	constexpr uint32_t m_nHighestGeneratedServerViewAngleChangeIndex = 0xAB0;
-	constexpr uint32_t v_angle = 0xAB4;
-	constexpr uint32_t v_anglePrevious = 0xAC0;
-	constexpr uint32_t m_iHideHUD = 0xACC;
-	constexpr uint32_t m_skybox3d = 0xAD0;
-	constexpr uint32_t m_fTimeLastHurt = 0xB60;
-	constexpr uint32_t m_flDeathTime = 0xB64;
-	constexpr uint32_t m_fNextSuicideTime = 0xB68;
-	constexpr uint32_t m_fInitHUD = 0xB6C;
-	constexpr uint32_t m_pExpresser = 0xB70;
-	constexpr uint32_t m_hController = 0xB78;
-	constexpr uint32_t m_fHltvReplayDelay = 0xB80;
-	constexpr uint32_t m_fHltvReplayEnd = 0xB84;
-	constexpr uint32_t m_iHltvReplayEntity = 0xB88;
-	constexpr uint32_t m_sndOpvarLatchData = 0xB90;
+	constexpr uint32_t m_pWeaponServices = 0xA08;
+	constexpr uint32_t m_pItemServices = 0xA10;
+	constexpr uint32_t m_pAutoaimServices = 0xA18;
+	constexpr uint32_t m_pObserverServices = 0xA20;
+	constexpr uint32_t m_pWaterServices = 0xA28;
+	constexpr uint32_t m_pUseServices = 0xA30;
+	constexpr uint32_t m_pFlashlightServices = 0xA38;
+	constexpr uint32_t m_pCameraServices = 0xA40;
+	constexpr uint32_t m_pMovementServices = 0xA48;
+	constexpr uint32_t m_ServerViewAngleChanges = 0xA58;
+	constexpr uint32_t m_nHighestGeneratedServerViewAngleChangeIndex = 0xAA8;
+	constexpr uint32_t v_angle = 0xAAC;
+	constexpr uint32_t v_anglePrevious = 0xAB8;
+	constexpr uint32_t m_iHideHUD = 0xAC4;
+	constexpr uint32_t m_skybox3d = 0xAC8;
+	constexpr uint32_t m_fTimeLastHurt = 0xB58;
+	constexpr uint32_t m_flDeathTime = 0xB5C;
+	constexpr uint32_t m_fNextSuicideTime = 0xB60;
+	constexpr uint32_t m_fInitHUD = 0xB64;
+	constexpr uint32_t m_pExpresser = 0xB68;
+	constexpr uint32_t m_hController = 0xB70;
+	constexpr uint32_t m_fHltvReplayDelay = 0xB78;
+	constexpr uint32_t m_fHltvReplayEnd = 0xB7C;
+	constexpr uint32_t m_iHltvReplayEntity = 0xB80;
+	constexpr uint32_t m_sndOpvarLatchData = 0xB88;
 }
 
 namespace CTeam
@@ -3865,8 +3997,8 @@ namespace CBasePlayerWeaponVData
 	constexpr uint32_t m_iRumbleEffect = 0x214;
 	constexpr uint32_t m_bLinkedCooldowns = 0x218;
 	constexpr uint32_t m_aShootSounds = 0x220;
-	constexpr uint32_t m_iSlot = 0x240;
-	constexpr uint32_t m_iPosition = 0x244;
+	constexpr uint32_t m_iSlot = 0x248;
+	constexpr uint32_t m_iPosition = 0x24C;
 }
 
 namespace CInfoGameEventProxy
@@ -3948,6 +4080,11 @@ namespace CPathParticleRope
 
 namespace CPathParticleRopeAlias_path_particle_rope_clientside
 {
+}
+
+namespace CPathSimple
+{
+	constexpr uint32_t m_pathString = 0x510;
 }
 
 namespace CFuncWall
@@ -4637,8 +4774,9 @@ namespace CLogicCollisionPair
 {
 	constexpr uint32_t m_nameAttach1 = 0x4C0;
 	constexpr uint32_t m_nameAttach2 = 0x4C8;
-	constexpr uint32_t m_disabled = 0x4D0;
-	constexpr uint32_t m_succeeded = 0x4D1;
+	constexpr uint32_t m_supportMultipleEntitiesWithSameName = 0x4D0;
+	constexpr uint32_t m_disabled = 0x4D1;
+	constexpr uint32_t m_succeeded = 0x4D2;
 }
 
 namespace CLogicBranchList
@@ -4683,7 +4821,7 @@ namespace CPathKeyFrame
 	constexpr uint32_t m_flNextTime = 0x4F8;
 	constexpr uint32_t m_pNextKey = 0x500;
 	constexpr uint32_t m_pPrevKey = 0x508;
-	constexpr uint32_t m_flSpeed = 0x510;
+	constexpr uint32_t m_flMoveSpeed = 0x510;
 }
 
 namespace CBaseMoveBehavior
@@ -4754,34 +4892,39 @@ namespace CPhysConstraint
 {
 	constexpr uint32_t m_nameAttach1 = 0x4C8;
 	constexpr uint32_t m_nameAttach2 = 0x4D0;
-	constexpr uint32_t m_breakSound = 0x4D8;
-	constexpr uint32_t m_forceLimit = 0x4E0;
-	constexpr uint32_t m_torqueLimit = 0x4E4;
-	constexpr uint32_t m_teleportTick = 0x4E8;
-	constexpr uint32_t m_minTeleportDistance = 0x4EC;
-	constexpr uint32_t m_OnBreak = 0x4F0;
+	constexpr uint32_t m_hAttach1 = 0x4D8;
+	constexpr uint32_t m_hAttach2 = 0x4DC;
+	constexpr uint32_t m_nameAttachment1 = 0x4E0;
+	constexpr uint32_t m_nameAttachment2 = 0x4E8;
+	constexpr uint32_t m_breakSound = 0x4F0;
+	constexpr uint32_t m_forceLimit = 0x4F8;
+	constexpr uint32_t m_torqueLimit = 0x4FC;
+	constexpr uint32_t m_teleportTick = 0x500;
+	constexpr uint32_t m_minTeleportDistance = 0x504;
+	constexpr uint32_t m_bSnapObjectPositions = 0x508;
+	constexpr uint32_t m_OnBreak = 0x510;
 }
 
 namespace CPhysHinge
 {
-	constexpr uint32_t m_soundInfo = 0x520;
-	constexpr uint32_t m_NotifyMinLimitReached = 0x5A8;
-	constexpr uint32_t m_NotifyMaxLimitReached = 0x5D0;
-	constexpr uint32_t m_bAtMinLimit = 0x5F8;
-	constexpr uint32_t m_bAtMaxLimit = 0x5F9;
-	constexpr uint32_t m_hinge = 0x5FC;
-	constexpr uint32_t m_hingeFriction = 0x63C;
-	constexpr uint32_t m_systemLoadScale = 0x640;
-	constexpr uint32_t m_bIsAxisLocal = 0x644;
-	constexpr uint32_t m_flMinRotation = 0x648;
-	constexpr uint32_t m_flMaxRotation = 0x64C;
-	constexpr uint32_t m_flInitialRotation = 0x650;
-	constexpr uint32_t m_flMotorFrequency = 0x654;
-	constexpr uint32_t m_flMotorDampingRatio = 0x658;
-	constexpr uint32_t m_flAngleSpeed = 0x65C;
-	constexpr uint32_t m_flAngleSpeedThreshold = 0x660;
-	constexpr uint32_t m_OnStartMoving = 0x668;
-	constexpr uint32_t m_OnStopMoving = 0x690;
+	constexpr uint32_t m_soundInfo = 0x540;
+	constexpr uint32_t m_NotifyMinLimitReached = 0x5C8;
+	constexpr uint32_t m_NotifyMaxLimitReached = 0x5F0;
+	constexpr uint32_t m_bAtMinLimit = 0x618;
+	constexpr uint32_t m_bAtMaxLimit = 0x619;
+	constexpr uint32_t m_hinge = 0x61C;
+	constexpr uint32_t m_hingeFriction = 0x65C;
+	constexpr uint32_t m_systemLoadScale = 0x660;
+	constexpr uint32_t m_bIsAxisLocal = 0x664;
+	constexpr uint32_t m_flMinRotation = 0x668;
+	constexpr uint32_t m_flMaxRotation = 0x66C;
+	constexpr uint32_t m_flInitialRotation = 0x670;
+	constexpr uint32_t m_flMotorFrequency = 0x674;
+	constexpr uint32_t m_flMotorDampingRatio = 0x678;
+	constexpr uint32_t m_flAngleSpeed = 0x67C;
+	constexpr uint32_t m_flAngleSpeedThreshold = 0x680;
+	constexpr uint32_t m_OnStartMoving = 0x688;
+	constexpr uint32_t m_OnStopMoving = 0x6B0;
 }
 
 namespace CPhysHingeAlias_phys_hinge_local
@@ -4790,138 +4933,139 @@ namespace CPhysHingeAlias_phys_hinge_local
 
 namespace CPhysBallSocket
 {
-	constexpr uint32_t m_flFriction = 0x518;
-	constexpr uint32_t m_bEnableSwingLimit = 0x51C;
-	constexpr uint32_t m_flSwingLimit = 0x520;
-	constexpr uint32_t m_bEnableTwistLimit = 0x524;
-	constexpr uint32_t m_flMinTwistAngle = 0x528;
-	constexpr uint32_t m_flMaxTwistAngle = 0x52C;
+	constexpr uint32_t m_flJointFriction = 0x538;
+	constexpr uint32_t m_bEnableSwingLimit = 0x53C;
+	constexpr uint32_t m_flSwingLimit = 0x540;
+	constexpr uint32_t m_bEnableTwistLimit = 0x544;
+	constexpr uint32_t m_flMinTwistAngle = 0x548;
+	constexpr uint32_t m_flMaxTwistAngle = 0x54C;
 }
 
 namespace CPhysSlideConstraint
 {
-	constexpr uint32_t m_axisEnd = 0x520;
-	constexpr uint32_t m_slideFriction = 0x52C;
-	constexpr uint32_t m_systemLoadScale = 0x530;
-	constexpr uint32_t m_initialOffset = 0x534;
-	constexpr uint32_t m_bEnableLinearConstraint = 0x538;
-	constexpr uint32_t m_bEnableAngularConstraint = 0x539;
-	constexpr uint32_t m_flMotorFrequency = 0x53C;
-	constexpr uint32_t m_flMotorDampingRatio = 0x540;
-	constexpr uint32_t m_bUseEntityPivot = 0x544;
-	constexpr uint32_t m_soundInfo = 0x548;
+	constexpr uint32_t m_axisEnd = 0x540;
+	constexpr uint32_t m_slideFriction = 0x54C;
+	constexpr uint32_t m_systemLoadScale = 0x550;
+	constexpr uint32_t m_initialOffset = 0x554;
+	constexpr uint32_t m_bEnableLinearConstraint = 0x558;
+	constexpr uint32_t m_bEnableAngularConstraint = 0x559;
+	constexpr uint32_t m_flMotorFrequency = 0x55C;
+	constexpr uint32_t m_flMotorDampingRatio = 0x560;
+	constexpr uint32_t m_bUseEntityPivot = 0x564;
+	constexpr uint32_t m_soundInfo = 0x568;
 }
 
 namespace CPhysFixed
 {
-	constexpr uint32_t m_flLinearFrequency = 0x518;
-	constexpr uint32_t m_flLinearDampingRatio = 0x51C;
-	constexpr uint32_t m_flAngularFrequency = 0x520;
-	constexpr uint32_t m_flAngularDampingRatio = 0x524;
-	constexpr uint32_t m_bEnableLinearConstraint = 0x528;
-	constexpr uint32_t m_bEnableAngularConstraint = 0x529;
+	constexpr uint32_t m_flLinearFrequency = 0x538;
+	constexpr uint32_t m_flLinearDampingRatio = 0x53C;
+	constexpr uint32_t m_flAngularFrequency = 0x540;
+	constexpr uint32_t m_flAngularDampingRatio = 0x544;
+	constexpr uint32_t m_bEnableLinearConstraint = 0x548;
+	constexpr uint32_t m_bEnableAngularConstraint = 0x549;
 }
 
 namespace CPhysPulley
 {
-	constexpr uint32_t m_position2 = 0x518;
-	constexpr uint32_t m_offset = 0x524;
-	constexpr uint32_t m_addLength = 0x53C;
-	constexpr uint32_t m_gearRatio = 0x540;
+	constexpr uint32_t m_position2 = 0x538;
+	constexpr uint32_t m_offset = 0x544;
+	constexpr uint32_t m_addLength = 0x55C;
+	constexpr uint32_t m_gearRatio = 0x560;
 }
 
 namespace CPhysLength
 {
-	constexpr uint32_t m_offset = 0x518;
-	constexpr uint32_t m_vecAttach = 0x530;
-	constexpr uint32_t m_addLength = 0x53C;
-	constexpr uint32_t m_minLength = 0x540;
-	constexpr uint32_t m_totalLength = 0x544;
-	constexpr uint32_t m_bEnableCollision = 0x548;
+	constexpr uint32_t m_offset = 0x538;
+	constexpr uint32_t m_vecAttach = 0x550;
+	constexpr uint32_t m_addLength = 0x55C;
+	constexpr uint32_t m_minLength = 0x560;
+	constexpr uint32_t m_totalLength = 0x564;
+	constexpr uint32_t m_bEnableCollision = 0x568;
 }
 
 namespace CRagdollConstraint
 {
-	constexpr uint32_t m_xmin = 0x518;
-	constexpr uint32_t m_xmax = 0x51C;
-	constexpr uint32_t m_ymin = 0x520;
-	constexpr uint32_t m_ymax = 0x524;
-	constexpr uint32_t m_zmin = 0x528;
-	constexpr uint32_t m_zmax = 0x52C;
-	constexpr uint32_t m_xfriction = 0x530;
-	constexpr uint32_t m_yfriction = 0x534;
-	constexpr uint32_t m_zfriction = 0x538;
+	constexpr uint32_t m_xmin = 0x538;
+	constexpr uint32_t m_xmax = 0x53C;
+	constexpr uint32_t m_ymin = 0x540;
+	constexpr uint32_t m_ymax = 0x544;
+	constexpr uint32_t m_zmin = 0x548;
+	constexpr uint32_t m_zmax = 0x54C;
+	constexpr uint32_t m_xfriction = 0x550;
+	constexpr uint32_t m_yfriction = 0x554;
+	constexpr uint32_t m_zfriction = 0x558;
 }
 
 namespace CGenericConstraint
 {
-	constexpr uint32_t m_nLinearMotionX = 0x520;
-	constexpr uint32_t m_nLinearMotionY = 0x524;
-	constexpr uint32_t m_nLinearMotionZ = 0x528;
-	constexpr uint32_t m_flLinearFrequencyX = 0x52C;
-	constexpr uint32_t m_flLinearFrequencyY = 0x530;
-	constexpr uint32_t m_flLinearFrequencyZ = 0x534;
-	constexpr uint32_t m_flLinearDampingRatioX = 0x538;
-	constexpr uint32_t m_flLinearDampingRatioY = 0x53C;
-	constexpr uint32_t m_flLinearDampingRatioZ = 0x540;
-	constexpr uint32_t m_flMaxLinearImpulseX = 0x544;
-	constexpr uint32_t m_flMaxLinearImpulseY = 0x548;
-	constexpr uint32_t m_flMaxLinearImpulseZ = 0x54C;
-	constexpr uint32_t m_flBreakAfterTimeX = 0x550;
-	constexpr uint32_t m_flBreakAfterTimeY = 0x554;
-	constexpr uint32_t m_flBreakAfterTimeZ = 0x558;
-	constexpr uint32_t m_flBreakAfterTimeStartTimeX = 0x55C;
-	constexpr uint32_t m_flBreakAfterTimeStartTimeY = 0x560;
-	constexpr uint32_t m_flBreakAfterTimeStartTimeZ = 0x564;
-	constexpr uint32_t m_flBreakAfterTimeThresholdX = 0x568;
-	constexpr uint32_t m_flBreakAfterTimeThresholdY = 0x56C;
-	constexpr uint32_t m_flBreakAfterTimeThresholdZ = 0x570;
-	constexpr uint32_t m_flNotifyForceX = 0x574;
-	constexpr uint32_t m_flNotifyForceY = 0x578;
-	constexpr uint32_t m_flNotifyForceZ = 0x57C;
-	constexpr uint32_t m_flNotifyForceMinTimeX = 0x580;
-	constexpr uint32_t m_flNotifyForceMinTimeY = 0x584;
-	constexpr uint32_t m_flNotifyForceMinTimeZ = 0x588;
-	constexpr uint32_t m_flNotifyForceLastTimeX = 0x58C;
-	constexpr uint32_t m_flNotifyForceLastTimeY = 0x590;
-	constexpr uint32_t m_flNotifyForceLastTimeZ = 0x594;
-	constexpr uint32_t m_bAxisNotifiedX = 0x598;
-	constexpr uint32_t m_bAxisNotifiedY = 0x599;
-	constexpr uint32_t m_bAxisNotifiedZ = 0x59A;
-	constexpr uint32_t m_nAngularMotionX = 0x59C;
-	constexpr uint32_t m_nAngularMotionY = 0x5A0;
-	constexpr uint32_t m_nAngularMotionZ = 0x5A4;
-	constexpr uint32_t m_flAngularFrequencyX = 0x5A8;
-	constexpr uint32_t m_flAngularFrequencyY = 0x5AC;
-	constexpr uint32_t m_flAngularFrequencyZ = 0x5B0;
-	constexpr uint32_t m_flAngularDampingRatioX = 0x5B4;
-	constexpr uint32_t m_flAngularDampingRatioY = 0x5B8;
-	constexpr uint32_t m_flAngularDampingRatioZ = 0x5BC;
-	constexpr uint32_t m_flMaxAngularImpulseX = 0x5C0;
-	constexpr uint32_t m_flMaxAngularImpulseY = 0x5C4;
-	constexpr uint32_t m_flMaxAngularImpulseZ = 0x5C8;
-	constexpr uint32_t m_NotifyForceReachedX = 0x5D0;
-	constexpr uint32_t m_NotifyForceReachedY = 0x5F8;
-	constexpr uint32_t m_NotifyForceReachedZ = 0x620;
+	constexpr uint32_t m_nLinearMotionX = 0x540;
+	constexpr uint32_t m_nLinearMotionY = 0x544;
+	constexpr uint32_t m_nLinearMotionZ = 0x548;
+	constexpr uint32_t m_flLinearFrequencyX = 0x54C;
+	constexpr uint32_t m_flLinearFrequencyY = 0x550;
+	constexpr uint32_t m_flLinearFrequencyZ = 0x554;
+	constexpr uint32_t m_flLinearDampingRatioX = 0x558;
+	constexpr uint32_t m_flLinearDampingRatioY = 0x55C;
+	constexpr uint32_t m_flLinearDampingRatioZ = 0x560;
+	constexpr uint32_t m_flMaxLinearImpulseX = 0x564;
+	constexpr uint32_t m_flMaxLinearImpulseY = 0x568;
+	constexpr uint32_t m_flMaxLinearImpulseZ = 0x56C;
+	constexpr uint32_t m_flBreakAfterTimeX = 0x570;
+	constexpr uint32_t m_flBreakAfterTimeY = 0x574;
+	constexpr uint32_t m_flBreakAfterTimeZ = 0x578;
+	constexpr uint32_t m_flBreakAfterTimeStartTimeX = 0x57C;
+	constexpr uint32_t m_flBreakAfterTimeStartTimeY = 0x580;
+	constexpr uint32_t m_flBreakAfterTimeStartTimeZ = 0x584;
+	constexpr uint32_t m_flBreakAfterTimeThresholdX = 0x588;
+	constexpr uint32_t m_flBreakAfterTimeThresholdY = 0x58C;
+	constexpr uint32_t m_flBreakAfterTimeThresholdZ = 0x590;
+	constexpr uint32_t m_flNotifyForceX = 0x594;
+	constexpr uint32_t m_flNotifyForceY = 0x598;
+	constexpr uint32_t m_flNotifyForceZ = 0x59C;
+	constexpr uint32_t m_flNotifyForceMinTimeX = 0x5A0;
+	constexpr uint32_t m_flNotifyForceMinTimeY = 0x5A4;
+	constexpr uint32_t m_flNotifyForceMinTimeZ = 0x5A8;
+	constexpr uint32_t m_flNotifyForceLastTimeX = 0x5AC;
+	constexpr uint32_t m_flNotifyForceLastTimeY = 0x5B0;
+	constexpr uint32_t m_flNotifyForceLastTimeZ = 0x5B4;
+	constexpr uint32_t m_bAxisNotifiedX = 0x5B8;
+	constexpr uint32_t m_bAxisNotifiedY = 0x5B9;
+	constexpr uint32_t m_bAxisNotifiedZ = 0x5BA;
+	constexpr uint32_t m_nAngularMotionX = 0x5BC;
+	constexpr uint32_t m_nAngularMotionY = 0x5C0;
+	constexpr uint32_t m_nAngularMotionZ = 0x5C4;
+	constexpr uint32_t m_flAngularFrequencyX = 0x5C8;
+	constexpr uint32_t m_flAngularFrequencyY = 0x5CC;
+	constexpr uint32_t m_flAngularFrequencyZ = 0x5D0;
+	constexpr uint32_t m_flAngularDampingRatioX = 0x5D4;
+	constexpr uint32_t m_flAngularDampingRatioY = 0x5D8;
+	constexpr uint32_t m_flAngularDampingRatioZ = 0x5DC;
+	constexpr uint32_t m_flMaxAngularImpulseX = 0x5E0;
+	constexpr uint32_t m_flMaxAngularImpulseY = 0x5E4;
+	constexpr uint32_t m_flMaxAngularImpulseZ = 0x5E8;
+	constexpr uint32_t m_NotifyForceReachedX = 0x5F0;
+	constexpr uint32_t m_NotifyForceReachedY = 0x618;
+	constexpr uint32_t m_NotifyForceReachedZ = 0x640;
 }
 
 namespace CSplineConstraint
 {
+	constexpr uint32_t m_vAnchorOffsetRestore = 0x580;
 }
 
 namespace CPhysWheelConstraint
 {
-	constexpr uint32_t m_flSuspensionFrequency = 0x518;
-	constexpr uint32_t m_flSuspensionDampingRatio = 0x51C;
-	constexpr uint32_t m_flSuspensionHeightOffset = 0x520;
-	constexpr uint32_t m_bEnableSuspensionLimit = 0x524;
-	constexpr uint32_t m_flMinSuspensionOffset = 0x528;
-	constexpr uint32_t m_flMaxSuspensionOffset = 0x52C;
-	constexpr uint32_t m_bEnableSteeringLimit = 0x530;
-	constexpr uint32_t m_flMinSteeringAngle = 0x534;
-	constexpr uint32_t m_flMaxSteeringAngle = 0x538;
-	constexpr uint32_t m_flSteeringAxisFriction = 0x53C;
-	constexpr uint32_t m_flSpinAxisFriction = 0x540;
+	constexpr uint32_t m_flSuspensionFrequency = 0x538;
+	constexpr uint32_t m_flSuspensionDampingRatio = 0x53C;
+	constexpr uint32_t m_flSuspensionHeightOffset = 0x540;
+	constexpr uint32_t m_bEnableSuspensionLimit = 0x544;
+	constexpr uint32_t m_flMinSuspensionOffset = 0x548;
+	constexpr uint32_t m_flMaxSuspensionOffset = 0x54C;
+	constexpr uint32_t m_bEnableSteeringLimit = 0x550;
+	constexpr uint32_t m_flMinSteeringAngle = 0x554;
+	constexpr uint32_t m_flMaxSteeringAngle = 0x558;
+	constexpr uint32_t m_flSteeringAxisFriction = 0x55C;
+	constexpr uint32_t m_flSpinAxisFriction = 0x560;
 }
 
 namespace CPhysicsEntitySolver
@@ -5154,52 +5298,54 @@ namespace CSceneEntity
 	constexpr uint32_t m_hTarget6 = 0x52C;
 	constexpr uint32_t m_hTarget7 = 0x530;
 	constexpr uint32_t m_hTarget8 = 0x534;
-	constexpr uint32_t m_bIsPlayingBack = 0x538;
-	constexpr uint32_t m_bPaused = 0x539;
-	constexpr uint32_t m_bMultiplayer = 0x53A;
-	constexpr uint32_t m_bAutogenerated = 0x53B;
-	constexpr uint32_t m_flForceClientTime = 0x53C;
-	constexpr uint32_t m_flCurrentTime = 0x540;
-	constexpr uint32_t m_flFrameTime = 0x544;
-	constexpr uint32_t m_bCancelAtNextInterrupt = 0x548;
-	constexpr uint32_t m_fPitch = 0x54C;
-	constexpr uint32_t m_bAutomated = 0x550;
-	constexpr uint32_t m_nAutomatedAction = 0x554;
-	constexpr uint32_t m_flAutomationDelay = 0x558;
-	constexpr uint32_t m_flAutomationTime = 0x55C;
-	constexpr uint32_t m_hWaitingForThisResumeScene = 0x560;
-	constexpr uint32_t m_bWaitingForResumeScene = 0x564;
-	constexpr uint32_t m_bPausedViaInput = 0x565;
-	constexpr uint32_t m_bPauseAtNextInterrupt = 0x566;
-	constexpr uint32_t m_bWaitingForActor = 0x567;
-	constexpr uint32_t m_bWaitingForInterrupt = 0x568;
-	constexpr uint32_t m_bInterruptedActorsScenes = 0x569;
-	constexpr uint32_t m_bBreakOnNonIdle = 0x56A;
-	constexpr uint32_t m_hActorList = 0x570;
-	constexpr uint32_t m_hRemoveActorList = 0x588;
-	constexpr uint32_t m_nSceneFlushCounter = 0x5D0;
-	constexpr uint32_t m_nSceneStringIndex = 0x5D4;
-	constexpr uint32_t m_OnStart = 0x5D8;
-	constexpr uint32_t m_OnCompletion = 0x600;
-	constexpr uint32_t m_OnCanceled = 0x628;
-	constexpr uint32_t m_OnPaused = 0x650;
-	constexpr uint32_t m_OnResumed = 0x678;
-	constexpr uint32_t m_OnTrigger = 0x6A0;
-	constexpr uint32_t m_hInterruptScene = 0x9B0;
-	constexpr uint32_t m_nInterruptCount = 0x9B4;
-	constexpr uint32_t m_bSceneMissing = 0x9B8;
-	constexpr uint32_t m_bInterrupted = 0x9B9;
-	constexpr uint32_t m_bCompletedEarly = 0x9BA;
-	constexpr uint32_t m_bInterruptSceneFinished = 0x9BB;
-	constexpr uint32_t m_bRestoring = 0x9BC;
-	constexpr uint32_t m_hNotifySceneCompletion = 0x9C0;
-	constexpr uint32_t m_hListManagers = 0x9D8;
-	constexpr uint32_t m_iszSoundName = 0x9F0;
-	constexpr uint32_t m_iszSequenceName = 0x9F8;
-	constexpr uint32_t m_hActor = 0xA00;
-	constexpr uint32_t m_hActivator = 0xA04;
-	constexpr uint32_t m_BusyActor = 0xA08;
-	constexpr uint32_t m_iPlayerDeathBehavior = 0xA0C;
+	constexpr uint32_t m_sTargetAttachment = 0x538;
+	constexpr uint32_t m_bIsPlayingBack = 0x540;
+	constexpr uint32_t m_bPaused = 0x541;
+	constexpr uint32_t m_bMultiplayer = 0x542;
+	constexpr uint32_t m_bAutogenerated = 0x543;
+	constexpr uint32_t m_flForceClientTime = 0x544;
+	constexpr uint32_t m_flCurrentTime = 0x548;
+	constexpr uint32_t m_flFrameTime = 0x54C;
+	constexpr uint32_t m_bCancelAtNextInterrupt = 0x550;
+	constexpr uint32_t m_fPitch = 0x554;
+	constexpr uint32_t m_bAutomated = 0x558;
+	constexpr uint32_t m_nAutomatedAction = 0x55C;
+	constexpr uint32_t m_flAutomationDelay = 0x560;
+	constexpr uint32_t m_flAutomationTime = 0x564;
+	constexpr uint32_t m_hWaitingForThisResumeScene = 0x568;
+	constexpr uint32_t m_bWaitingForResumeScene = 0x56C;
+	constexpr uint32_t m_bPausedViaInput = 0x56D;
+	constexpr uint32_t m_bPauseAtNextInterrupt = 0x56E;
+	constexpr uint32_t m_bWaitingForActor = 0x56F;
+	constexpr uint32_t m_bWaitingForInterrupt = 0x570;
+	constexpr uint32_t m_bInterruptedActorsScenes = 0x571;
+	constexpr uint32_t m_bBreakOnNonIdle = 0x572;
+	constexpr uint32_t m_bSceneFinished = 0x573;
+	constexpr uint32_t m_hActorList = 0x578;
+	constexpr uint32_t m_hRemoveActorList = 0x590;
+	constexpr uint32_t m_nSceneFlushCounter = 0x5D8;
+	constexpr uint32_t m_nSceneStringIndex = 0x5DC;
+	constexpr uint32_t m_OnStart = 0x5E0;
+	constexpr uint32_t m_OnCompletion = 0x608;
+	constexpr uint32_t m_OnCanceled = 0x630;
+	constexpr uint32_t m_OnPaused = 0x658;
+	constexpr uint32_t m_OnResumed = 0x680;
+	constexpr uint32_t m_OnTrigger = 0x6A8;
+	constexpr uint32_t m_hInterruptScene = 0x9B8;
+	constexpr uint32_t m_nInterruptCount = 0x9BC;
+	constexpr uint32_t m_bSceneMissing = 0x9C0;
+	constexpr uint32_t m_bInterrupted = 0x9C1;
+	constexpr uint32_t m_bCompletedEarly = 0x9C2;
+	constexpr uint32_t m_bInterruptSceneFinished = 0x9C3;
+	constexpr uint32_t m_bRestoring = 0x9C4;
+	constexpr uint32_t m_hNotifySceneCompletion = 0x9C8;
+	constexpr uint32_t m_hListManagers = 0x9E0;
+	constexpr uint32_t m_iszSoundName = 0x9F8;
+	constexpr uint32_t m_iszSequenceName = 0xA00;
+	constexpr uint32_t m_hActor = 0xA08;
+	constexpr uint32_t m_hActivator = 0xA0C;
+	constexpr uint32_t m_BusyActor = 0xA10;
+	constexpr uint32_t m_iPlayerDeathBehavior = 0xA14;
 }
 
 namespace CSoundOpvarSetEntity
@@ -5214,67 +5360,26 @@ namespace CSoundOpvarSetEntity
 	constexpr uint32_t m_bSetOnSpawn = 0x4F8;
 }
 
+namespace CCitadelSoundOpvarSetOBB
+{
+	constexpr uint32_t m_iszStackName = 0x4C0;
+	constexpr uint32_t m_iszOperatorName = 0x4C8;
+	constexpr uint32_t m_iszOpvarName = 0x4D0;
+	constexpr uint32_t m_vDistanceInnerMins = 0x4D8;
+	constexpr uint32_t m_vDistanceInnerMaxs = 0x4E4;
+	constexpr uint32_t m_vDistanceOuterMins = 0x4F0;
+	constexpr uint32_t m_vDistanceOuterMaxs = 0x4FC;
+	constexpr uint32_t m_nAABBDirection = 0x508;
+}
+
 namespace CAISound
 {
 	constexpr uint32_t m_iSoundType = 0x4C0;
-	constexpr uint32_t m_iSoundContext = 0x4C4;
-	constexpr uint32_t m_iVolume = 0x4C8;
-	constexpr uint32_t m_iSoundIndex = 0x4CC;
-	constexpr uint32_t m_flDuration = 0x4D0;
-	constexpr uint32_t m_iszProxyEntityName = 0x4D8;
-}
-
-namespace CSoundStackSave
-{
-	constexpr uint32_t m_iszStackName = 0x4C0;
-}
-
-namespace CSoundEventEntity
-{
-	constexpr uint32_t m_bStartOnSpawn = 0x4C0;
-	constexpr uint32_t m_bToLocalPlayer = 0x4C1;
-	constexpr uint32_t m_bStopOnNew = 0x4C2;
-	constexpr uint32_t m_bSaveRestore = 0x4C3;
-	constexpr uint32_t m_bSavedIsPlaying = 0x4C4;
-	constexpr uint32_t m_flSavedElapsedTime = 0x4C8;
-	constexpr uint32_t m_iszSourceEntityName = 0x4D0;
-	constexpr uint32_t m_iszAttachmentName = 0x4D8;
-	constexpr uint32_t m_onGUIDChanged = 0x4E0;
-	constexpr uint32_t m_onSoundFinished = 0x508;
-	constexpr uint32_t m_iszSoundName = 0x550;
-	constexpr uint32_t m_hSource = 0x560;
-}
-
-namespace CSoundEventEntityAlias_snd_event_point
-{
-}
-
-namespace CSoundEventAABBEntity
-{
-	constexpr uint32_t m_vMins = 0x568;
-	constexpr uint32_t m_vMaxs = 0x574;
-}
-
-namespace CSoundEventOBBEntity
-{
-	constexpr uint32_t m_vMins = 0x568;
-	constexpr uint32_t m_vMaxs = 0x574;
-}
-
-namespace CSoundEventPathCornerEntity
-{
-	constexpr uint32_t m_iszPathCorner = 0x568;
-	constexpr uint32_t m_iCountMax = 0x570;
-	constexpr uint32_t m_flDistanceMax = 0x574;
-	constexpr uint32_t m_flDistMaxSqr = 0x578;
-	constexpr uint32_t m_flDotProductMax = 0x57C;
-	constexpr uint32_t bPlaying = 0x580;
-}
-
-namespace CSoundEventParameter
-{
-	constexpr uint32_t m_iszParamName = 0x4C8;
-	constexpr uint32_t m_flFloatValue = 0x4D0;
+	constexpr uint32_t m_iSoundFlags = 0x4C2;
+	constexpr uint32_t m_iVolume = 0x4C4;
+	constexpr uint32_t m_iSoundIndex = 0x4C8;
+	constexpr uint32_t m_flDuration = 0x4CC;
+	constexpr uint32_t m_iszProxyEntityName = 0x4D0;
 }
 
 namespace CEnvSoundscapeProxyAlias_snd_soundscape_proxy
@@ -5364,8 +5469,7 @@ namespace CFuncTrackTrain
 	constexpr uint32_t m_flAccelSpeed = 0x84C;
 	constexpr uint32_t m_flDecelSpeed = 0x850;
 	constexpr uint32_t m_bAccelToSpeed = 0x854;
-	constexpr uint32_t m_flTimeScale = 0x858;
-	constexpr uint32_t m_flNextMPSoundTime = 0x85C;
+	constexpr uint32_t m_flNextMPSoundTime = 0x858;
 }
 
 namespace CTankTrainAI
@@ -5448,10 +5552,6 @@ namespace CPointPulse
 {
 }
 
-namespace CPointScriptEntity
-{
-}
-
 namespace CFuncNavObstruction
 {
 	constexpr uint32_t m_bDisabled = 0x718;
@@ -5506,23 +5606,24 @@ namespace CBaseButton
 	constexpr uint32_t m_sUseSound = 0x7C0;
 	constexpr uint32_t m_sLockedSound = 0x7C8;
 	constexpr uint32_t m_sUnlockedSound = 0x7D0;
-	constexpr uint32_t m_bLocked = 0x7D8;
-	constexpr uint32_t m_bDisabled = 0x7D9;
-	constexpr uint32_t m_flUseLockedTime = 0x7DC;
-	constexpr uint32_t m_bSolidBsp = 0x7E0;
-	constexpr uint32_t m_OnDamaged = 0x7E8;
-	constexpr uint32_t m_OnPressed = 0x810;
-	constexpr uint32_t m_OnUseLocked = 0x838;
-	constexpr uint32_t m_OnIn = 0x860;
-	constexpr uint32_t m_OnOut = 0x888;
-	constexpr uint32_t m_nState = 0x8B0;
-	constexpr uint32_t m_hConstraint = 0x8B4;
-	constexpr uint32_t m_hConstraintParent = 0x8B8;
-	constexpr uint32_t m_bForceNpcExclude = 0x8BC;
-	constexpr uint32_t m_sGlowEntity = 0x8C0;
-	constexpr uint32_t m_glowEntity = 0x8C8;
-	constexpr uint32_t m_usable = 0x8CC;
-	constexpr uint32_t m_szDisplayText = 0x8D0;
+	constexpr uint32_t m_sOverrideAnticipationName = 0x7D8;
+	constexpr uint32_t m_bLocked = 0x7E0;
+	constexpr uint32_t m_bDisabled = 0x7E1;
+	constexpr uint32_t m_flUseLockedTime = 0x7E4;
+	constexpr uint32_t m_bSolidBsp = 0x7E8;
+	constexpr uint32_t m_OnDamaged = 0x7F0;
+	constexpr uint32_t m_OnPressed = 0x818;
+	constexpr uint32_t m_OnUseLocked = 0x840;
+	constexpr uint32_t m_OnIn = 0x868;
+	constexpr uint32_t m_OnOut = 0x890;
+	constexpr uint32_t m_nState = 0x8B8;
+	constexpr uint32_t m_hConstraint = 0x8BC;
+	constexpr uint32_t m_hConstraintParent = 0x8C0;
+	constexpr uint32_t m_bForceNpcExclude = 0x8C4;
+	constexpr uint32_t m_sGlowEntity = 0x8C8;
+	constexpr uint32_t m_glowEntity = 0x8D0;
+	constexpr uint32_t m_usable = 0x8D4;
+	constexpr uint32_t m_szDisplayText = 0x8D8;
 }
 
 namespace CPhysicalButton
@@ -5535,20 +5636,20 @@ namespace CRotButton
 
 namespace CMomentaryRotButton
 {
-	constexpr uint32_t m_Position = 0x8D8;
-	constexpr uint32_t m_OnUnpressed = 0x900;
-	constexpr uint32_t m_OnFullyOpen = 0x928;
-	constexpr uint32_t m_OnFullyClosed = 0x950;
-	constexpr uint32_t m_OnReachedPosition = 0x978;
-	constexpr uint32_t m_lastUsed = 0x9A0;
-	constexpr uint32_t m_start = 0x9A4;
-	constexpr uint32_t m_end = 0x9B0;
-	constexpr uint32_t m_IdealYaw = 0x9BC;
-	constexpr uint32_t m_sNoise = 0x9C0;
-	constexpr uint32_t m_bUpdateTarget = 0x9C8;
-	constexpr uint32_t m_direction = 0x9CC;
-	constexpr uint32_t m_returnSpeed = 0x9D0;
-	constexpr uint32_t m_flStartPosition = 0x9D4;
+	constexpr uint32_t m_Position = 0x8E0;
+	constexpr uint32_t m_OnUnpressed = 0x908;
+	constexpr uint32_t m_OnFullyOpen = 0x930;
+	constexpr uint32_t m_OnFullyClosed = 0x958;
+	constexpr uint32_t m_OnReachedPosition = 0x980;
+	constexpr uint32_t m_lastUsed = 0x9A8;
+	constexpr uint32_t m_start = 0x9AC;
+	constexpr uint32_t m_end = 0x9B8;
+	constexpr uint32_t m_IdealYaw = 0x9C4;
+	constexpr uint32_t m_sNoise = 0x9C8;
+	constexpr uint32_t m_bUpdateTarget = 0x9D0;
+	constexpr uint32_t m_direction = 0x9D4;
+	constexpr uint32_t m_returnSpeed = 0x9D8;
+	constexpr uint32_t m_flStartPosition = 0x9DC;
 }
 
 namespace CRagdollMagnet
@@ -5669,7 +5770,8 @@ namespace CEnvMicrophone
 {
 	constexpr uint32_t m_bDisabled = 0x4C0;
 	constexpr uint32_t m_hMeasureTarget = 0x4C4;
-	constexpr uint32_t m_nSoundMask = 0x4C8;
+	constexpr uint32_t m_nSoundType = 0x4C8;
+	constexpr uint32_t m_nSoundFlags = 0x4CA;
 	constexpr uint32_t m_flSensitivity = 0x4CC;
 	constexpr uint32_t m_flSmoothFactor = 0x4D0;
 	constexpr uint32_t m_flMaxRange = 0x4D4;
@@ -5688,27 +5790,21 @@ namespace CEnvMicrophone
 
 namespace CBreakable
 {
-	constexpr uint32_t m_Material = 0x720;
-	constexpr uint32_t m_hBreaker = 0x724;
-	constexpr uint32_t m_Explosion = 0x728;
-	constexpr uint32_t m_iszSpawnObject = 0x730;
-	constexpr uint32_t m_flPressureDelay = 0x738;
-	constexpr uint32_t m_iMinHealthDmg = 0x73C;
-	constexpr uint32_t m_iszPropData = 0x740;
-	constexpr uint32_t m_impactEnergyScale = 0x748;
-	constexpr uint32_t m_nOverrideBlockLOS = 0x74C;
-	constexpr uint32_t m_OnBreak = 0x750;
-	constexpr uint32_t m_OnHealthChanged = 0x778;
-	constexpr uint32_t m_flDmgModBullet = 0x7A0;
-	constexpr uint32_t m_flDmgModClub = 0x7A4;
-	constexpr uint32_t m_flDmgModExplosive = 0x7A8;
-	constexpr uint32_t m_flDmgModFire = 0x7AC;
-	constexpr uint32_t m_iszPhysicsDamageTableName = 0x7B0;
-	constexpr uint32_t m_iszBasePropData = 0x7B8;
-	constexpr uint32_t m_iInteractions = 0x7C0;
-	constexpr uint32_t m_PerformanceMode = 0x7C4;
-	constexpr uint32_t m_hPhysicsAttacker = 0x7C8;
-	constexpr uint32_t m_flLastPhysicsInfluenceTime = 0x7CC;
+	constexpr uint32_t m_CPropDataComponent = 0x718;
+	constexpr uint32_t m_Material = 0x758;
+	constexpr uint32_t m_hBreaker = 0x75C;
+	constexpr uint32_t m_Explosion = 0x760;
+	constexpr uint32_t m_iszSpawnObject = 0x768;
+	constexpr uint32_t m_flPressureDelay = 0x770;
+	constexpr uint32_t m_iMinHealthDmg = 0x774;
+	constexpr uint32_t m_iszPropData = 0x778;
+	constexpr uint32_t m_impactEnergyScale = 0x780;
+	constexpr uint32_t m_nOverrideBlockLOS = 0x784;
+	constexpr uint32_t m_OnBreak = 0x788;
+	constexpr uint32_t m_OnHealthChanged = 0x7B0;
+	constexpr uint32_t m_PerformanceMode = 0x7D8;
+	constexpr uint32_t m_hPhysicsAttacker = 0x7DC;
+	constexpr uint32_t m_flLastPhysicsInfluenceTime = 0x7E0;
 }
 
 namespace CFuncMoveLinear
@@ -5721,11 +5817,40 @@ namespace CFuncMoveLinear
 	constexpr uint32_t m_currentSound = 0x7C0;
 	constexpr uint32_t m_flBlockDamage = 0x7C8;
 	constexpr uint32_t m_flStartPosition = 0x7CC;
-	constexpr uint32_t m_flMoveDistance = 0x7D0;
-	constexpr uint32_t m_OnFullyOpen = 0x7E0;
-	constexpr uint32_t m_OnFullyClosed = 0x808;
-	constexpr uint32_t m_bCreateMovableNavMesh = 0x830;
-	constexpr uint32_t m_bCreateNavObstacle = 0x831;
+	constexpr uint32_t m_OnFullyOpen = 0x7D8;
+	constexpr uint32_t m_OnFullyClosed = 0x800;
+	constexpr uint32_t m_bCreateMovableNavMesh = 0x828;
+	constexpr uint32_t m_bCreateNavObstacle = 0x829;
+}
+
+namespace CFuncMover
+{
+	constexpr uint32_t m_iszPathName = 0x710;
+	constexpr uint32_t m_hPathMover = 0x718;
+	constexpr uint32_t m_iszPathNodeStart = 0x720;
+	constexpr uint32_t m_eMoveType = 0x728;
+	constexpr uint32_t m_bIsReversing = 0x72C;
+	constexpr uint32_t m_vTarget = 0x730;
+	constexpr uint32_t m_flStartSpeed = 0x73C;
+	constexpr uint32_t m_flPathLocation = 0x740;
+	constexpr uint32_t m_flT = 0x744;
+	constexpr uint32_t m_nCurrentNodeIndex = 0x748;
+	constexpr uint32_t m_nPreviousNodeIndex = 0x74C;
+	constexpr uint32_t m_bFixedOrientation = 0x750;
+	constexpr uint32_t m_bFixedPitch = 0x751;
+	constexpr uint32_t m_eSolidType = 0x752;
+	constexpr uint32_t m_bIsMoving = 0x753;
+	constexpr uint32_t m_flTimeToReachMaxSpeed = 0x754;
+	constexpr uint32_t m_flTimeToReachZeroSpeed = 0x758;
+	constexpr uint32_t m_flTimeMovementStart = 0x75C;
+	constexpr uint32_t m_flTimeMovementStop = 0x760;
+	constexpr uint32_t m_hStopAtNode = 0x764;
+	constexpr uint32_t m_flPathLocationToBeginStop = 0x768;
+	constexpr uint32_t m_bMatchPathNodeUp = 0x76C;
+	constexpr uint32_t m_bFacePlayer = 0x76D;
+	constexpr uint32_t m_flTimeStartRoll = 0x770;
+	constexpr uint32_t m_vOriginalUp = 0x774;
+	constexpr uint32_t m_flTimeToRollToNewUp = 0x780;
 }
 
 namespace CFuncRotating
@@ -5740,7 +5865,6 @@ namespace CFuncRotating
 	constexpr uint32_t m_flTargetSpeed = 0x7A0;
 	constexpr uint32_t m_flMaxSpeed = 0x7A4;
 	constexpr uint32_t m_flBlockDamage = 0x7A8;
-	constexpr uint32_t m_flTimeScale = 0x7AC;
 	constexpr uint32_t m_NoiseRunning = 0x7B0;
 	constexpr uint32_t m_bReversed = 0x7B8;
 	constexpr uint32_t m_bAccelDecel = 0x7B9;
@@ -5808,7 +5932,7 @@ namespace CGamePlayerEquip
 
 namespace CMarkupVolume
 {
-	constexpr uint32_t m_bEnabled = 0x710;
+	constexpr uint32_t m_bDisabled = 0x710;
 }
 
 namespace CMarkupVolumeTagged
@@ -5852,21 +5976,21 @@ namespace CPathTrack
 
 namespace CPhysBox
 {
-	constexpr uint32_t m_damageType = 0x7D0;
-	constexpr uint32_t m_massScale = 0x7D4;
-	constexpr uint32_t m_damageToEnableMotion = 0x7D8;
-	constexpr uint32_t m_flForceToEnableMotion = 0x7DC;
-	constexpr uint32_t m_angPreferredCarryAngles = 0x7E0;
-	constexpr uint32_t m_bNotSolidToWorld = 0x7EC;
-	constexpr uint32_t m_bEnableUseOutput = 0x7ED;
-	constexpr uint32_t m_iExploitableByPlayer = 0x7F0;
-	constexpr uint32_t m_flTouchOutputPerEntityDelay = 0x7F4;
-	constexpr uint32_t m_OnDamaged = 0x7F8;
-	constexpr uint32_t m_OnAwakened = 0x820;
-	constexpr uint32_t m_OnMotionEnabled = 0x848;
-	constexpr uint32_t m_OnPlayerUse = 0x870;
-	constexpr uint32_t m_OnStartTouch = 0x898;
-	constexpr uint32_t m_hCarryingPlayer = 0x8C0;
+	constexpr uint32_t m_damageType = 0x7E8;
+	constexpr uint32_t m_massScale = 0x7EC;
+	constexpr uint32_t m_damageToEnableMotion = 0x7F0;
+	constexpr uint32_t m_flForceToEnableMotion = 0x7F4;
+	constexpr uint32_t m_angPreferredCarryAngles = 0x7F8;
+	constexpr uint32_t m_bNotSolidToWorld = 0x804;
+	constexpr uint32_t m_bEnableUseOutput = 0x805;
+	constexpr uint32_t m_iExploitableByPlayer = 0x808;
+	constexpr uint32_t m_flTouchOutputPerEntityDelay = 0x80C;
+	constexpr uint32_t m_OnDamaged = 0x810;
+	constexpr uint32_t m_OnAwakened = 0x838;
+	constexpr uint32_t m_OnMotionEnabled = 0x860;
+	constexpr uint32_t m_OnPlayerUse = 0x888;
+	constexpr uint32_t m_OnStartTouch = 0x8B0;
+	constexpr uint32_t m_hCarryingPlayer = 0x8D8;
 }
 
 namespace CPhysExplosion
@@ -5940,55 +6064,51 @@ namespace CBaseTrigger
 	constexpr uint32_t m_OnEndTouch = 0x7F8;
 	constexpr uint32_t m_OnEndTouchAll = 0x820;
 	constexpr uint32_t m_OnTouching = 0x848;
-	constexpr uint32_t m_OnNotTouching = 0x870;
-	constexpr uint32_t m_hTouchingEntities = 0x898;
-	constexpr uint32_t m_bClientSidePredicted = 0x8B0;
+	constexpr uint32_t m_OnTouchingEachEntity = 0x870;
+	constexpr uint32_t m_OnNotTouching = 0x898;
+	constexpr uint32_t m_hTouchingEntities = 0x8C0;
+	constexpr uint32_t m_bClientSidePredicted = 0x8D8;
 }
 
 namespace CTriggerMultiple
 {
-	constexpr uint32_t m_OnTrigger = 0x8B8;
+	constexpr uint32_t m_OnTrigger = 0x8E0;
 }
 
 namespace CTriggerSndSosOpvar
 {
-	constexpr uint32_t m_hTouchingPlayers = 0x8B8;
-	constexpr uint32_t m_flPosition = 0x8D0;
-	constexpr uint32_t m_flCenterSize = 0x8DC;
-	constexpr uint32_t m_flMinVal = 0x8E0;
-	constexpr uint32_t m_flMaxVal = 0x8E4;
-	constexpr uint32_t m_flWait = 0x8E8;
-	constexpr uint32_t m_opvarName = 0x8F0;
-	constexpr uint32_t m_stackName = 0x8F8;
-	constexpr uint32_t m_operatorName = 0x900;
-	constexpr uint32_t m_bVolIs2D = 0x908;
-	constexpr uint32_t m_opvarNameChar = 0x909;
-	constexpr uint32_t m_stackNameChar = 0xA09;
-	constexpr uint32_t m_operatorNameChar = 0xB09;
-	constexpr uint32_t m_VecNormPos = 0xC0C;
-	constexpr uint32_t m_flNormCenterSize = 0xC18;
+	constexpr uint32_t m_hTouchingPlayers = 0x8E0;
+	constexpr uint32_t m_flPosition = 0x8F8;
+	constexpr uint32_t m_flCenterSize = 0x904;
+	constexpr uint32_t m_flMinVal = 0x908;
+	constexpr uint32_t m_flMaxVal = 0x90C;
+	constexpr uint32_t m_opvarName = 0x910;
+	constexpr uint32_t m_stackName = 0x918;
+	constexpr uint32_t m_operatorName = 0x920;
+	constexpr uint32_t m_bVolIs2D = 0x928;
+	constexpr uint32_t m_opvarNameChar = 0x929;
+	constexpr uint32_t m_stackNameChar = 0xA29;
+	constexpr uint32_t m_operatorNameChar = 0xB29;
+	constexpr uint32_t m_VecNormPos = 0xC2C;
+	constexpr uint32_t m_flNormCenterSize = 0xC38;
 }
 
 namespace CTriggerHurt
 {
-	constexpr uint32_t m_flOriginalDamage = 0x8B8;
-	constexpr uint32_t m_flDamage = 0x8BC;
-	constexpr uint32_t m_flDamageCap = 0x8C0;
-	constexpr uint32_t m_flLastDmgTime = 0x8C4;
-	constexpr uint32_t m_flForgivenessDelay = 0x8C8;
-	constexpr uint32_t m_bitsDamageInflict = 0x8CC;
-	constexpr uint32_t m_damageModel = 0x8D0;
-	constexpr uint32_t m_bNoDmgForce = 0x8D4;
-	constexpr uint32_t m_vDamageForce = 0x8D8;
-	constexpr uint32_t m_thinkAlways = 0x8E4;
-	constexpr uint32_t m_hurtThinkPeriod = 0x8E8;
-	constexpr uint32_t m_OnHurt = 0x8F0;
-	constexpr uint32_t m_OnHurtPlayer = 0x918;
-	constexpr uint32_t m_hurtEntities = 0x940;
-}
-
-namespace CTriggerHurtGhost
-{
+	constexpr uint32_t m_flOriginalDamage = 0x8E0;
+	constexpr uint32_t m_flDamage = 0x8E4;
+	constexpr uint32_t m_flDamageCap = 0x8E8;
+	constexpr uint32_t m_flLastDmgTime = 0x8EC;
+	constexpr uint32_t m_flForgivenessDelay = 0x8F0;
+	constexpr uint32_t m_bitsDamageInflict = 0x8F4;
+	constexpr uint32_t m_damageModel = 0x8F8;
+	constexpr uint32_t m_bNoDmgForce = 0x8FC;
+	constexpr uint32_t m_vDamageForce = 0x900;
+	constexpr uint32_t m_thinkAlways = 0x90C;
+	constexpr uint32_t m_hurtThinkPeriod = 0x910;
+	constexpr uint32_t m_OnHurt = 0x918;
+	constexpr uint32_t m_OnHurtPlayer = 0x940;
+	constexpr uint32_t m_hurtEntities = 0x968;
 }
 
 namespace CTriggerCallback
@@ -5997,54 +6117,54 @@ namespace CTriggerCallback
 
 namespace CTriggerLerpObject
 {
-	constexpr uint32_t m_iszLerpTarget = 0x8B8;
-	constexpr uint32_t m_hLerpTarget = 0x8C0;
-	constexpr uint32_t m_iszLerpTargetAttachment = 0x8C8;
-	constexpr uint32_t m_hLerpTargetAttachment = 0x8D0;
-	constexpr uint32_t m_flLerpDuration = 0x8D4;
-	constexpr uint32_t m_bLerpRestoreMoveType = 0x8D8;
-	constexpr uint32_t m_bSingleLerpObject = 0x8D9;
-	constexpr uint32_t m_vecLerpingObjects = 0x8E0;
-	constexpr uint32_t m_iszLerpEffect = 0x8F8;
-	constexpr uint32_t m_iszLerpSound = 0x900;
-	constexpr uint32_t m_bAttachTouchingObject = 0x908;
-	constexpr uint32_t m_hEntityToWaitForDisconnect = 0x90C;
-	constexpr uint32_t m_OnLerpStarted = 0x910;
-	constexpr uint32_t m_OnLerpFinished = 0x938;
+	constexpr uint32_t m_iszLerpTarget = 0x8E0;
+	constexpr uint32_t m_hLerpTarget = 0x8E8;
+	constexpr uint32_t m_iszLerpTargetAttachment = 0x8F0;
+	constexpr uint32_t m_hLerpTargetAttachment = 0x8F8;
+	constexpr uint32_t m_flLerpDuration = 0x8FC;
+	constexpr uint32_t m_bLerpRestoreMoveType = 0x900;
+	constexpr uint32_t m_bSingleLerpObject = 0x901;
+	constexpr uint32_t m_vecLerpingObjects = 0x908;
+	constexpr uint32_t m_iszLerpEffect = 0x920;
+	constexpr uint32_t m_iszLerpSound = 0x928;
+	constexpr uint32_t m_bAttachTouchingObject = 0x930;
+	constexpr uint32_t m_hEntityToWaitForDisconnect = 0x934;
+	constexpr uint32_t m_OnLerpStarted = 0x938;
+	constexpr uint32_t m_OnLerpFinished = 0x960;
 }
 
 namespace CChangeLevel
 {
-	constexpr uint32_t m_sMapName = 0x8B8;
-	constexpr uint32_t m_sLandmarkName = 0x8C0;
-	constexpr uint32_t m_OnChangeLevel = 0x8C8;
-	constexpr uint32_t m_bTouched = 0x8F0;
-	constexpr uint32_t m_bNoTouch = 0x8F1;
-	constexpr uint32_t m_bNewChapter = 0x8F2;
-	constexpr uint32_t m_bOnChangeLevelFired = 0x8F3;
+	constexpr uint32_t m_sMapName = 0x8E0;
+	constexpr uint32_t m_sLandmarkName = 0x8E8;
+	constexpr uint32_t m_OnChangeLevel = 0x8F0;
+	constexpr uint32_t m_bTouched = 0x918;
+	constexpr uint32_t m_bNoTouch = 0x919;
+	constexpr uint32_t m_bNewChapter = 0x91A;
+	constexpr uint32_t m_bOnChangeLevelFired = 0x91B;
 }
 
 namespace CTriggerTeleport
 {
-	constexpr uint32_t m_iLandmark = 0x8B8;
-	constexpr uint32_t m_bUseLandmarkAngles = 0x8C0;
-	constexpr uint32_t m_bMirrorPlayer = 0x8C1;
+	constexpr uint32_t m_iLandmark = 0x8E0;
+	constexpr uint32_t m_bUseLandmarkAngles = 0x8E8;
+	constexpr uint32_t m_bMirrorPlayer = 0x8E9;
 }
 
 namespace CTriggerFan
 {
-	constexpr uint32_t m_vFanOrigin = 0x8B8;
-	constexpr uint32_t m_vFanEnd = 0x8C4;
-	constexpr uint32_t m_vNoise = 0x8D0;
-	constexpr uint32_t m_flForce = 0x8DC;
-	constexpr uint32_t m_flRopeForceScale = 0x8E0;
-	constexpr uint32_t m_flPlayerForce = 0x8E4;
-	constexpr uint32_t m_flRampTime = 0x8E8;
-	constexpr uint32_t m_bFalloff = 0x8EC;
-	constexpr uint32_t m_bPushPlayer = 0x8ED;
-	constexpr uint32_t m_bRampDown = 0x8EE;
-	constexpr uint32_t m_bAddNoise = 0x8EF;
-	constexpr uint32_t m_RampTimer = 0x8F0;
+	constexpr uint32_t m_vFanOrigin = 0x8E0;
+	constexpr uint32_t m_vFanEnd = 0x8EC;
+	constexpr uint32_t m_vNoise = 0x8F8;
+	constexpr uint32_t m_flForce = 0x904;
+	constexpr uint32_t m_flRopeForceScale = 0x908;
+	constexpr uint32_t m_flPlayerForce = 0x90C;
+	constexpr uint32_t m_flRampTime = 0x910;
+	constexpr uint32_t m_bFalloff = 0x914;
+	constexpr uint32_t m_bPushPlayer = 0x915;
+	constexpr uint32_t m_bRampDown = 0x916;
+	constexpr uint32_t m_bAddNoise = 0x917;
+	constexpr uint32_t m_RampTimer = 0x918;
 }
 
 namespace CNavWalkable
@@ -6219,10 +6339,6 @@ namespace CInfoDeathmatchSpawn
 {
 }
 
-namespace CInfoEnemyTerroristSpawn
-{
-}
-
 namespace CPointGiveAmmo
 {
 	constexpr uint32_t m_pActivator = 0x4C0;
@@ -6230,15 +6346,15 @@ namespace CPointGiveAmmo
 
 namespace CBombTarget
 {
-	constexpr uint32_t m_OnBombExplode = 0x8B8;
-	constexpr uint32_t m_OnBombPlanted = 0x8E0;
-	constexpr uint32_t m_OnBombDefused = 0x908;
-	constexpr uint32_t m_bIsBombSiteB = 0x930;
-	constexpr uint32_t m_bIsHeistBombTarget = 0x931;
-	constexpr uint32_t m_bBombPlantedHere = 0x932;
-	constexpr uint32_t m_szMountTarget = 0x938;
-	constexpr uint32_t m_hInstructorHint = 0x940;
-	constexpr uint32_t m_nBombSiteDesignation = 0x944;
+	constexpr uint32_t m_OnBombExplode = 0x8E0;
+	constexpr uint32_t m_OnBombPlanted = 0x908;
+	constexpr uint32_t m_OnBombDefused = 0x930;
+	constexpr uint32_t m_bIsBombSiteB = 0x958;
+	constexpr uint32_t m_bIsHeistBombTarget = 0x959;
+	constexpr uint32_t m_bBombPlantedHere = 0x95A;
+	constexpr uint32_t m_szMountTarget = 0x960;
+	constexpr uint32_t m_hInstructorHint = 0x968;
+	constexpr uint32_t m_nBombSiteDesignation = 0x96C;
 }
 
 namespace CInfoInstructorHintBombTargetA
@@ -6263,8 +6379,8 @@ namespace CInfoInstructorHintHostageRescueZone
 
 namespace CTriggerBuoyancy
 {
-	constexpr uint32_t m_BuoyancyHelper = 0x8B8;
-	constexpr uint32_t m_flFluidDensity = 0x8D8;
+	constexpr uint32_t m_BuoyancyHelper = 0x8E0;
+	constexpr uint32_t m_flFluidDensity = 0x900;
 }
 
 namespace CFuncWater
@@ -6282,104 +6398,104 @@ namespace CCSObserverPawn
 
 namespace CFootstepControl
 {
-	constexpr uint32_t m_source = 0x8B8;
-	constexpr uint32_t m_destination = 0x8C0;
+	constexpr uint32_t m_source = 0x8E0;
+	constexpr uint32_t m_destination = 0x8E8;
 }
 
 namespace CCSWeaponBaseVData
 {
-	constexpr uint32_t m_WeaponType = 0x248;
-	constexpr uint32_t m_WeaponCategory = 0x24C;
-	constexpr uint32_t m_szViewModel = 0x250;
-	constexpr uint32_t m_szPlayerModel = 0x330;
-	constexpr uint32_t m_szWorldDroppedModel = 0x410;
-	constexpr uint32_t m_szAimsightLensMaskModel = 0x4F0;
-	constexpr uint32_t m_szMagazineModel = 0x5D0;
-	constexpr uint32_t m_szHeatEffect = 0x6B0;
-	constexpr uint32_t m_szEjectBrassEffect = 0x790;
-	constexpr uint32_t m_szMuzzleFlashParticleAlt = 0x870;
-	constexpr uint32_t m_szMuzzleFlashThirdPersonParticle = 0x950;
-	constexpr uint32_t m_szMuzzleFlashThirdPersonParticleAlt = 0xA30;
-	constexpr uint32_t m_szTracerParticle = 0xB10;
-	constexpr uint32_t m_GearSlot = 0xBF0;
-	constexpr uint32_t m_GearSlotPosition = 0xBF4;
-	constexpr uint32_t m_DefaultLoadoutSlot = 0xBF8;
-	constexpr uint32_t m_sWrongTeamMsg = 0xC00;
-	constexpr uint32_t m_nPrice = 0xC08;
-	constexpr uint32_t m_nKillAward = 0xC0C;
-	constexpr uint32_t m_nPrimaryReserveAmmoMax = 0xC10;
-	constexpr uint32_t m_nSecondaryReserveAmmoMax = 0xC14;
-	constexpr uint32_t m_bMeleeWeapon = 0xC18;
-	constexpr uint32_t m_bHasBurstMode = 0xC19;
-	constexpr uint32_t m_bIsRevolver = 0xC1A;
-	constexpr uint32_t m_bCannotShootUnderwater = 0xC1B;
-	constexpr uint32_t m_szName = 0xC20;
-	constexpr uint32_t m_szAnimExtension = 0xC28;
-	constexpr uint32_t m_eSilencerType = 0xC30;
-	constexpr uint32_t m_nCrosshairMinDistance = 0xC34;
-	constexpr uint32_t m_nCrosshairDeltaDistance = 0xC38;
-	constexpr uint32_t m_bIsFullAuto = 0xC3C;
-	constexpr uint32_t m_nNumBullets = 0xC40;
-	constexpr uint32_t m_flCycleTime = 0xC44;
-	constexpr uint32_t m_flMaxSpeed = 0xC4C;
-	constexpr uint32_t m_flSpread = 0xC54;
-	constexpr uint32_t m_flInaccuracyCrouch = 0xC5C;
-	constexpr uint32_t m_flInaccuracyStand = 0xC64;
-	constexpr uint32_t m_flInaccuracyJump = 0xC6C;
-	constexpr uint32_t m_flInaccuracyLand = 0xC74;
-	constexpr uint32_t m_flInaccuracyLadder = 0xC7C;
-	constexpr uint32_t m_flInaccuracyFire = 0xC84;
-	constexpr uint32_t m_flInaccuracyMove = 0xC8C;
-	constexpr uint32_t m_flRecoilAngle = 0xC94;
-	constexpr uint32_t m_flRecoilAngleVariance = 0xC9C;
-	constexpr uint32_t m_flRecoilMagnitude = 0xCA4;
-	constexpr uint32_t m_flRecoilMagnitudeVariance = 0xCAC;
-	constexpr uint32_t m_nTracerFrequency = 0xCB4;
-	constexpr uint32_t m_flInaccuracyJumpInitial = 0xCBC;
-	constexpr uint32_t m_flInaccuracyJumpApex = 0xCC0;
-	constexpr uint32_t m_flInaccuracyReload = 0xCC4;
-	constexpr uint32_t m_nRecoilSeed = 0xCC8;
-	constexpr uint32_t m_nSpreadSeed = 0xCCC;
-	constexpr uint32_t m_flTimeToIdleAfterFire = 0xCD0;
-	constexpr uint32_t m_flIdleInterval = 0xCD4;
-	constexpr uint32_t m_flAttackMovespeedFactor = 0xCD8;
-	constexpr uint32_t m_flHeatPerShot = 0xCDC;
-	constexpr uint32_t m_flInaccuracyPitchShift = 0xCE0;
-	constexpr uint32_t m_flInaccuracyAltSoundThreshold = 0xCE4;
-	constexpr uint32_t m_flBotAudibleRange = 0xCE8;
-	constexpr uint32_t m_szUseRadioSubtitle = 0xCF0;
-	constexpr uint32_t m_bUnzoomsAfterShot = 0xCF8;
-	constexpr uint32_t m_bHideViewModelWhenZoomed = 0xCF9;
-	constexpr uint32_t m_nZoomLevels = 0xCFC;
-	constexpr uint32_t m_nZoomFOV1 = 0xD00;
-	constexpr uint32_t m_nZoomFOV2 = 0xD04;
-	constexpr uint32_t m_flZoomTime0 = 0xD08;
-	constexpr uint32_t m_flZoomTime1 = 0xD0C;
-	constexpr uint32_t m_flZoomTime2 = 0xD10;
-	constexpr uint32_t m_flIronSightPullUpSpeed = 0xD14;
-	constexpr uint32_t m_flIronSightPutDownSpeed = 0xD18;
-	constexpr uint32_t m_flIronSightFOV = 0xD1C;
-	constexpr uint32_t m_flIronSightPivotForward = 0xD20;
-	constexpr uint32_t m_flIronSightLooseness = 0xD24;
-	constexpr uint32_t m_angPivotAngle = 0xD28;
-	constexpr uint32_t m_vecIronSightEyePos = 0xD34;
-	constexpr uint32_t m_nDamage = 0xD40;
-	constexpr uint32_t m_flHeadshotMultiplier = 0xD44;
-	constexpr uint32_t m_flArmorRatio = 0xD48;
-	constexpr uint32_t m_flPenetration = 0xD4C;
-	constexpr uint32_t m_flRange = 0xD50;
-	constexpr uint32_t m_flRangeModifier = 0xD54;
-	constexpr uint32_t m_flFlinchVelocityModifierLarge = 0xD58;
-	constexpr uint32_t m_flFlinchVelocityModifierSmall = 0xD5C;
-	constexpr uint32_t m_flRecoveryTimeCrouch = 0xD60;
-	constexpr uint32_t m_flRecoveryTimeStand = 0xD64;
-	constexpr uint32_t m_flRecoveryTimeCrouchFinal = 0xD68;
-	constexpr uint32_t m_flRecoveryTimeStandFinal = 0xD6C;
-	constexpr uint32_t m_nRecoveryTransitionStartBullet = 0xD70;
-	constexpr uint32_t m_nRecoveryTransitionEndBullet = 0xD74;
-	constexpr uint32_t m_flThrowVelocity = 0xD78;
-	constexpr uint32_t m_vSmokeColor = 0xD7C;
-	constexpr uint32_t m_szAnimClass = 0xD88;
+	constexpr uint32_t m_WeaponType = 0x250;
+	constexpr uint32_t m_WeaponCategory = 0x254;
+	constexpr uint32_t m_szViewModel = 0x258;
+	constexpr uint32_t m_szPlayerModel = 0x338;
+	constexpr uint32_t m_szWorldDroppedModel = 0x418;
+	constexpr uint32_t m_szAimsightLensMaskModel = 0x4F8;
+	constexpr uint32_t m_szMagazineModel = 0x5D8;
+	constexpr uint32_t m_szHeatEffect = 0x6B8;
+	constexpr uint32_t m_szEjectBrassEffect = 0x798;
+	constexpr uint32_t m_szMuzzleFlashParticleAlt = 0x878;
+	constexpr uint32_t m_szMuzzleFlashThirdPersonParticle = 0x958;
+	constexpr uint32_t m_szMuzzleFlashThirdPersonParticleAlt = 0xA38;
+	constexpr uint32_t m_szTracerParticle = 0xB18;
+	constexpr uint32_t m_GearSlot = 0xBF8;
+	constexpr uint32_t m_GearSlotPosition = 0xBFC;
+	constexpr uint32_t m_DefaultLoadoutSlot = 0xC00;
+	constexpr uint32_t m_sWrongTeamMsg = 0xC08;
+	constexpr uint32_t m_nPrice = 0xC10;
+	constexpr uint32_t m_nKillAward = 0xC14;
+	constexpr uint32_t m_nPrimaryReserveAmmoMax = 0xC18;
+	constexpr uint32_t m_nSecondaryReserveAmmoMax = 0xC1C;
+	constexpr uint32_t m_bMeleeWeapon = 0xC20;
+	constexpr uint32_t m_bHasBurstMode = 0xC21;
+	constexpr uint32_t m_bIsRevolver = 0xC22;
+	constexpr uint32_t m_bCannotShootUnderwater = 0xC23;
+	constexpr uint32_t m_szName = 0xC28;
+	constexpr uint32_t m_szAnimExtension = 0xC30;
+	constexpr uint32_t m_eSilencerType = 0xC38;
+	constexpr uint32_t m_nCrosshairMinDistance = 0xC3C;
+	constexpr uint32_t m_nCrosshairDeltaDistance = 0xC40;
+	constexpr uint32_t m_bIsFullAuto = 0xC44;
+	constexpr uint32_t m_nNumBullets = 0xC48;
+	constexpr uint32_t m_flCycleTime = 0xC4C;
+	constexpr uint32_t m_flMaxSpeed = 0xC54;
+	constexpr uint32_t m_flSpread = 0xC5C;
+	constexpr uint32_t m_flInaccuracyCrouch = 0xC64;
+	constexpr uint32_t m_flInaccuracyStand = 0xC6C;
+	constexpr uint32_t m_flInaccuracyJump = 0xC74;
+	constexpr uint32_t m_flInaccuracyLand = 0xC7C;
+	constexpr uint32_t m_flInaccuracyLadder = 0xC84;
+	constexpr uint32_t m_flInaccuracyFire = 0xC8C;
+	constexpr uint32_t m_flInaccuracyMove = 0xC94;
+	constexpr uint32_t m_flRecoilAngle = 0xC9C;
+	constexpr uint32_t m_flRecoilAngleVariance = 0xCA4;
+	constexpr uint32_t m_flRecoilMagnitude = 0xCAC;
+	constexpr uint32_t m_flRecoilMagnitudeVariance = 0xCB4;
+	constexpr uint32_t m_nTracerFrequency = 0xCBC;
+	constexpr uint32_t m_flInaccuracyJumpInitial = 0xCC4;
+	constexpr uint32_t m_flInaccuracyJumpApex = 0xCC8;
+	constexpr uint32_t m_flInaccuracyReload = 0xCCC;
+	constexpr uint32_t m_nRecoilSeed = 0xCD0;
+	constexpr uint32_t m_nSpreadSeed = 0xCD4;
+	constexpr uint32_t m_flTimeToIdleAfterFire = 0xCD8;
+	constexpr uint32_t m_flIdleInterval = 0xCDC;
+	constexpr uint32_t m_flAttackMovespeedFactor = 0xCE0;
+	constexpr uint32_t m_flHeatPerShot = 0xCE4;
+	constexpr uint32_t m_flInaccuracyPitchShift = 0xCE8;
+	constexpr uint32_t m_flInaccuracyAltSoundThreshold = 0xCEC;
+	constexpr uint32_t m_flBotAudibleRange = 0xCF0;
+	constexpr uint32_t m_szUseRadioSubtitle = 0xCF8;
+	constexpr uint32_t m_bUnzoomsAfterShot = 0xD00;
+	constexpr uint32_t m_bHideViewModelWhenZoomed = 0xD01;
+	constexpr uint32_t m_nZoomLevels = 0xD04;
+	constexpr uint32_t m_nZoomFOV1 = 0xD08;
+	constexpr uint32_t m_nZoomFOV2 = 0xD0C;
+	constexpr uint32_t m_flZoomTime0 = 0xD10;
+	constexpr uint32_t m_flZoomTime1 = 0xD14;
+	constexpr uint32_t m_flZoomTime2 = 0xD18;
+	constexpr uint32_t m_flIronSightPullUpSpeed = 0xD1C;
+	constexpr uint32_t m_flIronSightPutDownSpeed = 0xD20;
+	constexpr uint32_t m_flIronSightFOV = 0xD24;
+	constexpr uint32_t m_flIronSightPivotForward = 0xD28;
+	constexpr uint32_t m_flIronSightLooseness = 0xD2C;
+	constexpr uint32_t m_angPivotAngle = 0xD30;
+	constexpr uint32_t m_vecIronSightEyePos = 0xD3C;
+	constexpr uint32_t m_nDamage = 0xD48;
+	constexpr uint32_t m_flHeadshotMultiplier = 0xD4C;
+	constexpr uint32_t m_flArmorRatio = 0xD50;
+	constexpr uint32_t m_flPenetration = 0xD54;
+	constexpr uint32_t m_flRange = 0xD58;
+	constexpr uint32_t m_flRangeModifier = 0xD5C;
+	constexpr uint32_t m_flFlinchVelocityModifierLarge = 0xD60;
+	constexpr uint32_t m_flFlinchVelocityModifierSmall = 0xD64;
+	constexpr uint32_t m_flRecoveryTimeCrouch = 0xD68;
+	constexpr uint32_t m_flRecoveryTimeStand = 0xD6C;
+	constexpr uint32_t m_flRecoveryTimeCrouchFinal = 0xD70;
+	constexpr uint32_t m_flRecoveryTimeStandFinal = 0xD74;
+	constexpr uint32_t m_nRecoveryTransitionStartBullet = 0xD78;
+	constexpr uint32_t m_nRecoveryTransitionEndBullet = 0xD7C;
+	constexpr uint32_t m_flThrowVelocity = 0xD80;
+	constexpr uint32_t m_vSmokeColor = 0xD84;
+	constexpr uint32_t m_szAnimClass = 0xD90;
 }
 
 namespace CTriggerTripWire
@@ -6399,7 +6515,7 @@ namespace CEnvHudHint
 
 namespace CBuyZone
 {
-	constexpr uint32_t m_LegacyTeamNum = 0x8B8;
+	constexpr uint32_t m_LegacyTeamNum = 0x8E0;
 }
 
 namespace CFuncConveyor
@@ -6588,146 +6704,145 @@ namespace CMapInfo
 
 namespace CCSBot
 {
-	constexpr uint32_t m_lastCoopSpawnPoint = 0xF0;
-	constexpr uint32_t m_eyePosition = 0x100;
-	constexpr uint32_t m_name = 0x10C;
-	constexpr uint32_t m_combatRange = 0x14C;
-	constexpr uint32_t m_isRogue = 0x150;
-	constexpr uint32_t m_rogueTimer = 0x158;
-	constexpr uint32_t m_diedLastRound = 0x174;
-	constexpr uint32_t m_safeTime = 0x178;
-	constexpr uint32_t m_wasSafe = 0x17C;
-	constexpr uint32_t m_blindFire = 0x184;
-	constexpr uint32_t m_surpriseTimer = 0x188;
-	constexpr uint32_t m_bAllowActive = 0x1A0;
-	constexpr uint32_t m_isFollowing = 0x1A1;
-	constexpr uint32_t m_leader = 0x1A4;
-	constexpr uint32_t m_followTimestamp = 0x1A8;
-	constexpr uint32_t m_allowAutoFollowTime = 0x1AC;
-	constexpr uint32_t m_hurryTimer = 0x1B0;
-	constexpr uint32_t m_alertTimer = 0x1C8;
-	constexpr uint32_t m_sneakTimer = 0x1E0;
-	constexpr uint32_t m_panicTimer = 0x1F8;
-	constexpr uint32_t m_stateTimestamp = 0x4C8;
-	constexpr uint32_t m_isAttacking = 0x4CC;
-	constexpr uint32_t m_isOpeningDoor = 0x4CD;
-	constexpr uint32_t m_taskEntity = 0x4D4;
-	constexpr uint32_t m_goalPosition = 0x4E4;
-	constexpr uint32_t m_goalEntity = 0x4F0;
-	constexpr uint32_t m_avoid = 0x4F4;
-	constexpr uint32_t m_avoidTimestamp = 0x4F8;
-	constexpr uint32_t m_isStopping = 0x4FC;
-	constexpr uint32_t m_hasVisitedEnemySpawn = 0x4FD;
-	constexpr uint32_t m_stillTimer = 0x500;
-	constexpr uint32_t m_bEyeAnglesUnderPathFinderControl = 0x510;
-	constexpr uint32_t m_pathIndex = 0x6608;
-	constexpr uint32_t m_areaEnteredTimestamp = 0x660C;
-	constexpr uint32_t m_repathTimer = 0x6610;
-	constexpr uint32_t m_avoidFriendTimer = 0x6628;
-	constexpr uint32_t m_isFriendInTheWay = 0x6640;
-	constexpr uint32_t m_politeTimer = 0x6648;
-	constexpr uint32_t m_isWaitingBehindFriend = 0x6660;
-	constexpr uint32_t m_pathLadderEnd = 0x668C;
-	constexpr uint32_t m_mustRunTimer = 0x66D8;
-	constexpr uint32_t m_waitTimer = 0x66F0;
-	constexpr uint32_t m_updateTravelDistanceTimer = 0x6708;
-	constexpr uint32_t m_playerTravelDistance = 0x6720;
-	constexpr uint32_t m_travelDistancePhase = 0x6820;
-	constexpr uint32_t m_hostageEscortCount = 0x69B8;
-	constexpr uint32_t m_hostageEscortCountTimestamp = 0x69BC;
-	constexpr uint32_t m_desiredTeam = 0x69C0;
-	constexpr uint32_t m_hasJoined = 0x69C4;
-	constexpr uint32_t m_isWaitingForHostage = 0x69C5;
-	constexpr uint32_t m_inhibitWaitingForHostageTimer = 0x69C8;
-	constexpr uint32_t m_waitForHostageTimer = 0x69E0;
-	constexpr uint32_t m_noisePosition = 0x69F8;
-	constexpr uint32_t m_noiseTravelDistance = 0x6A04;
-	constexpr uint32_t m_noiseTimestamp = 0x6A08;
-	constexpr uint32_t m_noiseSource = 0x6A10;
-	constexpr uint32_t m_noiseBendTimer = 0x6A28;
-	constexpr uint32_t m_bentNoisePosition = 0x6A40;
-	constexpr uint32_t m_bendNoisePositionValid = 0x6A4C;
-	constexpr uint32_t m_lookAroundStateTimestamp = 0x6A50;
-	constexpr uint32_t m_lookAheadAngle = 0x6A54;
-	constexpr uint32_t m_forwardAngle = 0x6A58;
-	constexpr uint32_t m_inhibitLookAroundTimestamp = 0x6A5C;
-	constexpr uint32_t m_lookAtSpot = 0x6A64;
-	constexpr uint32_t m_lookAtSpotDuration = 0x6A74;
-	constexpr uint32_t m_lookAtSpotTimestamp = 0x6A78;
-	constexpr uint32_t m_lookAtSpotAngleTolerance = 0x6A7C;
-	constexpr uint32_t m_lookAtSpotClearIfClose = 0x6A80;
-	constexpr uint32_t m_lookAtSpotAttack = 0x6A81;
-	constexpr uint32_t m_lookAtDesc = 0x6A88;
-	constexpr uint32_t m_peripheralTimestamp = 0x6A90;
-	constexpr uint32_t m_approachPointCount = 0x6C18;
-	constexpr uint32_t m_approachPointViewPosition = 0x6C1C;
-	constexpr uint32_t m_viewSteadyTimer = 0x6C28;
-	constexpr uint32_t m_tossGrenadeTimer = 0x6C40;
-	constexpr uint32_t m_isAvoidingGrenade = 0x6C60;
-	constexpr uint32_t m_spotCheckTimestamp = 0x6C80;
-	constexpr uint32_t m_checkedHidingSpotCount = 0x7088;
-	constexpr uint32_t m_lookPitch = 0x708C;
-	constexpr uint32_t m_lookPitchVel = 0x7090;
-	constexpr uint32_t m_lookYaw = 0x7094;
-	constexpr uint32_t m_lookYawVel = 0x7098;
-	constexpr uint32_t m_targetSpot = 0x709C;
-	constexpr uint32_t m_targetSpotVelocity = 0x70A8;
-	constexpr uint32_t m_targetSpotPredicted = 0x70B4;
-	constexpr uint32_t m_aimError = 0x70C0;
-	constexpr uint32_t m_aimGoal = 0x70CC;
-	constexpr uint32_t m_targetSpotTime = 0x70D8;
-	constexpr uint32_t m_aimFocus = 0x70DC;
-	constexpr uint32_t m_aimFocusInterval = 0x70E0;
-	constexpr uint32_t m_aimFocusNextUpdate = 0x70E4;
-	constexpr uint32_t m_ignoreEnemiesTimer = 0x70F0;
-	constexpr uint32_t m_enemy = 0x7108;
-	constexpr uint32_t m_isEnemyVisible = 0x710C;
-	constexpr uint32_t m_visibleEnemyParts = 0x710D;
-	constexpr uint32_t m_lastEnemyPosition = 0x7110;
-	constexpr uint32_t m_lastSawEnemyTimestamp = 0x711C;
-	constexpr uint32_t m_firstSawEnemyTimestamp = 0x7120;
-	constexpr uint32_t m_currentEnemyAcquireTimestamp = 0x7124;
-	constexpr uint32_t m_enemyDeathTimestamp = 0x7128;
-	constexpr uint32_t m_friendDeathTimestamp = 0x712C;
-	constexpr uint32_t m_isLastEnemyDead = 0x7130;
-	constexpr uint32_t m_nearbyEnemyCount = 0x7134;
-	constexpr uint32_t m_bomber = 0x7340;
-	constexpr uint32_t m_nearbyFriendCount = 0x7344;
-	constexpr uint32_t m_closestVisibleFriend = 0x7348;
-	constexpr uint32_t m_closestVisibleHumanFriend = 0x734C;
-	constexpr uint32_t m_attentionInterval = 0x7350;
-	constexpr uint32_t m_attacker = 0x7360;
-	constexpr uint32_t m_attackedTimestamp = 0x7364;
-	constexpr uint32_t m_burnedByFlamesTimer = 0x7368;
-	constexpr uint32_t m_lastVictimID = 0x7378;
-	constexpr uint32_t m_isAimingAtEnemy = 0x737C;
-	constexpr uint32_t m_isRapidFiring = 0x737D;
-	constexpr uint32_t m_equipTimer = 0x7380;
-	constexpr uint32_t m_zoomTimer = 0x7390;
-	constexpr uint32_t m_fireWeaponTimestamp = 0x73A8;
-	constexpr uint32_t m_lookForWeaponsOnGroundTimer = 0x73B0;
-	constexpr uint32_t m_bIsSleeping = 0x73C8;
-	constexpr uint32_t m_isEnemySniperVisible = 0x73C9;
-	constexpr uint32_t m_sawEnemySniperTimer = 0x73D0;
-	constexpr uint32_t m_enemyQueueIndex = 0x7488;
-	constexpr uint32_t m_enemyQueueCount = 0x7489;
-	constexpr uint32_t m_enemyQueueAttendIndex = 0x748A;
-	constexpr uint32_t m_isStuck = 0x748B;
-	constexpr uint32_t m_stuckTimestamp = 0x748C;
-	constexpr uint32_t m_stuckSpot = 0x7490;
-	constexpr uint32_t m_wiggleTimer = 0x74A0;
-	constexpr uint32_t m_stuckJumpTimer = 0x74B8;
-	constexpr uint32_t m_nextCleanupCheckTimestamp = 0x74D0;
-	constexpr uint32_t m_avgVel = 0x74D4;
-	constexpr uint32_t m_avgVelIndex = 0x74FC;
-	constexpr uint32_t m_avgVelCount = 0x7500;
-	constexpr uint32_t m_lastOrigin = 0x7504;
-	constexpr uint32_t m_lastRadioRecievedTimestamp = 0x7514;
-	constexpr uint32_t m_lastRadioSentTimestamp = 0x7518;
-	constexpr uint32_t m_radioSubject = 0x751C;
-	constexpr uint32_t m_radioPosition = 0x7520;
-	constexpr uint32_t m_voiceEndTimestamp = 0x752C;
-	constexpr uint32_t m_lastValidReactionQueueFrame = 0x7538;
+	constexpr uint32_t m_eyePosition = 0xF8;
+	constexpr uint32_t m_name = 0x104;
+	constexpr uint32_t m_combatRange = 0x144;
+	constexpr uint32_t m_isRogue = 0x148;
+	constexpr uint32_t m_rogueTimer = 0x150;
+	constexpr uint32_t m_diedLastRound = 0x16C;
+	constexpr uint32_t m_safeTime = 0x170;
+	constexpr uint32_t m_wasSafe = 0x174;
+	constexpr uint32_t m_blindFire = 0x17C;
+	constexpr uint32_t m_surpriseTimer = 0x180;
+	constexpr uint32_t m_bAllowActive = 0x198;
+	constexpr uint32_t m_isFollowing = 0x199;
+	constexpr uint32_t m_leader = 0x19C;
+	constexpr uint32_t m_followTimestamp = 0x1A0;
+	constexpr uint32_t m_allowAutoFollowTime = 0x1A4;
+	constexpr uint32_t m_hurryTimer = 0x1A8;
+	constexpr uint32_t m_alertTimer = 0x1C0;
+	constexpr uint32_t m_sneakTimer = 0x1D8;
+	constexpr uint32_t m_panicTimer = 0x1F0;
+	constexpr uint32_t m_stateTimestamp = 0x4C0;
+	constexpr uint32_t m_isAttacking = 0x4C4;
+	constexpr uint32_t m_isOpeningDoor = 0x4C5;
+	constexpr uint32_t m_taskEntity = 0x4CC;
+	constexpr uint32_t m_goalPosition = 0x4DC;
+	constexpr uint32_t m_goalEntity = 0x4E8;
+	constexpr uint32_t m_avoid = 0x4EC;
+	constexpr uint32_t m_avoidTimestamp = 0x4F0;
+	constexpr uint32_t m_isStopping = 0x4F4;
+	constexpr uint32_t m_hasVisitedEnemySpawn = 0x4F5;
+	constexpr uint32_t m_stillTimer = 0x4F8;
+	constexpr uint32_t m_bEyeAnglesUnderPathFinderControl = 0x508;
+	constexpr uint32_t m_pathIndex = 0x5600;
+	constexpr uint32_t m_areaEnteredTimestamp = 0x5604;
+	constexpr uint32_t m_repathTimer = 0x5608;
+	constexpr uint32_t m_avoidFriendTimer = 0x5620;
+	constexpr uint32_t m_isFriendInTheWay = 0x5638;
+	constexpr uint32_t m_politeTimer = 0x5640;
+	constexpr uint32_t m_isWaitingBehindFriend = 0x5658;
+	constexpr uint32_t m_pathLadderEnd = 0x5684;
+	constexpr uint32_t m_mustRunTimer = 0x56D0;
+	constexpr uint32_t m_waitTimer = 0x56E8;
+	constexpr uint32_t m_updateTravelDistanceTimer = 0x5700;
+	constexpr uint32_t m_playerTravelDistance = 0x5718;
+	constexpr uint32_t m_travelDistancePhase = 0x5818;
+	constexpr uint32_t m_hostageEscortCount = 0x59B0;
+	constexpr uint32_t m_hostageEscortCountTimestamp = 0x59B4;
+	constexpr uint32_t m_desiredTeam = 0x59B8;
+	constexpr uint32_t m_hasJoined = 0x59BC;
+	constexpr uint32_t m_isWaitingForHostage = 0x59BD;
+	constexpr uint32_t m_inhibitWaitingForHostageTimer = 0x59C0;
+	constexpr uint32_t m_waitForHostageTimer = 0x59D8;
+	constexpr uint32_t m_noisePosition = 0x59F0;
+	constexpr uint32_t m_noiseTravelDistance = 0x59FC;
+	constexpr uint32_t m_noiseTimestamp = 0x5A00;
+	constexpr uint32_t m_noiseSource = 0x5A08;
+	constexpr uint32_t m_noiseBendTimer = 0x5A20;
+	constexpr uint32_t m_bentNoisePosition = 0x5A38;
+	constexpr uint32_t m_bendNoisePositionValid = 0x5A44;
+	constexpr uint32_t m_lookAroundStateTimestamp = 0x5A48;
+	constexpr uint32_t m_lookAheadAngle = 0x5A4C;
+	constexpr uint32_t m_forwardAngle = 0x5A50;
+	constexpr uint32_t m_inhibitLookAroundTimestamp = 0x5A54;
+	constexpr uint32_t m_lookAtSpot = 0x5A5C;
+	constexpr uint32_t m_lookAtSpotDuration = 0x5A6C;
+	constexpr uint32_t m_lookAtSpotTimestamp = 0x5A70;
+	constexpr uint32_t m_lookAtSpotAngleTolerance = 0x5A74;
+	constexpr uint32_t m_lookAtSpotClearIfClose = 0x5A78;
+	constexpr uint32_t m_lookAtSpotAttack = 0x5A79;
+	constexpr uint32_t m_lookAtDesc = 0x5A80;
+	constexpr uint32_t m_peripheralTimestamp = 0x5A88;
+	constexpr uint32_t m_approachPointCount = 0x5C10;
+	constexpr uint32_t m_approachPointViewPosition = 0x5C14;
+	constexpr uint32_t m_viewSteadyTimer = 0x5C20;
+	constexpr uint32_t m_tossGrenadeTimer = 0x5C38;
+	constexpr uint32_t m_isAvoidingGrenade = 0x5C58;
+	constexpr uint32_t m_spotCheckTimestamp = 0x5C78;
+	constexpr uint32_t m_checkedHidingSpotCount = 0x6080;
+	constexpr uint32_t m_lookPitch = 0x6084;
+	constexpr uint32_t m_lookPitchVel = 0x6088;
+	constexpr uint32_t m_lookYaw = 0x608C;
+	constexpr uint32_t m_lookYawVel = 0x6090;
+	constexpr uint32_t m_targetSpot = 0x6094;
+	constexpr uint32_t m_targetSpotVelocity = 0x60A0;
+	constexpr uint32_t m_targetSpotPredicted = 0x60AC;
+	constexpr uint32_t m_aimError = 0x60B8;
+	constexpr uint32_t m_aimGoal = 0x60C4;
+	constexpr uint32_t m_targetSpotTime = 0x60D0;
+	constexpr uint32_t m_aimFocus = 0x60D4;
+	constexpr uint32_t m_aimFocusInterval = 0x60D8;
+	constexpr uint32_t m_aimFocusNextUpdate = 0x60DC;
+	constexpr uint32_t m_ignoreEnemiesTimer = 0x60E8;
+	constexpr uint32_t m_enemy = 0x6100;
+	constexpr uint32_t m_isEnemyVisible = 0x6104;
+	constexpr uint32_t m_visibleEnemyParts = 0x6105;
+	constexpr uint32_t m_lastEnemyPosition = 0x6108;
+	constexpr uint32_t m_lastSawEnemyTimestamp = 0x6114;
+	constexpr uint32_t m_firstSawEnemyTimestamp = 0x6118;
+	constexpr uint32_t m_currentEnemyAcquireTimestamp = 0x611C;
+	constexpr uint32_t m_enemyDeathTimestamp = 0x6120;
+	constexpr uint32_t m_friendDeathTimestamp = 0x6124;
+	constexpr uint32_t m_isLastEnemyDead = 0x6128;
+	constexpr uint32_t m_nearbyEnemyCount = 0x612C;
+	constexpr uint32_t m_bomber = 0x6338;
+	constexpr uint32_t m_nearbyFriendCount = 0x633C;
+	constexpr uint32_t m_closestVisibleFriend = 0x6340;
+	constexpr uint32_t m_closestVisibleHumanFriend = 0x6344;
+	constexpr uint32_t m_attentionInterval = 0x6348;
+	constexpr uint32_t m_attacker = 0x6358;
+	constexpr uint32_t m_attackedTimestamp = 0x635C;
+	constexpr uint32_t m_burnedByFlamesTimer = 0x6360;
+	constexpr uint32_t m_lastVictimID = 0x6370;
+	constexpr uint32_t m_isAimingAtEnemy = 0x6374;
+	constexpr uint32_t m_isRapidFiring = 0x6375;
+	constexpr uint32_t m_equipTimer = 0x6378;
+	constexpr uint32_t m_zoomTimer = 0x6388;
+	constexpr uint32_t m_fireWeaponTimestamp = 0x63A0;
+	constexpr uint32_t m_lookForWeaponsOnGroundTimer = 0x63A8;
+	constexpr uint32_t m_bIsSleeping = 0x63C0;
+	constexpr uint32_t m_isEnemySniperVisible = 0x63C1;
+	constexpr uint32_t m_sawEnemySniperTimer = 0x63C8;
+	constexpr uint32_t m_enemyQueueIndex = 0x6480;
+	constexpr uint32_t m_enemyQueueCount = 0x6481;
+	constexpr uint32_t m_enemyQueueAttendIndex = 0x6482;
+	constexpr uint32_t m_isStuck = 0x6483;
+	constexpr uint32_t m_stuckTimestamp = 0x6484;
+	constexpr uint32_t m_stuckSpot = 0x6488;
+	constexpr uint32_t m_wiggleTimer = 0x6498;
+	constexpr uint32_t m_stuckJumpTimer = 0x64B0;
+	constexpr uint32_t m_nextCleanupCheckTimestamp = 0x64C8;
+	constexpr uint32_t m_avgVel = 0x64CC;
+	constexpr uint32_t m_avgVelIndex = 0x64F4;
+	constexpr uint32_t m_avgVelCount = 0x64F8;
+	constexpr uint32_t m_lastOrigin = 0x64FC;
+	constexpr uint32_t m_lastRadioRecievedTimestamp = 0x650C;
+	constexpr uint32_t m_lastRadioSentTimestamp = 0x6510;
+	constexpr uint32_t m_radioSubject = 0x6514;
+	constexpr uint32_t m_radioPosition = 0x6518;
+	constexpr uint32_t m_voiceEndTimestamp = 0x6524;
+	constexpr uint32_t m_lastValidReactionQueueFrame = 0x6530;
 }
 
 namespace CFogVolume
@@ -6776,13 +6891,13 @@ namespace CTonemapController2Alias_env_tonemap_controller2
 
 namespace CTonemapTrigger
 {
-	constexpr uint32_t m_tonemapControllerName = 0x8B8;
-	constexpr uint32_t m_hTonemapController = 0x8C0;
+	constexpr uint32_t m_tonemapControllerName = 0x8E0;
+	constexpr uint32_t m_hTonemapController = 0x8E8;
 }
 
 namespace CFogTrigger
 {
-	constexpr uint32_t m_fog = 0x8B8;
+	constexpr uint32_t m_fog = 0x8E0;
 }
 
 namespace CLightSpotEntity
@@ -6836,65 +6951,61 @@ namespace CBaseProp
 
 namespace CBreakableProp
 {
-	constexpr uint32_t m_OnBreak = 0x938;
-	constexpr uint32_t m_OnHealthChanged = 0x960;
-	constexpr uint32_t m_OnTakeDamage = 0x988;
-	constexpr uint32_t m_impactEnergyScale = 0x9B0;
-	constexpr uint32_t m_iMinHealthDmg = 0x9B4;
-	constexpr uint32_t m_preferredCarryAngles = 0x9B8;
-	constexpr uint32_t m_flPressureDelay = 0x9C4;
-	constexpr uint32_t m_hBreaker = 0x9C8;
-	constexpr uint32_t m_PerformanceMode = 0x9CC;
-	constexpr uint32_t m_flDmgModBullet = 0x9D0;
-	constexpr uint32_t m_flDmgModClub = 0x9D4;
-	constexpr uint32_t m_flDmgModExplosive = 0x9D8;
-	constexpr uint32_t m_flDmgModFire = 0x9DC;
-	constexpr uint32_t m_iszPhysicsDamageTableName = 0x9E0;
-	constexpr uint32_t m_iszBasePropData = 0x9E8;
-	constexpr uint32_t m_iInteractions = 0x9F0;
-	constexpr uint32_t m_flPreventDamageBeforeTime = 0x9F4;
-	constexpr uint32_t m_bHasBreakPiecesOrCommands = 0x9F8;
-	constexpr uint32_t m_explodeDamage = 0x9FC;
-	constexpr uint32_t m_explodeRadius = 0xA00;
-	constexpr uint32_t m_explosionDelay = 0xA08;
-	constexpr uint32_t m_explosionBuildupSound = 0xA10;
-	constexpr uint32_t m_explosionCustomEffect = 0xA18;
-	constexpr uint32_t m_explosionCustomSound = 0xA20;
-	constexpr uint32_t m_explosionModifier = 0xA28;
-	constexpr uint32_t m_hPhysicsAttacker = 0xA30;
-	constexpr uint32_t m_flLastPhysicsInfluenceTime = 0xA34;
-	constexpr uint32_t m_bOriginalBlockLOS = 0xA38;
-	constexpr uint32_t m_flDefaultFadeScale = 0xA3C;
-	constexpr uint32_t m_hLastAttacker = 0xA40;
-	constexpr uint32_t m_hFlareEnt = 0xA44;
-	constexpr uint32_t m_bUsePuntSound = 0xA48;
-	constexpr uint32_t m_iszPuntSound = 0xA50;
-	constexpr uint32_t m_noGhostCollision = 0xA58;
+	constexpr uint32_t m_CPropDataComponent = 0x930;
+	constexpr uint32_t m_OnBreak = 0x970;
+	constexpr uint32_t m_OnHealthChanged = 0x998;
+	constexpr uint32_t m_OnTakeDamage = 0x9C0;
+	constexpr uint32_t m_impactEnergyScale = 0x9E8;
+	constexpr uint32_t m_iMinHealthDmg = 0x9EC;
+	constexpr uint32_t m_preferredCarryAngles = 0x9F0;
+	constexpr uint32_t m_flPressureDelay = 0x9FC;
+	constexpr uint32_t m_flDefBurstScale = 0xA00;
+	constexpr uint32_t m_vDefBurstOffset = 0xA04;
+	constexpr uint32_t m_hBreaker = 0xA10;
+	constexpr uint32_t m_PerformanceMode = 0xA14;
+	constexpr uint32_t m_flPreventDamageBeforeTime = 0xA18;
+	constexpr uint32_t m_bHasBreakPiecesOrCommands = 0xA1C;
+	constexpr uint32_t m_explodeDamage = 0xA20;
+	constexpr uint32_t m_explodeRadius = 0xA24;
+	constexpr uint32_t m_explosionDelay = 0xA2C;
+	constexpr uint32_t m_explosionBuildupSound = 0xA30;
+	constexpr uint32_t m_explosionCustomEffect = 0xA38;
+	constexpr uint32_t m_explosionCustomSound = 0xA40;
+	constexpr uint32_t m_explosionModifier = 0xA48;
+	constexpr uint32_t m_hPhysicsAttacker = 0xA50;
+	constexpr uint32_t m_flLastPhysicsInfluenceTime = 0xA54;
+	constexpr uint32_t m_bOriginalBlockLOS = 0xA58;
+	constexpr uint32_t m_flDefaultFadeScale = 0xA5C;
+	constexpr uint32_t m_hLastAttacker = 0xA60;
+	constexpr uint32_t m_hFlareEnt = 0xA64;
+	constexpr uint32_t m_bUsePuntSound = 0xA68;
+	constexpr uint32_t m_iszPuntSound = 0xA70;
+	constexpr uint32_t m_noGhostCollision = 0xA78;
 }
 
 namespace CDynamicProp
 {
-	constexpr uint32_t m_bCreateNavObstacle = 0xA68;
-	constexpr uint32_t m_bUseHitboxesForRenderBox = 0xA69;
-	constexpr uint32_t m_bUseAnimGraph = 0xA6A;
-	constexpr uint32_t m_pOutputAnimBegun = 0xA70;
-	constexpr uint32_t m_pOutputAnimOver = 0xA98;
-	constexpr uint32_t m_pOutputAnimLoopCycleOver = 0xAC0;
-	constexpr uint32_t m_OnAnimReachedStart = 0xAE8;
-	constexpr uint32_t m_OnAnimReachedEnd = 0xB10;
-	constexpr uint32_t m_iszIdleAnim = 0xB38;
-	constexpr uint32_t m_nIdleAnimLoopMode = 0xB40;
-	constexpr uint32_t m_bRandomizeCycle = 0xB44;
-	constexpr uint32_t m_bStartDisabled = 0xB45;
-	constexpr uint32_t m_bFiredStartEndOutput = 0xB46;
-	constexpr uint32_t m_bForceNpcExclude = 0xB47;
-	constexpr uint32_t m_bCreateNonSolid = 0xB48;
-	constexpr uint32_t m_bIsOverrideProp = 0xB49;
-	constexpr uint32_t m_iInitialGlowState = 0xB4C;
-	constexpr uint32_t m_nGlowRange = 0xB50;
-	constexpr uint32_t m_nGlowRangeMin = 0xB54;
-	constexpr uint32_t m_glowColor = 0xB58;
-	constexpr uint32_t m_nGlowTeam = 0xB5C;
+	constexpr uint32_t m_bCreateNavObstacle = 0xA88;
+	constexpr uint32_t m_bUseHitboxesForRenderBox = 0xA89;
+	constexpr uint32_t m_bUseAnimGraph = 0xA8A;
+	constexpr uint32_t m_pOutputAnimBegun = 0xA90;
+	constexpr uint32_t m_pOutputAnimOver = 0xAB8;
+	constexpr uint32_t m_pOutputAnimLoopCycleOver = 0xAE0;
+	constexpr uint32_t m_OnAnimReachedStart = 0xB08;
+	constexpr uint32_t m_OnAnimReachedEnd = 0xB30;
+	constexpr uint32_t m_iszIdleAnim = 0xB58;
+	constexpr uint32_t m_nIdleAnimLoopMode = 0xB60;
+	constexpr uint32_t m_bRandomizeCycle = 0xB64;
+	constexpr uint32_t m_bStartDisabled = 0xB65;
+	constexpr uint32_t m_bFiredStartEndOutput = 0xB66;
+	constexpr uint32_t m_bForceNpcExclude = 0xB67;
+	constexpr uint32_t m_bCreateNonSolid = 0xB68;
+	constexpr uint32_t m_bIsOverrideProp = 0xB69;
+	constexpr uint32_t m_iInitialGlowState = 0xB6C;
+	constexpr uint32_t m_nGlowRange = 0xB70;
+	constexpr uint32_t m_nGlowRangeMin = 0xB74;
+	constexpr uint32_t m_glowColor = 0xB78;
+	constexpr uint32_t m_nGlowTeam = 0xB7C;
 }
 
 namespace CDynamicPropAlias_dynamic_prop
@@ -6911,16 +7022,16 @@ namespace CDynamicPropAlias_cable_dynamic
 
 namespace CColorCorrectionVolume
 {
-	constexpr uint32_t m_bEnabled = 0x8B8;
-	constexpr uint32_t m_MaxWeight = 0x8BC;
-	constexpr uint32_t m_FadeDuration = 0x8C0;
-	constexpr uint32_t m_bStartDisabled = 0x8C4;
-	constexpr uint32_t m_Weight = 0x8C8;
-	constexpr uint32_t m_lookupFilename = 0x8CC;
-	constexpr uint32_t m_LastEnterWeight = 0xACC;
-	constexpr uint32_t m_LastEnterTime = 0xAD0;
-	constexpr uint32_t m_LastExitWeight = 0xAD4;
-	constexpr uint32_t m_LastExitTime = 0xAD8;
+	constexpr uint32_t m_bEnabled = 0x8E0;
+	constexpr uint32_t m_MaxWeight = 0x8E4;
+	constexpr uint32_t m_FadeDuration = 0x8E8;
+	constexpr uint32_t m_bStartDisabled = 0x8EC;
+	constexpr uint32_t m_Weight = 0x8F0;
+	constexpr uint32_t m_lookupFilename = 0x8F4;
+	constexpr uint32_t m_LastEnterWeight = 0xAF4;
+	constexpr uint32_t m_LastEnterTime = 0xAF8;
+	constexpr uint32_t m_LastExitWeight = 0xAFC;
+	constexpr uint32_t m_LastExitTime = 0xB00;
 }
 
 namespace CCommentaryViewPosition
@@ -6997,9 +7108,9 @@ namespace CGunTarget
 
 namespace CTriggerGameEvent
 {
-	constexpr uint32_t m_strStartTouchEventName = 0x8B8;
-	constexpr uint32_t m_strEndTouchEventName = 0x8C0;
-	constexpr uint32_t m_strTriggerID = 0x8C8;
+	constexpr uint32_t m_strStartTouchEventName = 0x8E0;
+	constexpr uint32_t m_strEndTouchEventName = 0x8E8;
+	constexpr uint32_t m_strTriggerID = 0x8F0;
 }
 
 namespace CRuleBrushEntity
@@ -7056,7 +7167,7 @@ namespace CConstraintAnchor
 
 namespace COrnamentProp
 {
-	constexpr uint32_t m_initialOwner = 0xB60;
+	constexpr uint32_t m_initialOwner = 0xB80;
 }
 
 namespace CRopeKeyframeAlias_move_rope
@@ -7069,20 +7180,20 @@ namespace CSceneEntityAlias_logic_choreographed_scene
 
 namespace CInstancedSceneEntity
 {
-	constexpr uint32_t m_hOwner = 0xA18;
-	constexpr uint32_t m_bHadOwner = 0xA1C;
-	constexpr uint32_t m_flPostSpeakDelay = 0xA20;
-	constexpr uint32_t m_flPreDelay = 0xA24;
-	constexpr uint32_t m_bIsBackground = 0xA28;
-	constexpr uint32_t m_bRemoveOnCompletion = 0xA29;
-	constexpr uint32_t m_hTarget = 0xA2C;
+	constexpr uint32_t m_hOwner = 0xA20;
+	constexpr uint32_t m_bHadOwner = 0xA24;
+	constexpr uint32_t m_flPostSpeakDelay = 0xA28;
+	constexpr uint32_t m_flPreDelay = 0xA2C;
+	constexpr uint32_t m_bIsBackground = 0xA30;
+	constexpr uint32_t m_bRemoveOnCompletion = 0xA31;
+	constexpr uint32_t m_hTarget = 0xA34;
 }
 
 namespace CTriggerSoundscape
 {
-	constexpr uint32_t m_hSoundscape = 0x8B8;
-	constexpr uint32_t m_SoundscapeName = 0x8C0;
-	constexpr uint32_t m_spectators = 0x8C8;
+	constexpr uint32_t m_hSoundscape = 0x8E0;
+	constexpr uint32_t m_SoundscapeName = 0x8E8;
+	constexpr uint32_t m_spectators = 0x8F0;
 }
 
 namespace CSpriteAlias_env_glow
@@ -7138,17 +7249,17 @@ namespace CFuncTrackAuto
 
 namespace CTriggerRemove
 {
-	constexpr uint32_t m_OnRemove = 0x8B8;
+	constexpr uint32_t m_OnRemove = 0x8E0;
 }
 
 namespace CScriptTriggerHurt
 {
-	constexpr uint32_t m_vExtent = 0x958;
+	constexpr uint32_t m_vExtent = 0x980;
 }
 
 namespace CScriptTriggerMultiple
 {
-	constexpr uint32_t m_vExtent = 0x8E0;
+	constexpr uint32_t m_vExtent = 0x908;
 }
 
 namespace CTriggerOnce
@@ -7157,50 +7268,52 @@ namespace CTriggerOnce
 
 namespace CScriptTriggerOnce
 {
-	constexpr uint32_t m_vExtent = 0x8E0;
+	constexpr uint32_t m_vExtent = 0x908;
 }
 
 namespace CTriggerLook
 {
-	constexpr uint32_t m_hLookTarget = 0x8E0;
-	constexpr uint32_t m_flFieldOfView = 0x8E4;
-	constexpr uint32_t m_flLookTime = 0x8E8;
-	constexpr uint32_t m_flLookTimeTotal = 0x8EC;
-	constexpr uint32_t m_flLookTimeLast = 0x8F0;
-	constexpr uint32_t m_flTimeoutDuration = 0x8F4;
-	constexpr uint32_t m_bTimeoutFired = 0x8F8;
-	constexpr uint32_t m_bIsLooking = 0x8F9;
-	constexpr uint32_t m_b2DFOV = 0x8FA;
-	constexpr uint32_t m_bUseVelocity = 0x8FB;
-	constexpr uint32_t m_hActivator = 0x8FC;
-	constexpr uint32_t m_bTestOcclusion = 0x900;
-	constexpr uint32_t m_OnTimeout = 0x908;
-	constexpr uint32_t m_OnStartLook = 0x930;
-	constexpr uint32_t m_OnEndLook = 0x958;
+	constexpr uint32_t m_hLookTarget = 0x908;
+	constexpr uint32_t m_flFieldOfView = 0x90C;
+	constexpr uint32_t m_flLookTime = 0x910;
+	constexpr uint32_t m_flLookTimeTotal = 0x914;
+	constexpr uint32_t m_flLookTimeLast = 0x918;
+	constexpr uint32_t m_flTimeoutDuration = 0x91C;
+	constexpr uint32_t m_bTimeoutFired = 0x920;
+	constexpr uint32_t m_bIsLooking = 0x921;
+	constexpr uint32_t m_b2DFOV = 0x922;
+	constexpr uint32_t m_bUseVelocity = 0x923;
+	constexpr uint32_t m_bTestOcclusion = 0x924;
+	constexpr uint32_t m_OnTimeout = 0x928;
+	constexpr uint32_t m_OnStartLook = 0x950;
+	constexpr uint32_t m_OnEndLook = 0x978;
 }
 
 namespace CTriggerPush
 {
-	constexpr uint32_t m_angPushEntitySpace = 0x8B8;
-	constexpr uint32_t m_vecPushDirEntitySpace = 0x8C4;
-	constexpr uint32_t m_bTriggerOnStartTouch = 0x8D0;
+	constexpr uint32_t m_angPushEntitySpace = 0x8E0;
+	constexpr uint32_t m_vecPushDirEntitySpace = 0x8EC;
+	constexpr uint32_t m_bTriggerOnStartTouch = 0x8F8;
+	constexpr uint32_t m_bUsePathSimple = 0x8F9;
+	constexpr uint32_t m_iszPathSimpleName = 0x900;
+	constexpr uint32_t m_PathSimple = 0x908;
+	constexpr uint32_t m_splinePushType = 0x910;
 }
 
 namespace CScriptTriggerPush
 {
-	constexpr uint32_t m_vExtent = 0x8D8;
+	constexpr uint32_t m_vExtent = 0x918;
 }
 
 namespace CTriggerToggleSave
 {
-	constexpr uint32_t m_bDisabled = 0x8B8;
 }
 
 namespace CTriggerSave
 {
-	constexpr uint32_t m_bForceNewLevelUnit = 0x8B8;
-	constexpr uint32_t m_fDangerousTimer = 0x8BC;
-	constexpr uint32_t m_minHitPoints = 0x8C0;
+	constexpr uint32_t m_bForceNewLevelUnit = 0x8E0;
+	constexpr uint32_t m_fDangerousTimer = 0x8E4;
+	constexpr uint32_t m_minHitPoints = 0x8E8;
 }
 
 namespace CTriggerGravity
@@ -7209,19 +7322,19 @@ namespace CTriggerGravity
 
 namespace CTriggerProximity
 {
-	constexpr uint32_t m_hMeasureTarget = 0x8B8;
-	constexpr uint32_t m_iszMeasureTarget = 0x8C0;
-	constexpr uint32_t m_fRadius = 0x8C8;
-	constexpr uint32_t m_nTouchers = 0x8CC;
-	constexpr uint32_t m_NearestEntityDistance = 0x8D0;
+	constexpr uint32_t m_hMeasureTarget = 0x8E0;
+	constexpr uint32_t m_iszMeasureTarget = 0x8E8;
+	constexpr uint32_t m_fRadius = 0x8F0;
+	constexpr uint32_t m_nTouchers = 0x8F4;
+	constexpr uint32_t m_NearestEntityDistance = 0x8F8;
 }
 
 namespace CTriggerImpact
 {
-	constexpr uint32_t m_flMagnitude = 0x8E0;
-	constexpr uint32_t m_flNoise = 0x8E4;
-	constexpr uint32_t m_flViewkick = 0x8E8;
-	constexpr uint32_t m_pOutputForce = 0x8F0;
+	constexpr uint32_t m_flMagnitude = 0x908;
+	constexpr uint32_t m_flNoise = 0x90C;
+	constexpr uint32_t m_flViewkick = 0x910;
+	constexpr uint32_t m_pOutputForce = 0x918;
 }
 
 namespace CServerRagdollTrigger
@@ -7230,36 +7343,36 @@ namespace CServerRagdollTrigger
 
 namespace CTriggerActiveWeaponDetect
 {
-	constexpr uint32_t m_OnTouchedActiveWeapon = 0x8B8;
-	constexpr uint32_t m_iszWeaponClassName = 0x8E0;
+	constexpr uint32_t m_OnTouchedActiveWeapon = 0x8E0;
+	constexpr uint32_t m_iszWeaponClassName = 0x908;
 }
 
 namespace CTriggerPhysics
 {
-	constexpr uint32_t m_gravityScale = 0x8C8;
-	constexpr uint32_t m_linearLimit = 0x8CC;
-	constexpr uint32_t m_linearDamping = 0x8D0;
-	constexpr uint32_t m_angularLimit = 0x8D4;
-	constexpr uint32_t m_angularDamping = 0x8D8;
-	constexpr uint32_t m_linearForce = 0x8DC;
-	constexpr uint32_t m_flFrequency = 0x8E0;
-	constexpr uint32_t m_flDampingRatio = 0x8E4;
-	constexpr uint32_t m_vecLinearForcePointAt = 0x8E8;
-	constexpr uint32_t m_bCollapseToForcePoint = 0x8F4;
-	constexpr uint32_t m_vecLinearForcePointAtWorld = 0x8F8;
-	constexpr uint32_t m_vecLinearForceDirection = 0x904;
-	constexpr uint32_t m_bConvertToDebrisWhenPossible = 0x910;
+	constexpr uint32_t m_gravityScale = 0x8F0;
+	constexpr uint32_t m_linearLimit = 0x8F4;
+	constexpr uint32_t m_linearDamping = 0x8F8;
+	constexpr uint32_t m_angularLimit = 0x8FC;
+	constexpr uint32_t m_angularDamping = 0x900;
+	constexpr uint32_t m_linearForce = 0x904;
+	constexpr uint32_t m_flFrequency = 0x908;
+	constexpr uint32_t m_flDampingRatio = 0x90C;
+	constexpr uint32_t m_vecLinearForcePointAt = 0x910;
+	constexpr uint32_t m_bCollapseToForcePoint = 0x91C;
+	constexpr uint32_t m_vecLinearForcePointAtWorld = 0x920;
+	constexpr uint32_t m_vecLinearForceDirection = 0x92C;
+	constexpr uint32_t m_bConvertToDebrisWhenPossible = 0x938;
 }
 
 namespace CTriggerDetectBulletFire
 {
-	constexpr uint32_t m_bPlayerFireOnly = 0x8B8;
-	constexpr uint32_t m_OnDetectedBulletFire = 0x8C0;
+	constexpr uint32_t m_bPlayerFireOnly = 0x8E0;
+	constexpr uint32_t m_OnDetectedBulletFire = 0x8E8;
 }
 
 namespace CTriggerDetectExplosion
 {
-	constexpr uint32_t m_OnDetectedExplosion = 0x8F0;
+	constexpr uint32_t m_OnDetectedExplosion = 0x908;
 }
 
 namespace CScriptNavBlocker
@@ -7269,43 +7382,43 @@ namespace CScriptNavBlocker
 
 namespace CBasePropDoor
 {
-	constexpr uint32_t m_flAutoReturnDelay = 0xB70;
-	constexpr uint32_t m_hDoorList = 0xB78;
-	constexpr uint32_t m_nHardwareType = 0xB90;
-	constexpr uint32_t m_bNeedsHardware = 0xB94;
-	constexpr uint32_t m_eDoorState = 0xB98;
-	constexpr uint32_t m_bLocked = 0xB9C;
-	constexpr uint32_t m_closedPosition = 0xBA0;
-	constexpr uint32_t m_closedAngles = 0xBAC;
-	constexpr uint32_t m_hBlocker = 0xBB8;
-	constexpr uint32_t m_bFirstBlocked = 0xBBC;
-	constexpr uint32_t m_ls = 0xBC0;
-	constexpr uint32_t m_bForceClosed = 0xBE0;
-	constexpr uint32_t m_vecLatchWorldPosition = 0xBE4;
-	constexpr uint32_t m_hActivator = 0xBF0;
-	constexpr uint32_t m_SoundMoving = 0xC00;
-	constexpr uint32_t m_SoundOpen = 0xC08;
-	constexpr uint32_t m_SoundClose = 0xC10;
-	constexpr uint32_t m_SoundLock = 0xC18;
-	constexpr uint32_t m_SoundUnlock = 0xC20;
-	constexpr uint32_t m_SoundLatch = 0xC28;
-	constexpr uint32_t m_SoundPound = 0xC30;
-	constexpr uint32_t m_SoundJiggle = 0xC38;
-	constexpr uint32_t m_SoundLockedAnim = 0xC40;
-	constexpr uint32_t m_numCloseAttempts = 0xC48;
-	constexpr uint32_t m_nPhysicsMaterial = 0xC4C;
-	constexpr uint32_t m_SlaveName = 0xC50;
-	constexpr uint32_t m_hMaster = 0xC58;
-	constexpr uint32_t m_OnBlockedClosing = 0xC60;
-	constexpr uint32_t m_OnBlockedOpening = 0xC88;
-	constexpr uint32_t m_OnUnblockedClosing = 0xCB0;
-	constexpr uint32_t m_OnUnblockedOpening = 0xCD8;
-	constexpr uint32_t m_OnFullyClosed = 0xD00;
-	constexpr uint32_t m_OnFullyOpen = 0xD28;
-	constexpr uint32_t m_OnClose = 0xD50;
-	constexpr uint32_t m_OnOpen = 0xD78;
-	constexpr uint32_t m_OnLockedUse = 0xDA0;
-	constexpr uint32_t m_OnAjarOpen = 0xDC8;
+	constexpr uint32_t m_flAutoReturnDelay = 0xB90;
+	constexpr uint32_t m_hDoorList = 0xB98;
+	constexpr uint32_t m_nHardwareType = 0xBB0;
+	constexpr uint32_t m_bNeedsHardware = 0xBB4;
+	constexpr uint32_t m_eDoorState = 0xBB8;
+	constexpr uint32_t m_bLocked = 0xBBC;
+	constexpr uint32_t m_closedPosition = 0xBC0;
+	constexpr uint32_t m_closedAngles = 0xBCC;
+	constexpr uint32_t m_hBlocker = 0xBD8;
+	constexpr uint32_t m_bFirstBlocked = 0xBDC;
+	constexpr uint32_t m_ls = 0xBE0;
+	constexpr uint32_t m_bForceClosed = 0xC00;
+	constexpr uint32_t m_vecLatchWorldPosition = 0xC04;
+	constexpr uint32_t m_hActivator = 0xC10;
+	constexpr uint32_t m_SoundMoving = 0xC20;
+	constexpr uint32_t m_SoundOpen = 0xC28;
+	constexpr uint32_t m_SoundClose = 0xC30;
+	constexpr uint32_t m_SoundLock = 0xC38;
+	constexpr uint32_t m_SoundUnlock = 0xC40;
+	constexpr uint32_t m_SoundLatch = 0xC48;
+	constexpr uint32_t m_SoundPound = 0xC50;
+	constexpr uint32_t m_SoundJiggle = 0xC58;
+	constexpr uint32_t m_SoundLockedAnim = 0xC60;
+	constexpr uint32_t m_numCloseAttempts = 0xC68;
+	constexpr uint32_t m_nPhysicsMaterial = 0xC6C;
+	constexpr uint32_t m_SlaveName = 0xC70;
+	constexpr uint32_t m_hMaster = 0xC78;
+	constexpr uint32_t m_OnBlockedClosing = 0xC80;
+	constexpr uint32_t m_OnBlockedOpening = 0xCA8;
+	constexpr uint32_t m_OnUnblockedClosing = 0xCD0;
+	constexpr uint32_t m_OnUnblockedOpening = 0xCF8;
+	constexpr uint32_t m_OnFullyClosed = 0xD20;
+	constexpr uint32_t m_OnFullyOpen = 0xD48;
+	constexpr uint32_t m_OnClose = 0xD70;
+	constexpr uint32_t m_OnOpen = 0xD98;
+	constexpr uint32_t m_OnLockedUse = 0xDC0;
+	constexpr uint32_t m_OnAjarOpen = 0xDE8;
 }
 
 namespace CEnvLaser
@@ -7320,9 +7433,9 @@ namespace CEnvLaser
 namespace CItem
 {
 	constexpr uint32_t m_OnPlayerTouch = 0x8F0;
-	constexpr uint32_t m_bActivateWhenAtRest = 0x918;
-	constexpr uint32_t m_OnCacheInteraction = 0x920;
-	constexpr uint32_t m_OnPlayerPickup = 0x948;
+	constexpr uint32_t m_OnPlayerPickup = 0x918;
+	constexpr uint32_t m_bActivateWhenAtRest = 0x940;
+	constexpr uint32_t m_OnCacheInteraction = 0x948;
 	constexpr uint32_t m_OnGlovePulled = 0x970;
 	constexpr uint32_t m_vOriginalSpawnOrigin = 0x998;
 	constexpr uint32_t m_vOriginalSpawnAngles = 0x9A4;
@@ -7348,17 +7461,16 @@ namespace CRagdollProp
 	constexpr uint32_t m_vecLastOrigin = 0x984;
 	constexpr uint32_t m_flAwakeTime = 0x990;
 	constexpr uint32_t m_flLastOriginChangeTime = 0x994;
-	constexpr uint32_t m_nBloodColor = 0x998;
-	constexpr uint32_t m_strOriginClassName = 0x9A0;
-	constexpr uint32_t m_strSourceClassName = 0x9A8;
-	constexpr uint32_t m_bHasBeenPhysgunned = 0x9B0;
-	constexpr uint32_t m_bShouldTeleportPhysics = 0x9B1;
-	constexpr uint32_t m_flBlendWeight = 0x9B4;
-	constexpr uint32_t m_flDefaultFadeScale = 0x9B8;
-	constexpr uint32_t m_ragdollMins = 0x9C0;
-	constexpr uint32_t m_ragdollMaxs = 0x9D8;
-	constexpr uint32_t m_bShouldDeleteActivationRecord = 0x9F0;
-	constexpr uint32_t m_bValidatePoweredRagdollPose = 0xA50;
+	constexpr uint32_t m_strOriginClassName = 0x998;
+	constexpr uint32_t m_strSourceClassName = 0x9A0;
+	constexpr uint32_t m_bHasBeenPhysgunned = 0x9A8;
+	constexpr uint32_t m_bShouldTeleportPhysics = 0x9A9;
+	constexpr uint32_t m_flBlendWeight = 0x9AC;
+	constexpr uint32_t m_flDefaultFadeScale = 0x9B0;
+	constexpr uint32_t m_ragdollMins = 0x9B8;
+	constexpr uint32_t m_ragdollMaxs = 0x9D0;
+	constexpr uint32_t m_bShouldDeleteActivationRecord = 0x9E8;
+	constexpr uint32_t m_bValidatePoweredRagdollPose = 0xA48;
 }
 
 namespace CPhysMagnet
@@ -7379,40 +7491,39 @@ namespace CPhysMagnet
 
 namespace CPhysicsProp
 {
-	constexpr uint32_t m_MotionEnabled = 0xA68;
-	constexpr uint32_t m_OnAwakened = 0xA90;
-	constexpr uint32_t m_OnAwake = 0xAB8;
-	constexpr uint32_t m_OnAsleep = 0xAE0;
-	constexpr uint32_t m_OnPlayerUse = 0xB08;
-	constexpr uint32_t m_OnPlayerPickup = 0xB30;
-	constexpr uint32_t m_OnOutOfWorld = 0xB58;
-	constexpr uint32_t m_massScale = 0xB80;
-	constexpr uint32_t m_inertiaScale = 0xB84;
-	constexpr uint32_t m_buoyancyScale = 0xB88;
-	constexpr uint32_t m_damageType = 0xB8C;
-	constexpr uint32_t m_damageToEnableMotion = 0xB90;
-	constexpr uint32_t m_flForceToEnableMotion = 0xB94;
-	constexpr uint32_t m_bThrownByPlayer = 0xB98;
-	constexpr uint32_t m_bDroppedByPlayer = 0xB99;
-	constexpr uint32_t m_bTouchedByPlayer = 0xB9A;
-	constexpr uint32_t m_bFirstCollisionAfterLaunch = 0xB9B;
-	constexpr uint32_t m_iExploitableByPlayer = 0xB9C;
-	constexpr uint32_t m_bHasBeenAwakened = 0xBA0;
-	constexpr uint32_t m_bIsOverrideProp = 0xBA1;
-	constexpr uint32_t m_fNextCheckDisableMotionContactsTime = 0xBA4;
-	constexpr uint32_t m_iInitialGlowState = 0xBA8;
-	constexpr uint32_t m_nGlowRange = 0xBAC;
-	constexpr uint32_t m_nGlowRangeMin = 0xBB0;
-	constexpr uint32_t m_glowColor = 0xBB4;
-	constexpr uint32_t m_bForceNavIgnore = 0xBB8;
-	constexpr uint32_t m_bNoNavmeshBlocker = 0xBB9;
-	constexpr uint32_t m_bForceNpcExclude = 0xBBA;
-	constexpr uint32_t m_bShouldAutoConvertBackFromDebris = 0xBBB;
-	constexpr uint32_t m_bMuteImpactEffects = 0xBBC;
-	constexpr uint32_t m_bAcceptDamageFromHeldObjects = 0xBC4;
-	constexpr uint32_t m_bEnableUseOutput = 0xBC5;
-	constexpr uint32_t m_bAwake = 0xBC6;
-	constexpr uint32_t m_nCollisionGroupOverride = 0xBC8;
+	constexpr uint32_t m_MotionEnabled = 0xA88;
+	constexpr uint32_t m_OnAwakened = 0xAB0;
+	constexpr uint32_t m_OnAwake = 0xAD8;
+	constexpr uint32_t m_OnAsleep = 0xB00;
+	constexpr uint32_t m_OnPlayerUse = 0xB28;
+	constexpr uint32_t m_OnOutOfWorld = 0xB50;
+	constexpr uint32_t m_OnPlayerPickup = 0xB78;
+	constexpr uint32_t m_bForceNavIgnore = 0xBA0;
+	constexpr uint32_t m_bNoNavmeshBlocker = 0xBA1;
+	constexpr uint32_t m_bForceNpcExclude = 0xBA2;
+	constexpr uint32_t m_massScale = 0xBA4;
+	constexpr uint32_t m_inertiaScale = 0xBA8;
+	constexpr uint32_t m_buoyancyScale = 0xBAC;
+	constexpr uint32_t m_damageType = 0xBB0;
+	constexpr uint32_t m_damageToEnableMotion = 0xBB4;
+	constexpr uint32_t m_flForceToEnableMotion = 0xBB8;
+	constexpr uint32_t m_bThrownByPlayer = 0xBBC;
+	constexpr uint32_t m_bDroppedByPlayer = 0xBBD;
+	constexpr uint32_t m_bTouchedByPlayer = 0xBBE;
+	constexpr uint32_t m_bFirstCollisionAfterLaunch = 0xBBF;
+	constexpr uint32_t m_iExploitableByPlayer = 0xBC0;
+	constexpr uint32_t m_bHasBeenAwakened = 0xBC4;
+	constexpr uint32_t m_bIsOverrideProp = 0xBC5;
+	constexpr uint32_t m_fNextCheckDisableMotionContactsTime = 0xBC8;
+	constexpr uint32_t m_iInitialGlowState = 0xBCC;
+	constexpr uint32_t m_nGlowRange = 0xBD0;
+	constexpr uint32_t m_nGlowRangeMin = 0xBD4;
+	constexpr uint32_t m_glowColor = 0xBD8;
+	constexpr uint32_t m_bShouldAutoConvertBackFromDebris = 0xBDC;
+	constexpr uint32_t m_bMuteImpactEffects = 0xBDD;
+	constexpr uint32_t m_bAcceptDamageFromHeldObjects = 0xBE4;
+	constexpr uint32_t m_bEnableUseOutput = 0xBE5;
+	constexpr uint32_t m_bAwake = 0xBE6;
 }
 
 namespace CPhysicsPropOverride
@@ -7421,11 +7532,11 @@ namespace CPhysicsPropOverride
 
 namespace CPhysicsPropRespawnable
 {
-	constexpr uint32_t m_vOriginalSpawnOrigin = 0xBD0;
-	constexpr uint32_t m_vOriginalSpawnAngles = 0xBDC;
-	constexpr uint32_t m_vOriginalMins = 0xBE8;
-	constexpr uint32_t m_vOriginalMaxs = 0xBF4;
-	constexpr uint32_t m_flRespawnDuration = 0xC00;
+	constexpr uint32_t m_vOriginalSpawnOrigin = 0xBE8;
+	constexpr uint32_t m_vOriginalSpawnAngles = 0xBF4;
+	constexpr uint32_t m_vOriginalMins = 0xC00;
+	constexpr uint32_t m_vOriginalMaxs = 0xC0C;
+	constexpr uint32_t m_flRespawnDuration = 0xC18;
 }
 
 namespace CWaterBullet
@@ -7467,10 +7578,6 @@ namespace CBaseGrenade
 	constexpr uint32_t m_hThrower = 0x9FC;
 	constexpr uint32_t m_flNextAttack = 0xA14;
 	constexpr uint32_t m_hOriginalThrower = 0xA18;
-}
-
-namespace CCoopBonusCoin
-{
 }
 
 namespace CPhysicsPropMultiplayer
@@ -7522,15 +7629,14 @@ namespace CBaseCSGrenadeProjectile
 	constexpr uint32_t m_flSpawnTime = 0xA58;
 	constexpr uint32_t m_unOGSExtraFlags = 0xA5C;
 	constexpr uint32_t m_bDetonationRecorded = 0xA5D;
-	constexpr uint32_t m_flDetonateTime = 0xA60;
-	constexpr uint32_t m_nItemIndex = 0xA64;
-	constexpr uint32_t m_vecOriginalSpawnLocation = 0xA68;
-	constexpr uint32_t m_flLastBounceSoundTime = 0xA74;
-	constexpr uint32_t m_vecGrenadeSpin = 0xA78;
-	constexpr uint32_t m_vecLastHitSurfaceNormal = 0xA84;
-	constexpr uint32_t m_nTicksAtZeroVelocity = 0xA90;
-	constexpr uint32_t m_bHasEverHitPlayer = 0xA94;
-	constexpr uint32_t m_bClearFromPlayers = 0xA95;
+	constexpr uint32_t m_nItemIndex = 0xA5E;
+	constexpr uint32_t m_vecOriginalSpawnLocation = 0xA60;
+	constexpr uint32_t m_flLastBounceSoundTime = 0xA6C;
+	constexpr uint32_t m_vecGrenadeSpin = 0xA70;
+	constexpr uint32_t m_vecLastHitSurfaceNormal = 0xA7C;
+	constexpr uint32_t m_nTicksAtZeroVelocity = 0xA88;
+	constexpr uint32_t m_bHasEverHitPlayer = 0xA8C;
+	constexpr uint32_t m_bClearFromPlayers = 0xA8D;
 }
 
 namespace CItemDogtags
@@ -7541,9 +7647,9 @@ namespace CItemDogtags
 
 namespace CSensorGrenadeProjectile
 {
-	constexpr uint32_t m_fExpireTime = 0xA98;
-	constexpr uint32_t m_fNextDetectPlayerSound = 0xA9C;
-	constexpr uint32_t m_hDisplayGrenade = 0xAA0;
+	constexpr uint32_t m_fExpireTime = 0xA90;
+	constexpr uint32_t m_fNextDetectPlayerSound = 0xA94;
+	constexpr uint32_t m_hDisplayGrenade = 0xA98;
 }
 
 namespace CBreachChargeProjectile
@@ -7560,9 +7666,9 @@ namespace CTripWireFireProjectile
 
 namespace CFlashbangProjectile
 {
-	constexpr uint32_t m_flTimeToDetonate = 0xA98;
-	constexpr uint32_t m_numOpponentsHit = 0xA9C;
-	constexpr uint32_t m_numTeammatesHit = 0xA9D;
+	constexpr uint32_t m_flTimeToDetonate = 0xA90;
+	constexpr uint32_t m_numOpponentsHit = 0xA94;
+	constexpr uint32_t m_numTeammatesHit = 0xA95;
 }
 
 namespace CHEGrenadeProjectile
@@ -7571,40 +7677,40 @@ namespace CHEGrenadeProjectile
 
 namespace CChicken
 {
-	constexpr uint32_t m_AttributeManager = 0xB80;
-	constexpr uint32_t m_OriginalOwnerXuidLow = 0xE48;
-	constexpr uint32_t m_OriginalOwnerXuidHigh = 0xE4C;
-	constexpr uint32_t m_updateTimer = 0xE50;
-	constexpr uint32_t m_stuckAnchor = 0xE68;
-	constexpr uint32_t m_stuckTimer = 0xE78;
-	constexpr uint32_t m_collisionStuckTimer = 0xE90;
-	constexpr uint32_t m_isOnGround = 0xEA8;
-	constexpr uint32_t m_vFallVelocity = 0xEAC;
-	constexpr uint32_t m_activity = 0xEB8;
-	constexpr uint32_t m_activityTimer = 0xEC0;
-	constexpr uint32_t m_turnRate = 0xED8;
-	constexpr uint32_t m_fleeFrom = 0xEDC;
-	constexpr uint32_t m_moveRateThrottleTimer = 0xEE0;
-	constexpr uint32_t m_startleTimer = 0xEF8;
-	constexpr uint32_t m_vocalizeTimer = 0xF10;
-	constexpr uint32_t m_flWhenZombified = 0xF28;
-	constexpr uint32_t m_jumpedThisFrame = 0xF2C;
-	constexpr uint32_t m_leader = 0xF30;
-	constexpr uint32_t m_reuseTimer = 0xF38;
-	constexpr uint32_t m_hasBeenUsed = 0xF50;
-	constexpr uint32_t m_jumpTimer = 0xF58;
-	constexpr uint32_t m_flLastJumpTime = 0xF70;
-	constexpr uint32_t m_bInJump = 0xF74;
-	constexpr uint32_t m_isWaitingForLeader = 0xF75;
-	constexpr uint32_t m_repathTimer = 0x2F80;
-	constexpr uint32_t m_inhibitDoorTimer = 0x2F98;
-	constexpr uint32_t m_inhibitObstacleAvoidanceTimer = 0x3028;
-	constexpr uint32_t m_vecPathGoal = 0x3048;
-	constexpr uint32_t m_flActiveFollowStartTime = 0x3054;
-	constexpr uint32_t m_followMinuteTimer = 0x3058;
-	constexpr uint32_t m_vecLastEggPoopPosition = 0x3070;
-	constexpr uint32_t m_vecEggsPooped = 0x3080;
-	constexpr uint32_t m_BlockDirectionTimer = 0x30A0;
+	constexpr uint32_t m_AttributeManager = 0xBA0;
+	constexpr uint32_t m_sActivityFinishedTag = 0xE88;
+	constexpr uint32_t m_updateTimer = 0xE90;
+	constexpr uint32_t m_stuckAnchor = 0xEA8;
+	constexpr uint32_t m_stuckTimer = 0xEB8;
+	constexpr uint32_t m_collisionStuckTimer = 0xED0;
+	constexpr uint32_t m_isOnGround = 0xEE8;
+	constexpr uint32_t m_vFallVelocity = 0xEEC;
+	constexpr uint32_t m_desiredActivity = 0xEF8;
+	constexpr uint32_t m_currentActivity = 0xEFC;
+	constexpr uint32_t m_activityTimer = 0xF00;
+	constexpr uint32_t m_turnRate = 0xF18;
+	constexpr uint32_t m_fleeFrom = 0xF1C;
+	constexpr uint32_t m_moveRateThrottleTimer = 0xF20;
+	constexpr uint32_t m_startleTimer = 0xF38;
+	constexpr uint32_t m_vocalizeTimer = 0xF50;
+	constexpr uint32_t m_flWhenZombified = 0xF68;
+	constexpr uint32_t m_jumpedThisFrame = 0xF6C;
+	constexpr uint32_t m_leader = 0xF70;
+	constexpr uint32_t m_reuseTimer = 0xF88;
+	constexpr uint32_t m_hasBeenUsed = 0xFA0;
+	constexpr uint32_t m_jumpTimer = 0xFA8;
+	constexpr uint32_t m_flLastJumpTime = 0xFC0;
+	constexpr uint32_t m_bInJump = 0xFC4;
+	constexpr uint32_t m_isWaitingForLeader = 0xFC5;
+	constexpr uint32_t m_repathTimer = 0x2FD0;
+	constexpr uint32_t m_inhibitDoorTimer = 0x2FE8;
+	constexpr uint32_t m_inhibitObstacleAvoidanceTimer = 0x3078;
+	constexpr uint32_t m_vecPathGoal = 0x3098;
+	constexpr uint32_t m_flActiveFollowStartTime = 0x30A4;
+	constexpr uint32_t m_followMinuteTimer = 0x30A8;
+	constexpr uint32_t m_vecLastEggPoopPosition = 0x30C0;
+	constexpr uint32_t m_vecEggsPooped = 0x30D0;
+	constexpr uint32_t m_BlockDirectionTimer = 0x30F0;
 }
 
 namespace CHostageCarriableProp
@@ -7635,8 +7741,7 @@ namespace CBaseFlexAlias_funCBaseFlex
 
 namespace CScriptItem
 {
-	constexpr uint32_t m_OnPlayerPickup = 0x9C0;
-	constexpr uint32_t m_MoveTypeOverride = 0x9E8;
+	constexpr uint32_t m_MoveTypeOverride = 0x9C0;
 }
 
 namespace CRagdollPropAlias_physics_prop_ragdoll
@@ -7645,41 +7750,41 @@ namespace CRagdollPropAlias_physics_prop_ragdoll
 
 namespace CRagdollPropAttached
 {
-	constexpr uint32_t m_boneIndexAttached = 0xA90;
-	constexpr uint32_t m_ragdollAttachedObjectIndex = 0xA94;
-	constexpr uint32_t m_attachmentPointBoneSpace = 0xA98;
-	constexpr uint32_t m_attachmentPointRagdollSpace = 0xAA4;
-	constexpr uint32_t m_bShouldDetach = 0xAB0;
-	constexpr uint32_t m_bShouldDeleteAttachedActivationRecord = 0xAC0;
+	constexpr uint32_t m_boneIndexAttached = 0xA88;
+	constexpr uint32_t m_ragdollAttachedObjectIndex = 0xA8C;
+	constexpr uint32_t m_attachmentPointBoneSpace = 0xA90;
+	constexpr uint32_t m_attachmentPointRagdollSpace = 0xA9C;
+	constexpr uint32_t m_bShouldDetach = 0xAA8;
+	constexpr uint32_t m_bShouldDeleteAttachedActivationRecord = 0xAB8;
 }
 
 namespace CPropDoorRotating
 {
-	constexpr uint32_t m_vecAxis = 0xDF0;
-	constexpr uint32_t m_flDistance = 0xDFC;
-	constexpr uint32_t m_eSpawnPosition = 0xE00;
-	constexpr uint32_t m_eOpenDirection = 0xE04;
-	constexpr uint32_t m_eCurrentOpenDirection = 0xE08;
-	constexpr uint32_t m_flAjarAngle = 0xE0C;
-	constexpr uint32_t m_angRotationAjarDeprecated = 0xE10;
-	constexpr uint32_t m_angRotationClosed = 0xE1C;
-	constexpr uint32_t m_angRotationOpenForward = 0xE28;
-	constexpr uint32_t m_angRotationOpenBack = 0xE34;
-	constexpr uint32_t m_angGoal = 0xE40;
-	constexpr uint32_t m_vecForwardBoundsMin = 0xE4C;
-	constexpr uint32_t m_vecForwardBoundsMax = 0xE58;
-	constexpr uint32_t m_vecBackBoundsMin = 0xE64;
-	constexpr uint32_t m_vecBackBoundsMax = 0xE70;
-	constexpr uint32_t m_bAjarDoorShouldntAlwaysOpen = 0xE7C;
-	constexpr uint32_t m_hEntityBlocker = 0xE80;
+	constexpr uint32_t m_vecAxis = 0xE10;
+	constexpr uint32_t m_flDistance = 0xE1C;
+	constexpr uint32_t m_eSpawnPosition = 0xE20;
+	constexpr uint32_t m_eOpenDirection = 0xE24;
+	constexpr uint32_t m_eCurrentOpenDirection = 0xE28;
+	constexpr uint32_t m_flAjarAngle = 0xE2C;
+	constexpr uint32_t m_angRotationAjarDeprecated = 0xE30;
+	constexpr uint32_t m_angRotationClosed = 0xE3C;
+	constexpr uint32_t m_angRotationOpenForward = 0xE48;
+	constexpr uint32_t m_angRotationOpenBack = 0xE54;
+	constexpr uint32_t m_angGoal = 0xE60;
+	constexpr uint32_t m_vecForwardBoundsMin = 0xE6C;
+	constexpr uint32_t m_vecForwardBoundsMax = 0xE78;
+	constexpr uint32_t m_vecBackBoundsMin = 0xE84;
+	constexpr uint32_t m_vecBackBoundsMax = 0xE90;
+	constexpr uint32_t m_bAjarDoorShouldntAlwaysOpen = 0xE9C;
+	constexpr uint32_t m_hEntityBlocker = 0xEA0;
 }
 
 namespace CPropDoorRotatingBreakable
 {
-	constexpr uint32_t m_bBreakable = 0xE88;
-	constexpr uint32_t m_isAbleToCloseAreaPortals = 0xE89;
-	constexpr uint32_t m_currentDamageState = 0xE8C;
-	constexpr uint32_t m_damageStates = 0xE90;
+	constexpr uint32_t m_bBreakable = 0xEA8;
+	constexpr uint32_t m_isAbleToCloseAreaPortals = 0xEA9;
+	constexpr uint32_t m_currentDamageState = 0xEAC;
+	constexpr uint32_t m_damageStates = 0xEB0;
 }
 
 namespace CBaseCombatCharacter
@@ -7690,12 +7795,11 @@ namespace CBaseCombatCharacter
 	constexpr uint32_t m_impactEnergyScale = 0x99C;
 	constexpr uint32_t m_LastHitGroup = 0x9A0;
 	constexpr uint32_t m_bApplyStressDamage = 0x9A4;
-	constexpr uint32_t m_bloodColor = 0x9A8;
-	constexpr uint32_t m_iDamageCount = 0x9F0;
-	constexpr uint32_t m_pVecRelationships = 0x9F8;
-	constexpr uint32_t m_strRelationships = 0xA00;
-	constexpr uint32_t m_eHull = 0xA08;
-	constexpr uint32_t m_nNavHullIdx = 0xA0C;
+	constexpr uint32_t m_iDamageCount = 0x9E8;
+	constexpr uint32_t m_pVecRelationships = 0x9F0;
+	constexpr uint32_t m_strRelationships = 0x9F8;
+	constexpr uint32_t m_eHull = 0xA00;
+	constexpr uint32_t m_nNavHullIdx = 0xA04;
 }
 
 namespace CCSGOViewModel
@@ -7751,52 +7855,54 @@ namespace CCSWeaponBase
 	constexpr uint32_t m_bSilencerOn = 0xDFD;
 	constexpr uint32_t m_flTimeSilencerSwitchComplete = 0xE00;
 	constexpr uint32_t m_iOriginalTeamNumber = 0xE04;
-	constexpr uint32_t m_flNextAttackRenderTimeOffset = 0xE08;
-	constexpr uint32_t m_bCanBePickedUp = 0xE20;
-	constexpr uint32_t m_bUseCanOverrideNextOwnerTouchTime = 0xE21;
-	constexpr uint32_t m_nextOwnerTouchTime = 0xE24;
-	constexpr uint32_t m_nextPrevOwnerTouchTime = 0xE28;
-	constexpr uint32_t m_hPrevOwner = 0xE2C;
-	constexpr uint32_t m_nDropTick = 0xE30;
-	constexpr uint32_t m_donated = 0xE54;
-	constexpr uint32_t m_fLastShotTime = 0xE58;
-	constexpr uint32_t m_bWasOwnedByCT = 0xE5C;
-	constexpr uint32_t m_bWasOwnedByTerrorist = 0xE5D;
-	constexpr uint32_t m_bFiredOutOfAmmoEvent = 0xE5E;
-	constexpr uint32_t m_numRemoveUnownedWeaponThink = 0xE60;
-	constexpr uint32_t m_IronSightController = 0xE68;
-	constexpr uint32_t m_iIronSightMode = 0xE80;
-	constexpr uint32_t m_flLastLOSTraceFailureTime = 0xE84;
-	constexpr uint32_t m_iNumEmptyAttacks = 0xE88;
-	constexpr uint32_t m_flWatTickOffset = 0xE8C;
+	constexpr uint32_t m_iMostRecentTeamNumber = 0xE08;
+	constexpr uint32_t m_bDroppedNearBuyZone = 0xE0C;
+	constexpr uint32_t m_flNextAttackRenderTimeOffset = 0xE10;
+	constexpr uint32_t m_bCanBePickedUp = 0xE28;
+	constexpr uint32_t m_bUseCanOverrideNextOwnerTouchTime = 0xE29;
+	constexpr uint32_t m_nextOwnerTouchTime = 0xE2C;
+	constexpr uint32_t m_nextPrevOwnerTouchTime = 0xE30;
+	constexpr uint32_t m_hPrevOwner = 0xE38;
+	constexpr uint32_t m_nDropTick = 0xE3C;
+	constexpr uint32_t m_donated = 0xE5C;
+	constexpr uint32_t m_fLastShotTime = 0xE60;
+	constexpr uint32_t m_bWasOwnedByCT = 0xE64;
+	constexpr uint32_t m_bWasOwnedByTerrorist = 0xE65;
+	constexpr uint32_t m_bFiredOutOfAmmoEvent = 0xE66;
+	constexpr uint32_t m_numRemoveUnownedWeaponThink = 0xE68;
+	constexpr uint32_t m_IronSightController = 0xE70;
+	constexpr uint32_t m_iIronSightMode = 0xE88;
+	constexpr uint32_t m_flLastLOSTraceFailureTime = 0xE8C;
+	constexpr uint32_t m_iNumEmptyAttacks = 0xE90;
+	constexpr uint32_t m_flWatTickOffset = 0xE94;
 }
 
 namespace CCSWeaponBaseGun
 {
-	constexpr uint32_t m_zoomLevel = 0xE90;
-	constexpr uint32_t m_iBurstShotsRemaining = 0xE94;
-	constexpr uint32_t m_silencedModelIndex = 0xEA0;
-	constexpr uint32_t m_inPrecache = 0xEA4;
-	constexpr uint32_t m_bNeedsBoltAction = 0xEA5;
-	constexpr uint32_t m_bSkillReloadAvailable = 0xEA6;
-	constexpr uint32_t m_bSkillReloadLiftedReloadKey = 0xEA7;
-	constexpr uint32_t m_bSkillBoltInterruptAvailable = 0xEA8;
-	constexpr uint32_t m_bSkillBoltLiftedFireKey = 0xEA9;
+	constexpr uint32_t m_zoomLevel = 0xE98;
+	constexpr uint32_t m_iBurstShotsRemaining = 0xE9C;
+	constexpr uint32_t m_silencedModelIndex = 0xEA8;
+	constexpr uint32_t m_inPrecache = 0xEAC;
+	constexpr uint32_t m_bNeedsBoltAction = 0xEAD;
+	constexpr uint32_t m_bSkillReloadAvailable = 0xEAE;
+	constexpr uint32_t m_bSkillReloadLiftedReloadKey = 0xEAF;
+	constexpr uint32_t m_bSkillBoltInterruptAvailable = 0xEB0;
+	constexpr uint32_t m_bSkillBoltLiftedFireKey = 0xEB1;
 }
 
 namespace CC4
 {
-	constexpr uint32_t m_vecLastValidPlayerHeldPosition = 0xE90;
-	constexpr uint32_t m_vecLastValidDroppedPosition = 0xE9C;
-	constexpr uint32_t m_bDoValidDroppedPositionCheck = 0xEA8;
-	constexpr uint32_t m_bStartedArming = 0xEA9;
-	constexpr uint32_t m_fArmedTime = 0xEAC;
-	constexpr uint32_t m_bBombPlacedAnimation = 0xEB0;
-	constexpr uint32_t m_bIsPlantingViaUse = 0xEB1;
-	constexpr uint32_t m_entitySpottedState = 0xEB8;
-	constexpr uint32_t m_nSpotRules = 0xED0;
-	constexpr uint32_t m_bPlayedArmingBeeps = 0xED4;
-	constexpr uint32_t m_bBombPlanted = 0xEDB;
+	constexpr uint32_t m_vecLastValidPlayerHeldPosition = 0xE98;
+	constexpr uint32_t m_vecLastValidDroppedPosition = 0xEA4;
+	constexpr uint32_t m_bDoValidDroppedPositionCheck = 0xEB0;
+	constexpr uint32_t m_bStartedArming = 0xEB1;
+	constexpr uint32_t m_fArmedTime = 0xEB4;
+	constexpr uint32_t m_bBombPlacedAnimation = 0xEB8;
+	constexpr uint32_t m_bIsPlantingViaUse = 0xEB9;
+	constexpr uint32_t m_entitySpottedState = 0xEC0;
+	constexpr uint32_t m_nSpotRules = 0xED8;
+	constexpr uint32_t m_bPlayedArmingBeeps = 0xEDC;
+	constexpr uint32_t m_bBombPlanted = 0xEE3;
 }
 
 namespace CDEagle
@@ -7817,7 +7923,8 @@ namespace CWeaponSawedoff
 
 namespace CWeaponTaser
 {
-	constexpr uint32_t m_fFireTime = 0xEB0;
+	constexpr uint32_t m_fFireTime = 0xEB8;
+	constexpr uint32_t m_nLastAttackTick = 0xEBC;
 }
 
 namespace CWeaponXM1014
@@ -7826,7 +7933,7 @@ namespace CWeaponXM1014
 
 namespace CKnife
 {
-	constexpr uint32_t m_bFirstAttack = 0xE90;
+	constexpr uint32_t m_bFirstAttack = 0xE98;
 }
 
 namespace CMelee
@@ -7835,60 +7942,61 @@ namespace CMelee
 
 namespace CWeaponShield
 {
-	constexpr uint32_t m_flBulletDamageAbsorbed = 0xEB0;
-	constexpr uint32_t m_flLastBulletHitSoundTime = 0xEB4;
-	constexpr uint32_t m_flDisplayHealth = 0xEB8;
+	constexpr uint32_t m_flBulletDamageAbsorbed = 0xEB8;
+	constexpr uint32_t m_flLastBulletHitSoundTime = 0xEBC;
+	constexpr uint32_t m_flDisplayHealth = 0xEC0;
 }
 
 namespace CMolotovProjectile
 {
-	constexpr uint32_t m_bIsIncGrenade = 0xA98;
-	constexpr uint32_t m_bDetonated = 0xAA4;
-	constexpr uint32_t m_stillTimer = 0xAA8;
-	constexpr uint32_t m_bHasBouncedOffPlayer = 0xB88;
+	constexpr uint32_t m_bIsIncGrenade = 0xA90;
+	constexpr uint32_t m_bDetonated = 0xA9C;
+	constexpr uint32_t m_stillTimer = 0xAA0;
+	constexpr uint32_t m_bHasBouncedOffPlayer = 0xB80;
 }
 
 namespace CDecoyProjectile
 {
-	constexpr uint32_t m_nDecoyShotTick = 0xAA0;
-	constexpr uint32_t m_shotsRemaining = 0xAA4;
-	constexpr uint32_t m_fExpireTime = 0xAA8;
-	constexpr uint32_t m_decoyWeaponDefIndex = 0xAB8;
+	constexpr uint32_t m_nDecoyShotTick = 0xA98;
+	constexpr uint32_t m_shotsRemaining = 0xA9C;
+	constexpr uint32_t m_fExpireTime = 0xAA0;
+	constexpr uint32_t m_decoyWeaponDefIndex = 0xAB0;
 }
 
 namespace CSmokeGrenadeProjectile
 {
-	constexpr uint32_t m_nSmokeEffectTickBegin = 0xAB0;
-	constexpr uint32_t m_bDidSmokeEffect = 0xAB4;
-	constexpr uint32_t m_nRandomSeed = 0xAB8;
-	constexpr uint32_t m_vSmokeColor = 0xABC;
-	constexpr uint32_t m_vSmokeDetonationPos = 0xAC8;
-	constexpr uint32_t m_VoxelFrameData = 0xAD8;
-	constexpr uint32_t m_flLastBounce = 0xAF0;
-	constexpr uint32_t m_fllastSimulationTime = 0xAF4;
+	constexpr uint32_t m_nSmokeEffectTickBegin = 0xAA8;
+	constexpr uint32_t m_bDidSmokeEffect = 0xAAC;
+	constexpr uint32_t m_nRandomSeed = 0xAB0;
+	constexpr uint32_t m_vSmokeColor = 0xAB4;
+	constexpr uint32_t m_vSmokeDetonationPos = 0xAC0;
+	constexpr uint32_t m_VoxelFrameData = 0xAD0;
+	constexpr uint32_t m_flLastBounce = 0xAE8;
+	constexpr uint32_t m_fllastSimulationTime = 0xAEC;
 }
 
 namespace CBaseCSGrenade
 {
-	constexpr uint32_t m_bRedraw = 0xE90;
-	constexpr uint32_t m_bIsHeldByPlayer = 0xE91;
-	constexpr uint32_t m_bPinPulled = 0xE92;
-	constexpr uint32_t m_bJumpThrow = 0xE93;
-	constexpr uint32_t m_bThrowAnimating = 0xE94;
-	constexpr uint32_t m_fThrowTime = 0xE98;
-	constexpr uint32_t m_flThrowStrength = 0xE9C;
-	constexpr uint32_t m_flThrowStrengthApproach = 0xEA0;
-	constexpr uint32_t m_fDropTime = 0xEA4;
-	constexpr uint32_t m_bJustPulledPin = 0xEA8;
-	constexpr uint32_t m_nNextHoldTick = 0xEAC;
-	constexpr uint32_t m_flNextHoldFrac = 0xEB0;
-	constexpr uint32_t m_hSwitchToWeaponAfterThrow = 0xEB4;
+	constexpr uint32_t m_bRedraw = 0xE98;
+	constexpr uint32_t m_bIsHeldByPlayer = 0xE99;
+	constexpr uint32_t m_bPinPulled = 0xE9A;
+	constexpr uint32_t m_bJumpThrow = 0xE9B;
+	constexpr uint32_t m_bThrowAnimating = 0xE9C;
+	constexpr uint32_t m_fThrowTime = 0xEA0;
+	constexpr uint32_t m_flThrowStrength = 0xEA4;
+	constexpr uint32_t m_flThrowStrengthApproach = 0xEA8;
+	constexpr uint32_t m_fDropTime = 0xEAC;
+	constexpr uint32_t m_fPinPullTime = 0xEB0;
+	constexpr uint32_t m_bJustPulledPin = 0xEB4;
+	constexpr uint32_t m_nNextHoldTick = 0xEB8;
+	constexpr uint32_t m_flNextHoldFrac = 0xEBC;
+	constexpr uint32_t m_hSwitchToWeaponAfterThrow = 0xEC0;
 }
 
 namespace CWeaponBaseItem
 {
-	constexpr uint32_t m_SequenceCompleteTimer = 0xE90;
-	constexpr uint32_t m_bRedraw = 0xEA8;
+	constexpr uint32_t m_SequenceCompleteTimer = 0xE98;
+	constexpr uint32_t m_bRedraw = 0xEB0;
 }
 
 namespace CItem_Healthshot
@@ -7897,13 +8005,13 @@ namespace CItem_Healthshot
 
 namespace CFists
 {
-	constexpr uint32_t m_bPlayingUninterruptableAct = 0xE90;
-	constexpr uint32_t m_nUninterruptableActivity = 0xE94;
-	constexpr uint32_t m_bRestorePrevWep = 0xE98;
-	constexpr uint32_t m_hWeaponBeforePrevious = 0xE9C;
-	constexpr uint32_t m_hWeaponPrevious = 0xEA0;
-	constexpr uint32_t m_bDelayedHardPunchIncoming = 0xEA4;
-	constexpr uint32_t m_bDestroyAfterTaunt = 0xEA5;
+	constexpr uint32_t m_bPlayingUninterruptableAct = 0xE98;
+	constexpr uint32_t m_nUninterruptableActivity = 0xE9C;
+	constexpr uint32_t m_bRestorePrevWep = 0xEA0;
+	constexpr uint32_t m_hWeaponBeforePrevious = 0xEA4;
+	constexpr uint32_t m_hWeaponPrevious = 0xEA8;
+	constexpr uint32_t m_bDelayedHardPunchIncoming = 0xEAC;
+	constexpr uint32_t m_bDestroyAfterTaunt = 0xEAD;
 }
 
 namespace CSensorGrenade
@@ -7930,52 +8038,79 @@ namespace CWeaponZoneRepulsor
 {
 }
 
+namespace CCSPlayerPawnBase
+{
+	constexpr uint32_t m_CTouchExpansionComponent = 0xBB0;
+	constexpr uint32_t m_pPingServices = 0xC00;
+	constexpr uint32_t m_pViewModelServices = 0xC08;
+	constexpr uint32_t m_blindUntilTime = 0xC10;
+	constexpr uint32_t m_blindStartTime = 0xC14;
+	constexpr uint32_t m_iPlayerState = 0xC18;
+	constexpr uint32_t m_bRespawning = 0xCC8;
+	constexpr uint32_t m_fImmuneToGunGameDamageTime = 0xCCC;
+	constexpr uint32_t m_bGunGameImmunity = 0xCD0;
+	constexpr uint32_t m_fMolotovDamageTime = 0xCD4;
+	constexpr uint32_t m_bHasMovedSinceSpawn = 0xCD8;
+	constexpr uint32_t m_iNumSpawns = 0xCDC;
+	constexpr uint32_t m_flIdleTimeSinceLastAction = 0xCE4;
+	constexpr uint32_t m_fNextRadarUpdateTime = 0xCE8;
+	constexpr uint32_t m_flFlashDuration = 0xCEC;
+	constexpr uint32_t m_flFlashMaxAlpha = 0xCF0;
+	constexpr uint32_t m_flProgressBarStartTime = 0xCF4;
+	constexpr uint32_t m_iProgressBarDuration = 0xCF8;
+	constexpr uint32_t m_angEyeAngles = 0xCFC;
+	constexpr uint32_t m_NumEnemiesAtRoundStart = 0xD08;
+	constexpr uint32_t m_wasNotKilledNaturally = 0xD0C;
+	constexpr uint32_t m_bCommittingSuicideOnTeamChange = 0xD0D;
+	constexpr uint32_t m_hOriginalController = 0xD10;
+}
+
 namespace CHostageExpresserShim
 {
-	constexpr uint32_t m_pExpresser = 0xA10;
+	constexpr uint32_t m_pExpresser = 0xA08;
 }
 
 namespace CHostage
 {
-	constexpr uint32_t m_OnHostageBeginGrab = 0xA28;
-	constexpr uint32_t m_OnFirstPickedUp = 0xA50;
-	constexpr uint32_t m_OnDroppedNotRescued = 0xA78;
-	constexpr uint32_t m_OnRescued = 0xAA0;
-	constexpr uint32_t m_entitySpottedState = 0xAC8;
-	constexpr uint32_t m_nSpotRules = 0xAE0;
-	constexpr uint32_t m_uiHostageSpawnExclusionGroupMask = 0xAE4;
-	constexpr uint32_t m_nHostageSpawnRandomFactor = 0xAE8;
-	constexpr uint32_t m_bRemove = 0xAEC;
-	constexpr uint32_t m_vel = 0xAF0;
-	constexpr uint32_t m_isRescued = 0xAFC;
-	constexpr uint32_t m_jumpedThisFrame = 0xAFD;
-	constexpr uint32_t m_nHostageState = 0xB00;
-	constexpr uint32_t m_leader = 0xB04;
-	constexpr uint32_t m_lastLeader = 0xB08;
-	constexpr uint32_t m_reuseTimer = 0xB10;
-	constexpr uint32_t m_hasBeenUsed = 0xB28;
-	constexpr uint32_t m_accel = 0xB2C;
-	constexpr uint32_t m_isRunning = 0xB38;
-	constexpr uint32_t m_isCrouching = 0xB39;
-	constexpr uint32_t m_jumpTimer = 0xB40;
-	constexpr uint32_t m_isWaitingForLeader = 0xB58;
-	constexpr uint32_t m_repathTimer = 0x2B68;
-	constexpr uint32_t m_inhibitDoorTimer = 0x2B80;
-	constexpr uint32_t m_inhibitObstacleAvoidanceTimer = 0x2C10;
-	constexpr uint32_t m_wiggleTimer = 0x2C30;
-	constexpr uint32_t m_isAdjusted = 0x2C4C;
-	constexpr uint32_t m_bHandsHaveBeenCut = 0x2C4D;
-	constexpr uint32_t m_hHostageGrabber = 0x2C50;
-	constexpr uint32_t m_fLastGrabTime = 0x2C54;
-	constexpr uint32_t m_vecPositionWhenStartedDroppingToGround = 0x2C58;
-	constexpr uint32_t m_vecGrabbedPos = 0x2C64;
-	constexpr uint32_t m_flRescueStartTime = 0x2C70;
-	constexpr uint32_t m_flGrabSuccessTime = 0x2C74;
-	constexpr uint32_t m_flDropStartTime = 0x2C78;
-	constexpr uint32_t m_nApproachRewardPayouts = 0x2C7C;
-	constexpr uint32_t m_nPickupEventCount = 0x2C80;
-	constexpr uint32_t m_vecSpawnGroundPos = 0x2C84;
-	constexpr uint32_t m_vecHostageResetPosition = 0x2CA4;
+	constexpr uint32_t m_OnHostageBeginGrab = 0xA20;
+	constexpr uint32_t m_OnFirstPickedUp = 0xA48;
+	constexpr uint32_t m_OnDroppedNotRescued = 0xA70;
+	constexpr uint32_t m_OnRescued = 0xA98;
+	constexpr uint32_t m_entitySpottedState = 0xAC0;
+	constexpr uint32_t m_nSpotRules = 0xAD8;
+	constexpr uint32_t m_uiHostageSpawnExclusionGroupMask = 0xADC;
+	constexpr uint32_t m_nHostageSpawnRandomFactor = 0xAE0;
+	constexpr uint32_t m_bRemove = 0xAE4;
+	constexpr uint32_t m_vel = 0xAE8;
+	constexpr uint32_t m_isRescued = 0xAF4;
+	constexpr uint32_t m_jumpedThisFrame = 0xAF5;
+	constexpr uint32_t m_nHostageState = 0xAF8;
+	constexpr uint32_t m_leader = 0xAFC;
+	constexpr uint32_t m_lastLeader = 0xB00;
+	constexpr uint32_t m_reuseTimer = 0xB08;
+	constexpr uint32_t m_hasBeenUsed = 0xB20;
+	constexpr uint32_t m_accel = 0xB24;
+	constexpr uint32_t m_isRunning = 0xB30;
+	constexpr uint32_t m_isCrouching = 0xB31;
+	constexpr uint32_t m_jumpTimer = 0xB38;
+	constexpr uint32_t m_isWaitingForLeader = 0xB50;
+	constexpr uint32_t m_repathTimer = 0x2B60;
+	constexpr uint32_t m_inhibitDoorTimer = 0x2B78;
+	constexpr uint32_t m_inhibitObstacleAvoidanceTimer = 0x2C08;
+	constexpr uint32_t m_wiggleTimer = 0x2C28;
+	constexpr uint32_t m_isAdjusted = 0x2C44;
+	constexpr uint32_t m_bHandsHaveBeenCut = 0x2C45;
+	constexpr uint32_t m_hHostageGrabber = 0x2C48;
+	constexpr uint32_t m_fLastGrabTime = 0x2C4C;
+	constexpr uint32_t m_vecPositionWhenStartedDroppingToGround = 0x2C50;
+	constexpr uint32_t m_vecGrabbedPos = 0x2C5C;
+	constexpr uint32_t m_flRescueStartTime = 0x2C68;
+	constexpr uint32_t m_flGrabSuccessTime = 0x2C6C;
+	constexpr uint32_t m_flDropStartTime = 0x2C70;
+	constexpr uint32_t m_nApproachRewardPayouts = 0x2C74;
+	constexpr uint32_t m_nPickupEventCount = 0x2C78;
+	constexpr uint32_t m_vecSpawnGroundPos = 0x2C7C;
+	constexpr uint32_t m_vecHostageResetPosition = 0x2C9C;
 }
 
 namespace CHostageAlias_info_hostage_spawn

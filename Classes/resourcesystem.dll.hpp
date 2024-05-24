@@ -157,10 +157,6 @@ namespace InfoForResourceTypeCChoreoSceneFileData
 {
 }
 
-namespace InfoForResourceTypeCDACGameDefsData
-{
-}
-
 namespace InfoForResourceTypeCCompositeMaterialKit
 {
 }
@@ -189,11 +185,11 @@ namespace InfoForResourceTypeCNmClip
 {
 }
 
-namespace InfoForResourceTypeCNmGraph
+namespace InfoForResourceTypeCNmGraphDefinition
 {
 }
 
-namespace InfoForResourceTypeCNmGraphDataSet
+namespace InfoForResourceTypeCNmGraphVariation
 {
 }
 
